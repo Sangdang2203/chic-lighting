@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
 
-  <link rel="stylesheet" href="./css/index.css">
-  <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/SignIn.js"></script>
+    <title>Sign Up</title>
+
 </head>
 <body>
     <header>
@@ -20,39 +24,38 @@
         <div align="center" style="margin:50px 0;">
             <h1>SignIn Form</h1>
         </div>
-        <div align="center">
-            <form action="Home.html" onsubmit="check()">
-                <table>    
-                    <tr>
-                        <th>
-                            <label>Login name:</label></th>
-                        <td>
-                            <input class="input-style" type="text" id="txtName" placeholder=" Enter Login name">
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <th><label>Password:</label></th>
-                        <td>
-                            <input class="input-style" type="password" id="txtPassword" placeholder=" Enter password">
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td></td>
-                        <td align="right">Already have a account? <a href="./SignUp.html">Sign Up</a></td>
-                    </tr>
+        <form action="Index.html" id="contactForm" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Username</label>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="username" />
+                </div>
+            </div>
 
-                    <tr>
-                        <td></td>
-                        <td style="padding: 10px 0 0 5px;">
-                            <input class="btn btn-primary" type="submit" value="Sign In">
-                            <input class="btn btn-default" type="reset" value="Cancel">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                <div class="col-md-5">
+                    <input type="password" class="form-control" name="password" />
+                </div>
+            </div>
+            <div style="padding-left: 34%;">
+                <h4>Already have a account ? <a href="SignUp.html">Sign Up</a></h4>
+            </div>
+
+            <!-- #messages is where the messages are placed inside -->
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-4">
+                    <div id="messages"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-4">
+                    <button type="submit" class="btn btn-default">Sign In</button>
+                </div>
+            </div>
+        </form>
         
     </section>
     <footer></footer>

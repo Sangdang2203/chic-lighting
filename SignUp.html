@@ -2,161 +2,86 @@
 <html lang="en">
 <head>
   
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
 
-  <link rel="stylesheet"
-        href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" />
-    <script type="text/javascript"
-        src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
-  <title>Sign Up</title>
-  <script>
-    $(document).ready(function () {
-            $('#contactForm').bootstrapValidator({
-                container: '#messages',
-                excluded: ':disabled',
-                feedbackIcons: {
-                    valid: 'glyphicon glyphicon-ok',
-                    invalid: 'glyphicon glyphicon-remove',
-                    validating: 'glyphicon glyphicon-refresh'
-                },
-                fields: {
-                    username: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Username is required and cannot be empty'
-                            },
-                            stringLength: {
-                                min: 5,
-                                max: 12,
-                                message: 'Username is only from 5~12 characters'
-                            }
-                        }
-                    },
-                    fullName: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The full name is required and cannot be empty'
-                            },
-                            regexp: {
-                                regexp: /^[a-z\s]+$/i,
-                                message: 'The full name can consist of alphabetical characters and spaces only'
-                            }
-                        }
-                    },
-                    password: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Password is required and cannot be empty'
-                            },
-                            stringLength: {
-                                min: 5,
-                                message: 'Password has at least 5 characters'
-                            },
-                            regexp: {
-                                regexp: /^([a-z]+[0-9]+|([0-9]+[a-z]+))$/i,
-                                message: 'Password must contain both alphabet characters and numbers'
-                            }
-                        }
-                    },
-                    confirmPassword: {
-                        validators: {
-                            identical: {
-                                field: 'password',
-                                message: 'The password and its confirm are not the same'
-                            }
-                        }
-                    },
-                    email: {
-                        validators: {
-                            notEmpty: {
-                                message: 'The email address is required and cannot be empty'
-                            },
-                            emailAddress: {
-                                message: 'The email address is not valid'
-                            }
-                        }
-                    },
-                    
-                }
-            });
-        });
-</script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
+    <script src="./js/SignUp.js"></script>
+    <title>Sign Up</title>
+    
 </head>
 <body>
     <header></header>
     <section>
         <div align="center" style="margin:50px 0;">
-            <h1>Sign Up</h1>
+            <h1>Register Form</h1>
         </div>
-        <form action=""></form>
-        <div align="center">
-            <form id="contactForm" method="post" class="form-horizontal" action="SignIn.html">
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Username</label>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control" name="username" />
-                    </div>
+        <form action="SignIn.html" id="contactForm" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Username</label>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="username" />
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Full name</label>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control" name="fullName" />
-                    </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Full name</label>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="fullName" />
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Password</label>
-                    <div class="col-md-5">
-                        <input type="password" class="form-control" name="password" />
-                    </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                <div class="col-md-5">
+                    <input type="password" class="form-control" name="password" />
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Confirm password</label>
-                    <div class="col-md-5">
-                        <input type="password" class="form-control" name="confirmPassword" />
-                    </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Confirm password</label>
+                <div class="col-md-5">
+                    <input type="password" class="form-control" name="confirmPassword" />
                 </div>
-                
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Email</label>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control" name="email" />
-                    </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-md-4 control-label">Email</label>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="email" />
                 </div>
-                
-                <div class="form-group">
-                    <div class="col-md-offset-4 col-md-2">
-                        <label class="radio-inline">
-                          <input type="radio" name="rdGender" id="rdMale" checked>Male
-                        </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="rdGender" id="rdFemale">Female
-                        </label> 
-                      </div>
-                    </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-2">
+                    <label class="radio-inline">
+                      <input type="radio" name="rdGender" id="rdMale" checked>Male
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="rdGender" id="rdFemale">Female
+                    </label> 
+                  </div>
                 </div>
+            </div>
 
-                <!-- #messages is where the messages are placed inside -->
-                <div class="form-group">
-                    <div class="col-md-9 col-md-offset-4">
-                        <div id="messages"></div>
-                    </div>
+            <!-- #messages is where the messages are placed inside -->
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-4">
+                    <div id="messages"></div>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <div class="col-md-9 col-md-offset-4">
-                        <button type="submit" class="btn btn-default">Sign Up</button>
-                    </div>
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-4">
+                    <button type="submit" class="btn btn-default">Sign Up</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </section>
     <footer>
 
