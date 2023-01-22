@@ -1,0 +1,8 @@
+[
+    {"id":1 , "name":"Đèn led neon OSIDEN gắn tường trang trí", "brand":"OSIDEN" , "description":"Loại sản phẩm: Đèn neon LED mềm. Nhiệt độ hoạt động: 20℃～60℃." , "image":"" , "price": "$10.15"},
+    {"id":2 , "name":"Dây đèn led OSIDEN hình quả bóng cotton phát sáng trang trí" , "brand": "OSIDEN" , "description":"" , "image":"" , "price": "$3.05"},
+    {"id":3 , "name":"Đèn Đèn LED dây mây" , "brand":"MASHANG" , "description":"20 Đèn LED trang trí này tạo ra một bầu không khí linh thiêng và trong lành, mang ánh sáng đến mọi ngóc ngách trong ngôi nhà của bạn." , "image":"" , "price": "$2.95"},
+    {"id":4 , "name":"Bóng Đèn Led Trang Trí HUTA Edison ST64 4W Dimmer" , "brand":"HUTA" , "description":"Bóng đèn LED Edison phù hợp cho tất cả các thiết bị Dimmer, có thể điều chỉnh tăng giảm ánh sáng tùy ý." , "image":"" , "price": "$4.5"},
+    {"id":5 , "name":"Đèn thả MONSKY kim cương trang trí" , "brand":"MONSKY" , "description":"" , "image":"" , "price": "$11.3"},
+    {"id":6 , "name":"Đèn thả MONSKY MARIT hình nhện" , "brand":"MONSKY" , "description":"" , "image":"" , "price": "$28.6"}
+]

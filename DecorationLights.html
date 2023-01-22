@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/product.css">
+
+  <title>Decoration Lights</title>
+</head>
+<body class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
+  <header></header>
+    <section>
+      <h2>Decoration Lights page</h2>
+      <table class="table table-hover table-bordered">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Product Description</th>
+          <th>Image</th>
+          <th>Price</th>
+        </tr>
+        
+        <tr ng-repeat="data in decorationLights">
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.brand}}</td>
+          <td>{{data.description}}</td>
+          <td>{{data.image}}</td>
+          <td>{{data.price}}</td>
+        </tr>
+      </table>
+      
+    </section>
+    <footer></footer>
+</body>
+</html>

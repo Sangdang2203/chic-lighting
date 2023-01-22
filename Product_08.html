@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/home.js"></script>
+  <script src="./js/Controller.js"></script>
+
+  <title>Philips Hue Smart LED wire Lightstrip Bluetooth</title>
+</head>
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
+  <header>
+    <table>
+      <tr>
+          <td>
+              <div style="margin-left: 68%;">
+                  <a href="Index.html"><img src="./image/home/logo.png" width="60%"></a>
+              </div>
+          </td>
+          <td>
+              <div align="right">
+                  <a href="SignUp.html"><img src="./image/home/logo_register.png" width="8%">Sign Up</a>
+                  <a href="SignIn.html"><img src="./image/home/logo_login.jpg" width="6%"> Login</a>
+              </div>
+          </td>
+      </tr>
+    </table>
+  
+    <div class="main-menu">
+      <nav>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li class="dropdown">
+                <a class="dropbtn" href="">Product</a>
+                <div class="dropdown-content">
+                    <a href="CellingLights.html">Celling Lights</a>
+                    <a href="WallLights.html">Wall Lights</a>
+                    <a href="Lamps.html">Lamps</a>
+                    <a href="Fans.html">Fans</a>
+                    <a href="HomeAccent.html">Home Accent</a>
+                    <a href="OutdoorLights.html">Outdoor Lights</a>
+                </div>
+          </li>
+
+          <li class="dropdown">
+                <a class="dropbtn" href="">Led Lights</a>
+                <div class="dropdown-content">
+                    <a href="SpotLights.html">Spot Lights</a>
+                    <a href="SmartLights.html">Smart Lights</a>
+                    <a href="DecorationLights.html">Decoration Lights</a>
+                </div>
+          </li>
+
+          <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <section>
+      <table style="margin-top: 20px;">
+        <tr>
+          <td>
+              <div class="slideshow-container">
+                <div class="mySlides1">
+                  <img src="./image/home/product_08.jpg" width="600px" height="600px">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="./image/home/product_08a.jpg" width="600px" height="600px">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="./image/home/product_08b.jpg" width="600px" height="600px">
+                </div>
+      
+                <div class="mySlides1">
+                  <img src="./image/home/product_08c.jpg" width="600px" height="600px">
+                </div>
+              
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+              </div>
+          </td>
+          
+          <td>
+            <div style="margin-left: 20px; text-align: justify;">
+              <p><b>Philips Hue Smart LED wire Lightstrip Bluetooth.</b></p>
+              <p>Price: <span>$45.10</span></p>
+              <br>
+
+              <ul><b>Product Specifications</b></ul>
+              <li>Brand: PHILIPS</li>
+              <li>Lighting Type: Led wire light.</li>
+              <li>Smart Equipment: Yes</li>
+              <li>Warranty Duration: 24 months</li>
+              <li>Stock: 32</li>
+              <br>
+
+              <ul><b>Product Description:</b></ul>
+                <li>HomeKit, Alexa, Google Assistant compatible.</li>
+                <li>Light 16 million colors, Power 20W-220V, 1600 Lumen.</li>
+                <li>Support remote control, timer, context settings, voice control.</li>
+                <li>Operating time 20,000 hours.</li>
+                <li>Use smart function with Philips Hue app or Philips Hue Bluetooth.</li>
+                <li> Includes 1 2 meter lamp Strip and Adapter. Can extend up to 10 meters with Hue Extension</li>
+                <li>Zigbee & Bluetooth connection protocol.</li>
+                <li>Note: The new version cannot be connected to the old version Extension.</li>
+              </ul>
+
+            </div>
+            <div style="margin: 20px 20px;">
+              <b>Quantity:</b> <input class="input-style" type="number" placeholder=" 1"> 32 available.
+            </div>
+
+            <div style="margin: 20px 20px;">
+              <input class="btn btn-info" type="button" value="Add to Cart">
+              <input class="btn btn-danger" type="button" value="Buy Now">
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div align="right">
+        <a href="Index.html"><img src="./image/home/Homepage.gif" style="width: 5%; margin: 1% 1%;"></a>
+      </div>
+      
+    </section>
+    <footer></footer>
+</body>
+</html>

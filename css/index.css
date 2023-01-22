@@ -31,6 +31,37 @@ nav {
 }
 .main-menu ul li:hover {background-color: wheat;}
 .main-menu ul li a:hover {color: goldenrod;}
+
+/*Tạo menu đa cấp*/
+.dropbtn{
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 25px 50px;
+}
+
+li.dropdown {display: inline-block;}
+.dropdown-content{
+  display: none;
+  position:relative;
+  background-color: whitesmoke;
+  min-width: 180px;
+  box-shadow: 0px 5px 5px 0px #f90;
+  z-index: 1;
+}
+.dropdown-content a{
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.dropdown-content a:hover{ color: goldenrod;}
+.dropdown:hover .dropdown-content{display: block;}
+/*Tạo menu đa cấp*/
+
 footer {
     background-color: black;
     color: white;
@@ -60,7 +91,7 @@ img {vertical-align: auto;}
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -76,7 +107,7 @@ img {vertical-align: auto;}
 
 /* On hover, add a grey background color */
 .prev:hover, .next:hover {
-  background-color: #f1f1f1;
+  background-color:gainsboro;
   color: black;
 }
 
@@ -109,5 +140,22 @@ img {vertical-align: auto;}
   text-align: justify;
   padding: 5px 4px;
 }
+
+.product-list .product-item button {
+    border: none;
+	  outline: 0;
+		padding: 12px;
+		color: white;
+		background-color: #000;
+		text-align: center;
+		width: 100%;
+		font-size: 18px;
+}
+.product-list .product-item button:hover{background-color: gray;}
 h1, h3 {color: goldenrod;}
 span {color: red; font-weight: bold;}
+
+.myChange {
+  background-color: wheat;
+  color: goldenrod;
+}

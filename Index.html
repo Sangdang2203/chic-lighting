@@ -15,19 +15,54 @@
   
   <title>Chic Lighting & Design</title>
 </head>
+
 <body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
     <header>
-        <div align="center">
-            <a href="Index.html"><img src="./image/home/logo.png" width="10%"></a>
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div style="margin-left: 68%;">
+                        <a href="Index.html"><img src="./image/home/logo.png" width="60%"></a>
+                    </div>
+                </td>
+                <td>
+                    <div align="right">
+                        <a href="SignUp.html"><img src="./image/home/logo_register.png" width="8%">Sign Up</a>
+                        <a href="SignIn.html"><img src="./image/home/logo_login.jpg" width="6%"> Login</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
         
-        <div class="main-menu">
+        
+        
+        <div class="main-menu" >
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#!about">About Us</a></li>
-                    <li><a href="#!product">Product</a></li>
-                    <li><a href="#!signin">Sign In</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn" href="">Product</a>
+                        <div class="dropdown-content">
+                            <a href="#!CellingLights">Celling Lights</a>
+                            <a href="#!WallLights">Wall Lights</a>
+                            <a href="#!Lamps">Lamps</a>
+                            <a href="#!Fans">Fans</a>
+                            <a href="#!HomeAccent">Home Accent</a>
+                            <a href="#!OutdoorLights">Outdoor Lights</a>
+                        </div>
+                    </li>
+                    
+
+                    <li class="dropdown">
+                        <a class="dropbtn" href="">Led Lights</a>
+                        <div class="dropdown-content">
+                            <a href="#!SpotLights">Spot Lights</a>
+                            <a href="#!SmartLights">Smart Lights</a>
+                            <a href="#!DecorationLights">Decoration Lights</a>
+                        </div>
+                    </li>
+    
                     <li><a href="#!contact">Contact Us</a></li>
                 </ul>
             </nav>
