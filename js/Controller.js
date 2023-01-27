@@ -58,15 +58,11 @@ var app = angular.module("myApp", ["ngRoute"]);
         });
         
     });
-    app.controller('myCtrl', function($scope, $http) {
-        function getData (){
-            $http.get('decorationLights.json').then(function(rspt) {
-                if(sessionStorage.getItem("decorationLights") == null){
-                    sessionStorage.setItem("decorationLights", JSON.stringify(rspt.data));
-                    $scope.decorationLightsList = JSON.parse(sessionStorage.getItem("decorationLights"));
-                }else{
-                    $scope.decorationLightsList = JSON.parse(sessionStorage.getItem("decorationLights"));    
-                }
+
+    app.controller('myCtrl', function($scope, $http){
+        function getData() {
+            $http.get('decorationLights.json').then(function(rpst){
+                $scope.decorationLightList = rpst.data;
             });
         }
         getData();

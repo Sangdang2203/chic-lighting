@@ -3,7 +3,6 @@
     padding: 0;
     font-size: 12pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    box-sizing: border-box;
 }
 nav {
     width: 100%;
@@ -152,10 +151,27 @@ img {vertical-align: auto;}
 		font-size: 18px;
 }
 .product-list .product-item button:hover{background-color: gray;}
-h1, h3 {color: goldenrod;}
-span {color: red; font-weight: bold;}
 
-.myChange {
-  background-color: wheat;
-  color: goldenrod;
+textarea {
+  margin-top: 20px;
+  width: 800px;
+  height: 100px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
 }
+textarea:hover, input:hover {border: 2px solid goldenrod;}
+
+
+h1, h3 {color: goldenrod; padding: 10px 0;}
+
+span {color: red; font-weight: bold; font-size: 18pt;}
+
+.signup-style, .signin-style {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.signup-style:hover, .signin-style:hover {
+  color: green;
+}
+

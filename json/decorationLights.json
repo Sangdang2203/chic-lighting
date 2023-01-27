@@ -1,8 +1,43 @@
 [
-    {"id":1 , "name":"Đèn led neon OSIDEN gắn tường trang trí", "brand":"OSIDEN" , "description":"Loại sản phẩm: Đèn neon LED mềm. Nhiệt độ hoạt động: 20℃～60℃." , "image":"" , "price": "$10.15"},
-    {"id":2 , "name":"Dây đèn led OSIDEN hình quả bóng cotton phát sáng trang trí" , "brand": "OSIDEN" , "description":"" , "image":"" , "price": "$3.05"},
-    {"id":3 , "name":"Đèn Đèn LED dây mây" , "brand":"MASHANG" , "description":"20 Đèn LED trang trí này tạo ra một bầu không khí linh thiêng và trong lành, mang ánh sáng đến mọi ngóc ngách trong ngôi nhà của bạn." , "image":"" , "price": "$2.95"},
-    {"id":4 , "name":"Bóng Đèn Led Trang Trí HUTA Edison ST64 4W Dimmer" , "brand":"HUTA" , "description":"Bóng đèn LED Edison phù hợp cho tất cả các thiết bị Dimmer, có thể điều chỉnh tăng giảm ánh sáng tùy ý." , "image":"" , "price": "$4.5"},
-    {"id":5 , "name":"Đèn thả MONSKY kim cương trang trí" , "brand":"MONSKY" , "description":"" , "image":"" , "price": "$11.3"},
-    {"id":6 , "name":"Đèn thả MONSKY MARIT hình nhện" , "brand":"MONSKY" , "description":"" , "image":"" , "price": "$28.6"}
+    {"id":1,
+     "name":"LED neon wall mounted decoration.", 
+     "brand":"OSIDEN", 
+     "description":"Soft LED neon light operating temperature: 20℃～60℃ input voltage: 12V. Suitable for indoor and outdoor use; in the manufacture of logos, light boxes, LED letters.", 
+     "img":"./image/DecorationLight/product_01.jpg", 
+     "price": "$10.15"},
+
+    {"id":2, 
+     "name":"LED string lights ball shaped cotton.", 
+     "brand": "OSIDEN", 
+     "description":"Wire lamps are handmade from cotton yarn. Bring soft light in the dark seasons. Unique designed wire lamp, perfect for party decoration, bedroom curtains, ... etc.aaaaa", 
+     "img":"./image/DecorationLight/product_02.jpg", 
+     "price": "$3.05"},
+
+    {"id":3, 
+     "name":"Led wire rattan lights.", 
+     "brand":"MASHANG", 
+     "description":"Carefully made by hand, they are the perfect choice for floral and fabric decorations and even in a children's room. Ultra-thin soft wire with insulated rubber layer is easy to move and easy to store.", 
+     "img":"./image/DecorationLight/product_03.jpg", 
+     "price": "$2.95"},
+
+    {"id":4, 
+     "name":"Huta Edison ST64 4W Dimmer.",
+     "brand":"HUTA", 
+     "description":"Edison LED bulb has vintage design with LED strands and 2200K gold light for display color, suitable to decorate the housing space, cafes, cafes, restaurants. Bring a feeling of extreme relaxation.", 
+     "img":"./image/DecorationLight/product_04.jpg", 
+     "price": "$4.5"},
+
+    {"id":5, 
+     "name":"Decorative diamond monsky drop lights.", 
+     "brand":"MONSKY", 
+     "description":"High grade diamond drop decoration lights. Lamps made from high-end iron frames powder coated. Lampshades made of fabric give unique lighting. Size: lamp diameter 25cm.", 
+     "img":"./image/DecorationLight/product_05.jpg", 
+     "price": "$11.3"},
+
+    {"id":6, 
+     "name":"Spider-shaped monsky Marit drop lamp.", 
+     "brand":"MONSKY", 
+     "description":"Easy to choose low height adjustable lamp, easy to install. Product size: D810 mm. Modern lighting technology of led bulbs makes beautiful dining table lamps provide even light.", 
+     "img":"./image/DecorationLight/product_06.jpg", 
+     "price": "$28"}
 ]

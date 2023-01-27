@@ -8,36 +8,111 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+  
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/product.css">
+  <script src="./js/Controller.js"></script>
 
   <title>Decoration Lights</title>
 </head>
-<body class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
   <header></header>
+  
     <section>
-      <h2>Decoration Lights page</h2>
-      <table class="table table-hover table-bordered">
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Brand</th>
-          <th>Product Description</th>
-          <th>Image</th>
-          <th>Price</th>
-        </tr>
-        
-        <tr ng-repeat="data in decorationLights">
-          <td>{{data.id}}</td>
-          <td>{{data.name}}</td>
-          <td>{{data.brand}}</td>
-          <td>{{data.description}}</td>
-          <td>{{data.image}}</td>
-          <td>{{data.price}}</td>
-        </tr>
-      </table>
-      
+      <h3>Decoration Lights</h3>
+    <!--Product List No.01-->
+      <div class="product-list">
+        <div class="product-item">
+          <img src="./image/DecorationLight/product_01.jpg">
+          <div class="content">
+            <p><b>LED neon wall mounted decoration.</b></p>
+            <p><b>Brand:</b> OSIDEN</p>
+            <p><b>Description:</b>
+              Soft LED neon light operating temperature: 20℃～60℃ input voltage: 12V.
+              Suitable for indoor and outdoor use; in the manufacture of logos, light boxes, LED letters.</p>
+            <p>Price: <span>$10.15</span></p>
+            <p><a href="DecorationProduct_01.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/DecorationLight/product_02.jpg">
+          <div class="content">
+            <p><b>LED string lights ball shaped cotton.</b></p>
+            <p><b>Brand:</b> OSIDEN</p>
+            <p><b>Description:</b>
+              Wire lamps are handmade from cotton yarn. Bring soft light in the dark seasons. Unique designed wire lamp, 
+              perfect for party decoration, bedroom curtains, ... etc.
+            </p>
+            <p>Price: <span>$3.05</span></p>
+            <p><a href="DecorationProduct_02.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/DecorationLight/product_03.jpg">
+          <div class="content">
+            <p><b>Led wire rattan lights.</b></p>
+            <p><b>Brand:</b> MASHANG </p>
+            <p><b>Description:</b>
+              Carefully made by hand, they are the perfect choice for floral and fabric decorations and even in a children's room.
+              Ultra-thin soft wire with insulated rubber layer is easy to move and easy to store.
+            </p>
+            <p>Price: <span>$2.95</span></p>
+            <p><a href="DecorationProduct_03.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/DecorationLight/product_04.jpg">
+          <div class="content">
+            <p><b>Huta Edison ST64 4W Dimmer.</b></p>
+            <p><b>Brand:</b> HUTA </p>
+            <p><b>Description:</b>
+              Edison LED bulb has vintage design with LED strands and 2200K gold light for display color, 
+              suitable to decorate the housing space, cafes, cafes, restaurants. 
+              Bring a feeling of extreme relaxation.
+            </p>
+            <p>Price: <span>$4.50</span></p>
+            <p><a href="DecorationProduct_04.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <!--Product List No.02-->
+      <div class="product-list">
+        <div class="product-item">
+          <img src="./image/DecorationLight/product_05.jpg">
+          <div class="content">
+            <p><b>Decorative diamond Monsky drop lights.</b></p>
+            <p><b>Brand:</b> MONSKY </p>
+            <p><b>Description:</b>
+              High grade diamond drop decoration lights. Lamps made from high-end iron frames powder coated. 
+              Lampshades made of fabric give unique lighting. Size: lamp diameter 25cm. 
+            </p>
+            <p>Price: <span>$11.30</span></p>
+            <p><a href="DecorationProduct_05.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/DecorationLight/product_06.jpg">
+          <div class="content">
+            <p><b>Spider-shaped Monsky Marit drop lamp.</b></p>
+            <p><b>Brand:</b> MONSKY </p>
+            <p><b>Description:</b>
+              Easy to choose low height adjustable lamp, easy to install.  Product size: D810 mm.
+              Modern lighting technology of led bulbs makes beautiful dining table lamps provide even light.
+            </p>
+            <p>Price: <span>$28.00</span></p>
+            <p><a href="DecorationProduct_06.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
     </section>
+
     <footer></footer>
 </body>
 </html>

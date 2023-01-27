@@ -10,14 +10,68 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.css">
 
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
     <script src="./js/SignUp.js"></script>
     <title>Sign Up</title>
     
 </head>
 <body>
-    <header></header>
+    <header>
+        <table>
+          <tr>
+              <td>
+                  <div style="margin-left: 68%;">
+                      <a href="Index.html"><img src="./image/home/logo.png" width="60%"></a>
+                  </div>
+              </td>
+              <td>
+                  <div align="right" style="margin-right: 30px;">
+                      <a href="SignUp.html" class="signup-style">
+                          <img src="./image/home/logo_register.png" width="6%">
+                          <label for="">Sign Up</label>
+                      </a> &ensp;
+                          
+                      <a href="SignIn.html" class="signin-style">
+                          <img src="./image/home/logo_login.jpg" width="5%"> 
+                          <label for="">Login</label>
+                      </a>    
+                  </div>
+              </td>
+          </tr>
+      </table>
+      
+        <div class="main-menu">
+          <nav>
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li class="dropdown">
+                    <a class="dropbtn" href="">Product</a>
+                    <div class="dropdown-content">
+                        <a href="CellingLights.html">Celling Lights</a>
+                        <a href="WallLights.html">Wall Lights</a>
+                        <a href="Lamps.html">Lamps</a>
+                        <a href="Fans.html">Fans</a>
+                        <a href="HomeAccent.html">Home Accent</a>
+                        <a href="OutdoorLights.html">Outdoor Lights</a>
+                    </div>
+              </li>
+  
+              <li class="dropdown">
+                    <a class="dropbtn" href="">Led Lights</a>
+                    <div class="dropdown-content">
+                        <a href="SpotLights.html">Spot Lights</a>
+                        <a href="SmartLights.html">Smart Lights</a>
+                        <a href="DecorationLights.html">Decoration Lights</a>
+                    </div>
+              </li>
+  
+              <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
     <section>
         <div align="center" style="margin:50px 0;">
             <h1>Registration Form</h1>
@@ -25,35 +79,35 @@
         <form action="SignIn.html" id="contactForm" method="post" class="form-horizontal">
             <div class="form-group">
                 <label class="col-md-4 control-label">Username</label>
-                <div class="col-md-5">
-                    <input type="text" class="form-control" name="username" />
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="username">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Full name</label>
-                <div class="col-md-5">
-                    <input type="text" class="form-control" name="fullName" />
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="fullName">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Password</label>
-                <div class="col-md-5">
-                    <input type="password" class="form-control" name="password" />
+                <div class="col-md-4">
+                    <input type="password" class="form-control" name="password">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-4 control-label">Confirm password</label>
-                <div class="col-md-5">
-                    <input type="password" class="form-control" name="confirmPassword" />
+                <div class="col-md-4">
+                    <input type="password" class="form-control" name="confirmPassword">
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="col-md-4 control-label">Email</label>
-                <div class="col-md-5">
-                    <input type="text" class="form-control" name="email" />
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="email">
                 </div>
             </div>
             
