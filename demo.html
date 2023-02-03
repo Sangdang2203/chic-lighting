@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/Controller.js"></script>
+  <title>Decoration Lights</title>
+</head>
+
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
+  <header>
+
+  </header>
+  
+    <section>
+      <h3>Decoration Lights</h3>
+      
+      Filter by brand:
+      <select ng-model="selectedBrand" class="input-style">
+        <option ng-repeat="data in decoration" value="{{data.brand}}"></option>
+      </select>
+
+    <!--Product List No.01-->
+      
+        <table class="table table-hover table-bordered">
+          <tr>
+           <td>Id</td>
+           <td>Name</td>
+           <td>Brand</td>
+           <td>Description</td>
+           <td>Image</td>
+           <td>Price</td>
+          </tr>
+          <tr ng-repeat="data in decoration">
+           <td>{{data.id}}</td>
+           <td>{{data.name}}</td>
+           <td>{{data.brand}}</td>
+           <td>{{data.description}}</td>
+           <td><img ng-src="{{data.img}}" width="50px"></td>
+           <td>{{data.price}}</td>
+          </tr>
+        </table>
+
+    </section>
+
+    <footer></footer>
+</body>
+</html>

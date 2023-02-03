@@ -60,10 +60,8 @@ var app = angular.module("myApp", ["ngRoute"]);
     });
 
     app.controller('myCtrl', function($scope, $http){
-        function getData() {
-            $http.get('decorationLights.json').then(function(rpst){
-                $scope.decorationLightList = rpst.data;
-            });
-        }
-        getData();
+        $http.get('json/decorationLight.json').then(function(rspt){
+            $scope.decoration = rspt.data.decoration;
+        })
     });
+       

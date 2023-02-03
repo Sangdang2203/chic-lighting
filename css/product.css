@@ -17,7 +17,7 @@ img {vertical-align: auto;}
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: goldenrod;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -34,7 +34,7 @@ img {vertical-align: auto;}
 /* On hover, add a grey background color */
 .prev:hover, .next:hover {
   background-color: #f1f1f1;
-  color: black;
+  color: goldenrod;
 }
 
 h4 {text-align: left;}
