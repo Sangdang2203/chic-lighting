@@ -4,21 +4,113 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+  <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https:/ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https:/ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https:/maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/product.css">
+  <script src="./js/Controller.js"></script>
 
   <title>Spot Lights</title>
 </head>
-<body>
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
   <header></header>
+  
     <section>
-        <h2>Spot Lights page</h2>
-        
+      <div align="left">
+        <h1>Spot Lights</h1> 
+      Filter by brand: <input type="text" class="input-style">
+      </div>
+    <!--Product List -->
+      <div class="product-list">
+        <div class="product-item">
+          <img src="./image/spotlight/product1.jpg">
+          <div class="content">
+            <p><b>Opal LED Recessed Ceiling Light  Spotlight</b></p>
+            <p><b>Brand:</b> Opal</p>    
+            <p><b>Description:</b>
+              Spotlight 7W with advanced design and application of modern lighting technology brings many outstanding advantages. Widely used in lighting objects and creating accents for space.
+            </p>
+            <p>Price: <span>$12.41</span></p>
+            <p><a href="spotlightProduct_01.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/spotlight/product2.png">
+          <div class="content">
+            <p><b>LED SPOTLIGHT SLIDER LEDTSL02 23740 </b></p>
+            <p><b>Brand:</b> Dien Quang</p> 
+            <p><b>Description:</b>
+              The luminaire is flexibly mounted on a rail used for decoration to create accents for objects that need lighting, highlight products, and create solemnity for bars, fashion stores, showrooms, cafes, etc.
+            </p>
+            <p>Price: <span>$56.26</span></p>
+            <p><a href="spotlightProduct_02.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/spotlight/product3.png">
+          <div class="content">
+            <p><b>LED light set of recessed ceiling lights.</b></p>
+            <p><b>Brand:</b> Dien Quang</p> 
+            <p><b>Description:</b>
+              Bars, Fashion Stores, Showrooms, Cafes, Trade Centers.. need a professional, modern and especially attractive POINTS.
+              What better solution is there?
+            </p>
+            <p>Price: <span>$47.09 </span></p>
+            <p><a href="spotlightProduct_03.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/spotlight/product4.jpg">
+          <div class="content">
+            <p><b> Sliding Slider LED Spotlight LEDTSL05</b></p>
+            <p><b>Brand:</b> Dien Quang</p>
+            <p><b>Description:</b>
+              The luminaire is flexibly mounted on a rail used for decoration to create accents for objects that need lighting, highlight products, and create solemnity for bars, fashion stores, showrooms, cafes, etc.
+            </p>
+            <p>Price: <span>$47.09</span></p>
+            <p><a href="spotlightProduct_04.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+
+        <div class="product-item">
+          <img src="./image/spotlight/product5.jpg">
+          <div class="content">
+            <p><b>LED Spot Light Kit LEDRSL20 20730</b></p>
+            <p><b>Brand:</b> Dien Quang</p>
+            <p><b>Description:</b>
+              Bars, Fashion Stores, Showrooms, Cafes, Trade Centers.. need a professional, modern and especially attractive POINTS.
+              What better solution is there?
+            </p>
+            <p>Price: <span>$44.91</span></p>
+            <p><a href="spotlightProduct_05.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/spotlight/product6.jpg">
+          <div class="content">
+            <p><b> LED Spot Light Kit LEDRSL12 0898</b></p>
+            <p><b>Brand:</b> Dien Quang</p>
+            <p><b>Description:</b>
+              Bars, Fashion Stores, Showrooms, Cafes, Trade Centers.. need a professional, modern and especially attractive POINTS.
+              What better solution is there?
+            </p>
+            <p>Price: <span>$8.46 </span></p>
+            <p><a href="spotlightProduct_06.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+      <br>
     </section>
+
     <footer></footer>
 </body>
 </html>

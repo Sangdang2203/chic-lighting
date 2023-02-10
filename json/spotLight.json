@@ -1,0 +1,56 @@
+{
+    "spotLight": 
+    [
+        {"id":1,
+         "name":"Opal LED Recessed Ceiling Light Spotlight.", 
+         "brand":"Opal", 
+         "description":"Spotlight 7W with advanced design and application of modern lighting technology brings many outstanding advantages. Widely used in lighting objects and creating accents for space.", 
+         "img":"./image/spotlight/product1.jpg", 
+         "price": "$12.41"
+        },
+    
+        {"id":2, 
+         "name":"LED SPOTLIGHT SLIDER LEDTSL02 23740.", 
+         "brand": "Dien Quang", 
+         "description":"The luminaire is flexibly mounted on a rail used for decoration to create accents for objects that need lighting, highlight products, and create solemnity for bars, fashion stores, showrooms, cafes, etc. shopping mall.", 
+         "img":"./image/spotlight/product2.png", 
+         "price": "$56.26"
+        },
+    
+        {"id":3, 
+         "name":"LED light set of recessed ceiling lights.", 
+         "brand":"Dien Quang", 
+         "description":"Bars, Fashion Stores, Showrooms, Cafes, Trade Centers.. need a professional, modern and especially attractive POINTS.", 
+         "img":"./image/spotlight/product3.png", 
+         "price": "$47.09"
+        },
+    
+        {"id":4, 
+         "name":"Sliding Slider LED Spotlight LEDTSL05.",
+         "brand":"Dien Quang", 
+         "description":"The luminaire is flexibly mounted on a rail used for decoration to create accents for objects that need lighting, highlight products, and create solemnity for bars, fashion stores, showrooms, cafes, etc. shopping mall.", 
+         "img":"./image/spotlight/product4.jpg", 
+         "price": "$47.09"
+        },
+    
+        {"id":5, 
+         "name":"LED Spot Light Kit LEDRSL20 20730.", 
+         "brand":"Dien Quang", 
+         "description":"Bars, Fashion Stores, Showrooms, Cafes, Trade Centers.. need a professional, modern and especially attractive POINTS.", 
+         "img":"./image/spotlight/product5.jpg", 
+         "price": "$44.91"
+        },
+    
+        {"id":6, 
+         "name":"LED Spot Light Kit LEDRSL12 0898.", 
+         "brand":"Dien Quang", 
+         "description":"Bars, Fashion Stores, Showrooms, Cafes, Trade Centers.. need a professional, modern and especially attractive POINTS. ", 
+         "img":"./image/spotlight/product6.jpg", 
+         "price": "$8.46"
+        }
+    ]
+}
+
+
+
+    

@@ -8,17 +8,110 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+  
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/product.css">
+  <script src="./js/Controller.js"></script>
 
   <title>Smart Lights</title>
 </head>
-<body>
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
   <header></header>
+  
     <section>
-        <h2>Smart Lights page</h2>
-        
+      <div align="left">
+        <h1>Smart Lights</h1> 
+      Filter by brand: <input type="text" class="input-style">
+      </div>
+    <!--Product List -->
+      <div class="product-list">
+        <div class="product-item">
+          <img src="./image/smartlight/smartlight1.1.jpeg">
+          <div class="content">
+            <p><b>TP-Link Tapo L510E White LED 8.7W</b></p>
+            <p><b>Brand:</b> Tapo</p>
+            <p><b>Description:</b>
+              TP-Link Tapo L510E has a common bulb design, easy to install anywhere in your home. Operates with 220 - 240V ~ 50/60Hz 
+              current, 2.4 GHz band response.
+            </p>
+            <p>Price: <span>$7.67</span></p>
+            <p><a href="smartlight_01.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/smartlight/smartlight2.jpg">
+          <div class="content">
+            <p><b>LED SPOTLIGHT SLIDER LEDTSL02 23740 </b></p>
+            <p><b>Brand:</b> Baseus</p>
+            <p><b>Description:</b>
+              Baseus Sunshine Series smart motion sensor lights with portable, 
+              compact design along with smart features make your home and living space smarter and more convenient.
+            </p>
+            <p>Price: <span>$11.03</span></p> 
+            <p><a href="smartlight_02.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/smartlight/smartlight3.1.jpg">
+          <div class="content">
+            <p><b> LED light set of recessed ceiling lights LEDRSL03 20727</b></p>
+            <p><b>Brand:</b> Xiaomi </p>
+            <p><b>Description:</b>
+              Xiaomi Mijia Smart Light Sensor Detection Sensor Zigbee 3.0 Intelligent Linkage Work With 
+              Xiaomi Mijia Smart Multimode Gateway.
+            </p>
+            <p>Price: <span>$16.40 </span></p> 
+            <p><a href="smartlight_03.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/smartlight/smartlight4.1.jpg">
+          <div class="content">
+            <p><b> Sliding Slider LED Spotlight LEDTSL05</b></p>
+            <p><b>Brand:</b> Philips </p>
+            <p><b>Description:</b>
+              Philips WiZ Tunable White Downlight smart LED ceiling light with Wifi connection, remote control on and off, automatic scheduling.
+            </p>
+            <p>Price: <span>$22.53</span></p> <br>
+            <p><a href="smartlight_04.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+
+        <div class="product-item">
+          <img src="./image/smartlight/smartlight5.jpeg"> 
+          <div class="content">
+            <p><b>LED Spot Light Kit LEDRSL20 20730</b></p>
+            <p><b>Brand:</b> OEM</p>
+            <p><b>Description:</b>
+              Bars, Fashion Stores, Showrooms, Cafes, Trade Centers... need a professional, modern and especially attractive POINTS.
+            </p>
+            <p>Price: <span>$23.93</span></p>
+            <p><a href="smartlight_05.html"><button>Buy Now</button></a></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="./image/smartlight/smartlight6.1.jpeg">
+          <div class="content">
+            <p><b> LED Spot Light Kit LEDRSL12 03730</b></p>
+            <p><b>Brand:</b> Rang Dong</p>
+            <p><b>Description:</b>
+              Low heat generation, does not heat the lamp surface and the surrounding environment.
+              The best solution for bathroom lighting
+            </p>
+            <p>Price: <span>$8.30 </span></p>
+            <p><a href="smartlight_06.html"><button>Buy now</button></a></p>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+      <br>
     </section>
+
     <footer></footer>
 </body>
 </html>

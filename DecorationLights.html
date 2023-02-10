@@ -10,20 +10,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/product.css">
   <script src="./js/Controller.js"></script>
 
   <title>Decoration Lights</title>
 </head>
+
 <body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
+  
   <header></header>
   
     <section>
-      <h3>Decoration Lights</h3> 
-      Filter by brand: <input type="text" class="input-style">
-
-    <!--Product List No.01-->
+      <table>
+        <tr>
+          <td>
+            <h1>Decoration Lights</h1>
+          </td>
+          <td>
+            <div class="box">
+              <form name="search">
+                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+              </form>
+              <i class="fas fa-search"></i>
+            </div>
+          </td>
+        </tr>
+      </table>  
+  
+    <!--Product List -->
       <div class="product-list">
+      
         <div class="product-item">
           <img src="./image/DecorationLight/product_01.jpg">
           <div class="content">
@@ -79,11 +94,9 @@
             <p><a href="DecorationProduct_04.html"><button>Buy Now</button></a></p>
           </div>
         </div>
+        <br>
         <div style="clear: both;"></div>
-      </div>
 
-      <!--Product List No.02-->
-      <div class="product-list">
         <div class="product-item">
           <img src="./image/DecorationLight/product_05.jpg">
           <div class="content">
@@ -97,14 +110,14 @@
             <p><a href="DecorationProduct_05.html"><button>Buy Now</button></a></p>
           </div>
         </div>
-
+  
         <div class="product-item">
           <img src="./image/DecorationLight/product_06.jpg">
           <div class="content">
             <p><b>Spider-shaped Monsky Marit drop lamp.</b></p>
             <p><b>Brand:</b> MONSKY </p>
             <p><b>Description:</b>
-              Easy to choose low height adjustable lamp, easy to install.  Product size: D810 mm.
+              Easy to choose low height adjustable lamp, easy to install.
               Modern lighting technology of led bulbs makes beautiful dining table lamps provide even light.
             </p>
             <p>Price: <span>$28.00</span></p>
@@ -113,6 +126,7 @@
         </div>
         <div style="clear: both;"></div>
       </div>
+      <br>
     </section>
 
     <footer></footer>

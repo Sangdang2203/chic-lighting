@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/home.js"></script>
+  <script src="./js/Controller.js"></script>
+
+  <title>LED neon wall mounted decoration.</title>
+</head>
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
+  <header></header>
+
+    <section>
+      <table style="margin-top: 20px;">
+        <tr>
+          <td>
+              <div class="slideshow-container">
+                <div class="mySlides1">
+                  <img src="./image/smartlight/smartlight1.1.jpeg" height="550px" height="550px">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="./image/smartlight/smartlight1.jpeg" height="550px" height="550px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+              </div>
+          </td>
+          
+          <td>
+            <div style="margin-left: 50px; text-align: justify;">
+              <p><b>TP-Link Tapo L510E White LED 8.7W Dimable LED Light</b></p>
+              <p>Price: <span>$7.67</span></p>
+
+              <b>Product Specifications</b>
+              <ul style="margin-left: 50px;">
+                <li>Power : 8.7W</li>
+                <li>Power Supply: 220 - 240 V ~ 50/60Hz, 73 mA </li>
+                <li>Light : China</li>
+                <li>Size : Length 10.5 cm - Width 5.2 cm</li>
+                <li>Weight: 68g</li>
+              </ul>
+
+              <b>Product Description:</b>
+              <ul style="margin-left: 50px;">
+                <li>Utilities : Voice control and Control by app (Download on phone)</li>
+                <li>Controller app : TP-Link Tapo </li>
+                <li>Made in China.</li>
+                <li>Lifespan: 50,000 hours</li>
+              </ul>
+            </div>
+            <div style="margin: 20px 20px;">
+              <b>Quantity:</b> <input class="input-style" type="number" placeholder=" 1"> 
+            </div>
+            <div style="margin: 20px 20px;">
+              <input class="btn btn-info" type="button" value="Add to Cart">
+              <a href="PurchaseForm.html"><input class="btn btn-danger" type="button" value="Buy Now"></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div> 
+          <textarea placeholder=" Enter your comment:"></textarea>
+          <div>
+            <input class="btn btn-info" type="button" value="Send">
+          </div>
+        </div>
+        
+      <div style="float: right;">
+        <a href="Index.html"><img src="./image/home/Homepage.gif" style="width: 50%;"></a>
+      </div>   
+    </section>
+    <footer></footer>
+</body>
+</html>
