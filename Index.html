@@ -13,6 +13,7 @@
   <script src="./js/home.js"></script>
   <script src="./js/Controller.js"></script>
   
+  
   <title>Chic Lighting & Design</title>
 </head>
 
@@ -20,24 +21,25 @@
     <header>
         <table>
             <tr>
-                <td>
-                    <div style="margin-left: 68%;">
-                        <a href="Index.html"><img src="./image/home/logo.png" width="60%"></a>
-                    </div>
-                </td>
-                <td>
-                    <div align="right">
-                        <a href="#!Register" class="signup-style">
-                            <img src="./image/home/logo_register.png" width="6%">
-                            <label for="">Sign Up</label>
-                        </a> &ensp;
+              <td>
+                <div style="margin-left: 70%;">
+                  <a href="Index.html"><img src="./image/home/logo.png" width="60%"></a>
+                </div>
+              </td>
+
+              <td>
+                <div align="right">
+                  <a href="#!Register" class="signup-style">
+                    <img src="./image/home/logo_register.png" width="6%">
+                    <label for="">Sign Up</label>
+                  </a> &ensp;
                             
-                        <a href="#!Login" class="signin-style">
-                            <img src="./image/home/logo_login.jpg" width="5%"> 
-                            <label for="">Login</label>
-                        </a>    
-                    </div>
-                </td>
+                  <a href="#!Login" class="signin-style">
+                    <img src="./image/home/logo_login.jpg" width="5%"> 
+                    <label for="">Login</label>
+                  </a>    
+                </div>
+              </td>  
             </tr>
         </table>
         
@@ -47,7 +49,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#!about">About Us</a></li>
                     <li class="dropdown">
-                        <a class="dropbtn" href="">Product</a>
+                        <a class="dropbtn" href="">Our Lights</a>
                         <div class="dropdown-content">
                             <a href="#!CellingLights">Celling Lights</a>
                             <a href="#!WallLights">Wall Lights</a>
@@ -76,13 +78,29 @@
 
     <section>
         <div ng-view></div>
+        <table width="100%" border="0">
+            <tr>
+              <td>
+                
+              </td>
+
+              <td>
+                <div align="right">
+                  <a href="Index.html"><img src="./image/home/BackToMenu.gif" style="width: 6%; margin: 1% 1%;"></a>
+                  <div id="digital-clock"></div>
+                  <script src="./js/watch.js" defer></script>
+                </div>
+                
+              </td>
+            </tr>
+          </table>
     </section>
 
     <footer>
         <br>
         <table class="table-style">
             <tr>
-              <td style="padding-left: 30px;">
+              <td style="padding-left: 40px;">
                 <a href="#!contact"><b style="font-size: 15pt;">Contact Us</b></a>
                 <ul type="square" style="margin-left: 30px;">
                   <li><i>Address: No. 444 Cach Mang Thang 8 street, Ward 11, District 3, Ho Chi Minh City.</i></li>
@@ -107,24 +125,25 @@
                 <ul>
                     <li><a href="#!Fans">Fans</a></li>
                     <li><a href="#!Lamps">Lamps</a></li>
-                    <li><a href="#!HomeAccent">Home Accent</a></li>
                     <li><a href="#!WallLights">Wall Lights</a></li>
+                    <li><a href="#!HomeAccent">Home Accent</a></li>
                     <li><a href="#!CellingLights">Celling Lights</a></li>
-                    <li><a href="#!OutdoorLights">Outdoor Lights</a></li>
+                    <li><a href="#!OutdoorLights">Outdoor Lights</a></li>    
                 </ul>
               </td>
 
               <td>
                 <div align="center">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.404401950413!2d106.65233383955079!3d10.784398300000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed14610eb1f%3A0x8ea7310c2e6c83e4!2sACB%20Building!5e0!3m2!1sen!2s!4v1675353044750!5m2!1sen!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.404401950413!2d106.65233383955079!3d10.784398300000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed14610eb1f%3A0x8ea7310c2e6c83e4!2sACB%20Building!5e0!3m2!1sen!2s!4v1675353044750!5m2!1sen!2s" width="280" height="180" style="border: 1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </td>
             </tr>
           </table>
         
         <div align="center" style="padding: auto;">
-            &copy By Group 04. All right reserved.
-        </div>    
+          Designed by Team 4. Copyright &copy; 2023 <a href="Index.html">chiclighting-design.com.vn</a>
+        </div> 
+        <br>   
     </footer>
 </body>
 </html>

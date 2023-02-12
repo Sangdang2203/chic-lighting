@@ -10,16 +10,130 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="./css/index.css">
-
-  <title>Outdoor Lights</title>
+  <script src="./js/home.js"></script>
+  
+  <title>OutdoorLights</title>
+    
+  </title>
 </head>
-<body>
-  <header></header>
-  <div align="left">
-    <h1>Outdoor Lights</h1> 
-    Filter by brand: <input type="text" class="input-style">
-  </div>
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
+    <header>
+      
+    </header>
+
+    <section>
+      <table>
+        <tr>
+          <td>
+            <h1>Outdoor Lights</h1>
+          </td>
+          <td>
+            <div class="box">
+              <form name="search">
+                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+              </form>
+              <i class="fas fa-search"></i>
+            </div>
+          </td>
+        </tr>
+      </table> 
+        <!--Products List-->
+        <div class="product-list">
+        
+          <div class="product-item">
+            <a href="OutdoorLightProduct01.html"><img src="./image/Outdoorlight/Product01 .jpg"></a>
+            <div class="content">
+              <p><b>Designers Fountain 1161-BK.</b></p>
+              <p><b>Brand:</b> DESIGNERS FOUNTAIN</p>
+              <p>Price: <span>$16.3</span></p>
+              <p><a href="OutdoorLightProduct01.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct02.html"><img src="./image/Outdoorlight/Product02 .jpg"></a>
+            <div class="content">
+              <p><b>DESIGNERS FOUNTAIN 2067.</b></p>
+              <p><b>Brand:</b> DESIGNERS FOUNTAIN</p>
+              <p>Price: <span>$33.08</span></p> 
+              <p><a href="OutdoorLightProduct02.html"><button>Buy Now</button></a>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct03.html"><img src="./image/Outdoorlight/Product03.jpg"></a>
+            <div class="content">
+              <p><b>DESIGNERS FOUNTAIN Belmont 2.</b></p>
+              <p><b>Brand:</b> DESIGNERS FOUNTAIN</p>
+              
+              <p>Price: <span>$78.40</span></p>
+              <p><a href="OutdoorLightProduct03.html"><button>Buy Now</button></a></p> 
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct04.html"><img src="./image/Outdoorlight/Product04.jpg"></a>
+            <div class="content">
+              <p><b>EGLO 201734A Pierino LED Track Light.</b></p>
+              <p><b>Brand:</b> EGLO</p>
+               
+              <p>Price: <span>$76.42</span></p>
+              <p><a href="OutdoorLightProduct04.html"><button>Buy Now</button></a></p>  
+            </div>
+          </div>
+      
+          <div style="clear: both;"></div>
+          <br>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct05.html"><img src="./image/Outdoorlight/Product05.jpg"></a>
+            <div class="content">
+              <p><b>Globe Electric 59530 4.</b></p>
+              <p><b>Brand:</b> Globe Electric</p>
+              
+              <p>Price: <span>$71.83</span></p>
+              <p><a href="OutdoorLightProduct05.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct06.html"><img src="./image/Outdoorlight/Product06.jpg"></a>
+            <div class="content">
+              <p><b>Aootek New Solar Lights 120 LEDs.</b></p>
+              <p><b>Brand:</b> Aootek</p>
+              
+              <p>Price: <span>$78.34</span></p>
+              <p><a href="OutdoorLightProduct06.html"><button>Buy Now</button></a></p>  
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct07.html"><img src="./image/Outdoorlight/Product07.jpg"></a>
+            <div class="content">
+              <p><b>UCGG Solar Wall Lights Outdoor.</b></p>
+              <p><b>Brand:</b> UCGG</p>
+              
+              <p>Price: <span>$30.99</span></p>
+              <p><a href="OutdoorLightProduct07.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="OutdoorLightProduct08.html"><img src="./image/Outdoorlight/Product08.jpg"></a>
+            <div class="content">
+              <p><b>Lithonia Lighting HGX LED 2RH.</b></p>
+              <p><b>Brand:</b> Lithonia Lighting</p>
+              
+              <p>Price: <span>$59.99</span></p>
+              <p><a href="OutdoorLightProduct08.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+
     </section>
+    
+    
     <footer></footer>
 </body>
 </html>

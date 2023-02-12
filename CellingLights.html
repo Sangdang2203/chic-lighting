@@ -16,10 +16,21 @@
 <body>
   <header></header>
     <section>
-      <div align="left">
-        <h1>Celling Lights</h1> 
-        Filter by brand: <input type="text" class="input-style">
-      </div>
+      <table>
+        <tr>
+          <td>
+            <h1>Celling Lights</h1>
+          </td>
+          <td>
+            <div class="box">
+              <form name="search">
+                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+              </form>
+              <i class="fas fa-search"></i>
+            </div>
+          </td>
+        </tr>
+      </table>
        
     </section>
     <footer></footer>

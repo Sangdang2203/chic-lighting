@@ -1,0 +1,72 @@
+{
+    "Fans": 
+    [
+        {"id":1,
+         "name":"Dreo Cruiser Pro T1 Tower Fan.", 
+         "brand":"Dreo", 
+         "description":"Customizable Comfort: Featured with 4 modes (Normal/Natural/Sleep/Auto) and 4 speeds from soothing-soft to storm-strong.", 
+         "img":"./image/fans/Product_01.jpg", 
+         "price": "$105.00"
+        },
+    
+        {"id":2, 
+         "name":"BLACK DECKER Stand Fan with Remote.", 
+         "brand": "BLACK DECKER", 
+         "description":"Carefully made by hand, they are the perfect choice for floral and fabric decorations and even in a children's room.", 
+         "img":"./image/fans/Product_04a.jpg", 
+         "price": "$40.99"
+        },
+    
+        {"id":3, 
+         "name":"Honeywell Ceiling Fans Ocean Breeze.", 
+         "brand":"Honeywell", 
+         "description":"LED LIGHT SPECS: Two E26 / B10 LED bulbs. Dimmable up to 20%, 2700K, 80CRI, 450 lumens, 4.5 watts.", 
+         "img":"./image/fans/Product_03.jpg", 
+         "price": "$52.15"
+        },
+    
+        {"id":4, 
+         "name":"IRIS USA WOOZOO Oscillating Fan.",
+         "brand":"IRIS USA, Inc.", 
+         "description":"The included remote gives you full control over the settings on your fan; switching the power on and off, changing the mode, etc.", 
+         "img":"./image/fans/Product_05.jpg", 
+         "price": "$98.99"
+        },
+    
+        {"id":5, 
+         "name":"YITAHOME Farmhouse Ceiling Fan.", 
+         "brand":"YITAHOME", 
+         "description":"This lighting & ceiling fan feature with 1/2/4/8 timer and 3 speeds adjustable function, gives you a worriless sleep.", 
+         "img":"./image/fans/Product_02.jpg", 
+         "price": "$131.88"
+        },
+    
+        {"id":6, 
+         "name":"Vornado Atom 1 Oscillating Tower Fan.", 
+         "brand":"Vornado", 
+         "description":"4 quiet speed settings can easily be adjusted through the LED controls. Atom 1 is small but mighty.", 
+         "img":"./image/fans/Product_06.jpg", 
+         "price": "$69.95"
+        },
+
+        {"id":7, 
+         "name":"Vornado 693 Mid-Size Air Circulator Fan.", 
+         "brand":"Vornado", 
+         "description":"SIMPLE CONTROLS — The 3-speed manual control is easy to use and allows you to dial in your comfort.", 
+         "img":"./image/fans/Product_07.jpg", 
+         "price": "$109.99"
+        },
+
+        {"id":8, 
+         "name":"Vornado 173 Air Circulator.", 
+         "brand":"Vornado", 
+         "description":"Allow you to select from 3 speed settings. Equipped with a pivoting head and adjustable height to direct the air.", 
+         "img":"./image/fans/Product_08.jpg", 
+         "price": "$65.88"
+        }
+    ]
+}
+
+
+
+    
