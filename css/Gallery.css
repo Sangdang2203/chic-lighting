@@ -1,0 +1,26 @@
+.image-list {margin-left: 1%;}
+.image-list .image-item {
+    width: 24%;
+    padding: 1%;
+    float: left;
+    margin-right: 1%;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    background-color: black;
+}
+.image-list .image-item:hover {
+    border: 3px solid goldenrod;
+}
+.image-list .image-item img {
+    margin: 10px 4px;
+    width: 320px;
+    height: 420px;
+    border-radius: 20px;
+}
+.image-list .image-item .content {
+  text-align: justify;
+  padding: 5px 8px;
+  font-size: 11pt;
+  color: white;
+  font-weight: bold;
+}

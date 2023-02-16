@@ -3,35 +3,67 @@
     padding: 0;
     font-size: 12pt;
     line-height: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
+body {
+  width: auto;
+  height: auto;
+}
 nav {
+    background-color: black;
     width: 100%;
     height: 60px;
-    border-top: 1px double goldenrod;
-    border-bottom: 1px double goldenrod;
+    border-top: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
 }
 
 .main-menu ul {
   list-style: none;
 }
 .main-menu ul li {
-    width: 20%;
-    height: 58px;
+    width: 14.28%;
+    height: 56px;
     text-align: center;
     padding: 15px 1px;
     float: left;
 }
 
 .main-menu ul li a {
-    color: black;
-    font-size: 15pt;
+    color: white;
+    font-size: 14pt;
     font-weight: bold;
     text-decoration: none;
 }
 .main-menu ul li:hover {background-color: wheat;}
 .main-menu ul li a:hover {color: goldenrod;}
+
+@-webkit-keyframes my {
+  0% { color: goldenrod;} 
+  50% { color: #fff;} 
+  100% { color: goldenrod;} 
+}
+@-moz-keyframes my { 
+  0% { color: goldenrod;} 
+  50% { color: #fff;}
+  100% { color: goldenrod;} 
+}
+@-o-keyframes my { 
+  0% { color: goldenrod;} 
+  50% { color: #fff; } 
+  100% { color: goldenrod;} 
+}
+@keyframes my { 
+  0% { color: goldenrod;} 
+  50% { color: #fff;  }
+  100% { color: goldenrod;} 
+} 
+.test {
+  -webkit-animation: my 700ms infinite;
+  -moz-animation: my 700ms infinite; 
+  -o-animation: my 700ms infinite; 
+  animation: my 700ms infinite;
+}
 
 /*Tạo menu đa cấp*/
 .dropbtn{
@@ -47,7 +79,7 @@ li.dropdown {display: inline-block;}
 .dropdown-content{
   display: none;
   position:relative;
-  background-color: whitesmoke;
+  background-color: black;
   min-width: 180px;
   box-shadow: 0px 5px 5px 0px #f90;
   z-index: 1;
@@ -70,20 +102,21 @@ footer {
     width: 100%;
 }
 
-.mySlides1, .mySlides2 {display: none}
-.slideshow-container .mySlides1:first-child, .slideshow-container .mySlides2:first-child {display: block;}
+.mySlides1 {display: none}
+.slideshow-container .mySlides1:first-child {display: block;}
 img {vertical-align: auto;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 2000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
 .image-style {
   width: 100%;
-  height: 650px;
+  height: 600px;
 }
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -95,7 +128,7 @@ img {vertical-align: auto;}
   margin-top: -22px;
   color: goldenrod;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -115,7 +148,7 @@ img {vertical-align: auto;}
 
 .input-style {
     width: 400px;
-    height: 35px;
+    height: 40px;
     border: 1px solid gainsboro;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -123,6 +156,9 @@ img {vertical-align: auto;}
     padding: 2px 5px;
 }
 .input-style:hover {border: 2px solid goldenrod;}
+.label-style {
+  float: left;
+}
 
 /*Best Seller & Promotion Products & New Products*/
 .product-list {margin-left: 1%;}
@@ -133,14 +169,16 @@ img {vertical-align: auto;}
     margin-right: 1%;
     border: 1px solid gainsboro;
     border-radius: 20px;
+    box-shadow: 2px 2px goldenrod;
 }
 .product-list .product-item:hover {
-    border: 1px solid goldenrod;
+    border: 2px double goldenrod;
 }
 .product-list .product-item img {
-    margin: 10px 4px;
-    width: 300px;
-    height: 300px;
+    margin: 2px 2px;
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
 }
 .product-list .product-item .content {
   text-align: justify;
@@ -159,6 +197,11 @@ img {vertical-align: auto;}
 		width: 100%;
 		font-size: 18px;
 }
+.product-list .product-item img:hover {
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
 .product-list .product-item button:hover{background-color: gray;}
 
 textarea {
@@ -171,7 +214,7 @@ textarea {
 }
 textarea:hover, input:hover {border: 2px solid goldenrod;}
 
-h1, h3 {color: goldenrod; padding: 10px 0;}
+h1, h3 {color: goldenrod; padding: 10px 0; text-shadow: 1px 1px goldenrod;}
 
 span {color: red; font-weight: bold; font-size: 16pt;}
 

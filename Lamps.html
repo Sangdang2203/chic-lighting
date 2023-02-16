@@ -8,32 +8,139 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="">
 
   <link rel="stylesheet" href="./css/index.css">
-
+  <script src="./js/home.js"></script>
+  
   <title>Lamps</title>
+    
+  
 </head>
-<body>
-  <header></header>
-  <section>
-    <table>
-      <tr>
-        <td>
-          <h1>Lamps</h1>
-        </td>
-        <td>
-          <div class="box">
-            <form name="search">
-              <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-            </form>
-            <i class="fas fa-search"></i>
+<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
+    <header></header>
+    <section>
+      <table>
+        <tr>
+          <td>
+            <h1>Lamps</h1>
+          </td>
+          <td>
+            <div class="box">
+              <form name="search">
+                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+              </form>
+              <i class="fas fa-search"></i>
+            </div>
+          </td>
+        </tr>
+      </table> 
+      <!--Download file-->
+      <div>
+        <b style="font-size: 13pt;">Download Catalogue:</b>
+        <a href="./Docx/Lamps_Description.docx" download>
+          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .DOC
+        </a>
+        <a href="./PDF/Lamps_Description.pdf" download>
+          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .PDF
+        </a>
+      </div><br>
+      <!--Products List-->
+        <div class="product-list">
+        
+          <div class="product-item">
+            <a href="LampsProduct01.html"><img src="./image/Lamps/Product_01.jpg"></a>
+            <div class="content">
+              <p><b>Huta Light For Life G9</b></p>
+              <p><b>Brand:</b> HUTA</p>
+              
+              <p>Price: <span>$4.62</span></p>
+              <p><a href="LampsProduct01.html"><button>Buy Now</button></a></p>
+            </div>
           </div>
-        </td>
-      </tr>
-    </table>
-  </section>
-  
-  
-  <footer></footer>
+
+          <div class="product-item">
+            <a href="LampsProduct02.html"><img src="./image/home/product_02.jpg"></a>
+            <div class="content">
+              <p><b>Huta Ceramic Night Light For Life S4.</b></p>
+              <p><b>Brand:</b> HUTA</p> 
+              
+              <p>Price: <span>$29.00</span></p>
+              <p><a href="LampsProduct02.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="LampsProduct03.html"><img src="./image/Lamps/Product_03.jpg"></a>
+            <div class="content">
+              <p><b>Desk lamp decoration My Home DN031</b></p>
+              <p><b>Brand:</b> MY HOME</p>
+              
+              <p>Price: <span>$11.65</span></p>
+              <p><a href="LampsProduct03.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="LampsProduct04.html"><img src="./image/Lamps/Product_04.jpg"></a>
+            <div class="content">
+              <p><b>Sothing Sensor Night Light.</b></p> 
+              <p><b>Brand:</b> XIAOMI</p>
+              
+              <p>Price: <span>$12.00</span></p>
+              <p><a href="LampsProduct04.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+          <br>
+
+          <div class="product-item">
+            <a href="LampsProduct05.html"><img src="./image/Lamps/Product_05.jpg"></a>
+            <div class="content">
+              <p><b>Xiaomi Mijia Smart Night Light.</b></p>
+              <p><b>Brand:</b> Xiaomi Mijia</p>
+              
+              <p>Price: <span>$37.65</span></p>
+              <p><a href="LampsProduct05.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="LampsProduct06.html"><img src="./image/Lamps/Product_06a.jpg"></a>
+            <div class="content">
+              <p><b>Yeelight Sensor Night Light</b></p>
+              <p><b>Brand:</b> Yeelight</p>
+              
+              <p>Price: <span>$5.40</span></p>
+              <p><a href="LampsProduct06.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="LampsProduct07.html"><img src="./image/Lamps/Product_07a.jpg"></a>
+            <div class="content">
+              <p><b>Yeelight Staria Pro YLCT03YL. </b></p>
+              <p><b>Brand:</b> Yeelight</p>
+              
+              <p>Price: <span> $55.05</span></p>
+              <p><a href="LampsProduct07.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <a href="LampsProduct08.html"><img src="./image/Lamps/Product_08.jpg"></a>
+            <div class="content">
+              <p><b>Night light sensor Mijia MJYD04YL</b></p>
+              <p><b>Brand:</b>	Ganeep</p>
+              
+              <p>Price: <span>$4.60</span></p>
+              <p><a href="LampsProduct08.html"><button>Buy Now</button></a></p>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+    </section>
+
+    <footer></footer>
 </body>
 </html>

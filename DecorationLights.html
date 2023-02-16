@@ -4,15 +4,8 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  
-  <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/Controller.js"></script>
-
   <title>Decoration Lights</title>
+  
 </head>
 
 <body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
@@ -34,9 +27,18 @@
             </div>
           </td>
         </tr>
-      </table>  
-  
-    <!--Product List -->
+      </table>
+      <!--Download file-->
+      <div>
+        <b style="font-size: 13pt;">Download Catalogue:</b>
+        <a href="./Docx/Decoration_Lights_Description.docx" download>
+          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .DOC
+        </a>
+        <a href="./PDF/Decoration_Lights_Description.pdf" download>
+          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .PDF
+        </a>
+      </div><br>  
+      <!--Product List -->
       <div class="product-list">
       
         <div class="product-item">
@@ -111,7 +113,6 @@
       </div>
       <br>
     </section>
-
     <footer></footer>
 </body>
 </html>
