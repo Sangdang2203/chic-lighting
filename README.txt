@@ -17,7 +17,7 @@ Project title: Chic Lighting & Design
 
 ============================
 
-eProject documentation at: 
+eProject documentation at: https://github.com/Sangdang2203/eProject_Sem01/tree/master/Documentation
 
 ============================
 
