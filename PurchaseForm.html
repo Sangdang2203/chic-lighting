@@ -5,59 +5,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Purchase Information</title>
 
 </head>
-<script>
-    function check (){
-        var messages = newArray ();
-        message.push("Congratulation!\nYour purchase information has been sent successfully!");
-        alert(message.join("\n"));
-    }
-</script>
+
 <body>
     <header></header>
     <section>
         <div align="center">
             <h1>Purchase Information</h1>
         </div>
-        <form action="Index.html" id="contactForm" method="post" class="form-horizontal" onsubmit="return check()">
+        <form action="index.html" id="contactForm" method="post" class="form-horizontal">
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Full name</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" name="fullName">
+                    <input type="text" class="form-control" name="fullName" placeholder=" Dang Van Sang" required>
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="col-md-4 control-label">Phone</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" name="phone">
+                    <input type="text" class="form-control" name="phone" placeholder=" (+84)909751772" required>
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="col-md-4 control-label">Name of Product</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" name="product">
+                    <input type="text" class="form-control" name="product" placeholder=" Globe Electric 59530 4-Light Track Lighting" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Quantity</label>
                 <div class="col-md-4">
-                    <input type="number" class="form-control" name="quantity" placeholder=" 1">
+                    <input type="text" class="form-control" name="quantity" placeholder=" 1" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Address</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" name="address">
+                    <input type="text" class="form-control" name="address" required>
                 </div>
             </div>
             <div class="form-group">
