@@ -1,22 +1,4 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
-
-  <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/home.js"></script>
-  
-  <title>Chic Lighting & Design</title>
-</head>
-<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
-    <header></header>
-
+<div class="container-fluid">
     <section>  
       <!--Slideshow banner-->
         <div class="slideshow-container">
@@ -43,6 +25,7 @@
           <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
           <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
         </div>
+                
         <!--Best Seller-->
         <div class="product-list">
           <div align="center">
@@ -52,8 +35,8 @@
             </h1> 
           </div>
           
-          <div class="product-item">
-            <img src="./image/home/product_01.jpg">
+          <div ng-repeat="product in products" class="product-item">
+            <img ng-src="{{product.image}}">
             <div class="content">
               <p><b>Bluetooth-Smart Spotlight Lamp</b></p>
               <p><b>Brand:</b> PHILIPS </p>
@@ -62,35 +45,6 @@
             </div>
           </div>
 
-          <div class="product-item">
-            <img src="./image/home/product_02.jpg">
-            <div class="content">
-              <p><b>Huta Ceramic Night Light For Life S4.</b></p>
-              <p><b>Brand:</b> HUTA </p>
-              <p>Price: <span>$29.00</span></p>
-              <p><a href="LampsProduct02.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/home/product_03.jpg">
-            <div class="content">
-              <p><b>LED Downlight White Ambiance.</b></p>
-              <p><b>Brand:</b> PHILIPS </p>
-              <p>Price: <span>$52.15</span></p>
-              <p><a href="Product_03.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/home/product_04.jpg">
-            <div class="content">
-              <p><b>Ceiling lights ATH LIGHTING.</b></p>
-              <p><b>Brand:</b> ATH LIGHTING </p>
-              <p>Price: <span>$58.00</span></p>
-              <p><a href="Product_04.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
           <div style="clear: both;"></div>
         </div>
         
@@ -196,9 +150,5 @@
           <div style="clear: both;"></div>
         </div>  
         <br>
-      
     </section>
-
-    <footer></footer>
-</body>
-</html>
+</div>

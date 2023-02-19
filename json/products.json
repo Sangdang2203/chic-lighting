@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bluetooth-Smart Spotlight Lamp",
+    "brand": "Bluetooth-Smart Spotlight Lamp",
+    "price": 72,
+    "image": "./image/home/product_01.jpg"
+  },
+  {
+    "name": "Huta Ceramic Night Light For Life S4.",
+    "brand": "HUTA",
+    "price": 29,
+    "image": "./image/home/product_02.jpg"
+  },
+  {
+    "name": "LED Downlight White Ambiance.",
+    "brand": "PHILIPS",
+    "price": 72,
+    "image": "./image/home/product_03.jpg"
+  },
+  {
+    "name": "Ceiling lights ATH LIGHTING.",
+    "brand": "ATH LIGHTING",
+    "price": 58,
+    "image": "./image/home/product_04.jpg"
+  }
+]
