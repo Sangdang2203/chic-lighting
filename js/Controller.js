@@ -5,9 +5,9 @@ myApp.config(function ($routeProvider) {
             templateUrl: "Home.html",
             controller: "myCtrl"
         })
-        .when("/product", {
+        .when("/product/:id", {
             templateUrl: "Product.html",
-            controller: "myCtrl"
+            controller: "productController"
         })
         .when("/about", {
             templateUrl: "AboutUs.html",
@@ -74,7 +74,23 @@ myApp.config(function ($routeProvider) {
 });
 
 myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
+    $scope.productTypes = [
+        {type: 'best', image: './image/home/hot.gif', name: 'Best Seller'}, 
+        {type: 'promote', image: './image/home/hot.gif', name: 'Promotional Products'},
+        {type: 'new', image: './image/NewProduct/NewIcon.gif', name: 'New Products'}
+    ]
     $http.get('json/products.json').then(function(response) {
         $scope.products = response.data
+    })
+}]);
+
+myApp.controller('productController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
+    $http.get('json/products.json').then(function(response) {
+        const products = response.data.filter(product => {
+            return product.id === parseInt($routeParams.id)
+        })
+        if (products.length > 0) {
+            $scope.product = products[0] 
+        }
     })
 }]);

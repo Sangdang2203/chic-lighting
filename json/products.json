@@ -1,26 +1,134 @@
 [
   {
+    "id": 1,
     "name": "Bluetooth-Smart Spotlight Lamp",
     "brand": "Bluetooth-Smart Spotlight Lamp",
     "price": 72,
-    "image": "./image/home/product_01.jpg"
+    "image": "./image/home/product_01.jpg",
+    "type": "best",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
   },
   {
+    "id": 2,
     "name": "Huta Ceramic Night Light For Life S4.",
     "brand": "HUTA",
     "price": 29,
-    "image": "./image/home/product_02.jpg"
+    "image": "./image/home/product_02.jpg",
+    "type": "best",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
   },
   {
+    "id": 3,
     "name": "LED Downlight White Ambiance.",
     "brand": "PHILIPS",
     "price": 72,
-    "image": "./image/home/product_03.jpg"
+    "image": "./image/home/product_03.jpg",
+    "type": "best",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
   },
   {
+    "id": 4,
     "name": "Ceiling lights ATH LIGHTING.",
     "brand": "ATH LIGHTING",
     "price": 58,
-    "image": "./image/home/product_04.jpg"
+    "image": "./image/home/product_04.jpg",
+    "type": "best",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 5,
+    "name": "Sothing Sensor Night Light - Xiaomi.",
+    "brand": "XIAOMI",
+    "price": 12,
+    "image": "./image/home/product_05.jpg",
+    "type": "promote",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 6,
+    "name": "Wall mounted ATH LIGHTING.",
+    "brand": "ATH LIGHTING",
+    "price": 18,
+    "image": "./image/home/product_06.jpg",
+    "type": "promote",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 7,
+    "name": "Celling Fan with QT04 ASIA Lamp.",
+    "brand": "ASIA LIGHTING ",
+    "price": 63.5,
+    "image": "./image/home/product_07.jpg",
+    "type": "promote",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 8,
+    "name": "Smart LED wire Lightstrip Bluetooth",
+    "brand": "PHILIPS",
+    "price": 45.1,
+    "image": "./image/home/product_08.jpg",
+    "type": "promote",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 9,
+    "name": "Huta Light For Life G9",
+    "brand": "HUTA",
+    "price": 4.62,
+    "image": "./image/NewProduct/Product_01.jpg",
+    "type": "new",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 10,
+    "name": "Desk lamp decoration My Home DN031",
+    "brand": "MY HOME",
+    "price": 11.65,
+    "image": "./image/NewProduct/Product_03.jpg",
+    "type": "new",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 11,
+    "name": "Xiaomi Mijia Smart Night Light.",
+    "brand": "Xiaomi Mijia",
+    "price": 37.65,
+    "image": "./image/NewProduct/Product_05.jpg",
+    "type": "new",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
+  },
+  {
+    "id": 12,
+    "name": "Yeelight Staria Pro YLCT03YL",
+    "brand": "Yeelight",
+    "price": 55.05,
+    "image": "./image/NewProduct/Product_07a.jpg",
+    "type": "new",
+    "quantity": 3,
+    "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights\r\nSmart Equipment: Yes\r\nWarranty Duration: 12 months",
+    "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings\r\n16 million color smart lights support bright entertainment function according to music, video, game.\r\nPower 6W 220-240V, color temperature 2000-6500K.\r\nRemote control, timer, voice control.\r\nUnique design, can install ceiling tiles, used for decorative tree lights or nightlights.\r\nZigbee and Bluetooth connection protocol.\r\nTo unlock the entire smart function requires Philips Hue Bridge."
   }
 ]

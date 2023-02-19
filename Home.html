@@ -26,129 +26,27 @@
           <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
         </div>
                 
-        <!--Best Seller-->
-        <div class="product-list">
+        <div ng-repeat="type in productTypes" class="product-list">
           <div align="center">
             <h1>
-              <img src="./image/home/hot.gif" width="5%"> Best Seller 
-              <img src="./image/home/hot.gif" width="5%">
+              <img ng-src="{{type.image}}" width="5%"> {{type.name}}
+              <img ng-src="{{type.image}}" width="5%">
             </h1> 
           </div>
           
-          <div ng-repeat="product in products" class="product-item">
+          <div ng-repeat="product in products | filter:{ type: type.type }" class="product-item">
             <img ng-src="{{product.image}}">
             <div class="content">
-              <p><b>Bluetooth-Smart Spotlight Lamp</b></p>
-              <p><b>Brand:</b> PHILIPS </p>
-              <p>Price: <span>$72.00</span></p>
-              <p><a href="Product_01.html"><button>Buy Now</button></a></p>
+              <p><b>{{product.name}}</b></p>
+              <p><b>Brand:</b> {{product.brand}} </p>
+              <p>Price: <span>{{product.price | currency}}</span></p>
+              <p><a ng-href="#!/product/{{product.id}}"><button>Buy Now</button></a></p>
             </div>
           </div>
 
           <div style="clear: both;"></div>
         </div>
-        
-      <!--Promotion Products-->
-        <div class="product-list">
-          <div align="center">
-            <h1>
-              <img src="./image/home/hot.gif" width="5%"> Promotional Products 
-              <img src="./image/home/hot.gif" width="5%">
-            </h1> 
-          </div>
-          
-          <div class="product-item">
-            <img src="./image/home/product_05.jpg">
-            <div class="content">
-              <p><b>Sothing Sensor Night Light - Xiaomi.</b></p>
-              <p><b>Brand:</b> XIAOMI </p>
-              <p>Price: <span>$12.00</span></p>
-              <p><a href="LampsProduct04.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
 
-          <div class="product-item">
-            <img src="./image/home/product_06.jpg">
-            <div class="content">
-              <p><b>Wall mounted ATH LIGHTING.</b></p>
-              <p><b>Brand:</b> ATH LIGHTING </p>
-              <p>Price: <span>$18.00</span></p>
-              <p><a href="Product_06.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/home/product_07.jpg">
-            <div class="content">
-              <p><b>Celling Fan with QT04 ASIA Lamp.</b></p>
-              <p><b>Brand:</b> ASIA LIGHTING </p>
-              <p>Price: <span>$63.50</span></p>
-              <p><a href="Product_07.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/home/product_08.jpg">
-            <div class="content">
-              <p><b>Smart LED wire Lightstrip Bluetooth</b></p>
-              <p><b>Brand:</b> PHILIPS </p>
-              <p>Price: <span>$45.10</span></p>
-              <p><a href="Product_08.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
-        </div>
-
-      <!--New Products-->
-        <div class="product-list">
-          <div align="center">
-            <h1>
-              <img src="./image/NewProduct/NewIcon.gif" width="6%"> New Products 
-              <img src="./image/NewProduct/NewIcon.gif" width="6%">
-            </h1> 
-          </div>
-          
-          <div class="product-item">
-            <img src="./image/NewProduct/Product_01.jpg">
-            <div class="content">
-              <p><b>Huta Light For Life G9</b></p>
-              <p><b>Brand:</b> HUTA </p>
-              <p>Price: <span>$4.62</span></p>
-              <p><a href="LampsProduct01.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/NewProduct/Product_03.jpg">
-            <div class="content">
-              <p><b>Desk lamp decoration My Home DN031</b></p>
-              <p><b>Brand:</b> MY HOME </p>
-              <p>Price: <span>$11.65</span></p>
-              <p><a href="LampsProduct03.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/NewProduct/Product_05.jpg">
-            <div class="content">
-              <p><b>Xiaomi Mijia Smart Night Light.</b></p>
-              <p><b>Brand:</b> Xiaomi Mijia </p>
-              <p>Price: <span>$37.65</span></p>
-              <p><a href="LampsProduct05.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <img src="./image/NewProduct/Product_07a.jpg">
-            <div class="content">
-              <p><b>Yeelight Staria Pro YLCT03YL</b></p>
-              <p><b>Brand:</b> Yeelight </p>
-              <p>Price: <span>$55.05</span></p>
-              <p><a href="LampsProduct07.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
-        </div>  
         <br>
     </section>
 </div>
