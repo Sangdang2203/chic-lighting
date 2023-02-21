@@ -1,146 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="shortcut icon" type="image/x-icon" href="">
+<div class="container-fluid">
+  <section>
+    <table>
+      <tr>
+        <td>
+          <h1>Wall Lights</h1>
+        </td>
+        <td>
+          <div class="box">
+            <form name="search">
+                <input ng-model="brand" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+            </form>
+            <i class="fas fa-search"></i>
+          </div>      
+        </td>
+      </tr>
+    </table>
+    <!--Download file-->
+    <div>
+      <p>Fillter by Brand:</p>
+      <input type="checkbox" id="ck1" ng-model="cat1" value="DIHUIKEJI" checked ng-click="choose()" class="cat"> DIHUIKEJI &ensp;
+      <input type="checkbox" id="ck2" ng-model="cat2" value="Globe Electric" checked ng-click="choose()"> Globe Electric &ensp;
+      <input type="checkbox" id="ck3" ng-model="cat3" value="HWH Farmhouse" checked ng-click="choose()"> HWH Farmhouse &ensp;
+      <input type="checkbox" id="ck4" ng-model="cat4" value="LOG BARN" checked ng-click="choose()"> LOG BARN &ensp;
+      <input type="checkbox" id="ck5" ng-model="cat5" value="Westinghouse Lighting" checked ng-click="choose()"> Westinghouse Lighting &ensp;
+      <input type="checkbox" id="ck6" ng-model="cat6" value="Ganeep" checked ng-click="choose()"> Ganeep 
+  </div>
+  <br>
+    <div>
+      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <a href="./Docx/Wall_Lights_Description.docx" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+      </a>
+      <a href="./PDF/Wall_Lights_Description.pdf" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+      </a>
+    </div>
+    <br>
 
-  <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/home.js"></script>
-  
-  <title>WallLight</title>
-    
-  
-</head>
-<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
-    <header></header>
-    <section>
-      <table>
-        <tr>
-          <td>
-            <h1>WallLight</h1>
-          </td>
-          <td>
-            <div class="box">
-              <form name="search">
-                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-              </form>
-              <i class="fas fa-search"></i>
-            </div>
-          </td>
-        </tr>
-      </table> 
-      <!--Download file-->
-      <div>
-        <b style="font-size: 13pt;">Download Catalogue:</b>
-        <a href="./Docx/Wall_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .DOC
-        </a>
-        <a href="./PDF/Wall_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .PDF
-        </a>
-      </div><br>
-      <!--Products List-->
-        <div class="product-list">
-        
-          <div class="product-item">
-            <a href="WallLightProduct01.html"><img src="./image/WallLight/Product_01.jpg"></a>
-            <div class="content">
-              <p><b>E26 Socket Opal Glass Shade Wall Lantern </b></p>
-              <p><b>Brand:</b>	DIHUIKEJI</p>
-              
-              <p>Price: <span>$32.00</span></p>
-              <p><a href="WallLightProduct01.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="WallLightProduct02.html"><img src="./image/WallLight/Product_02.jpg"></a>
-            <div class="content">
-              <p><b>Globe Electric 52111 Holden 1-Light Long Arm Plug-in</b></p>
-              <p><b>Brand:</b> Globe Electric</p> 
-              
-              <p>Price: <span>$32.78</span></p>
-              <p><a href="WallLightProduct02.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="WallLightProduct03.html"><img src="./image/WallLight/Product_03.jpg"></a>
-            <div class="content">
-              <p><b>Dusk to Dawn Outdoor Lighting, HWH Farmhouse </b></p>
-              <p><b>Brand:</b> Govee</p>
-              
-              <p>Price: <span>$52.00</span></p>
-              <p><a href="WallLightProduct03.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="WallLightProduct04.html"><img src="./image/WallLight/Product_04.jpg"></a>
-            <div class="content">
-              <p><b>LOG BARN Vanity Lights, Wall Sconce in Rustic Wood and Oil,..</b></p> 
-              <p><b>Brand:</b> 	LOG BARN</p>
-              
-              <p>Price: <span>$99.99</span></p>
-              <p><a href="WallLightProduct04.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
-          <br>
-
-          <div class="product-item">
-            <a href="WallLightProduct05.html"><img src="./image/WallLight/Product_05.jpg"></a>
-            <div class="content">
-              <p><b>LOG BARN Pendant Lighting for Kitchen Island, Farmhouse Mini</b></p>
-              <p><b>Brand:</b>	LOG BARN</p>
-              
-              <p>Price: <span>$69.59</span></p>
-              <p><a href="WallLightProduct05.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="WallLightProduct06.html"><img src="./image/WallLight/Product_06.jpg"></a>
-            <div class="content">
-              <p><b>Westinghouse Lighting 6116600 Iron Hill Vintage-Style One-</b></p>
-              <p><b>Brand:</b>	Westinghouse Lighting</p>
-              
-              <p>Price: <span>$58.44</span></p>
-              <p><a href="WallLightProduct06.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="WallLightProduct07.html"><img src="./image/WallLight/Product_07.jpg"></a>
-            <div class="content">
-              <p><b>Westinghouse Lighting 6370100 Iron Hill 9-Inch, One-Light</b></p>
-              <p><b>Brand:</b> Westinghouse Lighting</p>
-              
-              <p>Price: <span> $39.31</span></p>
-              <p><a href="WallLightProduct07.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="WallLightProduct08.html"><img src="./image/WallLight/Product_08.jpg"></a>
-            <div class="content">
-              <p><b>Ganeep Industrial Vintage Ceramic Milk White</b></p>
-              <p><b>Brand:</b>	Ganeep</p>
-              
-              <p>Price: <span>$59.99</span></p>
-              <p><a href="WallLightProduct08.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
+    <!--Wall Lights List --> <!--Add data from walls.json-->
+    <div ng-repeat="type in productTypes" class="product-list">
+      <div ng-repeat="wall in walls | filter:{ type: type.type } | filter:brand" class="product-item">
+        <img ng-src="{{wall.image}}">
+        <div class="content">
+          <p><b>{{wall.name}}</b></p>
+          <p><b>Brand:</b> {{wall.brand}} </p>
+          <p>Price: <span>{{wall.price | currency}}</span></p>
+          <p><a ng-href="#!/wall/{{wall.id}}"><button>Buy Now</button></a></p>
         </div>
-    </section>
+      </div>
 
-    <footer></footer>
-</body>
-</html>
+      <div style="clear: both;"></div>
+    </div>
+    <br>
+  </section>
+</div>

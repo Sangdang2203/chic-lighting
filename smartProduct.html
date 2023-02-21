@@ -1,0 +1,63 @@
+<main class="container-fluid">
+  <section>
+    <table style="margin-top: 20px; text-align: justify;">
+      <tr>
+        <td>
+          <div class="slideshow-container">
+            <div class="mySlides1">
+              <img ng-src="{{smart.image}}" width="600px" height="600px">
+            </div>
+
+            <div class="mySlides1">
+              <img ng-src="{{smart.image1}}" width="600px" height="600px">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+          </div>
+        </td>
+
+        <td>
+          <div style="margin-left: 50px;">
+            <p>
+              <b>{{smart.name}}</b>
+              <img src="./image/home/hot.gif" width="6%">
+            </p>
+            <p>Price: <span>{{smart.price | currency}}</span></p>
+
+            <b>Product Specifications:</b>
+            <ul style="margin-left: 50px;">
+              <li>Brand: {{ smart.brand }}</li>
+              <li>{{smart.specification}}</li> 
+            </ul>
+            <b>Product Description:</b>
+            <ul style="margin-left: 50px;">
+              <li>{{smart.description}}</li> 
+            </ul>
+          </div>
+          <div style="margin: 20px 50px;">
+            <b>Quantity:</b> <input class="input-style" type="number" placeholder=" 1"> {{smart.quantity}} available.
+          </div>
+          
+          <div style="margin: 20px 50px;">
+            <input class="btn btn-info" type="button" value="Add to Cart">
+            <a href="PurchaseForm.html"><input class="btn btn-danger" type="button" value="Buy Now"></a>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <form action="">
+      <div>
+        <textarea placeholder=" Enter your comment:"></textarea>
+        <div>
+          <a href="index.html"><input class="btn btn-info" type="button" value="Send"></a>
+        </div>
+      </div>
+    </form>
+
+    <div style="float: right;">
+      <a href="index.html"><img src="./image/home/Homepage.gif" style="width: 50%;"></a>
+    </div>
+  </section>
+</main>

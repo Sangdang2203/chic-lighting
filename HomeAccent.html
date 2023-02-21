@@ -1,134 +1,46 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HomeAccent</title>
-</head>
-<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
-    <header></header>-->
-    <section>
-      <table>
-        <tr>
-          <td>
-            <h1>Home Accent</h1>
-          </td>
-          <td>
-            <div class="box">
-              <form name="search">
-                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-              </form>
-              <i class="fas fa-search"></i>
-            </div>
-          </td>
-        </tr>
-      </table> 
-      <!--Download file-->
-      <div>
-        <b style="font-size: 13pt;">Download Catalogue:</b>
-        <a href="./Docx/HomeAccent_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .DOC
-        </a>
-        <a href="./PDF/HomeAccent_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .PDF
-        </a>
-      </div><br>
-      <!--Products List-->
-        <div class="product-list">
-        
-          <div class="product-item">
-            <a href="HomeaccentProduct1.html"><img src="./image/Homeaccent/Product01.jpg"></a>
-            <div class="content">
-              <p><b>Home Accents Holiday 200-Light LED Multi-Colored Dome Light String.</b></p>
-              <p><b>Brand:</b> HomeAccent</p>
-              
-              <p>Price: <span>$10.00</span></p>
-              <p><a href="HomeaccentProduct1.html"><button>Buy Now</button></a></p>
-            </div>
+<div class="container-fluid">
+  <section>
+    <table>
+      <tr>
+        <td>
+          <h1>Home Accents</h1>
+        </td>
+        <td>
+          <div class="box">
+            <form name="search">
+              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+            </form>
+            <i class="fas fa-search"></i>
           </div>
+        </td>
+      </tr>
+    </table>
+    <!--Download file-->
+    <div>
+      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <a href="./Docx/HomeAccent_Description.docx" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+      </a>
+      <a href="./PDF/HomeAccent_Description.pdf" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+      </a>
+    </div>
+    <br>
 
-          <div class="product-item">
-            <a href="HomeaccentProduct2.html"><img src="./image/Homeaccent/Product02.jpg"></a>
-            <div class="content">
-              <p><b>400 LED Curtain Lights Programmable for Valentines Day Decor.</b></p>
-              <p><b>Brand:</b> Avatar Controls</p> 
-              
-              <p>Price: <span>$60.98</span></p>
-              <p><a href="HomeaccentProduct2.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="HomeaccentProduct3.html"><img src="./image/Homeaccent/Product03.jpg"></a>
-            <div class="content">
-              <p><b>Govee LED Strip Lights, 32.8ft RGB LED Light Strip with Remote Control.</b></p>
-              <p><b>Brand:</b> Govee</p>
-              
-              <p>Price: <span>$20.00</span></p>
-              <p><a href="HomeaccentProduct3.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="HomeaccentProduct4.html"><img src="./image/Homeaccent/Product04.jpg"></a>
-            <div class="content">
-              <p><b>OurLeeme Lawn Flood Light Stake, Waterproof Outdoor Remote Controller.</b></p> 
-              <p><b>Brand:</b> OurLeeme</p>
-              
-              <p>Price: <span>$50.00</span></p>
-              <p><a href="HomeaccentProduct4.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
-          <br>
-
-          <div class="product-item">
-            <a href="HomeaccentProduct5.html"><img src="./image/Homeaccent/Product05b.jpg"></a>
-            <div class="content">
-              <p><b>Christmas Lights 25Ft Clear C7 Vintage Lights.</b></p>
-              <p><b>Brand:</b>	Abeja</p>
-              
-              <p>Price: <span>$35.60</span></p>
-              <p><a href="HomeaccentProduct5.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="HomeaccentProduct6.html"><img src="./image/Homeaccent/Product06.jpg"></a>
-            <div class="content">
-              <p><b>25 Foot C9 Multi Ceramic Christmas String Light Set.</b></p>
-              <p><b>Brand:</b> Novelty Lights.</p>
-              
-              <p>Price: <span>$70.00</span></p>
-              <p><a href="HomeaccentProduct6.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="HomeaccentProduct7.html"><img src="./image/Homeaccent/Product07.jpg"></a>
-            <div class="content">
-              <p><b>Minka Lavery Crystal Chandelier Pendant Lighting 3150-77.</b></p>
-              <p><b>Brand:</b> Minka Lavery</p>
-              
-              <p>Price: <span>$344.95</span></p>
-              <p><a href="HomeaccentProduct7.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="HomeaccentProduct8.html"><img src="./image/Homeaccent/Product08.jpg"></a>
-            <div class="content">
-              <p><b>Minka Lavery 4446-582 Laurel Estate Crystal Chandelier Lighting.</b></p>
-              <p><b>Brand:</b>	Minka Lavery</p>
-              
-              <p>Price: <span>$414.95</span></p>
-              <p><a href="HomeaccentProduct8.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
+    <!--Homeaccents List --> <!--Add data from homeaccents.json-->
+    <div ng-repeat="type in productTypes" class="product-list">
+      <div ng-repeat="homeaccent in homeaccents | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+        <img ng-src="{{homeaccent.image}}">
+        <div class="content">
+          <p><b>{{homeaccent.name}}</b></p>
+          <p><b>Brand:</b> {{homeaccent.brand}} </p>
+          <p>Price: <span>{{homeaccent.price | currency}}</span></p>
+          <p><a ng-href="#!/homeaccent/{{homeaccent.id}}"><button>Buy Now</button></a></p>
         </div>
-    </section>
+      </div>
 
-    <footer></footer>
-</body>
-</html>
+      <div style="clear: both;"></div>
+    </div>
+    <br>
+  </section>
+</div>

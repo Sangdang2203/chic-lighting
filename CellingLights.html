@@ -1,149 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="./css/index.css">
-
-  <title>Celling Lights</title>
-</head>
-<body>
-  <header></header>
-    <section>
-      <table>
-        <tr>
-          <td>
-            <h1>Celling Lights</h1>
-          </td>
-          <td>
-            <div class="box">
-              <form name="search">
-                <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-              </form>
-              <i class="fas fa-search"></i>
-            </div>
-          </td>
-        </tr>
-      </table>
-       
-
-      <div>
-        <b style="font-size: 13pt;">Download Catalogue:</b>
-        <a href="./Docx/Celling_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .DOC
-        </a>
-        <a href="./PDF/Celling_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .PDF
-        </a>
-      </div><br>
-
-
-      <div class="product-list">
-        
-        <div class="product-item">
-          <a href="CellingLightProduct01.html"><img src="./image/CellingLights/product1.jpg"></a>
-          <div class="content">
-            <p><b>NOVELUX Slim Panel Ceiling Lights Damp-Rated</b></p>
-            <p><b>Brand:</b> NOVELUX</p>
-            
-            <p>Price: <span>$26.00</span></p>
-            <p><a href="CellingLightProduct01.html"><button>Buy Now</button></a></p>
+<div class="container-fluid">
+  <section>
+    <table>
+      <tr>
+        <td>
+          <h1>Ceiling Lights</h1>
+        </td>
+        <td>
+          <div class="box">
+            <form name="search">
+              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+            </form>
+            <i class="fas fa-search"></i>
           </div>
-        </div>
+        </td>
+      </tr>
+    </table>
+    <!--Download file-->
+    <div>
+      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <a href="./Docx/Celling_Lights_Description.docx" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+      </a>
+      <a href="./PDF/Celling_Lights_Description.pdf" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+      </a>
+    </div>
+    <br>
 
-        <div class="product-item">
-          <a href="CellingLightProduct02.html"><img src="./image/CellingLights/product2.jpg"></a>
-          <div class="content">
-            <p><b>PARMIDA (12 Pack) 4 Inch Ultra-Thin LED Recessed Ceiling Light</b></p>
-            <p><b>Brand:</b> Parmida LED Technologies</p> 
-            
-            <p>Price: <span>$66.00</span></p>
-            <p><a href="CellingLightProduct02.html"><button>Buy Now</button></a></p>
-          </div>
+    <!--Ceiling Lights List --> <!--Add data from ceilings.json-->
+    <div ng-repeat="type in productTypes" class="product-list">
+      <div ng-repeat="ceiling in ceilings | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+        <img ng-src="{{ceiling.image}}">
+        <div class="content">
+          <p><b>{{ceiling.name}}</b></p>
+          <p><b>Brand:</b> {{ceiling.brand}} </p>
+          <p>Price: <span>{{ceiling.price | currency}}</span></p>
+          <p><a ng-href="#!/ceiling/{{ceiling.id}}"><button>Buy Now</button></a></p>
         </div>
-
-        <div class="product-item">
-          <a href="CellingLightProduct03.html"><img src="./image/CellingLights/product3.jpg"></a>
-          <div class="content">
-            <p><b>PARMIDA (12 Pack) 4 Inch - Thin LED Adjustable Gimbal Recessed Lighting</b></p>
-            <p><b>Brand:</b> Parmida LED Technologies</p>
-            
-            <p>Price: <span>$78.00</span></p>
-            <p><a href="CellingLightProduct03.html"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-
-        <div class="product-item">
-          <a href="CellingLightProduct04.html"><img src="./image/CellingLights/product4.jpg"></a>
-          <div class="content">
-            <p><b>LUXRITE 3 Inch Square LED Recessed Ceiling Light</b></p> 
-            <p><b>Brand:</b> LUXRITE</p>
-            
-            <p>Price: <span>$75.05</span></p>
-            <p><a href="CellingLightProduct04.html"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-        <div style="clear: both;"></div>
-        <br>
-
-        <div class="product-item">
-          <a href="CellingLightProduct05.html"><img src="./image/CellingLights/product5.jpg"></a>
-          <div class="content">
-            <p><b>Feanron Farmhouse 2-Light Black Flush Mount Ceiling Light Fixtures</b></p>
-            <p><b>Brand:</b> Feanron</p>
-            
-            <p>Price: <span>$58.00</span></p>
-            <p><a href="CellingLightProduct05.html"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-
-        <div class="product-item">
-          <a href="CellingLightProduct06.html"><img src="./image/CellingLights/product6.jpg"></a>
-          <div class="content">
-            <p><b>Drosbey 36W LED Ceiling Light Fixture, 13in Flush Mount Light Fixture</b></p>
-            <p><b>Brand:</b>	Drosbey</p>
-            
-            <p>Price: <span>$26.00</span></p>
-            <p><a href="CellingLightProduct06.html"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-
-        <div class="product-item">
-          <a href="CellingLightProduct07.html"><img src="./image/CellingLights/product7.jpg"></a>
-          <div class="content">
-            <p><b>MAXvolador Industrial Semi Flush Mount Ceiling Light</b></p>
-            <p><b>Brand:</b> MAXvolador</p>
-            
-            <p>Price: <span> $29.00</span></p>
-            <p><a href="CellingLightProduct07.html"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-
-        <div class="product-item">
-          <a href="CellingLightProduct08.html"><img src="./image/CellingLights/product8.jpg"></a>
-          <div class="content">
-            <p><b>2 Pack LED Garage Lights, 120W Deformable LED Garage Ceiling Lights</b></p>
-            <p><b>Brand:</b>	Mefflypee</p>
-            
-            <p>Price: <span>$29.00</span></p>
-            <p><a href="CellingLightProduct08.html"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-        <div style="clear: both;"></div>
       </div>
 
-
-    </section>
-
-    
-
-
-    <footer></footer>
-</body>
-</html>
+      <div style="clear: both;"></div>
+    </div>
+    <br>
+  </section>
+</div>

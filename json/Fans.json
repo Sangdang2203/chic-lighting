@@ -1,72 +1,114 @@
-{
-    "Fans": 
-    [
-        {"id":1,
-         "name":"Dreo Cruiser Pro T1 Tower Fan.", 
-         "brand":"Dreo", 
-         "description":"Customizable Comfort: Featured with 4 modes (Normal/Natural/Sleep/Auto) and 4 speeds from soothing-soft to storm-strong.", 
-         "img":"./image/fans/Product_01.jpg", 
-         "price": "$105.00"
-        },
-    
-        {"id":2, 
-         "name":"BLACK DECKER Stand Fan with Remote.", 
-         "brand": "BLACK DECKER", 
-         "description":"Carefully made by hand, they are the perfect choice for floral and fabric decorations and even in a children's room.", 
-         "img":"./image/fans/Product_04a.jpg", 
-         "price": "$40.99"
-        },
-    
-        {"id":3, 
-         "name":"Honeywell Ceiling Fans Ocean Breeze.", 
-         "brand":"Honeywell", 
-         "description":"LED LIGHT SPECS: Two E26 / B10 LED bulbs. Dimmable up to 20%, 2700K, 80CRI, 450 lumens, 4.5 watts.", 
-         "img":"./image/fans/Product_03.jpg", 
-         "price": "$52.15"
-        },
-    
-        {"id":4, 
-         "name":"IRIS USA WOOZOO Oscillating Fan.",
-         "brand":"IRIS USA, Inc.", 
-         "description":"The included remote gives you full control over the settings on your fan; switching the power on and off, changing the mode, etc.", 
-         "img":"./image/fans/Product_05.jpg", 
-         "price": "$98.99"
-        },
-    
-        {"id":5, 
-         "name":"YITAHOME Farmhouse Ceiling Fan.", 
-         "brand":"YITAHOME", 
-         "description":"This lighting & ceiling fan feature with 1/2/4/8 timer and 3 speeds adjustable function, gives you a worriless sleep.", 
-         "img":"./image/fans/Product_02.jpg", 
-         "price": "$131.88"
-        },
-    
-        {"id":6, 
-         "name":"Vornado Atom 1 Oscillating Tower Fan.", 
-         "brand":"Vornado", 
-         "description":"4 quiet speed settings can easily be adjusted through the LED controls. Atom 1 is small but mighty.", 
-         "img":"./image/fans/Product_06.jpg", 
-         "price": "$69.95"
-        },
-
-        {"id":7, 
-         "name":"Vornado 693 Mid-Size Air Circulator Fan.", 
-         "brand":"Vornado", 
-         "description":"SIMPLE CONTROLS — The 3-speed manual control is easy to use and allows you to dial in your comfort.", 
-         "img":"./image/fans/Product_07.jpg", 
-         "price": "$109.99"
-        },
-
-        {"id":8, 
-         "name":"Vornado 173 Air Circulator.", 
-         "brand":"Vornado", 
-         "description":"Allow you to select from 3 speed settings. Equipped with a pivoting head and adjustable height to direct the air.", 
-         "img":"./image/fans/Product_08.jpg", 
-         "price": "$65.88"
-        }
-    ]
-}
-
-
-
-    
+[
+    {
+        "id": 1,
+        "name": "Dreo Cruiser Pro T1 Tower Fan.",
+        "brand": "Dreo",
+        "price": 105,
+        "image": "./image/fans/Product_01.jpg",
+        "image1": "./image/fans/Product_01a.jpg",
+        "image2": "./image/fans/Product_01b.jpg",
+        "image3": "./image/fans/Product_01c.jpg",
+        "type": "fan",
+        "quantity": 35,
+        "specification": "Color: Black.\r\n Electric fan design : Floor Fan.\r\n Power Source : Corded Electric.\r\n Special Feature : Timer, bladeless, oscillating, remote controlled.\r\n Mounting Type : Free Standing.",
+        "description": "24ft/s Velocity: This tower fan is equipped with a powerful motor and a unique air-duct that can provide a velocity of 24ft/s, effectively distributing airflow around the room. It lets you enjoy the cool quickly.\r\n 90° Oscillation Tower Fan: Compared to other 65°oscillating fans, for quicker cooling, ours provides wider coverage of airflow to increase indoor air circulation.\r\n A6 Speeds plus 3 Modes plus Additional Auto Mode: Customize your breeze with 6 speeds and 3 modes (Normal, Natural, and Sleep). Stay cool on hot summer days in the bedroom, study, or office."
+    },
+    {
+        "id": 2,
+        "name": "BLACK+DECKER Stand Fan with Remote",
+        "brand": "BLACK+DECKER",
+        "price": 72,
+        "image": "./image/fans/Product_02a.jpg",
+        "image1": "./image/fans/Product_02.jpg",
+        "image2": "./image/fans/Product_02b.jpg",
+        "image3": "./image/fans/Product_02c.jpg",
+        "type": "fan",
+        "quantity": 150,
+        "specification": "Color : White.\r\n Warranty Duration: 12 months.\r\n Style home : Living Room, Bedroom.\r\n Special : Feature Programmable, Adjustable Height, Adjustable Tilt, Oscillating, Remote Controlled, Timer, LED Light.\r\n Recommended Uses For Product: Air Circulation.",
+        "description": "PEDESTAL FAN WITH REMOTE CONTROL This stand up fan (15.75 x 17.72 x 22.83 inches) rests on the floor and creates fast cooling in medium to large rooms of the home like bedrooms, offices, garages, RVs, and dorms..\r\n ADJUSTABLE HEIGHT & TILT To suit your specific cooling needs, you can change the height of this stand fan, and alter the vertical angle to circulate air upwards or downwards. Weighing less than 10 lbs..\r\n AUTOMATIC MODES & EASY ACCESS CONTROLS .The 3 speed settings are adjusted quickly & simply right from the LED control display panel or remote control (batteries not included)."
+    },
+    {
+        "id": 3,
+        "name": "Honeywell Ceiling Fans Ocean Breeze",
+        "brand": "Honeywell Ceiling Fans",
+        "price": 52.15,
+        "image": "./image/fans/Product_03.jpg",
+        "image1": "./image/fans/Product_03a.jpg",
+        "image2": "./image/fans/Product_03b.jpg",
+        "image3": "./image/fans/Product_03c.jpg",
+        "type": "fan",
+        "quantity": 45,
+        "specification": "Electric fan design : Ceiling Fan.\r\n Style: Classic,Casual,Modern,Contemporary.\r\n Warranty Duration: 12 months.\r\n Room Type : Kitchen, Bedroom.\r\n Special Feature : LED Light.\r\n Recommended Uses For Product: Air Circulation.\r\n Mounting Type: Celling Mount",
+        "description": "CONTEMPORARY CEILING FAN: Modernize your space with a contemporary Honeywell ceiling fan. This small ceiling fan is perfect for kitchens, bedrooms, bathrooms and smaller spaces.\r\n QUIET, REVERSIBLE MOTOR: Conveniently quiet, 3 speed - reversible motor. Downdraft mode and updraft mode for optimal airflow. Control the temperature of your space with ease.\r\n LED LIGHT SPECS: Two E26 / B10 LED bulbs (included with purchase). Dimmable up to 20%, 2700K, 80CRI, 450 lumens, 4.5 watts and housed in a light-frosted white globe light."
+    },
+    {
+        "id": 4,
+        "name": "IRIS USA WOOZOO Oscillating Fan.",
+        "brand": "IRIS USA, Inc.",
+        "price": 98.99,
+        "image": "./image/fans/Product_04a.jpg",
+        "image1": "./image/fans/Product_04.jpg",
+        "image2": "./image/fans/Product_04b.jpg",
+        "image3": "./image/fans/Product_04c.jpg",
+        "type": "fan",
+        "quantity": 3,
+        "specification": "Color : White.\r\n Electric fan design : Table Fan.\r\n Room Type : Office.\r\n Recommended Uses For Product: Cooling.\r\n Mounting Type : Free Standing.",
+        "description": "OSCILLATION Achieve full room auto air circulation like never before with WOOZOO oscillation. Set the fan to oscillate 120° horizontally, 65° vertically, or activate both simultaneously to ensure airflow reaches every corner of the room. The stylish, modern aesthetic is sure to fit in with any bedroom, bathroom, kitchen, office, dorm room, or any room in need of airflow.\r\n REMOTE - Change your settings without changing your seat. The included remote gives you full control over the settings on your fan; switching the power on and off, changing the mode, changing the speed, auto-oscillation, and setting a timer, it's all accessible via the remote."
+    },
+    {
+        "id": 5,
+        "name": "YITAHOME Farmhouse Ceiling Fan",
+        "brand": "YITAHOME",
+        "price": 131.88,
+        "image": "./image/fans/Product_05.jpg",
+        "image1": "./image/fans/Product_05a.jpg",
+        "image2": "./image/fans/Product_05b.jpg",
+        "image3": "./image/fans/Product_05c.jpg",
+        "type": "fan",
+        "quantity": 349,
+        "specification": "Lighting Type: White and Yellow.\r\n Color : Oak+Black.\r\n Warranty Duration: 12 months.\r\n Recommended Uses For Product: Air Circulation.",
+        "description": "RUSTIC CEILING FAN: Certified by ETL; Compact with barnwood tones blades, mixed with matte black hardware complement your home decor style, inspired from the great outdoors.\r\n 3 SPEEDS & 4 TIMERS: This lighting & ceiling fan feature with 1/2/4/8 timer and 3 speeds adjustable function make your daily routines more regularly or gives you a worriless sleep.\r\n SMART REMOTE: Tap the switch anytime with no annoying beep, and hang the remote on the wall with our attached wall-mount holder, no need to look for it everywhere. (Battery is not) included *Need 12V 23A Battery."
+    },
+    {
+        "id": 6,
+        "name": "Vornado Atom 1 Oscillating Tower Fan",
+        "brand": "Vornado",
+        "price": 69.95,
+        "image": "./image/fans/Product_06.jpg",
+        "image1": "./image/fans/Product_06a.jpg",
+        "image2": "./image/fans/Product_06b.jpg",
+        "image3": "./image/fans/Product_06c.jpg",
+        "type": "fan",
+        "quantity": 56,
+        "specification": "Electric fan design : Floor Fan. Room Type : Bedroom, living room, dining room, kitchen, hallway, bathroom.\r\n Special Feature : Corded Electric.\r\n Recommended Uses For Product : Air Circulation.\r\n Controller Type : Button Control",
+        "description": "UNEXPECTEDLY POWERFUL — Utilizes Vornado's signature Vortex air circulation to more effectively move all the air in a small room.\r\n COMPACT DESIGN — At just 10 inches tall and 4.7 inches wide, Atom 1 is small but mighty and can provide a gentle breeze or a high-velocity rush of air.\r\n SUPERIOR SUPPORT — When you choose a Vornado Tower Fan, you’re investing in superior performance and design that will deliver total satisfaction. If not, we'll replace it, for 5 years."
+    },
+    {
+        "id": 7,
+        "name": "Vornado 693 Air Circulator Fan",
+        "brand": "Vornado",
+        "price": 109.99,
+        "image": "./image/fans/Product_07.jpg",
+        "image1": "./image/fans/Product_07a.jpg",
+        "image2": "./image/fans/Product_07b.jpg",
+        "image3": "./image/fans/Product_07c.jpg",
+        "type": "fan",
+        "quantity": 120,
+        "specification": "Color : Black.\r\n Electric fan design : Table Fan.\r\n Power Source : Corded Electric.\r\n Room Type : Laundry Room, Kitchen.\r\n Style : 693 - 3 Speed.\r\n Recommended Uses For Product: Air Circulation.",
+        "description": "POWERFUL VORTEX ACTION — Utilizes Vornado's signature Vortex air circulation to more effectively move air throughout the entire room. Made in the USA of U.S. and imported parts.\r\n MULTI-DIRECTIONAL AIRFLOW — Equipped with a pivoting head and adjustable height (28” to 40”) to direct the air where you need it.\r\n OPTIMUM PERFORMANCE — Deep-pitched blades paired with an inlet guide cone, enclosed air duct, and spiral grill help move air up to 70 ft.\r\n SUPERIOR SUPPORT — Backed by a 5-year hassle-free promise and supported by a customer service team based in Andover, KS."
+    },
+    {
+        "id": 8,
+        "name": "Vornado 173 Air Circulator Fan",
+        "brand": "Vornado",
+        "price": 65.88,
+        "image": "./image/fans/Product_08.jpg",
+        "image1": "./image/fans/Product_08a.jpg",
+        "image2": "./image/fans/Product_08b.jpg",
+        "image3": "./image/fans/Product_08c.jpg",
+        "type": "fan",
+        "quantity": 3,
+        "specification": "Color: Black.\r\n Electric fan design: Floor Fan.\r\n Style : 173 - 37 inches.\r\n Special Feature: Timer",
+        "description": "POWERFUL VORTEX ACTION — Utilizes Vornado's signature Vortex air circulation to more effectively move air throughout the entire room. Made in the USA of U.S. and imported parts.\r\n MULTI-DIRECTIONAL AIRFLOW — Equipped with a pivoting head and adjustable height (28” to 40”) to direct the air where you need it.\r\n OPTIMUM PERFORMANCE — Deep-pitched blades paired with an inlet guide cone, enclosed air duct, and spiral grill help move air up to 70 ft..\r\n SUPERIOR SUPPORT — Backed by a 5-year hassle-free promise and supported by a customer service team based in Andover, KS."
+    }
+]

@@ -1,143 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fans</title>
- 
-</head>
-<body class="container-fluid" ng-app="myApp" ng-controler="myCtrl">
-    <header></header>
-
-      <section>
-        <table>
-          <tr>
-            <td>
-              <h1>Fans</h1>
-            
-            <td>
-              <div class="box">
-                <form name="search">
-                  <input type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-                </form>
-                <i class="fas fa-search"></i>
-              </div>
-          </tr>
-        </table> 
-        <!--Download file-->
-        <div>
-          <b style="font-size: 13pt;">Download Catalogue:</b>
-          <a href="./Docx/Fans_Description.docx" download>
-            <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .DOC
-          </a>
-          <a href="./PDF/Fans_Description.pdf" download>
-            <img src="./image/home/Download.png" alt="" width="40px" height="40px">File .PDF
-          </a>
-        </div><br>
-        <!--Product list-->
-        <div class="product-list">
+<div class="container-fluid">
+  <section>
+    <table>
+      <tr>
+        <td>
+          <h1>Fans</h1>
         
-          <div class="product-item">
-            <a href="FansProduct_01.html"><img src="./image/fans/Product_01.jpg"></a>
-            <div class="content">
-              <b>Dreo Cruiser Pro T1 Tower Fan.</b>
-              <p><b>Brand:</b> Dreo</p>
-              
-              <p>Price: <span>$105.00</span></p> 
-              <p><a href="FansProduct_01.html"><button>Buy Now</button></a></p>
+        <td>
+          <div class="box">
+            <div name="search">
+              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
             </div>
+            <i class="fas fa-search"></i>
           </div>
+      </tr>
+    </table> 
+    <!--Download file-->
+    <div>
+      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <a href="./Docx/Fans_Description.docx" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+      </a>
+      <a href="./PDF/Fans_Description.pdf" download>
+        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+      </a>
+    </div><br>
 
-          <div class="product-item">
-            <a href="FansProduct_04.html"><img src="./image/fans/Product_04a.jpg"></a>
-            <div class="content">
-              <b>BLACK DECKER Stand Fan with Remote.</b>
-              <p><b>Brand:</b> BLACK DECKER</p> 
-              
-              <p>Price: <span>$40.99</span></p>
-              <p><a href="FansProduct_04.html"><button>Buy Now</button></a>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="FansProduct_03.html"><img src="./image/fans/Product_03.jpg"></a>
-            <div class="content">
-              <b>Honeywell Ceiling Fans Ocean Breeze.</b>
-              <p><b>Brand:</b> Honeywell</p>
-              
-              <p>
-                Price: <span>$52.15</span> &ensp;
-                <b style="color: goldenrod;">SAVE 50%</b>
-              </p>
-              <p><a href="FansProduct_03.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="fansProduct_05.html"><img src="./image/fans/Product_05.jpg"></a>
-            <div class="content">
-              <b>IRIS USA WOOZOO Oscillating Fan.</b> 
-              <p><b>Brand:</b> IRIS USA, Inc.</p>
-              
-              <p>Price: <span>$98.99</span></p> 
-              <p><a href="FansProduct_05.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div style="clear: both;"></div>
-          <br>
-          
-          <div class="product-item">
-            <a href="FansProduct_02.html"><img src="./image/fans/Product_02.jpg"></a>
-            <div class="content">
-              <p><b>YITAHOME Farmhouse Ceiling Fan.</b></p>
-              <p><b>Brand:</b> YITAHOME</p>
-              
-              <p>Price: <span>$131.88</span></p>
-              <p><a href="FansProduct_02.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="FansProduct_06.html"><img src="./image/fans/Product_06.jpg"></a>
-            <div class="content">
-              <p><b>Vornado Atom 1 Oscillating Tower Fan.</b></p>
-              <p><b>Brand:</b> Vornado</p>
-              
-              <p>
-                Price: <span>$69.95</span> &ensp;
-                <b style="color: goldenrod;">SAVE 20%</b>
-              </p>
-              <p><a href="FansProduct_06.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="FansProduct_07.html"><img src="./image/fans/Product_07.jpg"></a>
-            <div class="content">
-              <p><b>Vornado 693 Mid-Size Air Circulator Fan</b></p>
-              
-              <p><b>Brand:</b> Vornado</p>
-              
-              <p>Price: <span>$109.99</span></p>
-              <p><a href="FansProduct_07.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-
-          <div class="product-item">
-            <a href="FansProduct_08.html"><img src="./image/fans/Product_08.jpg"></a>
-            <div class="content">
-              <p><b>Vornado 173 Air Circulator.</b></p> 
-              <p><b>Brand:</b> Vornado</p>
-              
-              <p>Price: <span>$65.88</span></p> 
-              <p><a href="FansProduct_08.html"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
+    <!-- Fans list--> <!--Add data from fans.json-->
+    <div ng-repeat="type in productTypes" class="product-list">
+      <div ng-repeat="fan in fans | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+        <img ng-src="{{fan.image}}">
+        <div class="content">
+          <p><b>{{fan.name}}</b></p>
+          <p><b>Brand:</b> {{fan.brand}} </p>
+          <p>Price: <span>{{fan.price | currency}}</span></p>
+          <p><a ng-href="#!/fan/{{fan.id}}"><button>Buy Now</button></a></p>
         </div>
-      </section>
-    <footer></footer>
-</body>
-</html>
+      </div>
+
+      <div style="clear: both;"></div>
+    </div>
+    <br>
+    
+  </section>
+</div>
