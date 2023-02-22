@@ -21,7 +21,7 @@ eProject documentation at: https://github.com/Sangdang2203/eProject_Sem01/tree/m
 
 ============================
 
-eProject published at: https://sangdang2203.github.io/eProject_Sem01/index.html
+eProject published at: https://sangdang2203.github.io/eProject_Sem01/#!/home
 
 ============================
 
