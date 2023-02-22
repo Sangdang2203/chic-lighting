@@ -31,8 +31,9 @@
         <img ng-src="{{fan.image}}">
         <div class="content">
           <p><b>{{fan.name}}</b></p>
-          <p><b>Brand:</b> {{fan.brand}} </p>
-          <p>Price: <span>{{fan.price | currency}}</span></p>
+          <p><b>Brand:</b> {{fan.brand | uppercase}}</p>
+          <p>Price: <span>{{fan.price | currency}}</span>
+          </p>
           <p><a ng-href="#!/fan/{{fan.id}}"><button>Buy Now</button></a></p>
         </div>
       </div>

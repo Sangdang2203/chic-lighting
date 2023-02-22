@@ -33,7 +33,7 @@
           <img ng-src="{{decoration.image}}">
           <div class="content">
             <p><b>{{decoration.name}}</b></p>
-            <p><b>Brand:</b> {{decoration.brand}} </p>
+            <p><b>Brand:</b> {{decoration.brand | uppercase}} </p>
             <p>Price: <span>{{decoration.price | currency}}</span></p>
             <p><a ng-href="#!/decoration/{{decoration.id}}"><button>Buy Now</button></a></p>
           </div>

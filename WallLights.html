@@ -8,7 +8,7 @@
         <td>
           <div class="box">
             <form name="search">
-                <input ng-model="brand" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+              <input ng-model="brand" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
             </form>
             <i class="fas fa-search"></i>
           </div>      
@@ -17,16 +17,6 @@
     </table>
     <!--Download file-->
     <div>
-      <p>Fillter by Brand:</p>
-      <input type="checkbox" id="ck1" ng-model="cat1" value="DIHUIKEJI" checked ng-click="choose()" class="cat"> DIHUIKEJI &ensp;
-      <input type="checkbox" id="ck2" ng-model="cat2" value="Globe Electric" checked ng-click="choose()"> Globe Electric &ensp;
-      <input type="checkbox" id="ck3" ng-model="cat3" value="HWH Farmhouse" checked ng-click="choose()"> HWH Farmhouse &ensp;
-      <input type="checkbox" id="ck4" ng-model="cat4" value="LOG BARN" checked ng-click="choose()"> LOG BARN &ensp;
-      <input type="checkbox" id="ck5" ng-model="cat5" value="Westinghouse Lighting" checked ng-click="choose()"> Westinghouse Lighting &ensp;
-      <input type="checkbox" id="ck6" ng-model="cat6" value="Ganeep" checked ng-click="choose()"> Ganeep 
-  </div>
-  <br>
-    <div>
       <b style="font-size: 13pt;">Download Catalogue:</b>
       <a href="./Docx/Wall_Lights_Description.docx" download>
         <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
@@ -34,16 +24,14 @@
       <a href="./PDF/Wall_Lights_Description.pdf" download>
         <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
       </a>
-    </div>
-    <br>
-
+    </div><br>
     <!--Wall Lights List --> <!--Add data from walls.json-->
     <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="wall in walls | filter:{ type: type.type } | filter:brand" class="product-item">
+      <div ng-repeat="wall in walls | filter:{ type: type.type } | filter: brand" class="product-item">
         <img ng-src="{{wall.image}}">
         <div class="content">
           <p><b>{{wall.name}}</b></p>
-          <p><b>Brand:</b> {{wall.brand}} </p>
+          <p><b>Brand:</b> {{wall.brand | uppercase}} </p>
           <p>Price: <span>{{wall.price | currency}}</span></p>
           <p><a ng-href="#!/wall/{{wall.id}}"><button>Buy Now</button></a></p>
         </div>

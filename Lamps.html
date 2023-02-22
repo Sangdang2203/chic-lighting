@@ -8,7 +8,7 @@
         <td>
           <div class="box">
             <form name="search">
-              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
+              <input ng-model="brand" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
             </form>
             <i class="fas fa-search"></i>
           </div>
@@ -29,11 +29,11 @@
 
     <!--Lamps List --> <!--Add data from lamps.json-->
     <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="lamp in lamps | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+      <div ng-repeat="lamp in lamps | filter:{ type: type.type } | filter:brand" class="product-item">
         <img ng-src="{{lamp.image}}">
         <div class="content">
           <p><b>{{lamp.name}}</b></p>
-          <p><b>Brand:</b> {{lamp.brand}} </p>
+          <p><b>Brand:</b> {{lamp.brand | uppercase}} </p>
           <p>Price: <span>{{lamp.price | currency}}</span></p>
           <p><a ng-href="#!/lamp/{{lamp.id}}"><button>Buy Now</button></a></p>
         </div>

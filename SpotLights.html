@@ -32,7 +32,7 @@
           <img ng-src="{{spot.image}}">
           <div class="content">
             <p><b>{{spot.name}}</b></p>
-            <p><b>Brand:</b> {{spot.brand}} </p>
+            <p><b>Brand:</b> {{spot.brand | uppercase}} </p>
             <p>Price: <span>{{spot.price | currency}}</span></p>
             <p><a ng-href="#!/spot/{{spot.id}}"><button>Buy Now</button></a></p>
           </div>
