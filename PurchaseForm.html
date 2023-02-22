@@ -2,86 +2,73 @@
 <html lang="en">
 <head>
   
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Purchase Information</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-
 <body>
-    <header></header>
-    <section>
+    <script>
+        function check (){
+            var sFullname = document.getElementById("fullname").value;
+            var sPhone = document.getElementById("phone").value;
+            var sNameproduct = document.getElementById("nameproduct").value;  
+            var sQuantity = document.getElementById("quantity").value;
+            var sAddress = document.getElementById("address").value;
+            var sNote = document.getElementById("note").value;    
+            var message = new Array()
+                message.push("Order successfully.");
+                message.push("--------------------------");
+                message.push("Fullname: " +sFullname);
+                message.push("Name of product: " +sNameproduct);
+                message.push("Quantity: " +sQuantity);
+                message.push("Address: " +sAddress);
+                message.push("Note: " +sNote);
+                alert(message.join("\n"));
+        }
+      </script>
+      <section>
         <div align="center">
             <h1>Purchase Information</h1>
         </div>
-        <form action="index.html" id="contactForm" method="post" class="form-horizontal">
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">Full name</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="fullName" placeholder=" Dang Van Sang" required>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="col-md-4 control-label">Phone</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="phone" placeholder=" (+84)909751772" required>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label class="col-md-4 control-label">Name of Product</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="product" placeholder=" Globe Electric 59530 4-Light Track Lighting" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">Quantity</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="quantity" placeholder=" 1" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-md-4 control-label">Address</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="address" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label">Note</label>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="Note">
-                </div>
-            </div>
-            
-
-            <!-- #messages is where the messages are placed inside -->
-            <div class="form-group">
-                <div class="col-md-9 col-md-offset-4">
-                    <div id="messages"></div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-9 col-md-offset-4">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </div>
-            </div>
-        </form>
-        
-            
-        
-        
-    </section>
-    <footer></footer>
+        <form action="index.html" onsubmit="return check()">
+            <table class="form-group">
+                <tr>
+                    <td><label>Full name: </label></td>
+                    <td><input class="input-style" type="text" name="" id="fullname" placeholder="Dang Van Sang" required></td>
+                </tr>  
+                <tr>
+                    <td><label>Phone: </label></td>
+                    <td><input class="input-style" type="tel" id="phone" placeholder=" 0909 751 772" required></td>
+                </tr>     
+                <tr>
+                    <td><label>Name of product: </label></td>
+                    <td><input class="input-style" type="text" name="" id="nameproduct" placeholder="Honeywell Ceiling Fans Ocean Breeze" required></td>
+                </tr>                   
+                <tr>
+                    <td><label>Quantity: </label></td>
+                    <td><input class="input-style" type="number" name="" id="quantity" placeholder="0" required></td>
+                </tr>       
+                <tr>
+                    <td><label>Address: </label></td>
+                    <td><input class="input-style" type="text" name="" id="address" placeholder="170 Nguyen Huu Tho, Nha Be, HCMC" required></td>
+                </tr>
+                <tr>
+                    <td><label>Note: </label></td>
+                    <td><textarea class="input-style" id="note" style="height: 80px;"></textarea></td>
+                </tr>           
+                <tr>
+                    <td></td>
+                    <td>
+                        <input class="btn btn-primary" type="submit" id="button" value="Submit" style="margin: 5px 5px">
+                    </td>
+                </tr>
+            </table>
+        </form>    
+      </section>
 </body>
+</html>

@@ -104,7 +104,8 @@ myApp.config(function ($routeProvider) {
         .when("/Login", {
             templateUrl: "SignIn.html",
             controller: "myCtrl"
-        }).otherwise({
+        })
+        .otherwise({
             redirectTo: '/home'
         });
 });

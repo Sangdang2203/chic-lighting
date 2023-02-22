@@ -33,7 +33,7 @@
         <img ng-src="{{ceiling.image}}">
         <div class="content">
           <p><b>{{ceiling.name}}</b></p>
-          <p><b>Brand:</b> {{ceiling.brand}} </p>
+          <p><b>Brand:</b> {{ceiling.brand | uppercase}} </p>
           <p>Price: <span>{{ceiling.price | currency}}</span></p>
           <p><a ng-href="#!/ceiling/{{ceiling.id}}"><button>Buy Now</button></a></p>
         </div>

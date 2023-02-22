@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
-body {
+section {
   width: auto;
   height: auto;
 }
@@ -16,6 +16,9 @@ nav {
     height: 60px;
     border-top: 2px solid goldenrod;
     border-bottom: 2px solid goldenrod;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+    border-radius: 10px;
 }
 
 .main-menu ul {
@@ -27,6 +30,7 @@ nav {
     text-align: center;
     padding: 15px 1px;
     float: left;
+    border-radius: 5px;
 }
 
 .main-menu ul li a {
@@ -115,6 +119,7 @@ img {vertical-align: middle;}
 .image-style {
   width: 100%;
   height: 600px;
+  border-radius: 0 0 10px 10px;
 }
 
 /* Next & previous buttons */
@@ -145,7 +150,10 @@ img {vertical-align: middle;}
   background-color:gainsboro;
   color: goldenrod;
 }
-
+/*Registration Form, Login Form, Purchase Information, Contact Form*/
+.form-group{
+  margin: 1% 0 0 35%;
+}
 .input-style {
     width: 400px;
     height: 40px;
@@ -160,7 +168,7 @@ img {vertical-align: middle;}
   float: left;
 }
 
-/*Best Seller & Promotion Products & New Products*/
+/*Product card*/
 .product-list {margin-left: 1%;}
 .product-list .product-item {
     width: 24%;
@@ -186,7 +194,6 @@ img {vertical-align: middle;}
   padding: 5px 8px;
   font-size: 11pt;
 }
-
 .product-list .product-item button {
     border: none;
     border-radius: 20px;
@@ -204,7 +211,7 @@ img {vertical-align: middle;}
   transform: scale(1.01);
 }
 .product-list .product-item button:hover{background-color: gray;}
-
+/**/
 textarea {
   margin-top: 20px;
   width: 780px;
@@ -227,7 +234,7 @@ span {color: red; font-weight: bold; font-size: 16pt;}
 .signup-style:hover, .signin-style:hover {
   color: green;
 }
-
+/*footer*/
 .table-style{
   width: 100%;
 }
@@ -239,6 +246,7 @@ span {color: red; font-weight: bold; font-size: 16pt;}
   color: white;
 }
 .table-style li:hover, .table-style a:hover, i:hover {color: goldenrod;}
+footer{border-radius: 10px;}
 
 /*Search button*/
 .box{

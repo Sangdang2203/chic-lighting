@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <link rel="stylesheet" href="./css/index.css">
-    <section>  
+    <section style="width: auto;">  
       <!--Slideshow banner-->
         <div class="slideshow-container">
           <div class="mySlides1">
@@ -39,7 +39,7 @@
             <img ng-src="{{product.image}}">
             <div class="content">
               <p><b>{{product.name}}</b></p>
-              <p><b>Brand:</b> {{product.brand}} </p>
+              <p><b>Brand:</b> {{product.brand | uppercase}} </p>
               <p>Price: <span>{{product.price | currency}}</span></p>
               <p><a ng-href="#!/product/{{product.id}}"><button>Buy Now</button></a></p>
             </div>

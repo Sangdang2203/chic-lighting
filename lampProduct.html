@@ -29,13 +29,13 @@
             <div style="margin-left: 50px;">
               <p>
                 <b>{{lamp.name}}</b>
-                <img src="./image/home/hot.gif" width="6%">
+                <img src="./image/NewProduct/NewIcon.gif" width="6%">
               </p>
               <p>Price: <span>{{lamp.price | currency}}</span></p>
   
               <b>Product Specifications:</b>
               <ul style="margin-left: 50px;">
-                <li>Brand: {{ lamp.brand }}</li>
+                <li>Brand: {{ lamp.brand | uppercase }}</li>
                 <li>{{lamp.specification}}</li> 
               </ul>
               <b>Product Description:</b>
