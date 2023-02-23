@@ -115,6 +115,15 @@ myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
         {type: 'best', image: './image/home/hot.gif', name: 'Best Seller'}, 
         {type: 'promote', image: './image/home/hot.gif', name: 'Promotional Products'},
         {type: 'new', image: './image/NewProduct/NewIcon.gif', name: 'New Products'},
+        {type: 'decorationLight'},
+        {type: 'smartLight'},
+        {type: 'spotLight'},
+        {type: 'fan'},
+        {type: 'lamp'},
+        {type: 'ceilingLight'},
+        {type: 'wallLight'},
+        {type: 'outdoorLight'},
+        {type: 'homeAccent'}
     ]
 
     $http.get('json/products.json').then(function(response) {
