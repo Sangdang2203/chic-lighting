@@ -279,6 +279,12 @@ myApp.controller('homeaccentController', ['$scope', '$http', '$routeParams', fun
 }]);
 
 
+myApp.filter("myFilter", function () {
+    return function (item) {
+       return item.filter((i) => i.image)
+    }
+})
+
 
 
 

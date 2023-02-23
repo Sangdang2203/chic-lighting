@@ -1,13 +1,6 @@
 <div class="container-fluid">
   <script>
-    function check (){
-      var sFullname = document.getElementById("fullname").value;
-      var reFullname = /^\w+$/;
-        if(!reFullname.test(sFullname)){
-          alert("Fullname cannot left blank!");
-          document.getElementById("fullname").focus();
-          return false;
-        }        
+    function check (){       
       var sMail = document.getElementById("email").value;
       var reMail = /^\w+[@]\w+[.]\w+$/;
         if(!reMail.test(sMail)){
@@ -61,7 +54,7 @@
               <table class="form-group">
                   <tr>
                       <td><label>Fullname: </label></td>
-                      <td><input class="input-style" type="text" id="fullname" placeholder=" Jonathan Dang"></td>
+                      <td><input class="input-style" type="text" id="fullname" placeholder=" Jonathan Dang" required></td>
                   </tr>
                   <tr>
                       <td><label>Email: </label></td>
@@ -70,10 +63,6 @@
                   <tr>
                       <td><label>Phone: </label></td>
                       <td><input class="input-style" type="tel" id="phone" placeholder=" (+84) 909 751 772"></td>
-                  </tr>
-                  <tr>
-                    <td><label>Subject: </label></td>
-                    <td><input class="input-style" type="text" placeholder=" I wanna buy your product in bulk. "></td>
                   </tr>
                   <tr>
                       <td><label>Comment: </label></td>
