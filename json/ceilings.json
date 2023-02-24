@@ -9,6 +9,7 @@
         "image2": "./image/CellingLights/product1.2.jpg",
         "image3": "./image/CellingLights/product1.3.jpg",
         "type": "ceilingLight",
+        "type1": 1,
         "quantity": 160 ,
         "specification": "Color: 8.86-18W-5000K-White-1Pack. Material:Plastic, Metal. Style: Modern. Light fixture form: Ceiling",
         "description": "The thinnest available solution. Surface mounting fits any ceiling and solves the problem of limited plenum space.\r\n The damp-rated Slim Surface LED Ceiling Light​s suitable for interior or exterior locations where liquid may drip, splash, or flow on or against electrical equipment.\r\n Low profile LED ceiling flush mount fixture offers uniform light distribution and consistent color. Equivalent to a 180-watt incandescent fixture. Ideal for bathrooms, kitchen, hallway, and bedroom, study, basement.\r\n Super safe and durable with corrosion protection and rust prevention. ETL listed certified lights provide up to 50,000-hours of flicker-free illumination, over 50-times longer than the average 180-Watt incandescent bulb dimming capabilities allow you to soften or brighten as you wish, creating the desired warmth, no lead, mercury, UV, IR or radiation emissions.\r\n NOVELUX Slim Round Ceiling Light provides a 3-year warranty."
@@ -19,10 +20,11 @@
         "brand": "Parmida LED Technologies",
         "price": 66,
         "image": "./image/CellingLights/product2.1.jpg",
-        "image1": "./image/CellingLights/product2.jpg",
+        "image1": "./image/CellingLights/product2.3.jpg",
         "image2": "./image/CellingLights/product2.2.jpg",
-        "image3": "./image/CellingLights/product2.3.jpg",
+        "image3": "./image/CellingLights/product2.jpg",
         "type": "ceilingLight",
+        "type1": 2,
         "quantity": 110,
         "specification": "Color: 3000K (Soft White).\r\n Material: Aluminum.\r\n Style: Slim Panel Downlight.\r\n Light fixture form: Recessed.",
         "description": "SPACE SAVING EASY INSTALLATION. Our 4 inch low profile, ultra-thin surface mount only needs 2 inches clearance of ceiling space. Our recessed light is perfect for new construction installation, with no recessed can required. Each light comes with an ultra slim junction box with easy push-in wire connectors, spring loaded clips, a cable, and a cut out template.\r\n IC-RATED AIRTIGHT: The Parmida Slim Panel Downlight is IC-Rated for direct contact with insulation to prevent air conditioning or heating from leaking out of the home.\r\n QUALITY AND SAFETY ASSURED: ETL-Listed. This product meets strict requirements to be considered safe and reliable. With the latest DOB LED Technology, these lights are instant start with no flickering or humming."
@@ -32,11 +34,12 @@
         "name": "PARMIDA (12 Pack) 4 Inch - Thin LED Adjustable Gimbal Recessed Lighting",
         "brand": "Parmida LED Technologies",
         "price": 78,
-        "image": "./image/CellingLights/product3.jpg",
+        "image": "./image/CellingLights/product3.2.jpg",
         "image1": "./image/CellingLights/product3.1.jpg",
-        "image2": "./image/CellingLights/product3.2.jpg",
-        "image3": "./image/CellingLights/product3.3.jpg",
+        "image2": "./image/CellingLights/product3.jpg",
+        "image3": "./image/CellingLights/product3.4.jpg",
         "type": "ceilingLight",
+        "type1": 2,
         "quantity": 230,
         "specification": "Color: 5000K/4000K/3500K/3000K/2700K - 5CCT.\r\n Material: Aluminum.\r\n Style: Modern.\r\n Light fixture form: Recessed",
         "description": "5 COLOR TEMPERATURE SWITCH: Set the color temperature of your lights to the desired level with a simple flip of a switch on the junction box. Choose between Warm White (2700K), Soft White (3000K), Neutral White (3500K), Cool White (4000K), and Day Light (5000K).\r\n GIMBAL/EYEBALL DESIGN: Range of motion: 360° tilt. This canless Eyeball slim panel downlight is perfect for sloped ceilings or where directional lighting is desired; the light can pivot for where illumination is most wanted.\r\n DIMMABLE: With 100-5% dimming capability, you can set the mood and ensure the perfect level of light in your space. Our lights are compatible with most LED dimmers.\r\n SPACE SAVING EASY INSTALLATION. Our 4 inch low profile, ultra-thin surface mount light only needs 2 inches clearance of ceiling space. Our recessed light is perfect for new construction installation, with no recessed can required. Each light comes with an ultra slim junction box with easy push-in wire connectors, spring loaded clips, and a cut out template."
@@ -51,6 +54,7 @@
         "image2": "./image/CellingLights/product4.2.jpg",
         "image3": "./image/CellingLights/product4.3.jpg",
         "type": "ceilingLight",
+        "type1": 3,
         "quantity": 3,
         "specification": "Color: 5000K/4000K/3500K/3000K/2700K - 5CCT.\r\n Material: Aluminum.\r\n Style: Modern.\r\n Light fixture form: Recessed",
         "description": "5 COLOR ADJUSTABLE - Built with a tunable 5 cct color temperature switch so you can pick the ideal colored light for your space. During installation you can toggle the color switch on the LED recessed lights from 2700K warm white, 3000K soft white, 3500K natural white, 4000K cool white, or 5000K bright white.\r\n HIGH BRIGHTNESS - Each 3 inch LED recessed light offers 800 lumens of brighter lighting while using only 10 watts of power. Standard 3 inch square recessed lighting can't match up to these high output regressed lights which are equivalent to typical 60 watt light bulbs which means you'll cut electricity costs while having the brightest lighting for your space.\r\n DIMMABLE - Control the brightness of your LED downlight with it's smooth dimming feature that can be reduced from 100% to 10% lighting output with a dimmer. Adjust your high hat lighting to your preferred setting so you have just the perfect amount of lighting needed. With a wet location and IC rating, these 3 recess lights are ideal for new and old construction, remodel, soffit, eaves, and any indoor and outdoor location."
@@ -65,6 +69,7 @@
         "image2": "./image/CellingLights/product5.2.jpg",
         "image3": "./image/CellingLights/product5.3.jpg",
         "type": "ceilingLight",
+        "type1": 4,
         "quantity": 349,
         "specification": "Color: Black.\r\n Material: Metal.\r\n Style: Farmhouse.\r\n Light fixture form: Close to Ceiling",
         "description": "【Black Cage Design Ceiling Light 】This UL Certified farmhouse flush mount ceiling light (Ceiling Canopy Diameter: 10.62 inch, Lamp Height: 3.54 inch) features a unique matte black finish and open cage-style frame, gives out 360° illumination lights up the whole room and add a vintage industrial chic touch to your house.\r\n 【Sturdy, High-Quality Construction】This industrial flush mount light fixtures made of high quality metal construction which make it sturdier, anti-rust, durable and very safe for use. 2-Light base design will cast beautiful lighting shadows on the ceiling when lighting, creates a unique atmosphere to your home.\r\n 【4 FREE A19 LED BULBS INCLUCED】 These 2-light close to ceiling lights are packaged with 4 A19 bulbs, no second purchase hassle! Free but in high quality. The E26 bulb provides stable lighting, also the black hallway modern ceiling light is fully dimmable when used in a dimmable bulb and compatible dimmer switch.\r\n 【Easy and Quick To Install】Our farmhouse ceiling light fixtures are hardwired and no assemble needed, including all necessary accessories (screws, nuts, mounting bracket, wire connection caps), save a trip to hardware store."
@@ -79,6 +84,7 @@
         "image2": "./image/CellingLights/product6.2.jpg",
         "image3": "./image/CellingLights/product6.3.jpg",
         "type": "ceilingLight",
+        "type1": 5,
         "quantity": 160,
         "specification": "Color: 5000K Daylight - Brushed Nickel.\r\n Material:Metal.\r\n Style: Modern.\r\n Light fixture form: Sconce.",
         "description": "【Quick & Easy Installation】Includes all mounting hardwares, follow our installation guide for a quick and easy setup, It only takes a few minutes. Even one person can install quickly.\r\n 【Protect Your Family's Safety】This light fixture is overload, short circuit protection function, it can prevent any potential risk of electric shock, electric leakage or even potential disasters caused by electricity short circuit.\r\n 【Alegant Appearance】Cool, simplistic line design looks bright and tasteful, matches most styles of interior furnishing, provide an energetic, clean lighting to your living environment. If you needed something to illuminate your home and this is the best option..\r\n 【More Reliable and Durable】Life span 30,000 hours which means it can be used 10 years based on 8 hours/day. Each led lights has 36W low power consumption, save up to 70% on your electricity bill by replacing fluorescent tubes.\r\n 【6 Years Warranty】If any failure of the LED ceiling light within 6 years. We promise to offer free replacement or refund. Please email us with any questions or concerns, We will reply you within 12 hours."
@@ -93,6 +99,7 @@
         "image2": "./image/CellingLights/product7.2.jpg",
         "image3": "./image/CellingLights/product7.3.jpg",
         "type": "ceilingLight",
+        "type1": 6,
         "quantity": 120,
         "specification": "Color: Black.\r\n Material: Glass, Metal.\r\n Style: Modern.\r\n Light fixture form: Pendant",
         "description": "Flush-mount Design & Antique Style: The semi-flush ceiling light (Glass Shade Diameter:8.66 inch /220mm, Canopy Diameter: 4.72inch /120mm, Lamp Height: 7.09inch /180mm ) featuring a unique clear glass shade and vintage style black matte metal base, bringing a modern twist to its Avant-garde retro design.\r\n Easy Installation & Convenient Usage: Package includes all mounting hardware. The installation of the ceiling lighting is really simple with step by step instructions, perfect for any do-it-yourself project.\r\n Wide Application & Perfect Decoration: With the exquisite glass lampshade and Vintage matte base design, the semi flush mount ceiling light perfect for Hallway, Entry, Porch, Mudroom, Stairwell, Kitchen, Closet, Kids Room, Dining Room, Bedroom, Living Room, also ideal for commercial areas: Bar, Cafe, Hotel and Restaurant.\r\n E26 Base Socket & Different Bulb Different Atmosphere: The semi flush pendant light fixture with standard USA socket is compatible with E26 medium base bulb(Bulb NOT INCLUDED), such as incandescent, LED, CFL and halogen bulbs (bulb maximum wattage is 60W). Choose the bulb you like to decor your dream home.\r\n High Quality & 100% Customer Satisfaction: Our lights dedicated to rigorous standards of manufacturing excellence that result in the highest product quality and safety around the world."
@@ -107,6 +114,7 @@
         "image2": "./image/CellingLights/product8.2.jpg",
         "image3": "./image/CellingLights/product8.3.jpg",
         "type": "ceilingLight",
+        "type1": 7,
         "quantity": 58,
         "specification": "Color: Black.\r\n Material: Plastic.\r\n Style: Modern.\r\n Light fixture form: Ceiling.",
         "description": "Adjustable Design: Five flexible panels with 90° rotating angel can illuminate up to 360° of space.\r\n Long Life Span: Durability is the best way to be protect our planet. 50000 hours life span reduce the recycle burden for the environment and go less to the landfill.\r\n Eco-friendly: With premium high-efficiency diodes it emitts more light and consumes less energy than Incandescent lamps and Fluorescent lamps and produce less Carbon Dioxide on our planet.\r\n Easy Installation: Open the box, cut off the power supply, climb your ladder, just screw it in the E26/E27 holder. No tools needed and without bothering the Electrician, after reconnect your power, and enjoy your new garage light.\r\n Satisfaction Guarantee: 100% Money Back or Exchange for Customer Service Satisfaction Guarantee. 5 years Warranty, High-end Manufacture Work Shop Light with 5 Years Warranty."

@@ -56,17 +56,22 @@
       </tr>
     </table>
 
-    <form action="">
+    <form action="" onsubmit="return check()">
       <div>
-        <textarea placeholder=" Enter your comment:"></textarea>
+        <textarea id="comment" placeholder=" Enter your comment:"></textarea>
         <div>
-          <a href="index.html"><input class="btn btn-info" type="button" value="Send"></a>
+          <input class="btn btn-info" type="submit" value="Send">
         </div>
       </div>
     </form>
-
-    <div style="float: right;">
-      <a href="index.html"><img src="./image/home/Homepage.gif" style="width: 50%;"></a>
-    </div>
   </section>
+  <script>
+    function check (){
+      var sCommnent = document.getElementById("comment").value;
+      var message = Array()
+      message.push("Information has been sent.");
+      message.push("Your comment: " + sCommnent)
+      alert(message.join("\n"));
+    }
+  </script>
 </main>

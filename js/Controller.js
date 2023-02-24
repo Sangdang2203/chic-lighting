@@ -109,6 +109,7 @@ myApp.config(function ($routeProvider) {
             redirectTo: '/home'
         });
 });
+
 //Add data from json file
 myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.productTypes = [
@@ -155,7 +156,17 @@ myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
     })
 
     $http.get('json/ceilings.json').then(function(response){
-        $scope.ceilings = response.data
+        $scope.ceilings = response.data;
+        $scope.choose = function () {
+            let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+            let cats = [];
+            for (var checkbox of markedCheckbox) {
+                cats.push(checkbox.value);
+            }
+    
+            let data = $scope.ceilings;
+            $scope.ceilings = (cats.length == 0) ? data : data.filter(ceiling => cats.indexOf(ceiling.type1) >= 0);
+        }
     })
 
     $http.get('json/outdoors.json').then(function(response){
