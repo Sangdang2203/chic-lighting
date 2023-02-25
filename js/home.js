@@ -20,10 +20,10 @@ function showSlides(n, no) {
 
 function check(){
   var sComment = document.getElementById("comment").value;
-  var message = new Array();
-    message.push("Information has been sent.")
-    message.push("Your comment: " + sComment);
-    alert(message.join("\n"));
-  }
+  var message = new Array()
+      message.push("Information has been sent.")
+      message.push("Your comment: " +sComment);
+      alert(message.join("\n"));
+}
       
     
