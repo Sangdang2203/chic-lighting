@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-size: 12pt;
+    font-size: 11pt;
     line-height: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
@@ -32,7 +32,7 @@ nav {
 
 .main-menu ul li a {
     color: white;
-    font-size: 14pt;
+    font-size: 17px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -66,7 +66,7 @@ nav {
   animation: my 700ms infinite;
 }
 
-/*Tạo menu đa cấp*/
+/*Multi-level navbar.*/
 .dropbtn{
   font-size: 15pt;
   font-weight: bold;
@@ -182,8 +182,9 @@ img {vertical-align: middle;}
 }
 .product-list .product-item img {
     margin: 2px 2px;
-    width: 310px;
-    height: 310px;
+    width: 280px;
+    height: 280px;
+    margin: 15px 0 0 15px;
     border-radius: 20px;
 }
 .product-list .product-item .content {

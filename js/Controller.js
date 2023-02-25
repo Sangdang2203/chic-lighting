@@ -114,56 +114,10 @@ myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.productTypes = [
         {type: 'best', image: './image/home/hot.gif', name: 'Best Seller'}, 
         {type: 'promote', image: './image/home/hot.gif', name: 'Promotional Products'},
-        {type: 'new', image: './image/NewProduct/NewIcon.gif', name: 'New Products'},
-        {type: 'decorationLight'},
-        {type: 'smartLight'},
-        {type: 'spotLight'},
-        {type: 'fan'},
-        {type: 'lamp'},
-        {type: 'ceilingLight'},
-        {type: 'wallLight'},
-        {type: 'outdoorLight'},
-        {type: 'homeAccent'}
+        {type: 'new', image: './image/NewProduct/NewIcon.gif', name: 'New Products'},  
     ]
-
     $http.get('json/products.json').then(function(response) {
         $scope.products = response.data
-    })
-
-    $http.get('json/decorations.json').then(function(response) {
-        $scope.decorations = response.data
-    })
-
-    $http.get('json/smarts.json').then(function(response) {
-        $scope.smarts = response.data
-    })
-
-    $http.get('json/spots.json').then(function(response) {
-        $scope.spots = response.data
-    })
-
-    $http.get('json/fans.json').then(function(response){
-        $scope.fans = response.data
-    })
-
-    $http.get('json/lamps.json').then(function(response){
-        $scope.lamps = response.data
-    })
-
-    $http.get('json/walls.json').then(function(response){
-        $scope.walls = response.data
-    })
-
-    $http.get('json/ceilings.json').then(function(response){
-        $scope.ceilings = response.data
-    })
-
-    $http.get('json/outdoors.json').then(function(response){
-        $scope.outdoors = response.data
-    })
-
-    $http.get('json/homeaccents.json').then(function(response){
-        $scope.homeaccents = response.data
     })
 }]);
 
@@ -286,7 +240,7 @@ myApp.filter("myFilter", function () {
     }
 })
 
-//Filter by brand at CeilingLights.html
+// Add data from ceilings.json & Filter by brand at CeilingLights.html
 myApp.controller("ceilingListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/ceilings.json').then(function(response){
         $scope.ceilings = response.data;
@@ -302,7 +256,7 @@ myApp.controller("ceilingListsController", ['$scope', '$http', function($scope, 
             $scope.filteredCeilings = (cats.length == 0) ? data : data.filter(ceiling => cats.indexOf(ceiling.type1.toString()) >= 0);
         }
 }])
-//Filter by brand at WallLights.html
+// Add data from walls.json & Filter by brand at WallLights.html
 myApp.controller("wallListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/walls.json').then(function(response){
         $scope.walls = response.data;
@@ -319,7 +273,7 @@ myApp.controller("wallListsController", ['$scope', '$http', function($scope, $ht
         }
 }])
 
-//Filter by brand at Lamps.html
+// Add data from lamps.json & Filter by brand at Lamps.html
 myApp.controller("lampListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/lamps.json').then(function(response){
         $scope.lamps = response.data;
@@ -336,7 +290,7 @@ myApp.controller("lampListsController", ['$scope', '$http', function($scope, $ht
         }
 }])
 
-//Filter by brand at Fans.html
+// Add data from fans.json & Filter by brand at Fans.html
 myApp.controller("fanListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/fans.json').then(function(response){
         $scope.fans = response.data;
@@ -353,7 +307,7 @@ myApp.controller("fanListsController", ['$scope', '$http', function($scope, $htt
         }
 }])
 
-//Filter by brand at HomeAccent.html
+// Add data from homeaccents.json & Filter by brand at HomeAccent.html
 myApp.controller("homeaccentListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/homeaccents.json').then(function(response){
         $scope.homeaccents = response.data;
@@ -370,7 +324,7 @@ myApp.controller("homeaccentListsController", ['$scope', '$http', function($scop
         }
 }])
 
-//Filter by brand at OutdoorLights.html
+// Add data from outdoors.json & Filter by brand at OutdoorLights.html
 myApp.controller("outdoorListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/outdoors.json').then(function(response){
         $scope.outdoors = response.data;
@@ -387,7 +341,7 @@ myApp.controller("outdoorListsController", ['$scope', '$http', function($scope, 
         }
 }])
 
-//Filter by brand at SpotLights.html
+// Add data from spots.json &  Filter by brand at SpotLights.html
 myApp.controller("spotListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/spots.json').then(function(response){
         $scope.spots = response.data;
@@ -404,7 +358,7 @@ myApp.controller("spotListsController", ['$scope', '$http', function($scope, $ht
         }
 }])
 
-//Filter by brand at SmartLights.html
+// Add data from smarts.json & Filter by brand at SmartLights.html
 myApp.controller("smartListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/smarts.json').then(function(response){
         $scope.smarts = response.data;
@@ -421,7 +375,7 @@ myApp.controller("smartListsController", ['$scope', '$http', function($scope, $h
         }
 }])
 
-//Filter by brand at DecorationLights.html
+// Add data from decorations.json & Filter by brand at DecorationLights.html
 myApp.controller("decorationListsController", ['$scope', '$http', function($scope, $http) {
     $http.get('json/decorations.json').then(function(response){
         $scope.decorations = response.data;
