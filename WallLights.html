@@ -15,6 +15,16 @@
         </td>
       </tr>
     </table>
+    <!--Filter by brand-->
+    <div>
+      <b>Filter by brand:</b> &ensp;
+      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> DIHUIKEJI &ensp;
+      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> GLOBE ELECTRIC &ensp;
+      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HWH FARMHOUSE &ensp;
+      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> LOG BARN &ensp;
+      <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> WESTINGHOUSE LIGHTING &ensp;
+      <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> GANEEP &ensp;
+    </div><br>
     <!--Download file-->
     <div>
       <b style="font-size: 13pt;">Download Catalogue:</b>
@@ -26,8 +36,8 @@
       </a>
     </div><br>
     <!--Wall Lights List --> <!--Add data from walls.json-->
-    <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="wall in walls | filter:{ type: type.type } | filter: brand" class="product-item">
+    <div class="product-list">
+      <div ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand" class="product-item">
         <img ng-src="{{wall.image}}">
         <div class="content">
           <p><b>{{wall.name}}</b></p>

@@ -17,3 +17,13 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
+
+function check(){
+  var sComment = document.getElementById("comment").value;
+  var message = new Array();
+    message.push("Information has been sent.")
+    message.push("Your comment: " + sComment);
+    alert(message.join("\n"));
+  }
+      
+    

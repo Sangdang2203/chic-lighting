@@ -282,7 +282,7 @@ footer{border-radius: 10px;}
   opacity: 0;
   z-index: -1;
 }
-/*Automatic time*/
+/*Current time*/
 #digital-clock{
   background-color: none;
   width: auto;

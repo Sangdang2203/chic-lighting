@@ -15,6 +15,17 @@
         </td>
       </tr>
     </table>
+    <!--Filter by brand-->
+    <div>
+      <b>Filter by brand:</b> &ensp;
+      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> NOVELUX &ensp;
+      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> PARMIDA LED TECHNOLOGIES &ensp;
+      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> LUXRITE &ensp;
+      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> FEANRON &ensp;
+      <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> DROSBEY &ensp;
+      <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> MAXVOLADOR &ensp;
+      <input type="checkbox" ng-model="cat7" value="7" checked ng-click="choose()"> MEFFLYPEE
+    </div><br>
     <!--Download file-->
     <div>
       <b style="font-size: 13pt;">Download Catalogue:</b>
@@ -28,8 +39,8 @@
     <br>
 
     <!--Ceiling Lights List --> <!--Add data from ceilings.json-->
-    <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="ceiling in ceilings | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+    <div class="product-list">
+      <div ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter:txtSearch" class="product-item">
         <img ng-src="{{ceiling.image}}">
         <div class="content">
           <p><b>{{ceiling.name}}</b></p>

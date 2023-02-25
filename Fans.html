@@ -14,6 +14,16 @@
           </div>
       </tr>
     </table> 
+    <!--Filter by brand-->
+    <div>
+      <b>Filter by brand:</b> &ensp;
+      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> DREO &ensp;
+      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> BLACK DECKER &ensp;
+      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HONEYWELL &ensp;
+      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> IRIS USA, INC. &ensp;
+      <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> YITAHOME &ensp;
+      <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> VORNADO &ensp;
+    </div><br>
     <!--Download file-->
     <div>
       <b style="font-size: 13pt;">Download Catalogue:</b>
@@ -26,8 +36,8 @@
     </div><br>
 
     <!-- Fans list--> <!--Add data from fans.json-->
-    <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="fan in fans | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+    <div class="product-list">
+      <div ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter:txtSearch" class="product-item">
         <img ng-src="{{fan.image}}">
         <div class="content">
           <p><b>{{fan.name}}</b></p>

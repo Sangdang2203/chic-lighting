@@ -15,6 +15,17 @@
         </td>
       </tr>
     </table>
+    <!--Filter by brand-->
+    <div>
+      <b>Filter by brand:</b> &ensp;
+      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> HOME ACCENT &ensp;
+      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> AVATAR CONTROLS &ensp;
+      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> GOVEE &ensp;
+      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> OURLEEME &ensp;
+      <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> ABEJA &ensp;
+      <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> NOVELTY LIGHTS &ensp;
+      <input type="checkbox" ng-model="cat7" value="7" checked ng-click="choose()"> MINKA LAVERY
+    </div><br>
     <!--Download file-->
     <div>
       <b style="font-size: 13pt;">Download Catalogue:</b>
@@ -28,8 +39,8 @@
     <br>
 
     <!--Homeaccents List --> <!--Add data from homeaccents.json-->
-    <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="homeaccent in homeaccents | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+    <div class="product-list">
+      <div ng-repeat="homeaccent in filteredHomeaccents | filter:{ type: type.type } | filter:txtSearch" class="product-item">
         <img ng-src="{{homeaccent.image}}">
         <div class="content">
           <p><b>{{homeaccent.name}}</b></p>

@@ -59,39 +59,39 @@ myApp.config(function ($routeProvider) {
         })
         .when("/CellingLights", {
             templateUrl: "CellingLights.html",
-            controller: "myCtrl"
+            controller: "ceilingListsController"
         })
         .when("/WallLights", {
             templateUrl: "WallLights.html",
-            controller: "myCtrl"
+            controller: "wallListsController"
         })
         .when("/Lamps", {
             templateUrl: "Lamps.html",
-            controller: "myCtrl"
+            controller: "lampListsController"
         })
         .when("/OutdoorLights", {
             templateUrl: "OutdoorLights.html",
-            controller: "myCtrl"
+            controller: "outdoorListsController"
         })
         .when("/Fans", {
             templateUrl: "Fans.html",
-            controller: "myCtrl"
+            controller: "fanListsController"
         })
         .when("/HomeAccent", {
             templateUrl: "HomeAccent.html",
-            controller: "myCtrl"
+            controller: "homeaccentListsController"
         })
         .when("/SpotLights", {
             templateUrl: "SpotLights.html",
-            controller: "myCtrl"
+            controller: "spotListsController"
         })
         .when("/DecorationLights", {
             templateUrl: "DecorationLights.html",
-            controller: "myCtrl"
+            controller: "decorationListsController"
         })
         .when("/SmartLights", {
             templateUrl: "SmartLights.html",
-            controller: "myCtrl"
+            controller: "smartListsController"
         })
         .when("/FAQ", {
             templateUrl: "FAQ.html",
@@ -167,7 +167,7 @@ myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
     })
 }]);
 
-//add detailed data for each product page
+//add data for each product at Home.html
 myApp.controller('productController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/products.json').then(function(response) {
         const products = response.data.filter(product => {
@@ -178,7 +178,7 @@ myApp.controller('productController', ['$scope', '$http', '$routeParams', functi
         }
     }) 
 }]);
-
+//add data for each product at DecorationLights.html
 myApp.controller('decorationController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/decorations.json').then(function(response) {
         const decorations = response.data.filter(decoration => {
@@ -189,7 +189,7 @@ myApp.controller('decorationController', ['$scope', '$http', '$routeParams', fun
         }
     }) 
 }]);
-
+//add data for each product at SmartLights.html
 myApp.controller('smartController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/smarts.json').then(function(response) {
         const smarts = response.data.filter(smart => {
@@ -200,7 +200,7 @@ myApp.controller('smartController', ['$scope', '$http', '$routeParams', function
         }
     }) 
 }]);
-
+//add data for each product at SpotLights.html
 myApp.controller('spotController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/spots.json').then(function(response) {
         const spots = response.data.filter(spot => {
@@ -211,7 +211,7 @@ myApp.controller('spotController', ['$scope', '$http', '$routeParams', function(
         }
     }) 
 }]);
-
+//add data for each product at Fans.html
 myApp.controller('fanController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/fans.json').then(function(response) {
         const fans = response.data.filter(fan => {
@@ -222,7 +222,7 @@ myApp.controller('fanController', ['$scope', '$http', '$routeParams', function($
         }
     }) 
 }]);
-
+//add data for each product at Lamps.html
 myApp.controller('lampController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/lamps.json').then(function(response) {
         const lamps = response.data.filter(lamp => {
@@ -233,7 +233,7 @@ myApp.controller('lampController', ['$scope', '$http', '$routeParams', function(
         }
     }) 
 }]);
-
+//add data for each product at WallLights.html
 myApp.controller('wallController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/walls.json').then(function(response) {
         const walls = response.data.filter(wall => {
@@ -244,7 +244,7 @@ myApp.controller('wallController', ['$scope', '$http', '$routeParams', function(
         }
     }) 
 }]);
-
+//add data for each product at CeilingLights.html
 myApp.controller('ceilingController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/ceilings.json').then(function(response) {
         const ceilings = response.data.filter(ceiling => {
@@ -255,7 +255,7 @@ myApp.controller('ceilingController', ['$scope', '$http', '$routeParams', functi
         }
     }) 
 }]);
-
+//add data for each product at OutdoorLights.html
 myApp.controller('outdoorController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/outdoors.json').then(function(response) {
         const outdoors = response.data.filter(outdoor => {
@@ -266,7 +266,7 @@ myApp.controller('outdoorController', ['$scope', '$http', '$routeParams', functi
         }
     }) 
 }]);
-
+//add data for each product at HomeAccent.html
 myApp.controller('homeaccentController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('json/homeaccents.json').then(function(response) {
         const homeaccents = response.data.filter(homeaccent => {
@@ -286,7 +286,157 @@ myApp.filter("myFilter", function () {
     }
 })
 
+//Filter by brand at CeilingLights.html
+myApp.controller("ceilingListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/ceilings.json').then(function(response){
+        $scope.ceilings = response.data;
+        $scope.filteredCeilings = $scope.ceilings
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.ceilings;
+            $scope.filteredCeilings = (cats.length == 0) ? data : data.filter(ceiling => cats.indexOf(ceiling.type1.toString()) >= 0);
+        }
+}])
+//Filter by brand at WallLights.html
+myApp.controller("wallListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/walls.json').then(function(response){
+        $scope.walls = response.data;
+        $scope.filteredWalls = $scope.walls
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.walls;
+            $scope.filteredWalls = (cats.length == 0) ? data : data.filter(wall => cats.indexOf(wall.type1.toString()) >= 0);
+        }
+}])
 
+//Filter by brand at Lamps.html
+myApp.controller("lampListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/lamps.json').then(function(response){
+        $scope.lamps = response.data;
+        $scope.filteredLamps = $scope.lamps
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.lamps;
+            $scope.filteredLamps = (cats.length == 0) ? data : data.filter(lamp => cats.indexOf(lamp.type1.toString()) >= 0);
+        }
+}])
+
+//Filter by brand at Fans.html
+myApp.controller("fanListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/fans.json').then(function(response){
+        $scope.fans = response.data;
+        $scope.filteredFans = $scope.fans
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.fans;
+            $scope.filteredFans = (cats.length == 0) ? data : data.filter(fan => cats.indexOf(fan.type1.toString()) >= 0);
+        }
+}])
+
+//Filter by brand at HomeAccent.html
+myApp.controller("homeaccentListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/homeaccents.json').then(function(response){
+        $scope.homeaccents = response.data;
+        $scope.filteredHomeaccents = $scope.homeaccents
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.homeaccents;
+            $scope.filteredHomeaccents = (cats.length == 0) ? data : data.filter(homeaccent => cats.indexOf(homeaccent.type1.toString()) >= 0);
+        }
+}])
+
+//Filter by brand at OutdoorLights.html
+myApp.controller("outdoorListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/outdoors.json').then(function(response){
+        $scope.outdoors = response.data;
+        $scope.filteredOutdoors = $scope.outdoors
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.outdoors;
+            $scope.filteredOutdoors = (cats.length == 0) ? data : data.filter(outdoor => cats.indexOf(outdoor.type1.toString()) >= 0);
+        }
+}])
+
+//Filter by brand at SpotLights.html
+myApp.controller("spotListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/spots.json').then(function(response){
+        $scope.spots = response.data;
+        $scope.filteredSpots = $scope.spots
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.spots;
+            $scope.filteredSpots = (cats.length == 0) ? data : data.filter(spot => cats.indexOf(spot.type1.toString()) >= 0);
+        }
+}])
+
+//Filter by brand at SmartLights.html
+myApp.controller("smartListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/smarts.json').then(function(response){
+        $scope.smarts = response.data;
+        $scope.filteredSmarts = $scope.smarts
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.smarts;
+            $scope.filteredSmarts = (cats.length == 0) ? data : data.filter(smart => cats.indexOf(smart.type1.toString()) >= 0);
+        }
+}])
+
+//Filter by brand at DecorationLights.html
+myApp.controller("decorationListsController", ['$scope', '$http', function($scope, $http) {
+    $http.get('json/decorations.json').then(function(response){
+        $scope.decorations = response.data;
+        $scope.filteredDecorations = $scope.decorations
+    })
+    $scope.choose = function () {
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        let cats = [];
+        for (var checkbox of markedCheckbox) {
+            cats.push(checkbox.value);
+            }
+        let data = $scope.decorations;
+            $scope.filteredDecorations = (cats.length == 0) ? data : data.filter(decoration => cats.indexOf(decoration.type1.toString()) >= 0);
+        }
+}])
 
 
 

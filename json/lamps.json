@@ -9,6 +9,7 @@
         "image2": "./image/Lamps/Product_01b.jpg",
         "image3": "./image/Lamps/Product_01c.jpg",
         "type": "lamp",
+        "type1": 1,
         "quantity": 139,
         "specification": "Lighting Type: Lamps / Sleep Lights. Smart Equipment: No. Light Color: Warm White (3000K). Warranty Duration: 03 months.",
         "description": "Huta G9 Desk Lamp, cute wooden body, Vintage style, common USB plug, Bedroom Decor, reading headboard, Yellow Light, Power saving LED strip.\r\n LED strip lights for soft golden light, create a pleasant feeling of relaxation, sufficient amount of light can read the headboard.\r\n The lamp body is made of natural wood, elegant varnish, elegant, for extremely beautiful effect..\r\n Lampshades made of plastic fabric, high strength, mold-proof, user-friendly and environmental..\r\n Metal colander frame with strong Weld, tensioning cloth colander, not loose. Common USB plug, convenient, can plug into computer, laptop, phone charger, backup charger, ..."
@@ -16,13 +17,14 @@
     {
         "id": 2,
         "name": "Huta Ceramic Night Light For Life S4. ",
-        "brand": "HUTA LIGHT",
+        "brand": "HUTA",
         "price": 29,
         "image": "./image/Lamps/product_02.jpg",
         "image1": "./image/Lamps/product_02a.jpg",
         "image2": "./image/Lamps/product_02b.jpg",
         "image3": "./image/Lamps/product_02c.jpg",
         "type": "lamp",
+        "type1": 1,
         "quantity": 150,
         "specification": "Lighting Type: Lamps / Sleep Lights.\r\n Light Colour: Warm White (3000K).\r\n Warranty Duration: 12 months.",
         "description": "Huta S4 high-end ceramic Night Light unique Bedroom Decor, reading headboard, adjustable brightness, Golden Light.\r\n The ceramic body nightlight has an elegant design, can be both as a nightlight and decorate the Watch, bringing lightness to the space.\r\n The ceramic lamp body is made of solid smooth terracotta for extremely sharp shaping, smooth glaze water extremely luxurious, exquisite hole cutting design..\r\n The lamp uses the common e27 LED bulb, which is easy to replace. Electric saving LED ball, safe for children."
@@ -37,6 +39,7 @@
         "image2": "./image/Lamps/Product_03b.jpg",
         "image3": "./image/Lamps/Product_03c.jpg",
         "type": "lamp",
+        "type1": 2,
         "quantity": 312,
         "specification": "Lighting Type: Lamps / Sleep Lights.\r\n Smart Equipment: Yes.\r\n Light Color: Warm White (3000K).\r\n Warranty Duration: 06 months",
         "description": "Product information: Size: 50cm high, 15cm width. Material: wooden base, stainless steel body. Power supply: 220V, use yellow light LED ball.\r\n Uses: Table lamps used to decorate the home decor, make your house more beautiful and shimmering. Can be used as a night light and bedroom decoration lamp, reading is also very convenient. Can make your loved one's gift or crush, they will surely love.\r\n Product advantages: Modern design lights, easy to use suitable for many different spaces. Lights use golden light, help your house become more cozy and beautiful."
@@ -51,6 +54,7 @@
         "image2": "./image/Lamps/Product_04b.jpg",
         "image3": "./image/Lamps/Product_04c.jpg",
         "type": "lamp",
+        "type1": 3,
         "quantity": 2350,
         "specification": "Lighting Type: Sleep Lights.\r\n Smart Equipment: No.\r\n Light Color: Warm White (3.000K).\r\n Warranty Duration: 12 months.",
         "description": "Specifications Sothing Sensor Night Light with 3 modes Off open no need wire plugs easy installation..\r\n Item: SUNNY Night Light Color: wood grain, Gary light..\r\n Battery capacity: 500mAh.\r\n 3 mode: Auto / Off / open.\r\n Input voltage: USB power 5V: 0.25 W.\r\n Charging port: Micro USB.\r\n Automatic brightness time: 20 seconds brightness: 40-50lm.\r\n On time: 20h standby time: 10 times."
@@ -65,6 +69,7 @@
         "image2": "./image/Lamps/Product_05b.jpg",
         "image3": "./image/Lamps/Product_05c.jpg",
         "type": "lamp",
+        "type1": 3,
         "quantity": 400,
         "specification": "Lighting Type: Lamps / Sleep Lights.\r\n Smart Equipment: Yes.\r\n Light Color: Warm White (3000K).\r\n Warranty Duration: 06 months",
         "description": "Xiaomi Mijia smart nightlight also uses flip chips, complementing the hot running design to achieve uniform illumination. Thus, it improves the quality of light better, giving the user a pleasant feeling..\r\n Beautiful design with high finishes, increase the aesthetics of the room..\r\n Can connect and sync with the Mi Home app and Apple Homekit..\r\n Equipped With Multi Touch Control Bar..\r\n Xiaomi Mijia smart night light can connect to both Wifi and Bluetooth with high compatibility level."
@@ -78,7 +83,8 @@
         "image1": "./image/Lamps/Product_06a.jpg",
         "image2": "./image/Lamps/Product_06b.jpg",
         "image3": "./image/Lamps/Product_06c.jpg",
-        "type": "Llamp",
+        "type": "lamp",
+        "type1": 4,
         "quantity": 56,
         "specification": "Lighting Type: Lamps / Sleep Lights.\r\n Smart Equipment: No.\r\n Light Color: Warm White (2700K).\r\n Warranty Duration: 03 months.",
         "description": "Yeelight YLYD10YL Night Light is a new generation night light device with a soft light source that makes it easy for users to fall asleep after a hard day's work. The product will be an indispensable device for those who have trouble sleeping, besides the low cost makes the product more accessible to users.\r\n Yeelight YLYD10YL Night Light uses high quality LED beads, low rated power only 0.4 W..\r\n The Yeelight sensor nightlight is designed with a scientific optical structure, which does not hurt the eyes, including the children. At the same time, the light source from the lamp emits quite mildly, with a color temperature of 2700K, which makes it easy for users to fall asleep."
@@ -93,6 +99,7 @@
         "image2": "./image/Lamps/Product_07b.jpg",
         "image3": "./image/Lamps/Product_07c.jpg",
         "type": "lamp",
+        "type1": 4,
         "quantity": 212,
         "specification": "Lighting Type: Lamps / Sleep Lights.\r\n Smart Equipment: Yes.\r\n Light Color: Warm White (2700-6500K).\r\n Warranty Duration: 12 months.",
         "description": "Traditional, aesthetic and practical design. Compatible: Android 4.4 & IOS 9.0 and above. Support smart control application, voice control, HomeKit sync..\r\n Flexible custom color temperature range from 2700K-6500K, from warm yellow to cool white light to for each use needs of your family..\r\n The lampshade is adjustable to 30 degrees, and the backlight can form a uniform luminous effect..\r\n Built-in wireless charging support fast charging, very convenient and safer when charging."
@@ -107,6 +114,7 @@
         "image2": "./image/Lamps/Product_08b.jpg",
         "image3": "./image/Lamps/Product_08c.jpg",
         "type": "lamp",
+        "type1": 3,
         "quantity": 160,
         "specification": "Lighting Type: Lamps / Sleep Lights.\r\n Smart Equipment: Yes.\r\n Light Color: Warm White (3000K).\r\n Warranty Duration: 03 months.",
         "description": "Mijia Sensor Night Light uses high quality lamp particles for a warm and comfortable light source. Besides, the lamp is equipped with a convenient touch control key and low power consumption.\r\n The lamp has a fairly simple circular design with a 2-spoke Jack, light weight 38g will not occupy the area of other plugs. The brand name Mijia is prominently printed on the front of the lamp.\r\n The peculiarity of the lamp is that it is equipped with intelligent sensor technology. the Mijia Sensor Night Light is also equipped with a hidden spring touch switch and can be controlled off with just 1 light touch."

@@ -23,7 +23,7 @@ function Time(){
     hour=update(hour);
     minute=update(minute);
     second=update(second);
-    document.getElementById("digital-clock").innerText=hour+":"+minute+":"+second+""+period;
+    document.getElementById("digital-clock").innerText=hour+":"+minute+":"+second+" "+period;
     setTimeout(Time,1000);
 
 }

@@ -15,6 +15,14 @@
         </td>
       </tr>
     </table>
+    <!--Filter by brand-->
+    <div>
+      <b>Filter by brand:</b> &ensp;
+      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> HUTA &ensp;
+      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MY HOME &ensp;
+      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI &ensp;
+      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> YEELIGHT
+    </div><br>
     <!--Download file-->
     <div>
       <b style="font-size: 13pt;">Download Catalogue:</b>
@@ -28,8 +36,8 @@
     <br>
 
     <!--Lamps List --> <!--Add data from lamps.json-->
-    <div ng-repeat="type in productTypes" class="product-list">
-      <div ng-repeat="lamp in lamps | filter:{ type: type.type } | filter:brand" class="product-item">
+    <div class="product-list">
+      <div ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter:brand" class="product-item">
         <img ng-src="{{lamp.image}}">
         <div class="content">
           <p><b>{{lamp.name}}</b></p>

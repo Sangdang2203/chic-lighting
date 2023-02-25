@@ -15,6 +15,14 @@
           </td>
         </tr>
       </table>
+      <!--Filter by brand-->
+      <div>
+        <b>Filter by brand:</b> &ensp;
+        <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> OSIDEN &ensp;
+        <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MASHANG &ensp;
+        <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HUTA &ensp;
+        <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> MONSKY
+      </div><br>
       <!--Download file-->
       <div>
         <b style="font-size: 13pt;">Download Catalogue:</b>
@@ -26,10 +34,9 @@
         </a>
       </div>
       <br>
-
       <!--Decoration Lights List --> <!--Add data from decorations.json-->
-      <div ng-repeat="type in productTypes" class="product-list">
-        <div ng-repeat="decoration in decorations | filter:{ type: type.type } | filter:txtSearch" class="product-item">
+      <div class="product-list">
+        <div ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter:txtSearch" class="product-item">
           <img ng-src="{{decoration.image}}">
           <div class="content">
             <p><b>{{decoration.name}}</b></p>
