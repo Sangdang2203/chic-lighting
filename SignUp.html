@@ -1,50 +1,10 @@
 <div class="container-fluid">
-    <script>
-        function check (){
-            var sUsername = document.getElementById("username").value;
-            var reUsername = /^\w{5,12}$/;
-                if(!reUsername.test(sUsername)){
-                    alert("Username cannot left blank! Username must be between 5-12 characters");
-                    document.getElementById("username").focus();
-                    return false;
-                }
-            var sFullname = document.getElementById("fullname").value;
-            var sPassword = document.getElementById("password").value;
-            var rePassword = /^\w{5,30}$/;
-                if(!rePassword.test(sPassword)){
-                    alert("Password is not empty! Password must have at least 5 characters.");
-                    document.getElementById("password").focus();
-                    return false;
-                }    
-            var sPassword1 = document.getElementById("password1").value;
-            var rePassword1 = /^\w{5,30}$/;
-                if(!rePassword1.test(sPassword1)){
-                    alert("Confirmed password and Password must be the same.");
-                    document.getElementById("password1").focus();
-                    return false;
-                }
-            var sMail = document.getElementById("email").value;
-            var reMail = /^\w+[@]\w+[.]\w+$/;
-                if(!reMail.test(sMail)){
-                    alert("Email is invalid. Email format is xxxx@xxx.xxx!");
-                    document.getElementById("email").focus();
-                    return false;
-                }
-        
-            var message = new Array()
-                message.push("Registered successfully.");
-                message.push("--------------------------");
-                message.push("Username: " +sUsername);
-                message.push("Password: " +sPassword);
-                alert(message.join("\n"));
-        }
-    </script>
     <section>       
         <div align="center" style="margin:30px 0;">
             <h1>Registration Form</h1>
         </div>
         <!--Registration Form-->
-        <form action="#!Login" onsubmit="return check()">
+        <form action="#!Login" onsubmit="return checkRegister()">
             <table class="form-group">
                 <tr>
                     <td><label>Username: </label></td>

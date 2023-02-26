@@ -40,7 +40,7 @@
     <!--Outdoor Lights List --> <!--Add data from outdoors.json-->
     <div class="product-list">
       <div ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <img ng-src="{{outdoor.image}}" style="width: 90%;">
+        <a href="#!/outdoor/{{outdoor.id}}"><img ng-src="{{outdoor.image}}" style="width: 90%;"></a>
         <div class="content">
           <p><b>{{outdoor.name}}</b></p>
           <p><b>Brand:</b> {{outdoor.brand | uppercase}} </p>

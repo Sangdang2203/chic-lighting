@@ -97,6 +97,10 @@ myApp.config(function ($routeProvider) {
             templateUrl: "FAQ.html",
             controller: "myCtrl"
         })
+        .when("/cart", {
+            templateUrl: "cart.html",
+            controller: "myCtrl"
+        })
         .when("/Register", {
             templateUrl: "SignUp.html",
             controller: "myCtrl"

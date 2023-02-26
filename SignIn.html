@@ -1,33 +1,10 @@
 <div class="container-fluid">
-    <script>
-        function check (){
-            var sUsername = document.getElementById("username").value;
-            var reUsername = /^\w{5,12}$/;
-                if(!reUsername.test(sUsername)){
-                    alert("Username cannot left blank! Username must be between 5-12 characters");
-                    document.getElementById("username").focus();
-                    return false;
-                }
-            var sPassword = document.getElementById("password").value;
-            var rePassword = /^\w{5,30}$/;
-                if(!rePassword.test(sPassword)){
-                    alert("Password is not empty! Password must have at least 5 characters.");
-                    document.getElementById("password").focus();
-                    return false;
-                }    
-            var message = new Array()
-                message.push("Logged in successfully.");
-                message.push("Welcome to Chic Lighting & Design.");
-                
-                alert(message.join("\n"));
-        }
-    </script>
     <section>
         <div align="center" style="margin:30px 0;">
             <h1>Login Form</h1>
         </div>
         <!--Login Form-->
-        <form action="#!" onsubmit="return check()">
+        <form action="#!" onsubmit="return checkLogin()">
             <table class="form-group">
                 <tr>
                     <td><label id="label-control">Username:</label></td>

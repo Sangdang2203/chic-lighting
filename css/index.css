@@ -190,8 +190,8 @@ img {vertical-align: middle;}
     border-radius: 20px;
 }
 .product-list .product-item .content {
-  text-align: justify;
-  padding: 5px 8px;
+  text-align: left;
+  padding: 5px 1px;
   font-size: 10pt;
 }
 .product-list .product-item button {
@@ -230,6 +230,7 @@ span {color: red; font-weight: bold; font-size: 16pt;}
   text-decoration: none;
   color: black;
   font-weight: bold;
+  cursor: pointer;
 }
 .signup-style:hover, .signin-style:hover {
   color: goldenrod;
@@ -291,13 +292,11 @@ span {color: red; font-weight: bold; font-size: 16pt;}
   height:auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 13pt;
-  color: goldenrod;
   text-align: center;
   position: relative;
 }
 .visitorCount {
   font-size: 13pt;
-  color: goldenrod;
   text-align: center;
   position: relative;
 }
