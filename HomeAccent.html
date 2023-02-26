@@ -41,7 +41,7 @@
     <!--Homeaccents List --> <!--Add data from homeaccents.json-->
     <div class="product-list">
       <div ng-repeat="homeaccent in filteredHomeaccents | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <img ng-src="{{homeaccent.image}}">
+        <img ng-src="{{homeaccent.image}}" style="width: 90%;">
         <div class="content">
           <p><b>{{homeaccent.name}}</b></p>
           <p><b>Brand:</b> {{homeaccent.brand | uppercase}} </p>

@@ -392,6 +392,22 @@ myApp.controller("decorationListsController", ['$scope', '$http', function($scop
         }
 }])
 
+myApp.controller('footer', ['$scope', '$location', function($scope, $location) {
+    $scope.count = 1;
+    countVisiter()
+    function countVisiter() {
+        if (localStorage.getItem("visiter")) {
+          $scope.count = parseInt(localStorage.getItem("visiter"));
+          if ($location.path() === "/home") {
+            $scope.count++;
+          }
+        }
+        console.log($scope.count)
+        localStorage.setItem("visiter", $scope.count.toString());
+      }
+}]);
+
+
 
 
     

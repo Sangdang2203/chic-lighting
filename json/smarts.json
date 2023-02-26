@@ -27,7 +27,7 @@
     },
     {
         "id": 3,
-        "name": "LEDSL03 20727 - LED Ceiling Light Set",
+        "name": "LEDSL03 20727-LED Ceiling Light",
         "brand": "Xiaomi",
         "price": 16.4,
         "image": "./image/smartlight/smartlight3.1.jpg",
@@ -40,7 +40,7 @@
     },
     {
         "id": 4,
-        "name": "Sliding Slider LED Spotlight LEDTSL05",
+        "name": "LED Spotlight LEDTSL05",
         "brand": "Philips",
         "price": 22.53,
         "image": "./image/smartlight/smartlight4.1.jpg",

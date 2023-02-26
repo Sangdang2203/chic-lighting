@@ -32,7 +32,7 @@ nav {
 
 .main-menu ul li a {
     color: white;
-    font-size: 17px;
+    font-size: 12pt;
     font-weight: bold;
     text-decoration: none;
 }
@@ -101,6 +101,7 @@ footer {
     color: white;
     position: auto;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 .mySlides1 {display: none}
@@ -169,6 +170,7 @@ img {vertical-align: middle;}
 .product-list {margin-left: 1%;}
 .product-list .product-item {
     width: 24%;
+    height: 5%;
     padding: 1%;
     float: left;
     margin-right: 1%;
@@ -190,7 +192,7 @@ img {vertical-align: middle;}
 .product-list .product-item .content {
   text-align: justify;
   padding: 5px 8px;
-  font-size: 11pt;
+  font-size: 10pt;
 }
 .product-list .product-item button {
     border: none;
@@ -244,7 +246,6 @@ span {color: red; font-weight: bold; font-size: 16pt;}
   color: white;
 }
 .table-style li:hover, .table-style a:hover, i:hover {color: goldenrod;}
-footer{border-radius: 10px;}
 
 /*Search button*/
 .box{
@@ -288,10 +289,15 @@ footer{border-radius: 10px;}
   background-color: none;
   width: auto;
   height:auto;
-  padding: 10px 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15pt;
+  font-size: 13pt;
   color: goldenrod;
-  text-align: right;
+  text-align: center;
+  position: relative;
+}
+.visitorCount {
+  font-size: 13pt;
+  color: goldenrod;
+  text-align: center;
   position: relative;
 }

@@ -39,7 +39,7 @@
       <!--Smart Lights List --> <!--Add data from smarts.json-->
       <div class="product-list">
         <div ng-repeat="smart in filteredSmarts | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <img ng-src="{{smart.image}}">
+          <img ng-src="{{smart.image}}" style="width: 90%;">
           <div class="content">
             <p><b>{{smart.name}}</b></p>
             <p><b>Brand:</b> {{smart.brand | uppercase}} </p>

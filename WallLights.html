@@ -38,7 +38,7 @@
     <!--Wall Lights List --> <!--Add data from walls.json-->
     <div class="product-list">
       <div ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand" class="product-item">
-        <img ng-src="{{wall.image}}">
+        <img ng-src="{{wall.image}}" style="width: 90%;">
         <div class="content">
           <p><b>{{wall.name}}</b></p>
           <p><b>Brand:</b> {{wall.brand | uppercase}} </p>
