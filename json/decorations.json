@@ -61,7 +61,7 @@
     },
     {
         "id": 5,
-        "name": "Decorative diamond MONSKY drop lights.",
+        "name": "Decorative diamond drop lights.",
         "brand": "MONSKY",
         "price": 11.3,
         "image": "./image/DecorationLight/product_05.jpg",
@@ -76,7 +76,7 @@
     },
     {
         "id": 6,
-        "name": "Spider-shaped MONSKY Marit drop lamp.",
+        "name": "Spider-shaped Marit drop lamp.",
         "brand": "MONSKY",
         "price": 28,
         "image": "./image/DecorationLight/product_06.jpg",
