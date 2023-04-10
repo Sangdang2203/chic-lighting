@@ -1,5 +1,6 @@
 <div class="container-fluid">
   <section>
+    <!--Search tool-->
     <table>
       <tr>
         <td>
@@ -15,22 +16,32 @@
         </td>
       </tr>
     </table>
+    
     <!--Filter by brand-->
-    <div>
-      <b>Filter by brand:</b> &ensp;
-      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> HUTA &ensp;
-      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MY HOME &ensp;
-      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI &ensp;
-      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> YEELIGHT
-    </div><br>
+    <b>Filter by brand:</b><br>
+    <div class="container">
+      <div class="row">
+        <div class="fillter">
+          <ul>
+            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> HUTA</li>
+            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MY HOME</li>
+          </ul>
+          <ul>
+            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI</li>
+            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> YEELIGHT</li>
+          </ul>
+        </div><br>
+      </div>
+    </div>
+    
     <!--Download file-->
     <div>
-      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <b>Download Catalogue:</b>
       <a href="./Docx/Lamps_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
       </a>
       <a href="./PDF/Lamps_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
       </a>
     </div>
     <br>
@@ -38,17 +49,16 @@
     <!--Lamps List --> <!--Add data from lamps.json-->
     <div class="product-list">
       <div ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter:brand" class="product-item">
-        <a href="#!/lamp/{{lamp.id}}"><img ng-src="{{lamp.image}}" style="width: 90%;"></a>
+        <a href="#!/lamp/{{lamp.id}}"><img ng-src="{{lamp.image}}"></a>
         <div class="content">
-          <p><b>{{lamp.name}}</b></p>
+          <p><b>{{lamp.name | uppercase}}</b></p>
           <p><b>Brand:</b> {{lamp.brand | uppercase}} </p>
-          <p>Price: <span>{{lamp.price | currency}}</span></p>
+          <p><span>{{lamp.price | currency}}</span></p>
           <p><a ng-href="#!/lamp/{{lamp.id}}"><button>Buy Now</button></a></p>
         </div>
       </div>
-
-      <div style="clear: both;"></div>
     </div>
+    <div style="clear: both;"></div>
     <br>
   </section>
 </div>

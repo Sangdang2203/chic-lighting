@@ -16,34 +16,45 @@
         </tr>
       </table>
       <!--Filter by brand-->
-      <div>
-        <b>Filter by brand:</b> &ensp;
-        <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> TAPO &ensp;
-        <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> BASEUS &ensp;
-        <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI &ensp;
-        <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> PHILIPS &ensp;
-        <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> OEM &ensp;
-        <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> RANG DONG &ensp;
-      </div><br>
+      <b>Filter by brand:</b> <br>
+      <div class="container">
+        <div class="row">
+          <div class="fillter">
+            <ul>
+              <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> TAPO </li>
+              <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> BASEUS </li>
+            </ul>
+            <ul>
+              <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI </li>
+              <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> PHILIPS </li>
+            </ul>
+            <ul>
+              <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> OEM </li>
+              <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> RANG DONG </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
       <!--Download file-->
       <div>
-        <b style="font-size: 13pt;">Download Catalogue:</b>
+        <b>Download Catalogue:</b>
         <a href="./Docx/Smart_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+          <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
         </a>
         <a href="./PDF/Smart_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+          <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
         </a>
       </div>
       <br>
       <!--Smart Lights List --> <!--Add data from smarts.json-->
       <div class="product-list">
         <div ng-repeat="smart in filteredSmarts | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <a href="#!/smart/{{smart.id}}"><img ng-src="{{smart.image}}" style="width: 90%;"></a>
+          <a href="#!/smart/{{smart.id}}"><img ng-src="{{smart.image}}"></a>
           <div class="content">
-            <p><b>{{smart.name}}</b></p>
+            <p><b>{{smart.name | uppercase}}</b></p>
             <p><b>Brand:</b> {{smart.brand | uppercase}} </p>
-            <p>Price: <span>{{smart.price | currency}}</span></p>
+            <p><span>{{smart.price | currency}}</span></p>
             <p><a ng-href="#!/smart/{{smart.id}}"><button>Buy Now</button></a></p>
           </div>
         </div>

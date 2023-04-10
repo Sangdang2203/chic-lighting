@@ -1,26 +1,45 @@
-.image-list {margin-left: 1%;}
+.image-list {
+    margin-left: 1%; 
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap;
+}
 .image-list .image-item {
-    width: 24%;
-    padding: 1%;
+    width: 22%;
+    margin: 10px;
+    margin-left: 1.5%;
     float: left;
-    margin-right: 1%;
-    border: 1px solid gainsboro;
-    border-radius: 20px;
+    border: 1px solid goldenrod;
+    border-radius: 15px;
     background-color: black;
+    display: block;
 }
 .image-list .image-item:hover {
-    border: 3px solid goldenrod;
+    box-shadow: 0 3px 6px rgba(189, 157, 0, 0.94), 0 3px 6px rgba(189, 157, 0, 0.94);
 }
 .image-list .image-item img {
-    margin: 10px 4px;
-    width: 300px;
-    height: 360px;
-    border-radius: 20px;
+    margin: 15px 15px;
+    width: 90%;
+    border-radius: 15px;
+    cursor: pointer;
 }
 .image-list .image-item .content {
   text-align: justify;
-  padding: 5px 1px;
+  padding: 5px 10px;
   font-size: 11pt;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+}
+
+/*-- Tablet --*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .image-list .image-item {width: 40%; margin-left: 6%;}
+    .image-list .image-item img {margin: 15px 15px;}
+}
+ 
+/*-- Mobile --*/
+ @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .image-list .image-item {width: 90%; margin-left: 5%;}
+    .image-list .image-item img {width: 80%; margin: 15px 35px;}
 }

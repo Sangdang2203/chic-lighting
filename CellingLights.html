@@ -16,24 +16,36 @@
       </tr>
     </table>
     <!--Filter by brand-->
-    <div>
-      <b>Filter by brand:</b> &ensp;
-      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> NOVELUX &ensp;
-      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> PARMIDA LED TECHNOLOGIES &ensp;
-      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> LUXRITE &ensp;
-      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> FEANRON &ensp;
-      <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> DROSBEY &ensp;
-      <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> MAXVOLADOR &ensp;
-      <input type="checkbox" ng-model="cat7" value="7" checked ng-click="choose()"> MEFFLYPEE
-    </div><br>
+    <b>Filter by brand:</b><br>
+    <div class="container">
+      <div class="row">
+        <div class="fillter">
+          <ul>
+            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> NOVELUX </li>
+            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> PARMIDA LED </li>
+          </ul> 
+          <ul>
+            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> LUXRITE </li>
+            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> FEANRON </li>
+          </ul>
+          <ul>
+            <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> DROSBEY </li>
+            <li><input type="checkbox" ng-model="cat7" value="7" checked ng-click="choose()"> MEFFLYPEE</li>
+          </ul>
+          <ul>
+            <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> MAXVOLADOR </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <!--Download file-->
     <div>
-      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <b>Download Catalogue:</b>
       <a href="./Docx/Celling_Lights_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
       </a>
       <a href="./PDF/Celling_Lights_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
       </a>
     </div>
     <br>
@@ -41,16 +53,14 @@
     <!--Ceiling Lights List --> <!--Add data from ceilings.json-->
     <div class="product-list">
       <div ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <a href="#!/ceiling/{{ceiling.id}}"><img ng-src="{{ceiling.image}}" style="width: 90%;"></a>
+        <a href="#!/ceiling/{{ceiling.id}}"><img ng-src="{{ceiling.image}}"></a>
         <div class="content">
-          <p><b>{{ceiling.name}}</b></p>
+          <p><b>{{ceiling.name | uppercase}}</b></p>
           <p><b>Brand:</b> {{ceiling.brand | uppercase}} </p>
-          <p>Price: <span>{{ceiling.price | currency}}</span></p>
+          <p><span>{{ceiling.price | currency}}</span></p>
           <p><a ng-href="#!/ceiling/{{ceiling.id}}"><button>Buy Now</button></a></p>
         </div>
       </div>
-
-      <div style="clear: both;"></div>
     </div>
     <br>
   </section>

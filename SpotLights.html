@@ -16,30 +16,37 @@
         </tr>
       </table>
       <!--Filter by brand-->
-      <div>
-        <b>Filter by brand:</b> &ensp;
-        <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> TAPO &ensp;
-        <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> DIEN QUANG &ensp;
-      </div><br>
+      <b>Filter by brand:</b> <br>
+      <div class="container">
+        <div class="row">
+          <div class="fillter">
+            <ul>
+              <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> TAPO </li>
+              <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> DIEN QUANG </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
       <!--Download file-->
       <div>
-        <b style="font-size: 13pt;">Download Catalogue:</b>
+        <b>Download Catalogue:</b>
         <a href="./Docx/Spot_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+          <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
         </a>
         <a href="./PDF/Spot_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+          <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
         </a>
       </div>
       <br>
       <!--Spot Lights List --> <!--Add data from spots.json-->
       <div class="product-list">
         <div ng-repeat="spot in filteredSpots | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <a href="#!/spot/{{spot.id}}"><img ng-src="{{spot.image}}" style="width: 90%;"></a>
+          <a href="#!/spot/{{spot.id}}"><img ng-src="{{spot.image}}"></a>
           <div class="content">
-            <p><b>{{spot.name}}</b></p>
+            <p><b>{{spot.name | uppercase}}</b></p>
             <p><b>Brand:</b> {{spot.brand | uppercase}} </p>
-            <p>Price: <span>{{spot.price | currency}}</span></p>
+            <p><span>{{spot.price | currency}}</span></p>
             <p><a ng-href="#!/spot/{{spot.id}}"><button>Buy Now</button></a></p>
           </div>
         </div>

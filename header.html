@@ -1,17 +1,17 @@
 <header>
-  <table>
+  <table class="header-style">
     <tr>
-      <td>
+      <td class="call-center">
         <img src="./image/home/call_center.png" width="18%">
-        <a style="text-decoration: none; text-align: center; font-size: 18pt; font-weight: bold;" href="tel:0909751772" class="test">1900 1560</a>
+        <a style="text-decoration: none; text-align: center; font-weight: bold;" href="tel:0909751772" class="test">1900 1560</a>
       </td>
       <td>
-        <div style="margin-left: 60%;">
-          <a href="index.html"><img src="./image/home/logo.png" width="60%"></a>
+        <div>
+          <a href="index.html"><img src="./image/home/logo.png" class="logo"></a>
         </div>
       </td>
 
-      <td>
+      <td class="login-register">
         <div align="right">
           <a href="#!cart"><img src="./image/home/cart.png" width="8%"></a>&ensp;
           <a href="#!Register" class="signup-style"><img src="./image/home/logo_register.png" width="7%"></a> 
@@ -22,9 +22,10 @@
       </td>
     </tr>
   </table>
-
-  <div class="main-menu">
-    <nav>
+  
+<!--Navrbar for PC -->
+  <div>
+    <nav class="nav-pc">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#!about">About Us</a></li>
@@ -40,7 +41,7 @@
             <a href="#!OutdoorLights">Outdoor Lights</a>
           </div>
         </li>
-
+  
         <li class="dropdown">
           <a class="dropbtn" href="">Led Lights</a>
           <div class="dropdown-content">
@@ -55,4 +56,41 @@
       </ul>
     </nav>
   </div>
+
+  <label for="nav-mobile-input" class="nav-mobile-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+    </svg>
+  </label>
+
+
+  <input type="checkbox" hidden class="nav-input" id="nav-mobile-input">
+
+  <label for="nav-mobile-input" class="nav-overlay"></label>
+
+
+<!--Navrbar for Mobile -->
+<nav class="nav-mobile">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#!about">About Us</a></li>
+    <li><a href="#!gallery">Gallery</a></li>
+    <li><a href="#!CellingLights">Ceiling Lights</a></li>       
+    <li><a href="#!WallLights">Wall Lights</a></li>        
+    <li><a href="#!Lamps">Lamps</a></li>      
+    <li><a href="#!Fans">Fans</a></li>              
+    <li><a href="#!SpotLights">Spot Lights</a></li>
+    <li><a href="#!SmartLights">Smart Lights</a></li>   
+    <li><a href="#!HomeAccent">Home Accents</a></li>        
+    <li><a href="#!OutdoorLights">Outdoor Lights</a></li>     
+    <li><a href="#!DecorationLights">Decoration Lights</a></li>      
+  </ul>
+  
+  <label for="nav-mobile-input" class="nav-mobile-close"> 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+    </svg>
+  </label> 
+</nav>
+
 </header>

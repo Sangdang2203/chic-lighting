@@ -16,37 +16,44 @@
         </tr>
       </table>
       <!--Filter by brand-->
-      <div>
-        <b>Filter by brand:</b> &ensp;
-        <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> OSIDEN &ensp;
-        <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MASHANG &ensp;
-        <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HUTA &ensp;
-        <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> MONSKY
-      </div><br>
+      <b>Filter by brand:</b> <br>
+      <div class="container">
+        <div class="row">
+          <div class="fillter">
+            <ul>
+              <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> OSIDEN </li>
+              <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MASHANG </li>
+            </ul>
+            <ul>
+              <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HUTA </li>
+              <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> MONSKY</li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      
       <!--Download file-->
       <div>
-        <b style="font-size: 13pt;">Download Catalogue:</b>
+        <bserch-box>Download Catalogue:</bserch-box>
         <a href="./Docx/Decoration_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+          <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
         </a>
         <a href="./PDF/Decoration_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+          <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
         </a>
       </div>
       <br>
       <!--Decoration Lights List --> <!--Add data from decorations.json-->
       <div class="product-list">
         <div ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <a href="#!/decoration/{{decoration.id}}"><img ng-src="{{decoration.image1}}" style="width: 90%;"></a>
+          <a href="#!/decoration/{{decoration.id}}"><img ng-src="{{decoration.image1}}"></a>
           <div class="content">
             <p><b>{{decoration.name}}</b></p>
             <p><b>Brand:</b> {{decoration.brand | uppercase}} </p>
-            <p>Price: <span>{{decoration.price | currency}}</span></p>
+            <p><span>{{decoration.price | currency}}</span></p>
             <p><a ng-href="#!/decoration/{{decoration.id}}"><button>Buy Now</button></a></p>
           </div>
         </div>
-
-        <div style="clear: both;"></div>
       </div>
       <br>
     </section>

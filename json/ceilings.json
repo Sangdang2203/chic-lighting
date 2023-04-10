@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "NOVELUX Slim Panel Ceiling Lights Damp-Rated",
+        "name": "NOVELUX Slim Panel Ceiling Lights Damp",
         "brand": "NOVELUX",
         "price": 26,
         "image": "./image/CellingLights/product1.jpg",
@@ -16,8 +16,8 @@
     },
     {
         "id": 2,
-        "name": "PARMIDA (12 Pack) 4 Inch Ultra-Thin LED Recessed Ceiling Light",
-        "brand": "Parmida LED Technologies",
+        "name": "PARMIDA (12 Pack) 4 Inch Ultra-Thin LED",
+        "brand": "Parmida LED",
         "price": 66,
         "image": "./image/CellingLights/product2.1.jpg",
         "image1": "./image/CellingLights/product2.jpg",
@@ -31,8 +31,8 @@
     },
     {
         "id": 3,
-        "name": "PARMIDA (12 Pack) 4 Inch - Thin LED Adjustable Gimbal Recessed Lighting",
-        "brand": "Parmida LED Technologies",
+        "name": "PARMIDA (12 Pack) 4 Inch - Thin LED",
+        "brand": "Parmida LED",
         "price": 78,
         "image": "./image/CellingLights/product3.jpg",
         "image1": "./image/CellingLights/product3.1.jpg",
@@ -46,7 +46,7 @@
     },
     {
         "id": 4,
-        "name": "LUXRITE 3 Inch Square LED Recessed Ceiling Light",
+        "name": "LUXRITE 3 Inch Square LED - Ceiling Light",
         "brand": "LUXRITE",
         "price": 75.05,
         "image": "./image/CellingLights/product4.1.jpg",
@@ -61,7 +61,7 @@
     },
     {
         "id": 5,
-        "name": "Feanron Farmhouse 2-Light Black Flush Mount Ceiling Light Fixtures",
+        "name": "Light Black Flush Mount Ceiling Light",
         "brand": "Feanron",
         "price": 58,
         "image": "./image/CellingLights/product5.jpg",
@@ -76,7 +76,7 @@
     },
     {
         "id": 6,
-        "name": "Drosbey 36W LED Ceiling Light Fixture, 13in Flush Mount Light Fixture",
+        "name": "Drosbey 36W LED Ceiling Light Fixture",
         "brand": "Drosbey",
         "price": 26,
         "image": "./image/CellingLights/product6.jpg",
@@ -91,7 +91,7 @@
     },
     {
         "id": 7,
-        "name": "MAXvolador Industrial Semi Flush Mount Ceiling Light",
+        "name": "Industrial Semi Flush Mount Ceiling Light",
         "brand": "MAXvolador",
         "price": 29,
         "image": "./image/CellingLights/product7.jpg",
@@ -106,7 +106,7 @@
     },
     {
         "id": 8,
-        "name": "2 Pack LED Garage Lights, 120W Deformable LED Garage Ceiling Lights",
+        "name": "2 Pack LED Garage Lights, 120W LED",
         "brand": "Mefflypee",
         "price": 36,
         "image": "./image/CellingLights/product8.jpg",

@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <section>
-    <table>
+    <table class="heading-style">
       <tr>
         <td>
           <h1>Outdoor Lights</h1>
@@ -16,23 +16,34 @@
       </tr>
     </table>
     <!--Filter by brand-->
-    <div>
-      <b>Filter by brand:</b> &ensp;
-      <input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> DESIGNERS FOUNTAIN &ensp;
-      <input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> EGLO &ensp;
-      <input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> GLOBE ELECTRIC &ensp;
-      <input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> AOOTEK &ensp;
-      <input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> UCGG &ensp;
-      <input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> LITHONIA &ensp;
-    </div><br>
+    <b>Filter by brand:</b> <br>
+    <div class="container">
+      <div class="row">
+        <div class="fillter">
+          <ul>
+            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> DESIGNERS FOUNTAIN </li>
+            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> EGLO </li>
+          </ul>
+          <ul>
+            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> GLOBE ELECTRIC </li>
+            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> AOOTEK </li>
+          </ul>
+          <ul>
+            <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> UCGG </li>
+            <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> LITHONIA </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
     <!--Download file-->
     <div>
-      <b style="font-size: 13pt;">Download Catalogue:</b>
+      <b>Download Catalogue:</b>
       <a href="./Docx/Outdoor_Lights_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .DOC
+        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
       </a>
       <a href="./PDF/Outdoor_Lights_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" width="35px" height="35px">File .PDF
+        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
       </a>
     </div>
     <br>
@@ -40,11 +51,11 @@
     <!--Outdoor Lights List --> <!--Add data from outdoors.json-->
     <div class="product-list">
       <div ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <a href="#!/outdoor/{{outdoor.id}}"><img ng-src="{{outdoor.image}}" style="width: 90%;"></a>
+        <a href="#!/outdoor/{{outdoor.id}}"><img ng-src="{{outdoor.image}}"></a>
         <div class="content">
-          <p><b>{{outdoor.name}}</b></p>
+          <p><b>{{outdoor.name | uppercase}}</b></p>
           <p><b>Brand:</b> {{outdoor.brand | uppercase}} </p>
-          <p>Price: <span>{{outdoor.price | currency}}</span></p>
+          <p><span>{{outdoor.price | currency}}</span></p>
           <p><a ng-href="#!/outdoor/{{outdoor.id}}"><button>Buy Now</button></a></p>
         </div>
       </div>
