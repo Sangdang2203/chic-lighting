@@ -48,7 +48,7 @@
         <div ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter:txtSearch" class="product-item">
           <a href="#!/decoration/{{decoration.id}}"><img ng-src="{{decoration.image1}}"></a>
           <div class="content">
-            <p><b>{{decoration.name}}</b></p>
+            <p><b>{{decoration.name | uppercase}}</b></p>
             <p><b>Brand:</b> {{decoration.brand | uppercase}} </p>
             <p><span>{{decoration.price | currency}}</span></p>
             <p><a ng-href="#!/decoration/{{decoration.id}}"><button>Buy Now</button></a></p>

@@ -3,31 +3,24 @@
         <div align="center" style="margin:30px 0;">
             <h1>Login Form</h1>
         </div>
-        <!--Login Form-->
-        <form action="#!" onsubmit="return checkLogin()">
-            <table class="form-group">
-                <tr>
-                    <td><label id="label-control">Username:</label></td>
-                    <td><input class="input-style" type="text" id="username" placeholder="sangdang2203"></td>
-                </tr>
-                
-                <tr>
-                    <td><label id="label-control">Password:</label></td>
-                    <td><input class="input-style" type="password" id="password" placeholder="123sangdang" ></td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td align="right">Already have an account ? <a ng-href="#!Register"><b>Register Now</b></a></td>
-                </tr>
-           
-                <tr>
-                    <td></td>
-                    <td>
-                        <input class="btn btn-primary" type="submit" id="button" value="Submit" style="margin-left: 5px;">
-                    </td>
-                </tr>
-            </table>
+        <!-- Login Form -->
+        <form action="#!" onsubmit="return checkLogin()" class="form-group">
+            <div class="container">
+                <div class="row">
+                    <div class="field">
+                        <ul>
+                            <li><label>Username:</label></li>
+                            <li><label>Password:</label></li>
+                        </ul>
+                        <ul>
+                            <li><input class="log-reg-input" type="text" id="username" placeholder="sangdang2203"></li>
+                            <li><input class="log-reg-input" type="password" id="password" placeholder="123sangdang" ></li>
+                            <li align="right">Already have an account ? <a ng-href="#!Register"><b>Register Now</b></a></li>
+                            <li><input class="btn btn-primary" type="submit" id="button" value="Submit" style="margin-left: 5px;"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </form>
     </section>
 </div>

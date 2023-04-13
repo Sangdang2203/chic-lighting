@@ -35,39 +35,31 @@
         <div align="center">
             <h1>Purchase Information</h1>
         </div>
-        <form action="index.html" onsubmit="return check()">
-            <table class="form-group">
-                <tr>
-                    <td><label>Full name: </label></td>
-                    <td><input class="input-style" type="text" name="" id="fullname" placeholder="Dang Van Sang" required></td>
-                </tr>  
-                <tr>
-                    <td><label>Phone: </label></td>
-                    <td><input class="input-style" type="tel" id="phone" placeholder=" 0909 751 772" required></td>
-                </tr>     
-                <tr>
-                    <td><label>Name of product: </label></td>
-                    <td><input class="input-style" type="text" name="" id="nameproduct" placeholder="Honeywell Ceiling Fans Ocean Breeze" required></td>
-                </tr>                   
-                <tr>
-                    <td><label>Quantity: </label></td>
-                    <td><input class="input-style" type="number" name="" id="quantity" placeholder="0" required></td>
-                </tr>       
-                <tr>
-                    <td><label>Address: </label></td>
-                    <td><input class="input-style" type="text" name="" id="address" placeholder="170 Nguyen Huu Tho, Nha Be, HCMC" required></td>
-                </tr>
-                <tr>
-                    <td><label>Note: </label></td>
-                    <td><textarea class="input-style" id="note" style="height: 80px;"></textarea></td>
-                </tr>           
-                <tr>
-                    <td></td>
-                    <td>
-                        <input class="btn btn-primary" type="submit" id="button" value="Submit" style="margin: 5px 5px">
-                    </td>
-                </tr>
-            </table>
+        <form action="index.html" onsubmit="return check()" class="form-group">
+            <div class="container">
+                <div class="row">
+                    <div class="field">
+                        <ul>
+                            <li><label>Full name: </label></li>
+                            <li><label>Phone: </label></li>
+                            <li><label>Name of product: </label></li>
+                            <li><label>Quantity: </label></li>
+                            <li><label>Address: </label></li>
+                            <li><label>Note: </label></li>
+                        </ul>
+                        <ul>
+                            <li><input class="order-input" type="text" name="" id="fullname" placeholder="Dang Van Sang" required></li>
+                            <li><input class="order-input" type="tel" id="phone" placeholder=" 0909 751 772" required></li>
+                            <li><input class="order-input" type="text" name="" id="nameproduct" placeholder="Honeywell Ceiling Fans Ocean Breeze" required></li>
+                            <li><input class="order-input" type="number" name="" id="quantity" placeholder="0" required></li>
+                            <li><input class="order-input" type="text" name="" id="address" placeholder="170 Nguyen Huu Tho, Nha Be, HCMC" required></li>
+                            <li><textarea class="order-input" id="note"></textarea></li>
+                            <li><input class="btn btn-primary" type="submit" id="button" value="Submit" style="margin: 5px 5px"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
         </form>    
       </section>
 </body>

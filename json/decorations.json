@@ -12,7 +12,9 @@
         "type1": 1,
         "quantity": 2000,
         "specification": "Lighting Type: LED strip lights.\r\nLight Color: Warm White (3000K).\r\nSmart Equipment: No.\r\nWarranty Duration: No",
-        "description": "Product type: soft LED neon lights.\r\nOperating temperature: 20℃～60℃. Input voltage: 12V.\r\nWaterproof grade: IP65 waterproof grade.\r\nColor: red / green / blue / warm white / white / pink.\r\nSuitable for indoor and outdoor use.\r\nSuper flexible, suitable for families, shops, bars, KTV, clubs, featured restaurants and supermarket signage lights.\r\nWidely used in classroom KTV Christmas party multifunctional lighting multifunctional decoration."
+        "description": "Product type: soft LED neon lights.\r\nOperating temperature: 20℃～60℃. Input voltage: 12V.\r\nWaterproof grade: IP65 waterproof grade.\r\nColor: red / green / blue / warm white / white / pink.",
+        "description1": "\r\nSuitable for indoor and outdoor use.\r\nSuper flexible, suitable for families, shops, bars, KTV, clubs, featured restaurants and supermarket signage lights.",
+        "description2": "\r\nWidely used in classroom KTV Christmas party multifunctional lighting multifunctional decoration."
     },
     {
         "id": 2,
@@ -27,7 +29,9 @@
         "type1": 1,
         "quantity": 3490,
         "specification": "Lighting Type: LED lights.\r\nSmart Equipment: No.\r\nWarranty Duration: 12 months",
-        "description": "Jack type: EU Jack. Model: outdoor lighting. Voltage: 220v. Power source: AC.\r\nColor: Warm White / rgb / blue / white.\r\nPerfect decoration; mellow romantic lighting creates a fairy tale world: the inner structure of the bulb is round and does not fold. This nicely designed string Lamp exudes softness and creates a relaxing and quiet environment.\r\nSoft material-wire lamps are handmade from cotton yarn. Bring soft light in the dark seasons. Perfect for table decoration, Christmas party curtain bedroom birthday lights halloween wedding light baby room romantic decoration interior gifts, etc."
+        "description": "Jack type: EU Jack. Model: outdoor lighting. Voltage: 220v. Power source: AC.\r\nColor: Warm White / rgb / blue / white.",
+        "description1": "\r\nPerfect decoration; mellow romantic lighting creates a fairy tale world: the inner structure of the bulb is round and does not fold. This nicely designed string Lamp exudes softness and creates a relaxing and quiet environment.",
+        "description2": "\r\nSoft material-wire lamps are handmade from cotton yarn. Bring soft light in the dark seasons. Perfect for table decoration, Christmas party curtain bedroom birthday lights halloween wedding light baby room romantic decoration interior gifts, etc."
     },
     {
         "id": 3,
@@ -42,7 +46,9 @@
         "type1": 2,
         "quantity": 1003,
         "specification": "Lighting Type: LED lights.\r\nSmart Equipment: No.\r\nWarranty Duration: No.",
-        "description": "Voltage: 220v / 110v. Power: 10w. Plug model: US / EU. Number of lamp beads: 5 meters and 20 lamps. Takraw ball size: 3cm.\r\nControl box: 8 modes( combined; in waves; sequential; slow glow; Chase; dimming; flashlight; stable).\r\nExquisite craftsmanship, since LED lamps do not heat up, they are the perfect choice for decorating flowers and fabrics or even in a children's room.\r\nSoft and ultra-thin wire with rubber insulation, portable and easy to store.\r\nAll types of rattan are completely handcrafted and fastened, ideal for Christmas decorations, weddings, indoor parties, Gardens, verandas, bedrooms or any other occasion."
+        "description": "Voltage: 220v / 110v. Power: 10w. Plug model: US / EU. Number of lamp beads: 5 meters and 20 lamps. Takraw ball size: 3cm.",
+        "description1": "\r\nControl box: 8 modes( combined; in waves; sequential; slow glow; Chase; dimming; flashlight; stable).\r\nExquisite craftsmanship, since LED lamps do not heat up, they are the perfect choice for decorating flowers and fabrics or even in a children's room.",
+        "description2": "\r\nSoft and ultra-thin wire with rubber insulation, portable and easy to store.\r\nAll types of rattan are completely handcrafted and fastened, ideal for Christmas decorations, weddings, indoor parties, Gardens, verandas, bedrooms or any other occasion."
     },
     {
         "id": 4,
@@ -57,7 +63,9 @@
         "type1": 3,
         "quantity": 931,
         "specification": "Lighting Type: LED lights.\r\nSmart Equipment: No.\r\nWarranty Duration: 12 months.",
-        "description": "Material: transparent glass. Color: transparent shell / yellow shell. Light: 2200K Gold. Size: D45mm-L75mm.\r\nPower: 4W. Voltage: 220V-50 / 60HZ. Lighting time >25,000 h. Color temperature: 2700K.\r\nEdison LED bulb is suitable for all Dimmer devices, adjustable up and down light arbitrarily.\r\nEdison LED bulb design is watertight, insect-proof and water-proof very well, glass outer shell design, with projection angle up to 360 degrees.\r\nEdison LED bulb has vintage design with LED strands and 2200K gold light for display color is very beautiful, suitable to decorate the space of houses, cafes, cafes, restaurants. Bring a feeling of extreme relaxation, loved by all ages."
+        "description": "Material: transparent glass. Color: transparent shell / yellow shell. Light: 2200K Gold. Size: D45mm-L75mm.",
+        "description1": "\r\nPower: 4W. Voltage: 220V-50 / 60HZ. Lighting time >25,000 h. Color temperature: 2700K.\r\nEdison LED bulb is suitable for all Dimmer devices, adjustable up and down light arbitrarily.",
+        "description2": "\r\nEdison LED bulb design is watertight, insect-proof and water-proof very well, glass outer shell design, with projection angle up to 360 degrees.\r\nEdison LED bulb has vintage design with LED strands and 2200K gold light for display color is very beautiful, suitable to decorate the space of houses, cafes, cafes, restaurants. Bring a feeling of extreme relaxation, loved by all ages."
     },
     {
         "id": 5,
@@ -72,7 +80,9 @@
         "type1": 4,
         "quantity": 151,
         "specification": "Lighting Type: LED lights.\r\nSmart Equipment: No.\r\nWarranty Duration: 12 months.",
-        "description": "E27 lamp holder (commonly used type).\r\nColander material: powder coated iron + cloth lined colander. Style: Vintage.\r\nVoltage: 220V. Installation type: suspension wire.\r\nFull set: 1 meter connecting wire + wall cladding base + cloth colander + electrostatic iron colander.\r\nDiamond decorative ceiling drop lights are beautiful models often used to decorate cafes, restaurants, fashion clothing shops, bedrooms, living rooms, vintage style for use space."
+        "description": "E27 lamp holder (commonly used type).\r\nColander material: powder coated iron + cloth lined colander. Style: Vintage.",
+        "description1": "\r\nVoltage: 220V. Installation type: suspension wire.\r\nFull set: 1 meter connecting wire + wall cladding base + cloth colander + electrostatic iron colander.",
+        "description2": "\r\nDiamond decorative ceiling drop lights are beautiful models often used to decorate cafes, restaurants, fashion clothing shops, bedrooms, living rooms, vintage style for use space."
     },
     {
         "id": 6,
@@ -87,7 +97,9 @@
         "type1": 4,
         "quantity": 174,
         "specification": "Lighting Type: Pendant Lights.\r\nSmart Equipment: No.\r\nWarranty Duration: 12 months.",
-        "description": "Easy to choose low height adjustable lights, easy to install. Product size: D810 mm. Light source: Edison ST64 led ball.\r\nProducts include 3 categories: 8 blinds, 10 blinds, 12 blinds for customers to choose. Application: Hall, restaurant, cafe, dining room, living room...\r\nNot only does the role of providing light, decorative drop lights are also items that highlight the interior style of the space. In each space, you should also know how to lay out such that the highest aesthetic effect. Drop lights help bring joyful, happy things in your apartment. Therefore, many families choose to install drop lights in the bedroom to create a warm, romantic space. It has helped increase the cohesion in family happiness."
+        "description": "Easy to choose low height adjustable lights, easy to install. Product size: D810 mm. Light source: Edison ST64 led ball.",
+        "description1": "\r\nProducts include 3 categories: 8 blinds, 10 blinds, 12 blinds for customers to choose. Application: Hall, restaurant, cafe, dining room, living room...",
+        "description2": "\r\nNot only does the role of providing light, decorative drop lights are also items that highlight the interior style of the space. In each space, you should also know how to lay out such that the highest aesthetic effect. Drop lights help bring joyful, happy things in your apartment. Therefore, many families choose to install drop lights in the bedroom to create a warm, romantic space. It has helped increase the cohesion in family happiness."
     }
     
 ]

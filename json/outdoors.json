@@ -12,7 +12,9 @@
         "type1": 1,
         "quantity": 35,
         "specification": "Lighting Type: LED lights.\r\n Smart Equipment: No.\r\n Warranty Duration: 12 months.",
-        "description": "Designers value.\r\n Uses Medium base bulb.\r\n Steel construction and weatherproof seal; Extension/Depth-5.75 inches. Height from Center of Wall Opening-2.50 incheses.\r\n Length: 5.75 in. ; Width: 4.75 in. ; Height: 8.00 in. Backplate/Canopy Width- 4.75 inches. Backplate/Canopy Length-4.75 incheses."
+        "description": "Designers value.\r\n Uses Medium base bulb.",
+        "description1": "\r\n Steel construction and weatherproof seal; Extension/Depth-5.75 inches. Height from Center of Wall Opening-2.50 incheses.",
+        "description2": "\r\n Length: 5.75 in. ; Width: 4.75 in. ; Height: 8.00 in. Backplate/Canopy Width- 4.75 inches. Backplate/Canopy Length-4.75 incheses."
     },
     {
         "id": 2,
@@ -27,7 +29,9 @@
         "type1": 1,
         "quantity": 150,
         "specification": "Color: Black.\r\n Material: Metal.\r\n Style: Transitional; Modern.\r\n Light fixture form: Close to Ceiling.",
-        "description": "Black finish with frosted glass shade.\r\n Steel Construction Easy to Install.\r\n CAST aluminum construction and intended for damp locations.\r\n Uses (1) 100 watt bulb not included."
+        "description": "Black finish with frosted glass shade.",
+        "description1": "\r\n CAST aluminum construction and intended for damp locations.",
+        "description2": "\r\n Steel Construction Easy to Install.\r\n Uses (1) 100 watt bulb not included."
     },
     {
         "id": 3,
@@ -42,7 +46,9 @@
         "type1": 1,
         "quantity": 45,
         "specification": "Color: Black.\r\n Material: Steel.\r\n Style: Flush Mount Ceiling Light.\r\n Light fixture form: Close to Ceiling",
-        "description": "Black finish with frosted glass shade.\r\n Cast aluminum construction.\r\n ses (1) 60-Watt Bulb (Not Included).\r\n CAST aluminum construction and intended for damp locations."
+        "description": "Black finish with frosted glass shade.\r\n Cast aluminum construction.",
+        "description1": "\r\n ses (1) 60-Watt Bulb (Not Included).",
+        "description2": "\r\n CAST aluminum construction and intended for damp locations."
     },
     {
         "id": 4,
@@ -56,7 +62,9 @@
         "type1": 2,
         "quantity": 25,
         "specification": "Color: Satin Nickel.\r\n Material: Steel.\r\n Style: Track.\r\n Light fixture form: Track Light Head",
-        "description": "Integrated LED 3-Watt x 4-Watt.\r\n Dimmable (dimmer not included).\r\n Adjustable heads.\r\n For damp location."
+        "description": "Integrated LED 3-Watt x 4-Watt.",
+        "description1": "\r\n Dimmable (dimmer not included).",
+        "description2": "\r\n Adjustable heads.\r\n For damp location."
     },
     {
         "id": 5,
@@ -71,7 +79,9 @@
         "type1": 3,
         "quantity": 349,
         "specification": "Color: Black.\r\n Material: Metal.\r\n Style: Without Bulb.\r\n Light fixture form: Pendant.",
-        "description": "MODERN FARMHOUSE DESIGN: warm rustic and industrial elements come together with the Nate Track Light to emphasize the balance between cozy and functional lighting thus epitomizing the modern farmhouse design trend.\r\n BULB REQUIREMENTS: 4x E26/Medium Base 60W Bulbs (sold separately).\r\n PIVOTING TRACK HEADS: two pivoting track heads on either end of the track bar help create a unique lighting design while the two middle track heads are fixed in place to offer focused task lighting for any situation.\r\n EASY INSTALL: includes all mounting hardware for quick and easy installation."
+        "description": "MODERN FARMHOUSE DESIGN: warm rustic and industrial elements come together with the Nate Track Light to emphasize the balance between cozy and functional lighting thus epitomizing the modern farmhouse design trend.",
+        "description1": "\r\n BULB REQUIREMENTS: 4x E26/Medium Base 60W Bulbs (sold separately).",
+        "description2": "\r\n PIVOTING TRACK HEADS: two pivoting track heads on either end of the track bar help create a unique lighting design while the two middle track heads are fixed in place to offer focused task lighting for any situation.\r\n EASY INSTALL: includes all mounting hardware for quick and easy installation."
     },
     {
         "id": 6,
@@ -86,7 +96,9 @@
         "type1": 4,
         "quantity": 56,
         "specification": "Color: Black.\r\n Material: Plastic.\r\n Style: Classic.\r\n Light fixture form: Wall",
-        "description": "Three Optional Modes: 1)Security light mode (when it detects motion at night. Motion sensor turns the light on for 15 seconds and off automatically). 2)Permanent On all night mode (the light turns on automatically night and stay all ight). 3) Smart brightness control mode (the Light stays all night and turns brighter when it detects motion)..\r\n High-efficient LED lights with wide-angle illumination can improve the lighting utilization.\r\n High Efficient Solar Panel Our solar Panel is energy saving and with PET laminated solar panel and LED lights, which is up to 20. 5% Conversion Rate with 1. 2W Monocrystalline silicon ..\r\n Waterproof IP65 and Heatproof outdoor security night light for wall, patio, garden, porch, lawn, pathway, gutter, etc. It's specifically designed to withstand extreme weather conditions."
+        "description": "Three Optional Modes: 1)Security light mode (when it detects motion at night. Motion sensor turns the light on for 15 seconds and off automatically). 2)Permanent On all night mode (the light turns on automatically night and stay all ight). 3) Smart brightness control mode (the Light stays all night and turns brighter when it detects motion).",
+        "description1": "\r\n High Efficient Solar Panel Our solar Panel is energy saving and with PET laminated solar panel and LED lights, which is up to 20. 5% Conversion Rate with 1. 2W Monocrystalline silicon.",
+        "description2": "\r\n High-efficient LED lights with wide-angle illumination can improve the lighting utilization.\r\n Waterproof IP65 and Heatproof outdoor security night light for wall, patio, garden, porch, lawn, pathway, gutter, etc. It's specifically designed to withstand extreme weather conditions."
     },
     {
         "id": 7,
@@ -101,7 +113,9 @@
         "type1": 5,
         "quantity": 120,
         "specification": "Color: Black.\r\n Material: Plastic.\r\n Style: 2 Pack.\r\n Light fixture form: Wall.",
-        "description": "[270 Degree Range Lighting]：3-head solar wall light, can be adjusted 2 side heads angle freely within 270°. With these adjustable design, solar flood light bring higher brightness and more bright area.\r\n [Bright Solar Wall Lights]: The solar outdoor lights with 180 bright LED beads, bring up to 480 lumen 6500K Color Temperature high brightness. Bright your yard, pathway, garage.\r\n [Charge Fast Work Long]: With 5.5V 1.5W solar panel, the outdoor solar wall light can take sunlight into electric in the daytime. The battery can power the solar wall light for 6-12 hours. Note: The actual work time is affected by the sunlight and charging time.\r\n [IP65 Waterproof]：The solar outdoor wall light is made of durable ABS plastic, works well under rain, wind, snow weather. Perfect for outdoor locations."
+        "description": "[270 Degree Range Lighting]：3-head solar wall light, can be adjusted 2 side heads angle freely within 270°. With these adjustable design, solar flood light bring higher brightness and more bright area.",
+        "description1": "\r\n [Bright Solar Wall Lights]: The solar outdoor lights with 180 bright LED beads, bring up to 480 lumen 6500K Color Temperature high brightness. Bright your yard, pathway, garage.",
+        "description2": "\r\n [Charge Fast Work Long]: With 5.5V 1.5W solar panel, the outdoor solar wall light can take sunlight into electric in the daytime. The battery can power the solar wall light for 6-12 hours. Note: The actual work time is affected by the sunlight and charging time.\r\n [IP65 Waterproof]：The solar outdoor wall light is made of durable ABS plastic, works well under rain, wind, snow weather. Perfect for outdoor locations."
     },
     {
         "id": 8,
@@ -116,7 +130,9 @@
         "type1": 6,
         "quantity": 33,
         "specification": "Color: Dark Bronze.\r\n Material: Aluminum.\r\n Style: 2150-2600 Lumens.\r\n Light fixture form: Wall.",
-        "description": "DESIGN: Easy to install and experience, the HGX floodlight family is the best choice for contractors and DIY customers with its broad feature set for every application.\r\n ENERGY SAVINGS: Energy-efficient LEDs with adjustable lumen output of 2,150 or 2,600 lumen options.\r\n DIMMING: Photocell (dusk-to-dawn), Adjustable Lumen Output (ALO), Switchable Color Temperature (CCT) and Motion Sensor.\r\n RATINGS: UL/cUL listed to meet US and Canadian standards, suitable for wet locations, ENERGY STAR certified product."
+        "description": "DESIGN: Easy to install and experience, the HGX floodlight family is the best choice for contractors and DIY customers with its broad feature set for every application.",
+        "description1": "\r\n DIMMING: Photocell (dusk-to-dawn), Adjustable Lumen Output (ALO), Switchable Color Temperature (CCT) and Motion Sensor.",
+        "description2": "\r\n ENERGY SAVINGS: Energy-efficient LEDs with adjustable lumen output of 2,150 or 2,600 lumen options.\r\n RATINGS: UL/cUL listed to meet US and Canadian standards, suitable for wet locations, ENERGY STAR certified product."
     }
 ]
 

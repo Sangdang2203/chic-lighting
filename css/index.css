@@ -33,10 +33,13 @@
   font-weight: 500;
   color: white;
 }
+.dropdown-menu {padding: 0 10px; background-color: rgba(0, 0, 0, 1.0); width: 100%;}
+.dropdown-menu a {text-align: center;}
 .nav-mobile ul li:hover {padding-left: 20px; background-color: wheat;}
-.nav-mobile ul li a:hover {
+.nav-mobile ul li a:hover, dropdown-menu a:hover {
   color: goldenrod;
   font-weight: bold;
+  background-color: wheat;
 }
 .nav-mobile-btn {
   position: absolute;
@@ -178,6 +181,7 @@ li.dropdown {display: inline-block;}
   border-radius: 10px 10px  0 0;
   color: #fff;
   padding: 30px 0;
+  width: auto;
 }
 .container {
   max-width: 100%;
@@ -228,15 +232,14 @@ li.dropdown {display: inline-block;}
 .backToMenu {width: 6%;}
 
 /* Slideshow container */
-.mySlides1 {display: none;}
-.slideshow-container .mySlides1:first-child {display: block;}
-img {vertical-align: middle;}
-
 .slideshow-container {
   max-width: 2000px;
   position: relative;
   margin: auto;
 }
+.mySlides, .mySlides1 {display: none;}
+.slideshow-container .mySlides:first-child ,.slideshow-container .mySlides1:first-child {display: block;}
+.slideshow-container .mySlides img, .slideshow-container .mySlides1 img {vertical-align: middle;}
 .image-style {
   width: 100%;
   height: 100%;
@@ -267,7 +270,7 @@ img {vertical-align: middle;}
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  margin-left: auto;
   border-radius: 3px 0 0 3px;
 }
 
@@ -276,20 +279,29 @@ img {vertical-align: middle;}
   background-color:gainsboro;
   color: goldenrod;
 }
+
 /* -- Registration Form, Login Form, Purchase Information, Contact Form --*/
-.contact-form {width: 100%; margin-left: 30%;}
-.form-group{
-  margin: 1% 0 0 35%;
-}
-.input-style {
-  width: 400px;
-  height: 40px;
+.field {width: 100%;}
+.field ul {list-style: none; float: left;}
+.field ul li {width: 100%;}
+.form-group{margin-left: 20%;}
+.log-reg-input {
+  height: fit-content;
   border: 1px solid gainsboro;
   border-radius: 5px;
   margin: 0 0 5px 10px;
   padding: 2px 5px;
 }
-.input-style:hover, textarea:hover {
+.input-contact, .input-style {
+  width: 80%;
+  height: fit-content;
+  border: 1px solid gainsboro;;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0 0 5px 10px;
+  padding: 2px 5px;
+}
+.log-reg-input:hover, textarea:hover, .input-contact:hover, order-input:hover, input-style:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 .label-style {float: left;}
@@ -298,18 +310,15 @@ img {vertical-align: middle;}
 /* Product card */
 .product-list {margin-left: 1%; width: 100%;}
 .product-list .product-item {
-    width: 23%;
+    width: 24%;
     float: left;
     text-align: justify;
     margin-left: 1%;
     border: 1px solid gainsboro;
     border-radius: 10px;
-    box-shadow: 1px 2px goldenrod;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     background-color: rgba(250, 250, 250, 0.2);
-}
-.product-list .product-item:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.28);
 }
 .product-list .product-item img {
     width: 80%;
@@ -319,11 +328,10 @@ img {vertical-align: middle;}
 }
 .product-list .product-item .content {
   text-align: center;
-  padding: 5px;
-  font-size: 8pt;
+  padding: 2px 0px;
   cursor: pointer;
 }
-.product-list .product-item .content b {font-weight: 600; font-size: 8pt;}
+.product-list .product-item .content b {font-weight: 500; font-size: 8pt;}
 .product-list .product-item button {
     border: none;
     border-radius: 10px;
@@ -334,26 +342,35 @@ img {vertical-align: middle;}
 		text-align: center;
 		width: 82%;
     height: auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
+  }
+.product-list .product-item:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.28);
 }
 .product-list .product-item img:hover {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-.product-list .product-item button:hover{background-color: gray;}
+.product-list .product-item button:hover{background-color:rgba(0, 0, 0, 0.5);}
 .fillter {width: 100%;}
 .file-icon {width: 35px; height: 35px}
 .fillter ul {list-style: none; float: left; width: 25%;}
 .fillter ul li  {font-size: 8pt;}
-/* Product card */
 
+/* Product Detail */
+.product-detail {text-align: justify; margin-top: 30px;}
+.product-detail ul{float: left; width: 50%; list-style-type: square;}
+.product-detail li{margin-left: 30px;}
+.product-detail-btn {padding: 0 0 0 -100px; float: left;}
 textarea {
-  margin-top: 20px;
-  width: 780px;
+  width: 300px;
   height: 100px;
   border: 1px solid gainsboro;
   border-radius: 5px;
   padding: 2px 4px;
+  display: flex;
+  margin: 5% 0 2% 0;
 }
 
 h1, h3 {color: goldenrod; padding: 20px 0 0 0;}
@@ -439,9 +456,9 @@ span {color: red; font-weight: 600; font-size: 15pt;}
 .address {
   width: 50%;
   float: left;
-  padding: 0 60px;
+  padding-left: 50px;
 }
-.address ul {padding-left: 40px;}
+.address ul {padding-left: 30px;}
 
 /*-- FAQ Design --*/
 .faq-header{
@@ -510,14 +527,41 @@ span {color: red; font-weight: 600; font-size: 15pt;}
   transform: rotate(45deg);
 }
 .panel {display: none;}
-
+ 
 /*-- Responsive --*/
-@media (max-width : 1023px) {
+/*-- Tablet --*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .product-list .product-item {width: 42%; margin-left: 4%;}
+  .product-list .product-item img {width: 80%; margin: 10% 10%;}
+  .product-detail .mySlides1 img {width: 80%; height: 80%;}
+  .form-group {margin-left: 15%;}
+  .google-map {margin-top: 50px;}
+  .input-style {width: 50%; margin-top: 5px; height: 30px;}
+  
+}
+
+/*-- Mobile --*/
+@media only screen and (min-width: 240px) and (max-width: 767px) {
+  .product-list .product-item {width: 80%; margin-left: 8%;}
+  .product-list .product-item img {width: 80%; margin: 10% 10%;}
+  .fillter ul {width: 50%; padding: 0 1px;}
+  .address {width: 100%; padding: 0;}
+  .address ul {padding-left: 25px;}
+  .google-map {display: none;}
+  .form-group {margin-left: 5%;}
+  .product-detail-btn {padding: 0 0 0 -100px;}
+  .input-style {width: 30%; height: 30px; margin-top: 5px;}
+  .btn-info {width: 70px; height: 30px; font-size: 5pt; margin-left: -20px;}
+  .btn-danger {width: 60px; height: 30px; font-size: 5pt; margin-right: -40px;}
+}
+
+/* PC, Laptop */
+@media (max-width : 1024px) {
   *, .footer-col ul li a, .footer-col h4, #copyright, #digital-clock, .visitorCount, .current-date, .box .input, b, 
   .panel-title, .panel-content{
     font-size: 9pt;
+    line-height: 20px;
   }
-  
   h1, h2 {font-size: 20pt;}
   .search-style h1 {font-size: 12pt;}
   .nav-pc {display: none;}
@@ -533,31 +577,34 @@ span {color: red; font-weight: 600; font-size: 15pt;}
     height: 20px;
     line-height: 20px;
   }
-  iframe {display: none;}
-  .backToMenu {width: 12%};
+  .backToMenu {width: 10%};
   .address {width: 100%}
-  .product-list .product-item button {font-size: 11pt;}
-  .file-icon {width: 25px; height: 25px;}
-  span {font-weight: 600; font-size: 12pt;}
+  .backToMenu {width: 8%}
+  .visitorCount {display: none;}
+  .footer-google-map {display: none;} 
   
-} 
-/*-- Tablet --*/
-@media only screen and (min-width: 768px) and (max-width: 1023px){
-  .product-list .product-item {width: 40%; margin-left: 6%;}
-  .product-list .product-item img {width: 80%; margin: 20px 30px 0 30px;}
-  .slideshow-container .mySlides1 {display: block;}
-
-}
-
-/*-- Mobile --*/
-@media only screen and (min-width: 240px) and (max-width: 767px) {
-  .product-list .product-item {width: 80%; margin-left: 10%;}
-  .product-list .product-item img {width: 80%; margin: 25px 25px 0 25px;}
-  .fillter ul {width: 50%; padding: 0 1px;}
+  .product-list .product-item button {font-size: 12pt; font-weight: 600;}
+  .product-detail .mySlides1 img {width: 450px; height: 450px;}
+  .product-detail ul {width: 100%;}
+  .product-detail-btn {margin: 6px 0 0 65px;}
+  #text-area {display: none;}
+  .file-icon {width: 25px; height: 25px;}
+  span {font-weight: 600; font-size: 13pt;}
+  
+  .team-04 {display: none;}
+  .input-style {width: 40%; height: 30px; margin-top: 5px;}
+  .btn-info {width: 100px; height: 30px; font-size: 10pt; margin-left: 10px;}
+  .btn-danger {width: 100px; height: 30px; font-size: 10pt;}
  
-
 }
-
 @media (min-width: 1024px) {
-  .product-list .product-item{width: 23%;}
+  .product-list .product-item img {margin: 10% 10%;}
+  .form-group {margin-left: 20%;}
+  .product-detail .mySlides1 img {width: 450px; height: 450px;}
+  .google-map, .footer-google-map {display: block; width: 100%; height: 100%; margin-top: auto;}
+  .input-style {width: 40%; height: 35px;}
+  .btn-info {width: 100px; height: 35px; font-size: 10pt; margin-left: 10px;}
+  .btn-danger {width: 100px; height: 35px; font-size: 10pt;}
+
+
 }

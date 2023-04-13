@@ -1,66 +1,71 @@
-<div class="container-fluid">
+<main class="container-fluid">
   <section>
-    <table style="margin-top: 20px; text-align: justify;">
-      <tr>
-        <td>
-          <div class="slideshow-container">
-            <div class="mySlides1">
-              <img ng-src="{{product.image}}" width="450px" height="450px">
+    <div class="container">
+      <div class="row">
+        <div class="product-detail">
+          <ul>
+            <!-- slide product photos -->
+            <div class="slideshow-container">
+              <div class="mySlides1">
+                <img ng-src="{{product.image}}" width="560px" height="560px">
+              </div>
+  
+              <div class="mySlides1">
+                <img ng-src="{{product.image1}}" width="560px" height="560px">
+              </div>
+  
+              <div class="mySlides1">
+                <img ng-src="{{product.image2}}" width="560px" height="560px">
+              </div>
+  
+              <div class="mySlides1">
+                <img ng-src="{{product.image3}}" width="560px" height="560px">
+              </div>
+  
+              <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div><br>
+          </ul>
+
+          <ul>
+            <div>
+              <!-- Information of product -->
+              <b>{{product.name | uppercase }}</b>
+              <p>Price: <span>{{product.price | currency}}</span></p>
+  
+              <b>Product Specifications:</b>
+                <li>Brand: {{ product.brand | uppercase }}</li>
+                <li>{{product.specification}}</li> 
+
+              <b>Product Description:</b>
+                <li>{{product.description}}</li>
+                <li>{{product.description1}}</li>
+                <li>{{product.description2}}</li>
             </div>
 
-            <div class="mySlides1">
-              <img ng-src="{{product.image1}}" width="450px" height="450px">
+            <div style="margin-top: 20px; display: flex;">
+              <b>Quantity:</b> <input class="input-style" type="number" placeholder=" {{ product.quantity }} available">
+              <div class="product-detail-btn">
+                <button class="btn btn-info" type="button" value="">Add to Cart</button>
+                <a href="PurchaseForm.html">
+                  <button class="btn btn-danger" type="button" value="">Buy Now</button>
+                </a>
+              </div>
             </div>
-
-            <div class="mySlides1">
-              <img ng-src="{{product.image2}}" width="450px" height="450px">
-            </div>
-
-            <div class="mySlides1">
-              <img ng-src="{{product.image3}}" width="450px" height="450px">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-          </div>
-        </td>
-
-        <td>
-          <div style="margin-left: 50px;">
-            <p>
-              <b>{{product.name}}</b>
-              <img src="./image/home/hot.gif" width="6%">
-            </p>
-            <p>Price: <span>{{product.price | currency}}</span></p>
-
-            <b>Product Specifications</b>
-            <ul style="margin-left: 50px;">
-              <li>Brand: {{ product.brand | uppercase }}</li>
-              <li>{{product.specification}}</li> 
-            </ul>
-            <b>Product Description:</b>
-            <ul style="margin-left: 50px;">
-              <li>{{product.description}}</li> 
-            </ul>
-          </div>
-          <div style="margin: 20px 50px;">
-            <b>Quantity:</b> <input class="input-style" type="number" placeholder=" 1"> {{product.quantity}} available.
-          </div>
-          <div style="margin: 20px 50px;">
-            <input class="btn btn-info" type="button" value="Add to Cart">
-            <a href="PurchaseForm.html"><input class="btn btn-danger" type="button" value="Buy Now"></a>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-    <form action="#!" onsubmit="return check()">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Comment -->
+    <form action="#!CellingLights" onsubmit="return check()" id="text-area">
       <div>
         <textarea id="comment" placeholder=" Enter your comment:"></textarea>
       </div>
       <div>
         <input class="btn btn-info" type="submit" value="Send">
       </div>
-    </form> <br>
+    </form>
+
+    <br>
   </section>
-</div>
+</main>

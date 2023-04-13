@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Home Accents Holiday 200-Light LED Multi-Colored Dome Light String.",
+        "name": "Light LED Multi-Colored Dome Light",
         "brand": "Home Accent",
         "price": 10,
         "image": "./image/Homeaccent/Product01.jpg",
@@ -16,7 +16,7 @@
     },
     {
         "id": 2,
-        "name": "400 LED Curtain Lights Programmable for Decor.",
+        "name": "400 LED Curtain Lights Programmable",
         "brand": "Avatar Controls",
         "price": 60.98,
         "image": "./image/Homeaccent/Product02a.jpg",
@@ -31,7 +31,7 @@
     },
     {
         "id": 3,
-        "name": "Govee LED Strip Lights, 32.8ft RGB LED Light Strip with Remote Control.",
+        "name": "Govee LED Strip Lights, 32.8ft RGB",
         "brand": "Govee",
         "price": 40.00,
         "image": "./image/Homeaccent/Product03.jpg",
@@ -46,7 +46,7 @@
     },
     {
         "id": 4,
-        "name": "OurLeeme Lawn Flood Light Stake, Waterproof Outdoor Remote",
+        "name": "OurLeeme Lawn Flood Light Stake",
         "brand": "OurLeeme",
         "price": 50.0,
         "image": "./image/Homeaccent/Product04a.jpg",
@@ -61,7 +61,7 @@
     },
     {
         "id": 5,
-        "name": "Christmas Lights 25Ft Clear C7 Vintage Lights.",
+        "name": "Christmas Lights - 25Ft Clear C7",
         "brand": "Abeja",
         "price": 50.00,
         "image": "./image/Homeaccent/Product05b.jpg",
@@ -76,7 +76,7 @@
     },
     {
         "id": 6,
-        "name": "25 Foot C9 Multi Ceramic Christmas String Light Set.",
+        "name": "Multi Ceramic Christmas String Light",
         "brand": "Novelty Lights",
         "price": 20,
         "image": "./image/Homeaccent/Product06.jpg",
@@ -91,7 +91,7 @@
     },
     {
         "id": 7,
-        "name": "Minka Lavery Crystal Chandelier Pendant Lighting 3150-77.",
+        "name": "Crystal Chandelier Pendant Lighting",
         "brand": "Minka Lavery",
         "price": 344.95,
         "image": "./image/Homeaccent/Product07.jpg",
@@ -106,7 +106,7 @@
     },
     {
         "id": 8,
-        "name": "Minka Lavery 4446-582 Laurel Estate Crystal Chandelier Lighting.",
+        "name": "Laurel Estate Crystal Chandelier",
         "brand": "Minka Lavery",
         "price": 414.95,
         "image": "./image/Homeaccent/Product08.jpg",
