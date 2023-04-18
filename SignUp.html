@@ -3,35 +3,41 @@
         <div align="center" style="margin:30px 0;">
             <h1>Registration Form</h1>
         </div>
-        <!--Registration Form-->
+        <!-- Registration Form -->
         <form action="#!Login" onsubmit="return checkRegister()" class="form-group">
-            <div class="container">
-                <div class="row">
-                    <div class="field">
-                        <ul>
-                            <li><label>Username: </label></li>
-                            <li><label>Fullname: </label></li>
-                            <li><label>Password: </label></li>
-                            <li><label>Password confirm: </label></li>
-                            <li><label>Email: </label></li>
-                        </ul>
-                        <ul>
-                            <li><input class="log-reg-input" type="text" name="" id="username" placeholder="Sangdang2203"></li>
-                            <li><input class="log-reg-input" type="text" name="" id="fullname" placeholder="Jonathan Dang" required></li>
-                            <li><input class="log-reg-input" type="password" name="" id="password" placeholder="123sangdang"></li>
-                            <li><input class="log-reg-input" type="password" name="" id="password1" placeholder="123sangdang"></li>
-                            <li><input class="log-reg-input" type="email" name="email" id="email" placeholder="sangdang2203@gmail.com"></li>
-                            <li>
-                                <input type="radio" name="rdGender" id="rdMale" checked> Male
-                                <input type="radio" name="rdGender" id="rdFemale"> Female
-                            </li>
-                            <li>
-                                <input class="btn btn-primary" type="submit" id="button" value="Register" style="margin: 5px 10px">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <table wisth="100%" style="margin-left: 10%;">
+                <tr>
+                    <td><label>Username: </label></td>
+                    <td><input class="log-reg-input" type="text" name="" id="username" placeholder="Sangdang2203"></td>
+                </tr>
+                <tr>
+                    <td><label>Fullname: </label></td>
+                    <td><input class="log-reg-input" type="text" name="" id="fullname" placeholder="Jonathan Dang" required></td>
+                </tr>
+                <tr>
+                    <td><label>Password: </label></td>
+                    <td><input class="log-reg-input" type="password" name="" id="password" placeholder="123sangdang"></td>
+                </tr>
+                <tr>
+                    <td><label>Password confirm: </label></td>
+                    <td><input class="log-reg-input" type="password" name="" id="password1" placeholder="123sangdang"></td>
+                </tr>
+                <tr>
+                    <td><label>Email: </label></td>
+                    <td><input class="log-reg-input" type="email" name="email" id="email" placeholder="sangdang2203@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="radio" name="rdGender" id="rdMale" checked style="margin: 5px 10px"> Male &ensp;
+                        <input type="radio" name="rdGender" id="rdFemale"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="btn btn-primary" type="submit" id="button" style="margin: 5px 10px">Register</button></td>
+                </tr>
+            </table>
         </form>        
     </section>
 </div>
