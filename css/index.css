@@ -7,7 +7,7 @@
     box-sizing: border-box;
   }
 html { scroll-behavior: smooth;}
-.logo {width: 28%; margin-left: 60%;}
+.logo {width: 26%; margin-left: 60%; display: block;}
 
 /*navbar for mobile | tablet*/ 
 .nav-mobile {
@@ -45,6 +45,7 @@ html { scroll-behavior: smooth;}
 }
 .nav-mobile-btn {
   position: absolute;
+  top: 0;
   width: 20px;
   height: 20px;
   margin-top: 10px;
@@ -240,17 +241,12 @@ li.dropdown {display: inline-block;}
   margin: auto;
 }
 .mySlides, .mySlides1 {display: none;}
-.slideshow-container .mySlides:first-child ,.slideshow-container .mySlides1:first-child {display: block;}
-.slideshow-container .mySlides img, .slideshow-container .mySlides1 img {vertical-align: middle;}
+.slideshow-container .mySlides1:first-child {display: block;}
+.slideshow-container .mySlides1 img {vertical-align: middle;}
 .image-style {
   width: 100%;
   height: 100%;
   border-radius: 0 0 10px 10px;
-}
-.image-style-01 {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
 }
 
 /* Next & previous buttons */
@@ -272,7 +268,7 @@ li.dropdown {display: inline-block;}
 
 /* Position the "next button" to the right */
 .next {
-  margin-left: auto;
+  margin: -2% 0 0 96%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -292,7 +288,7 @@ li.dropdown {display: inline-block;}
   margin: 0 0 5px 10px;
   padding: 2px 5px;
 }
-.contact-input{
+.contact-input, .input-style{
   width: 80%;
   height: fit-content;
   border: 1px solid gainsboro;;
@@ -310,7 +306,7 @@ li.dropdown {display: inline-block;}
 /* Product card */
 .product-list {margin-left: 1%; width: 100%;}
 .product-list .product-item {
-    width: 24%;
+    width: 23%;
     float: left;
     text-align: justify;
     margin-left: 1%;
@@ -529,19 +525,8 @@ span {color: red; font-weight: 600; font-size: 15pt;}
 .panel {display: none;}
  
 /*-- Responsive --*/
-/*-- Tablet --*/
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-  .product-list .product-item {width: 42%; margin-left: 4%;}
-  .product-list .product-item img {width: 80%; margin: 10% 10%;}
-  .product-detail .mySlides1 img {width: 80%; height: 80%;}
-  .form-group {margin-left: 15%;}
-  .google-map {margin-top: 50px;}
-  .input-style {width: 50%; margin-top: 5px; height: 30px;}
-  
-}
-
 /*-- Mobile --*/
-@media only screen and (min-width: 240px) and (max-width: 767px) {
+@media only screen and (min-width: 240px) and (max-width: 768px) {
   .product-list .product-item {width: 80%; margin-left: 8%;}
   .product-list .product-item img {width: 80%; margin: 10% 10%;}
   .fillter ul {width: 50%; padding: 0 1px;}
@@ -551,12 +536,39 @@ span {color: red; font-weight: 600; font-size: 15pt;}
   .form-group {margin-left: 5%;}
   .product-detail-btn {padding: 0 0 0 -100px;}
   .input-style {width: 30%; height: 30px; margin-top: 5px;}
-  .btn-info {width: 70px; height: 30px; font-size: 5pt; margin-left: -20px;}
-  .btn-danger {width: 60px; height: 30px; font-size: 5pt; margin-right: -40px;}
+  .btn-info {width: 70px; height: 30px; font-size: 7pt; margin-left: -20px;}
+  .btn-danger {width: 60px; height: 30px; font-size: 7pt; margin-right: -40px;}
+  .logo {width: 30%; margin-left: 35%;}
+}
+
+/*-- Tablet --*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .product-list .product-item {width: 32%; margin-left: 1%; flex-wrap: wrap;}
+  .product-list .product-item img {width: 80%; margin: 10% 10%;}
+  .product-detail .mySlides1 img {width: 80%; height: 80%;}
+  .form-group {margin-left: 15%;}
+  .google-map {margin-top: 50px;}
+  .logo {width: 18%; margin-left: 40%;}
+  .input-style {width: 30%; height: 30px; margin-top: 5px;}
+  .btn-info {width: 100px; height: 30px; font-size: 9pt;}
+  .btn-danger {width: 100px; height: 30px; font-size: 9pt;}
+
 }
 
 /* PC, Laptop */
-@media (max-width : 1024px) {
+@media (min-width: 1024px) {
+  .product-list .product-item img {margin: 10% 10%;}
+  .form-group {margin-left: 20%;}
+  .product-detail .mySlides1 img {width: 450px; height: 450px;}
+  .google-map, .footer-google-map {display: block; width: 100%; height: 100%; margin-top: auto;}
+  .input-style {width: 30%; height: 35px;}
+  .btn-info {width: 100px; height: 35px; font-size: 10pt; margin-left: 10px;}
+  .btn-danger {width: 100px; height: 35px; font-size: 10pt;}
+
+
+}
+
+@media (max-width: 1024px) {
   *, .footer-col ul li a, .footer-col h4, #copyright, #digital-clock, .visitorCount, .current-date, .box .input, b, 
   .panel-title, .panel-content{
     font-size: 9pt;
@@ -565,7 +577,7 @@ span {color: red; font-weight: 600; font-size: 15pt;}
   h1, h2 {font-size: 20pt;}
   .search-style h1 {font-size: 12pt;}
   .nav-pc {display: none;}
-  .header-style {display: none;}
+  .call-center, .login-register {display: none;}
   .nav-mobile-btn {display: block;}
   .slideshow-container {display: none;}
   .footer-col {
@@ -592,19 +604,6 @@ span {color: red; font-weight: 600; font-size: 15pt;}
   span {font-weight: 600; font-size: 13pt;}
   
   .team-04 {display: none;}
-  .input-style {width: 40%; height: 30px; margin-top: 5px;}
-  .btn-info {width: 100px; height: 30px; font-size: 10pt; margin-left: 10px;}
-  .btn-danger {width: 100px; height: 30px; font-size: 10pt;}
- 
-}
-@media (min-width: 1024px) {
-  .product-list .product-item img {margin: 10% 10%;}
-  .form-group {margin-left: 20%;}
-  .product-detail .mySlides1 img {width: 450px; height: 450px;}
-  .google-map, .footer-google-map {display: block; width: 100%; height: 100%; margin-top: auto;}
-  .input-style {width: 40%; height: 35px;}
-  .btn-info {width: 100px; height: 35px; font-size: 10pt; margin-left: 10px;}
-  .btn-danger {width: 100px; height: 35px; font-size: 10pt;}
-
-
+  .product-detail {flex-direction: column;}
+  
 }

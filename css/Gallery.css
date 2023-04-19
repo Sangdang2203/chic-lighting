@@ -33,12 +33,12 @@
 }
 
 /*-- Tablet --*/
-@media only screen and (min-width: 768px) and (max-width: 1023px){
-    .slideshow-container .mySlides1 {display: block;}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    
 }
  
 /*-- Mobile --*/
- @media only screen and (min-width: 320px) and (max-width: 767px) {
+ @media only screen and (min-width: 240px) and (max-width: 768px) {
 
 }
 

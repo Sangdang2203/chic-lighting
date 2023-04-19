@@ -9,19 +9,19 @@
               <div class="mySlides1">
                 <img ng-src="{{ceiling.image}}" width="560px" height="560px">
               </div>
-  
+
               <div class="mySlides1">
                 <img ng-src="{{ceiling.image1}}" width="560px" height="560px">
               </div>
-  
+
               <div class="mySlides1">
                 <img ng-src="{{ceiling.image2}}" width="560px" height="560px">
               </div>
-  
+
               <div class="mySlides1">
                 <img ng-src="{{ceiling.image3}}" width="560px" height="560px">
               </div>
-  
+
               <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
             </div><br>
@@ -32,15 +32,15 @@
               <!-- Information of product -->
               <b>{{ceiling.name | uppercase }}</b>
               <p>Price: <span>{{ceiling.price | currency}}</span></p>
-  
+
               <b>Product Specifications:</b>
-                <li>Brand: {{ ceiling.brand | uppercase }}</li>
-                <li>{{ceiling.specification}}</li> 
+              <li>Brand: {{ ceiling.brand | uppercase }}</li>
+              <li>{{ceiling.specification}}</li>
 
               <b>Product Description:</b>
-                <li>{{ceiling.description}}</li>
-                <li>{{ceiling.description1}}</li>
-                <li>{{ceiling.description2}}</li>
+              <li>{{ceiling.description}}</li>
+              <li>{{ceiling.description1}}</li>
+              <li>{{ceiling.description2}}</li>
             </div>
 
             <div style="margin-top: 20px; display: flex;">
