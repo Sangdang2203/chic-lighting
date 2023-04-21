@@ -3,7 +3,7 @@
   <table class="header-style">
     <tr>
       <td class="call-center">
-        <img src="./image/home/call_center.png" width="18%">
+        <img src="./image/home/call_center.png" width="15%">
         <a style="text-decoration: none; text-align: center; font-weight: bold;" href="tel:0909751772" class="test">1900
           1560</a>
       </td>
@@ -13,12 +13,14 @@
         </div>
       </td>
 
-      <td class="login-register">
-        <div align="right">
-          <a href="#!cart"><img src="./image/home/cart.png" width="8%"></a>&ensp;
-          <a href="#!Register" class="signup-style"><img src="./image/home/logo_register.png" width="7%"></a>
+      <td class="login-register" align="right">
+        <div>
+          <a href="#!cart"><img src="./image/home/cart.png" width="10%"></i></a>&ensp;
+
+          <a href="#!Register" class="signup-style"><i class="glyphicon glyphicon-user"></i></a>
           <a href="#!Register"><label class="signup-style">Sign Up</label></a> &ensp;
-          <a href="#!Login" class="signin-style"><img src="./image/home/logo_login.jpg" width="6%"></a>
+          
+          <a href="#!Login" class="signin-style"><i class="glyphicon glyphicon-log-in"></i></a>
           <a href="#!Login"><label class="signin-style">Login</label></a>
         </div>
       </td>
@@ -26,46 +28,42 @@
   </table>
 
   <!--Navrbar for PC -->
-  <div>
-    <nav class="nav-pc">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#!about">About Us</a></li>
-        <li><a href="#!gallery">Gallery</a></li>
-        <li class="dropdown">
-          <a class="dropbtn" href="">Chic Lights</a>
-          <div class="dropdown-content">
-            <a href="#!CellingLights">Ceiling Lights</a>
-            <a href="#!WallLights">Wall Lights</a>
-            <a href="#!Lamps">Lamps</a>
-            <a href="#!Fans">Fans</a>
-            <a href="#!HomeAccent">Home Accents</a>
-            <a href="#!OutdoorLights">Outdoor Lights</a>
-          </div>
-        </li>
+  <nav class="nav-pc">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#!about">About Us</a></li>
+      <li><a href="#!gallery">Gallery</a></li>
+      <li class="dropdown">
+        <a href="">Chic Lights</a>
+        <div class="dropdown-content">
+          <a href="#!CellingLights">Ceiling Lights</a>
+          <a href="#!WallLights">Wall Lights</a>
+          <a href="#!Lamps">Lamps</a>
+          <a href="#!Fans">Fans</a>
+          <a href="#!HomeAccent">Home Accents</a>
+          <a href="#!OutdoorLights">Outdoor Lights</a>
+        </div>
+      </li>
 
-        <li class="dropdown">
-          <a class="dropbtn" href="">Led Lights</a>
-          <div class="dropdown-content">
-            <a href="#!SpotLights">Spot Lights</a>
-            <a href="#!SmartLights">Smart Lights</a>
-            <a href="#!DecorationLights">Decoration Lights</a>
-          </div>
-        </li>
+      <li class="dropdown">
+        <a href="">Led Lights</a>
+        <div class="dropdown-content">
+          <a href="#!SpotLights">Spot Lights</a>
+          <a href="#!SmartLights">Smart Lights</a>
+          <a href="#!DecorationLights">Decoration Lights</a>
+        </div>
+      </li>
 
-        <li><a href="#!contact">Contact Us</a></li>
-        <li><a href="#!FAQ">FAQ</a></li>
-      </ul>
-    </nav>
-  </div>
+      <li><a href="#!contact">Contact Us</a></li>
+      <li><a href="#!FAQ">FAQ</a></li>
+    </ul>
+  </nav>
 
   <label for="nav-mobile-input" class="nav-mobile-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-      <path
-        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-    </svg>
+    <i class="material-icons">menu</i>
   </label>
 
+  <!-- use  id="nav-mobile-input" to connect <label for"...">-->
   <input type="checkbox" hidden class="nav-input" id="nav-mobile-input">
 
   <label for="nav-mobile-input" class="nav-overlay"></label>
@@ -74,12 +72,19 @@
   <!--Navrbar for Mobile -->
   <nav class="nav-mobile">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#!about">About Us</a></li>
-      <li><a href="#!gallery">Gallery</a></li>
+      <li><a href="#">
+        <i class="glyphicon glyphicon-home"> Home</i>
+      </a></li>
+      <li><a href="#!about">
+        <i class="glyphicon glyphicon-user"> About Us</i>
+      </a></li>
+      <li><a href="#!gallery">
+        <i class="glyphicon glyphicon-picture"> Gallery</i>
+      </a></li>
 
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Chic Lights <span
-            class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">
+        <i class="glyphicon glyphicon-tags"> Chic Lights</i> 
+        <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#!CellingLights">Ceiling Lights</a></li>
           <li><a href="#!WallLights">Wall Lights</a></li>
@@ -90,8 +95,9 @@
         </ul>
       </li>
 
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Led Lights <span
-            class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">
+        <i class="glyphicon glyphicon-tags"> Led Lights</i> 
+        <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#!SpotLights">Spot Lights</a></li>
           <li><a href="#!SmartLights">Smart Lights</a></li>
@@ -99,16 +105,19 @@
         </ul>
       </li>
 
-      <li><a href="#!cart">Order</a></li>
-      <li><a href="#!Register" class="signup-style">Register</a> </li>
-      <li><a href="#!Login">Login</a></li>
+      <li><a href="#!cart">
+        <i class="glyphicon glyphicon-shopping-cart"> Order</i>
+      </a></li>
+      <li><a href="#!Register">
+        <i class="glyphicon glyphicon-pencil"> Register</i> 
+      </a></li>
+      <li><a href="#!Login">
+        <i class="glyphicon glyphicon-log-in"> Login</i>
+      </a></li>
     </ul>
 
     <label for="nav-mobile-input" class="nav-mobile-close">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path
-          d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-      </svg>
+      <i class="material-icons">close</i>
     </label>
   </nav>
 

@@ -18,7 +18,7 @@ img {vertical-align: auto;}
   padding: 16px;
   margin-top: -22px;
   color: goldenrod;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 30px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
@@ -27,14 +27,8 @@ img {vertical-align: auto;}
 
 /* Position the "next button" to the right */
 .next {
-  margin-left: 68%;
+  margin: -2% 0 0 70%;
   border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a grey background color */
-.prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: goldenrod;
 }
 
 h4 {text-align: left;}
