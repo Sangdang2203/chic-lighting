@@ -3,7 +3,7 @@
   padding: 0;
   font-size: 11pt;
   line-height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
 
@@ -417,7 +417,7 @@ html {
 
 /* Product card */
 .product-list {
-  width: 100%;
+  width: 100%; margin: 1%;
 }
 
 .product-list .product-item {
@@ -445,11 +445,9 @@ html {
   padding: 2px 0px;
   cursor: pointer;
 }
+.product-list .product-item .content b {font-weight: 600; font-size: 8pt;}
+.product-list .product-item .content p {font-size: 8pt;}
 
-.product-list .product-item .content b {
-  font-weight: 500;
-  font-size: 8pt;
-}
 
 .product-list .product-item button {
   border: none;
