@@ -6,9 +6,9 @@
     }
 
     #confirm {
-        width: 50%;
-        margin: auto;
-        padding: 5px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
     }
 </style>
 
@@ -49,18 +49,18 @@
     </table>
 
     <div id="confirm" ng-show="isShow">
-        <h3 style="margin: 0 5px">We are here for you !</h3>
-        <p  style="margin: 0 5px">Please complete and submit the following form.</p>
+        <h3>We are here for you !</h3>
+        <p>Please complete and submit the following form.</p>
         <form action="#!" onsubmit="return checkOut()">
-            <table>       
+            <table width="100%">       
                 <tr>
-                    <td><input class="order-input" type="text" id="name" placeholder="Name" required></td>
+                    <td><input class="input-style" type="text" id="name" placeholder="Name" required></td>
                 </tr>                     
                 <tr>
-                    <td><input class="order-input" type="email" id="email" placeholder="Email"></td>
+                    <td><input class="input-style" type="email" id="email" placeholder="Email"></td>
                 </tr>   
                 <tr>
-                    <td><input class="order-input" type="tel" id="phone" placeholder="Phone"></td>
+                    <td><input class="input-style" type="tel" id="phone" placeholder="Phone"></td>
                 </tr>           
                 <tr>
                     <td>
