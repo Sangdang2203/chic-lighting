@@ -351,7 +351,7 @@ html {
 
 /* Position the "next button" to the right */
 .next {
-  margin: -2% 0 0 96%;
+  margin: -2.5% 0 0 96%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -383,12 +383,9 @@ html {
 }
 
 /* -- Registration Form, Login Form, Contact Form --*/
-.form-group {
-  margin-left: 20%;
-}
-
+.form-group {margin-left: 40%;}
 .log-reg-input, .order-input {
-  width: 450px;
+  width: 400px;
   height: fit-content;
   border: 1px solid gainsboro;
   border-radius: 5px;
@@ -499,6 +496,7 @@ html {
 .product-detail {
   text-align: justify;
   margin-top: 30px;
+  padding-right: 15px ;
 }
 
 .product-detail ul {
@@ -511,10 +509,6 @@ html {
   margin-left: 30px;
 }
 
-.product-detail-btn {
-  padding: 0 0 0 -100px;
-  float: left;
-}
 
 textarea {
   width: 300px;
@@ -736,11 +730,6 @@ span {
     display: none;
   }
 
-
-  .product-detail-btn {
-    padding: 0 0 0 -100px;
-  }
-
   .form-group {margin-left: 3%;}
   .form-group .input-style {
     width: 60%;
@@ -748,22 +737,22 @@ span {
 
   .btn-info {
     width: 70px;
-    height: 30px;
+    height: fit-content;
     font-size: 7pt;
-    margin: 25px 0 0 -50px;
   }
 
   .btn-danger {
     width: 60px;
-    height: 30px;
+    height: fit-content;
     font-size: 7pt;
-    margin: 25px -40px 0 0;
+   
   }
 
   .logo {
     width: 30%;
     margin-left: 35%;
   }
+  .title {margin-left: -20%;}
   .about-us {flex-direction: column;}
 }
 
@@ -809,13 +798,16 @@ span {
     width: 100px;
     height: 30px;
     font-size: 9pt;
-    margin: 0 0 0 -30px;
+    margin: 0 0 0 -20%;
   }
 
   .btn-danger {
     width: 100px;
     height: 30px;
     font-size: 9pt;
+  }
+  .table-hover .btn-danger {
+    margin-right: 20%;
   }
   
 
