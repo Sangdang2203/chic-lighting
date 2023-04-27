@@ -10,7 +10,7 @@ img {vertical-align: auto;}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prevBtn, .nextBtn {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -26,15 +26,15 @@ img {vertical-align: auto;}
 }
 
 /* Position the "next button" to the right */
-.next {
-  margin: -2% 0 0 70%;
+.nextBtn {
+  margin: -2% 0 0 72%;
   border-radius: 3px 0 0 3px;
 }
 
 h4 {text-align: left;}
 
 @media (min-width: 1024) {}
-.next {
+.nextBtn {
   margin: -5% 0 0 85%;
   border-radius: 3px 0 0 3px;
 }
