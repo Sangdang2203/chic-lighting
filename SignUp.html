@@ -4,40 +4,22 @@
             <h1>Registration Form</h1>
         </div>
         <!-- Registration Form -->
-        <form action="#!Login" onsubmit="return checkRegister()" class="form-group">
-            <table wisth="100%" style="margin-left: 10%;">
-                <tr>
-                    <td><label>Username: </label></td>
-                    <td><input class="log-reg-input" type="text" name="" id="username" placeholder="Sangdang2203"></td>
-                </tr>
-                <tr>
-                    <td><label>Fullname: </label></td>
-                    <td><input class="log-reg-input" type="text" name="" id="fullname" placeholder="Jonathan Dang" required></td>
-                </tr>
-                <tr>
-                    <td><label>Password: </label></td>
-                    <td><input class="log-reg-input" type="password" name="" id="password" placeholder="123sangdang"></td>
-                </tr>
-                <tr>
-                    <td><label>Password confirm: </label></td>
-                    <td><input class="log-reg-input" type="password" name="" id="password1" placeholder="123sangdang"></td>
-                </tr>
-                <tr>
-                    <td><label>Email: </label></td>
-                    <td><input class="log-reg-input" type="email" name="email" id="email" placeholder="sangdang2203@gmail.com"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="radio" name="rdGender" id="rdMale" checked style="margin: 5px 10px"> Male &ensp;
-                        <input type="radio" name="rdGender" id="rdFemale"> Female
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button class="btn btn-primary" type="submit" id="button" style="margin: 5px 10px">Register</button></td>
-                </tr>
-            </table>
+        <form action="#!Login" onsubmit="return checkRegister()" >
+            <div class="form-group">
+                <div><input class="log-reg-input" type="text" name="" id="username" placeholder=" Username"></div>
+                <div><input class="log-reg-input" type="text" name="" id="fullname" placeholder=" Fullname" required></div>
+                <div><input class="log-reg-input" type="password" name="" id="password" placeholder=" Password"></div>
+                <div><input class="log-reg-input" type="password" name="" id="password1" placeholder=" Password confirm"></div>
+                <div><input class="log-reg-input" type="email" name="email" id="email" placeholder=" Email"></div>
+         
+                <div>
+                    <input type="radio" name="rdGender" id="rdMale" checked style="margin: 5px 10px"> Male &ensp;
+                    <input type="radio" name="rdGender" id="rdFemale"> Female
+                </div>
+
+                <button class="btn btn-primary" type="submit" id="button" style="margin: 10px">Register</button>
+            </div>
+            
         </form>        
     </section>
-</div>
+</div><br>

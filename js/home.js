@@ -16,14 +16,7 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
-// Show notification after comment at each product page.
-function check(){
-  var sComment = document.getElementById("comment").value;
-  var message = new Array()
-      message.push("Information has been sent.")
-      message.push("Your comment: " +sComment);
-      alert(message.join("\n"));
-}
+
 // check form and show notification at SignIn.html
 function checkLogin (){
   var sUsername = document.getElementById("username").value;

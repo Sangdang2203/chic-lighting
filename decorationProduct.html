@@ -9,19 +9,19 @@
               <div class="mySlides1">
                 <img ng-src="{{decoration.image}}" width="560px" height="560px">
               </div>
-  
+
               <div class="mySlides1">
                 <img ng-src="{{decoration.image1}}" width="560px" height="560px">
               </div>
-  
+
               <div class="mySlides1">
                 <img ng-src="{{decoration.image2}}" width="560px" height="560px">
               </div>
-  
+
               <div class="mySlides1">
                 <img ng-src="{{decoration.image3}}" width="560px" height="560px">
               </div>
-  
+
               <a class="prevBtn" onclick="plusSlides(-1, 0)">&#10094;</a>
               <a class="nextBtn" onclick="plusSlides(1, 0)">&#10095;</a>
             </div><br>
@@ -30,21 +30,24 @@
           <ul>
             <div>
               <!-- Information of product -->
-              <b>{{decoration.name | uppercase }}</b>
-              <p>Price: <span>{{decoration.price | currency}}</span></p>
-  
+              <div class="product-detail-title">
+                <b>{{decoration.name | uppercase }}</b>
+                <p>Price: <span>{{decoration.price | currency}}</span></p>
+              </div>
+
               <b>Product Specifications:</b>
-                <li>Brand: {{ decoration.brand | uppercase }}</li>
-                <li>{{decoration.specification}}</li> 
+              <li>Brand: {{ decoration.brand | uppercase }}</li>
+              <li>{{decoration.specification}}</li>
 
               <b>Product Description:</b>
-                <li>{{decoration.description}}</li>
-                <li>{{decoration.description1}}</li> 
-                <li>{{decoration.description2}}</li>  
+              <li>{{decoration.description}}</li>
+              <li>{{decoration.description1}}</li>
+              <li>{{decoration.description2}}</li>
             </div>
 
             <div style="margin-top: 20px; display: flex;">
-              <b>Quantity:</b> <input class="input-style" type="number" placeholder=" {{ decoration.quantity }} available">
+              <b>Quantity:</b> <input class="input-style" type="number"
+                placeholder=" {{decoration.quantity}} available">
               <div class="product-detail-btn">
                 <a href="#!cart">
                   <button class="btn btn-info" type="button" value="">Add to Cart</button>
@@ -58,15 +61,6 @@
         </div>
       </div>
     </div>
-    <!-- Comment -->
-    <form action="#!CellingLights" onsubmit="return check()" id="text-area">
-      <div>
-        <textarea id="comment" placeholder=" Enter your comment:"></textarea>
-      </div>
-      <div>
-        <input class="btn btn-info" type="submit" value="Send">
-      </div>
-    </form>
-    <br>
+
   </section>
 </main>

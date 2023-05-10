@@ -27,14 +27,8 @@ img {vertical-align: auto;}
 
 /* Position the "next button" to the right */
 .nextBtn {
-  margin: -2% 0 0 72%;
+  margin: -4% 0 0 68%;
   border-radius: 3px 0 0 3px;
 }
 
 h4 {text-align: left;}
-
-@media (min-width: 1024) {}
-.nextBtn {
-  margin: -5% 0 0 85%;
-  border-radius: 3px 0 0 3px;
-}
