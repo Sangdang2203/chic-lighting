@@ -423,12 +423,12 @@ html {
 
 /* -- Registration Form, Login Form, Contact Form --*/
 .form-group {
-  margin-left: 35%;
+  margin-left: 32%;
 }
 
 .log-reg-input,
 .order-input {
-  max-width: 350px;
+  max-width: 320px;
   width: 100%;
   height: fit-content;
   border: 1px solid gainsboro;
@@ -482,34 +482,31 @@ html {
   width: 80%;
   margin: 30px 30px 0 30px;
   border-radius: 0px;
+  margin: 10%;
 }
 
 .product-list .product-item .content {
   text-align: center;
-  padding: 2px 0px;
-  cursor: pointer;
+  padding: 1%;
 }
 
-.product-list .product-item .content b {
+.product-list .product-item .content b,
+.product-list .product-item .content p {
   font-weight: 600;
   font-size: 8pt;
 }
 
-.product-list .product-item .content p {
-  font-size: 8pt;
-}
-
-
 .product-list .product-item button {
   border: none;
   border-radius: 10px;
-  outline: 0;
-  padding: 12px;
+  /* outline: 0; */
+  padding: 12px 0;
+  margin-bottom: 8px;
   color: white;
   background-color: #000;
   text-align: center;
-  width: 82%;
-  height: auto;
+  width: 80%;
+  height:fit-content;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -561,17 +558,6 @@ html {
 .product-detail li {
   margin-left: 30px;
 }
-
-
-/* textarea {
-  width: 300px;
-  height: 100px;
-  border: 1px solid gainsboro;
-  border-radius: 5px;
-  padding: 2px 4px;
-  display: flex;
-  margin: 5% 0 2% 0;
-} */
 
 h1,
 h3 {
@@ -757,15 +743,11 @@ span {
 /*-- Mobile --*/
 @media (max-width: 740px) {
   .product-list {
-    margin: 0 15%;
+    margin: 0 10%;
   }
 
   .product-list .product-item {
-    width: 70%;
-  }
-
-  .product-list .product-item img {
-    margin: 20px 30px;
+    width: 80%;
   }
 
   .slideshow-container {
@@ -795,7 +777,7 @@ span {
   }
 
   .form-group {
-    margin-left: 2%;
+    margin-left: 0%;
   }
 
   .form-group .input-style {
@@ -876,7 +858,7 @@ span {
   }
 
   .form-group {
-    margin-left: 15%;
+    margin-left: 24%;
   }
 
   .google-map {
@@ -920,7 +902,6 @@ span {
   .product-list .product-item img {
     margin: 10% 10%;
   }
-
 
   .product-detail .mySlides1 img {
     width: 450px;
