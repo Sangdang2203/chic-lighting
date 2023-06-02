@@ -17,7 +17,7 @@ html {
   display: block;
 }
 
-/*navbar for mobile | tablet*/
+/* BEGIN: navbar for mobile | tablet*/
 .nav-mobile {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -28,6 +28,7 @@ html {
   right: 0;
   transform: translateX(100%);
   transition: transform linear 0.5s;
+  z-index: 1;
 }
 
 .nav-mobile ul {
@@ -125,10 +126,9 @@ html {
     opacity: 1;
   }
 }
+/* END : navbar for mobile | tablet*/
 
-/*navbar for mobile | tablet*/
-
-/*navbar for pc*/
+/* BEGIN : navbar for pc*/
 .nav-pc {
   background-color: black;
   width: 100%;
@@ -160,12 +160,9 @@ html {
   text-decoration: none;
 }
 
-.nav-pc ul li:hover {
-  background-color: wheat;
-}
-
 .nav-pc ul li a:hover {
   color: goldenrod;
+  font-size: 12pt;
   font-weight: bold;
 }
 
@@ -199,7 +196,7 @@ html {
   display: block;
 }
 
-/*navbar for pc*/
+/* END: navbar for pc*/
 
 @-webkit-keyframes my {
   0% {
@@ -265,7 +262,7 @@ html {
   font-size: 18pt;
 }
 
-/* Footer Design */
+/* BEGIN : Footer */
 .footer {
   background-color: black;
   border-radius: 10px 10px 0 0;
@@ -342,8 +339,9 @@ html {
 .backToMenu {
   width: 5%;
 }
+/* END : Footer */
 
-/* Slideshow container */
+/* BEGIN : Slideshow */
 .slideshow-container {
   max-width: 2000px;
   position: relative;
@@ -399,6 +397,7 @@ html {
   font-weight: bolder;
   text-decoration: none;
 }
+/* END: Slideshow */
 
 .gallery {
   width: 100%;
@@ -425,14 +424,15 @@ html {
   display: flex;
 }
 
-/* -- Registration Form, Login Form, Contact Form --*/
+/* BEGIN : Registration Form, Login Form, Contact Form */
 .form-group {
-  margin-left: 32%;
+  margin-left: 33%;
 }
 
 .log-reg-input,
 .order-input {
-  max-width: 320px;
+  max-width: 600px;
+  min-width: 240px;
   width: 100%;
   height: fit-content;
   border: 1px solid gainsboro;
@@ -462,9 +462,10 @@ html {
 .btn-primary:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.25);
 }
+/* END : Registration Form, Login Form, Contact Form */
 
 
-/* Begin : Product card */
+/* BEGIN : Product card */
 .product-list {
   width: 100%;
   margin: 0;
@@ -525,8 +526,7 @@ html {
 .product-list .product-item button:hover {
   opacity: 0.5;
 }
-
-/* End : Product card */
+/* END : Product card */
 
 .fillter {
   width: 100%;
@@ -551,7 +551,6 @@ html {
 .product-detail {
   text-align: justify;
   margin-top: 30px;
-  /* padding-right: 15px; */
 }
 
 .product-detail ul {
@@ -666,7 +665,7 @@ span {
   padding-left: 30px;
 }
 
-/*-- FAQ Design --*/
+/* BEGIN : FAQ Design */
 .faq-header {
   font-size: 15pt;
   font-weight: 500;
@@ -743,10 +742,10 @@ span {
 .panel {
   display: none;
 }
+/* END : FAQ Design */
 
-/*-- Responsive --*/
-/*-- Mobile --*/
-@media (max-width: 740px) {
+/* BEGIN : Mobile Responsive : width < 740px*/
+@media screen and (max-width: 46.1875em) {
   .product-list {
     margin: 0 10%;
   }
@@ -759,6 +758,12 @@ span {
     font-size: 9pt;
     padding: 6px 12px;
   }
+
+  .product-detail .slideshow-container {
+    display: flex;
+    flex-direction: column;
+  }
+
 
   .slideshow-container {
     display: none;
@@ -833,21 +838,20 @@ span {
   }
 
   .product-detail .mySlides1 img {
-    max-width: 600px;
-    max-height: 500px;
+    /* max-width: 600px;
+    max-height: 500px; */
     width: 100%;
     height: 100%;
   }
 
-
   .input-style {
     height: 30px;
   }
-
 }
+/* END : Mobile Responsive */
 
-/*-- Tablet --*/
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
+/* BEGIN : Tablet Responsive : 740px <= width < 1024px */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
   .slideshow-container {
     display: none;
   }
@@ -862,13 +866,14 @@ span {
     margin: 10% 10%;
   }
 
+  .product-detail .slideshow-container {
+    display: flex;
+    order: 0;
+  }
+
   .product-detail .mySlides1 img {
     width: 100%;
     height: 80%;
-  }
-
-  .form-group {
-    margin-left: 24%;
   }
 
   .google-map {
@@ -880,6 +885,9 @@ span {
     margin-left: 40%;
   }
 
+  .form-group {
+    margin-left: 10%;
+  }
   .input-style {
     width: 30%;
     height: 30px;
@@ -904,11 +912,11 @@ span {
   .footer-col {
     width: 80%;
   }
-
 }
+/* END : Tablet Responsive */
 
-/* PC, Laptop */
-@media (min-width: 1024px) {
+/* BEGIN: PC|Laptop Responsive : width >= 1024px*/
+@media screen and (min-width: 64em){
   .product-list .product-item img {
     margin: 10% 10%;
   }
@@ -925,7 +933,7 @@ span {
     height: 100%;
     margin-top: auto;
   }
-
+  
   .input-style {
     width: 35%;
   }
@@ -950,10 +958,10 @@ span {
     box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.3), 0px 3px 2px 0px rgba(0, 0, 0, 0.3);
   }
 }
+/* END : PC|Laptop Responsive */
 
 
-
-@media (max-width: 1024px) {
+@media (max-width: 63.9375em) {
 
   *,
   .footer-col ul li a,
@@ -1012,7 +1020,9 @@ span {
   }
 
   .footer-google-map {
-    display: none;
+    /* display: none; */
+    max-width: 90%;
+    height: 90%;
   }
 
   .product-detail ul {
@@ -1032,6 +1042,7 @@ span {
     font-weight: 600;
     font-size: 13pt;
   }
+ 
 
 
 

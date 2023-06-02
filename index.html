@@ -15,11 +15,14 @@
 
   <script src="./js/home.js" defer></script>
   <script src="./js/Controller.js" defer></script>
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
   <title>Chic Lighting & Design</title>
 </head>
@@ -31,7 +34,7 @@
     <div ng-view></div>
     <header ng-include="'visitorCount.html'"></header>
   </section>
-  
+
   <header ng-include="'footer.html'"></header>
 </body>
 

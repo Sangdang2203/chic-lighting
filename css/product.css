@@ -26,9 +26,28 @@ img {vertical-align: auto;}
 }
 
 /* Position the "next button" to the right */
-.nextBtn {
-  margin: -4% 0 0 68%;
-  border-radius: 3px 0 0 3px;
-}
 
 h4 {text-align: left;}
+
+/* Mobile Responsive: width < 740px */
+@media screen and (max-width: 46.1875em) {
+  .nextBtn {
+    margin: -8% 0 0 84%;
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+/* Tablet Responsive: 740px <= width < 1024px (64em) */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em){
+  .nextBtn {
+    margin: -5% 0 0 90%;
+    border-radius: 3px 0 0 3px;
+  }
+}
+/* Laptop Responsive: width >= 1024px (64em) */
+@media screen and (min-width: 64em){
+  .nextBtn {
+    margin: -5% 0 0 68%;
+    border-radius: 3px 0 0 3px;
+  }
+}
