@@ -745,13 +745,13 @@ span {
 /* END : FAQ Design */
 
 /* BEGIN : Mobile Responsive : width < 740px*/
-@media screen and (max-width: 46.1875em) {
+@media screen and (max-width: 740px) {
   .product-list {
-    margin: 0 10%;
+    margin: 0 8%;
   }
 
   .product-list .product-item {
-    width: 80%;
+    width: 84%;
   }
 
   .product-list .product-item button {
@@ -851,14 +851,15 @@ span {
 /* END : Mobile Responsive */
 
 /* BEGIN : Tablet Responsive : 740px <= width < 1024px */
-@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+@media screen and (min-width: 740px) and (max-width: 1023px) {
   .slideshow-container {
     display: none;
   }
-
+  .product-list {
+    margin: 0 5%;
+  }
   .product-list .product-item {
-    width: 46%;
-    margin-left: 3%;
+    width: 45%;
   }
 
   .product-list .product-item img {
@@ -916,7 +917,7 @@ span {
 /* END : Tablet Responsive */
 
 /* BEGIN: PC|Laptop Responsive : width >= 1024px*/
-@media screen and (min-width: 64em){
+@media screen and (min-width: 1024px){
   .product-list .product-item img {
     margin: 10% 10%;
   }
@@ -961,7 +962,7 @@ span {
 /* END : PC|Laptop Responsive */
 
 
-@media (max-width: 63.9375em) {
+@media (max-width: 1023px) {
 
   *,
   .footer-col ul li a,
