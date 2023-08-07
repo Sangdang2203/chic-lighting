@@ -1,63 +1,59 @@
 <main class="container-fluid">
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="product-detail">
-          <ul>
-            <!-- slide product photos -->
-            <div class="slideshow-container">
-              <div class="mySlides1">
-                <img ng-src="{{outdoor.image}}" width="560px" height="560px">
-              </div>
-  
-              <div class="mySlides1">
-                <img ng-src="{{outdoor.image1}}" width="560px" height="560px">
-              </div>
-  
-              <div class="mySlides1">
-                <img ng-src="{{outdoor.image2}}" width="560px" height="560px">
-              </div>
-  
-              <div class="mySlides1">
-                <img ng-src="{{outdoor.image3}}" width="560px" height="560px">
-              </div>
-  
-              <a class="prevBtn" onclick="plusSlides(-1, 0)">&#10094;</a>
-              <a class="nextBtn" onclick="plusSlides(1, 0)">&#10095;</a>
-            </div><br>
-          </ul>
+  <div class="row">
+    <div class="product-detail">
+      <ul>
+        <!-- slide product photos -->
+        <div class="slideshow-container">
+          <div class="mySlides1">
+            <img ng-src="{{outdoor.image}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-          <ul>
-            <div>
-              <!-- Information of product -->
-              <b>{{outdoor.name | uppercase }}</b>
-              <p>Price: <span>{{outdoor.price | currency}}</span></p>
-  
-              <b>Product Specifications:</b>
-                <li>Brand: {{ outdoor.brand | uppercase }}</li>
-                <li>{{outdoor.specification}}</li> 
+          <div class="mySlides1">
+            <img ng-src="{{outdoor.image1}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-              <b>Product Description:</b>
-                <li>{{outdoor.description}}</li> 
-                <li>{{outdoor.description1}}</li> 
-                <li>{{outdoor.description2}}</li> 
-            </div>
+          <div class="mySlides1">
+            <img ng-src="{{outdoor.image2}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-            <div style="margin-top: 20px; display: flex;">
-              <b>Quantity:</b> <input class="input-style" type="number" placeholder=" {{outdoor.quantity}} available">
-              <div class="product-detail-btn">
-                <a href="#!cart">
-                  <button class="btn btn-info" type="button" value="">Add to Cart</button>
-                </a>
-                <a href="#!cart">
-                  <button class="btn btn-danger" type="button" value="">Buy Now</button>
-                </a>
-              </div>
-            </div>
-          </ul>
+          <div class="mySlides1">
+            <img ng-src="{{outdoor.image3}}" class="rounded-2" width="560px" height="560px">
+          </div>
+
+          <a class="prevBtn" onclick="plusSlides(-1, 0)"><i class="fa-solid fa-chevron-left"></i></a>
+          <a class="nextBtn" onclick="plusSlides(1, 0)"><i class="fa-solid fa-chevron-right"></i></a>
+        </div><br>
+      </ul>
+
+      <ul>
+        <div>
+          <!-- Information of product -->
+          <b>{{outdoor.name | uppercase }}</b>
+          <p>Price: <span>{{outdoor.price | currency}}</span></p>
+
+          <b>Product Specifications:</b>
+          <li>Brand: {{ outdoor.brand | uppercase }}</li>
+          <li>{{outdoor.specification}}</li>
+
+          <b>Product Description:</b>
+          <li>{{outdoor.description}}</li>
+          <li>{{outdoor.description1}}</li>
+          <li>{{outdoor.description2}}</li>
         </div>
-      </div>
+
+        <div style="margin-top: 20px; display: flex;">
+          <b>Quantity:</b> <input class="input-style" type="number" min="0"
+            placeholder=" {{outdoor.quantity}} available">
+          <div class="product-detail-btn">
+            <a href="#!cart">
+              <button class="btn btn-info" type="button" value="">Add to Cart</button>
+            </a>
+            <a href="#!cart">
+              <button class="btn btn-success" type="button" value="">Buy Now</button>
+            </a>
+          </div>
+        </div>
+      </ul>
     </div>
-    
-  </section>
-  </main>
+  </div>
+</main>

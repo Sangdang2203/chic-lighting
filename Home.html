@@ -1,52 +1,53 @@
 <div class="container-fluid">
-  <link rel="stylesheet" href="./css/index.css">
-    <section>  
-      <!--Slideshow banner-->
-        <div class="slideshow-container">
-          <div class="mySlides1">
-            <img src="./image/home/picture_01.jpg" class="image-style">
-          </div>
-      
-          <div class="mySlides1">
-            <img src="./image/home/picture_02.jpg" class="image-style">
-          </div>
-      
-          <div class="mySlides1">
-           <img src="./image/home/picture_03.jpg" class="image-style">
-          </div>
 
-          <div class="mySlides1">
-            <img src="./image/home/picture_04.jpg" class="image-style">
-          </div>
-      
-          <div class="mySlides1">
-            <img src="./image/home/picture_05.jpg" class="image-style">
-          </div>
-      
-          <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-        </div>
-                
-        <div ng-repeat="type in productTypes | myFilter" class="product-list">
-          <div align="center" class="title">
-            <h1>
-              <img ng-src="{{type.image}}" width="5%"> {{type.name}}
-              <img ng-src="{{type.image}}" width="5%">
-            </h1> 
-          </div>
-          
-          <div ng-repeat="product in products | filter:{ type: type.type }" class="product-item">
-            <a href="#!/product/{{product.id}}"><img ng-src="{{product.image}}"></a>
-            <div class="content">
-              <p><b>{{product.name | uppercase}}</b></p>
-              <p>Brand: {{product.brand | uppercase}} </p>
-              <p><span>{{product.price | currency}}</span></p>
-              <p><a ng-href="#!/product/{{product.id}}"><button>Buy Now</button></a></p>
-            </div>
-          </div>
-          <div style="clear: both;"></div>
-        </div>
+  <!-- Begin: Slideshow Images -->
+  <div class="slideshow-container">
+    <div class="mySlides1">
+      <img src="./image/home/picture_01.jpg" class="image-style">
+    </div>
 
-        <br>
-    </section>
+    <div class="mySlides1">
+      <img src="./image/home/picture_02.jpg" class="image-style">
+    </div>
+
+    <div class="mySlides1">
+      <img src="./image/home/picture_03.jpg" class="image-style">
+    </div>
+
+    <div class="mySlides1">
+      <img src="./image/home/picture_04.jpg" class="image-style">
+    </div>
+
+    <div class="mySlides1">
+      <img src="./image/home/picture_05.jpg" class="image-style">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1, 0)"><i class="material-icons">keyboard_arrow_left</i></a>
+    <a class="next" onclick="plusSlides(1, 0)"><i class="material-icons">keyboard_arrow_right</i></a>
+  </div>
+  <!-- And: Slideshow Images -->
+
+  <div ng-repeat="type in productTypes | myFilter" class="product-list">
+    <div align="center" class="title">
+      <h1>
+        <img ng-src="{{type.image}}" width="5%"> {{type.name}}
+        <img ng-src="{{type.image}}" width="5%">
+      </h1>
+    </div>
+
+    <div ng-repeat="product in products | filter:{ type: type.type }" class="product-item">
+      <a href="#!/product/{{product.id}}"><img ng-src="{{product.image}}"></a>
+      <div class="content">
+        <p><b>{{product.name | uppercase}}</b></p>
+        <p>Brand: {{product.brand | uppercase}} </p>
+        <p><span>{{product.price | currency}}</span></p>
+        <p><a ng-href="#!/product/{{product.id}}"><button>Buy Now</button></a></p>
+      </div>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <br>
+  </section>
 </div>
+<link rel="stylesheet" href="./css/index.css">

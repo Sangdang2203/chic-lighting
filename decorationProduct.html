@@ -1,66 +1,61 @@
 <main class="container-fluid">
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="product-detail">
-          <ul>
-            <!-- slide product photos -->
-            <div class="slideshow-container">
-              <div class="mySlides1">
-                <img ng-src="{{decoration.image}}" width="560px" height="560px">
-              </div>
+  <div class="row">
+    <div class="product-detail">
+      <ul>
+        <!-- slide product photos -->
+        <div class="slideshow-container">
+          <div class="mySlides1">
+            <img ng-src="{{decoration.image}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-              <div class="mySlides1">
-                <img ng-src="{{decoration.image1}}" width="560px" height="560px">
-              </div>
+          <div class="mySlides1">
+            <img ng-src="{{decoration.image1}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-              <div class="mySlides1">
-                <img ng-src="{{decoration.image2}}" width="560px" height="560px">
-              </div>
+          <div class="mySlides1">
+            <img ng-src="{{decoration.image2}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-              <div class="mySlides1">
-                <img ng-src="{{decoration.image3}}" width="560px" height="560px">
-              </div>
+          <div class="mySlides1">
+            <img ng-src="{{decoration.image3}}" class="rounded-2" width="560px" height="560px">
+          </div>
 
-              <a class="prevBtn" onclick="plusSlides(-1, 0)">&#10094;</a>
-              <a class="nextBtn" onclick="plusSlides(1, 0)">&#10095;</a>
-            </div><br>
-          </ul>
+          <a class="prevBtn" onclick="plusSlides(-1, 0)"><i class="fa-solid fa-chevron-left"></i></a>
+          <a class="nextBtn" onclick="plusSlides(1, 0)"><i class="fa-solid fa-chevron-right"></i></a>
+        </div><br>
+      </ul>
 
-          <ul>
-            <div>
-              <!-- Information of product -->
-              <div class="product-detail-title">
-                <b>{{decoration.name | uppercase }}</b>
-                <p>Price: <span>{{decoration.price | currency}}</span></p>
-              </div>
+      <ul>
+        <div>
+          <!-- Information of product -->
+          <div class="product-detail-title">
+            <b>{{decoration.name | uppercase }}</b>
+            <p>Price: <span>{{decoration.price | currency}}</span></p>
+          </div>
 
-              <b>Product Specifications:</b>
-              <li>Brand: {{ decoration.brand | uppercase }}</li>
-              <li>{{decoration.specification}}</li>
+          <b>Product Specifications:</b>
+          <li>Brand: {{ decoration.brand | uppercase }}</li>
+          <li>{{decoration.specification}}</li>
 
-              <b>Product Description:</b>
-              <li>{{decoration.description}}</li>
-              <li>{{decoration.description1}}</li>
-              <li>{{decoration.description2}}</li>
-            </div>
-
-            <div style="margin-top: 20px; display: flex;">
-              <b>Quantity:</b> <input class="input-style" type="number"
-                placeholder=" {{decoration.quantity}} available">
-              <div class="product-detail-btn">
-                <a href="#!cart">
-                  <button class="btn btn-info" type="button" value="">Add to Cart</button>
-                </a>
-                <a href="#!cart">
-                  <button class="btn btn-danger" type="button" value="">Buy Now</button>
-                </a>
-              </div>
-            </div>
-          </ul>
+          <b>Product Description:</b>
+          <li>{{decoration.description}}</li>
+          <li>{{decoration.description1}}</li>
+          <li>{{decoration.description2}}</li>
         </div>
-      </div>
-    </div>
 
-  </section>
+        <div style="margin-top: 20px; display: flex;">
+          <b>Quantity:</b> <input class="input-style" type="number" min="0"
+            placeholder=" {{decoration.quantity}} available">
+          <div class="product-detail-btn">
+            <a href="#!cart">
+              <button class="btn btn-info" type="button" value="">Add to Cart</button>
+            </a>
+            <a href="#!cart">
+              <button class="btn btn-success" type="button" value="">Buy Now</button>
+            </a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
 </main>

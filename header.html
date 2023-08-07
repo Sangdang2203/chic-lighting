@@ -1,25 +1,23 @@
 <header>
-
   <table class="header-style">
     <tr>
-      <td class="call-center">
-        <img src="./image/home/call_center.png" width="15%">
-        <a style="text-decoration: none; text-align: center; font-weight: bold;" href="tel:0909751772" class="test">1900
-          1560</a>
-      </td>
-      <td>
-        <div>
-          <a href="#"><img src="./image/home/logo.png" class="logo"></a>
+      <td class="call-center" style="width: calc(100%/3);">
+        <div align="left">
+          <img src="./image/home/call_center.png" width="8%">
+          <a href="tel:0909751772" class="test">1900 1560</a>
         </div>
       </td>
+      <td style="width: calc(100%/3);">
+        <a href="#"><img src="./image/home/logo.png" class="logo"></a>
+      </td>
 
-      <td class="login-register" align="right">
+      <td class="login-register" align="right" style="width: calc(100%/3);">
         <div>
-          <a href="#!cart"><img src="./image/home/cart.png" width="10%"></i></a>&ensp;
+          <a href="#!cart"><i class="fa-solid fa-cart-shopping text-dark"></i></a>&ensp;
 
           <a href="#!Register" class="signup-style"><i class="glyphicon glyphicon-user"></i></a>
           <a href="#!Register"><label class="signup-style">Sign Up</label></a> &ensp;
-          
+
           <a href="#!Login" class="signin-style"><i class="glyphicon glyphicon-log-in"></i></a>
           <a href="#!Login"><label class="signin-style">Login</label></a>
         </div>
@@ -27,12 +25,13 @@
     </tr>
   </table>
 
-  <!--Navrbar for PC -->
+  <!-- Bengin: Navrbar for PC -->
   <nav class="nav-pc">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#!about">About Us</a></li>
-      <li><a href="#!gallery">Gallery</a></li>
+      <li> <a href="#">Home</a> </li>
+      <li> <a href="#!about">About Us</a> </li>
+      <li> <a href="#!gallery">Gallery</a> </li>
+
       <li class="dropdown">
         <a href="">Chic Lights</a>
         <div class="dropdown-content">
@@ -54,13 +53,14 @@
         </div>
       </li>
 
-      <li><a href="#!contact">Contact Us</a></li>
-      <li><a href="#!FAQ">FAQ</a></li>
+      <li> <a href="#!contact">Contact Us</a> </li>
+      <li> <a href="#!FAQ">FAQ</a> </li>
     </ul>
   </nav>
+  <!-- End: Navrbar for PC -->
 
   <label for="nav-mobile-input" class="nav-mobile-btn">
-    <i class="material-icons">menu</i>
+    <i class="fa-solid fa-bars"></i>
   </label>
 
   <!-- use  id="nav-mobile-input" to connect <label for"..."> -->
@@ -69,25 +69,30 @@
   <label for="nav-mobile-input" class="nav-overlay"></label>
 
 
-  <!--Navrbar for Mobile -->
+  <!--Begin: Navrbar for Mobile -->
   <nav class="nav-mobile">
     <ul>
-      <li><a href="#">
-        <i class="glyphicon glyphicon-home"></i>&ensp; Home
-      </a></li>
-      <li><a href="#!about">
-        <i class="fa fa-info-circle"></i>&ensp; About Us
-      </a></li>
-      <li><a href="#!contact">
-        <i class="fa fa-contact-book"></i>&ensp; Contact Us
-      </a></li>
-      <li><a href="#!gallery">
-        <i class="glyphicon glyphicon-picture"></i>&ensp; Gallery
-      </a></li>
+      <li>
+        <a href="#"> <i class="fa-solid fa-house px-2"></i> Home </a>
+      </li>
 
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">
-        <i class="glyphicon glyphicon-tags"></i>&ensp; Chic Lights 
-        <span class="caret"></span></a>
+      <li>
+        <a href="#!about"> <i class="fa-solid fa-user px-2"></i> About Us </a>
+      </li>
+
+      <li>
+        <a href="#!contact"> <i class="fa-solid fa-id-badge px-2"></i> Contact Us </a>
+      </li>
+
+      <li>
+        <a href="#!gallery"> <i class="fa-solid fa-image px-2"></i> Gallery </a>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+          <i class="fa-solid fa-tag px-2"></i> Chic Lights
+          <span class="caret"></span>
+        </a>
         <ul class="dropdown-menu">
           <li><a href="#!CellingLights">Ceiling Lights</a></li>
           <li><a href="#!WallLights">Wall Lights</a></li>
@@ -98,9 +103,11 @@
         </ul>
       </li>
 
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">
-        <i class="glyphicon glyphicon-tags"></i>&ensp; Led Lights
-        <span class="caret"></span></a>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+          <i class="fa-solid fa-lightbulb px-2"></i> Led Lights
+          <span class="caret"></span>
+        </a>
         <ul class="dropdown-menu">
           <li><a href="#!SpotLights">Spot Lights</a></li>
           <li><a href="#!SmartLights">Smart Lights</a></li>
@@ -108,20 +115,23 @@
         </ul>
       </li>
 
-      <li><a href="#!cart">
-        <i class="fa fa-shopping-cart"></i>&ensp; Order
-      </a></li>
-      <li><a href="#!Register">
-        <i class="glyphicon glyphicon-user"></i>&ensp; Register
-      </a></li>
-      <li><a href="#!Login">
-        <i class="glyphicon glyphicon-log-in"></i>&ensp; Login
-      </a></li>
+      <li>
+        <a href="#!cart"> <i class="fa-solid fa-cart-shopping px-2"></i> Order </a>
+      </li>
+
+      <li>
+        <a href="#!Register"> <i class="fa-solid fa-registered px-2"></i> Register </a>
+      </li>
+
+      <li>
+        <a href="#!Login"> <i class="fa-solid fa-right-to-bracket px-2"></i> Login </a>
+      </li>
     </ul>
 
     <label for="nav-mobile-input" class="nav-mobile-close">
-      <i class="material-icons">close</i>
+      <i class="fa-solid fa-xmark"></i>
     </label>
   </nav>
+  <!--End: Navrbar for Mobile -->
 
 </header>

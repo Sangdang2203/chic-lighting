@@ -1,25 +1,22 @@
 <div class="container-fluid">
-    <section>       
-        <div align="center" style="margin:30px 0;">
-            <h1>Registration Form</h1>
-        </div>
-        <!-- Registration Form -->
-        <form action="#!Login" onsubmit="return checkRegister()" >
-            <div class="form-group">
-                <div><input class="log-reg-input" type="text" name="" id="username" placeholder=" Username"></div>
-                <div><input class="log-reg-input" type="text" name="" id="fullname" placeholder=" Fullname" required></div>
-                <div><input class="log-reg-input" type="password" name="" id="password" placeholder=" Password"></div>
-                <div><input class="log-reg-input" type="password" name="" id="password1" placeholder=" Password confirm"></div>
-                <div><input class="log-reg-input" type="email" name="email" id="email" placeholder=" Email"></div>
-         
-                <div>
-                    <input type="radio" name="rdGender" id="rdMale" checked style="margin: 5px 10px"> Male &ensp;
-                    <input type="radio" name="rdGender" id="rdFemale"> Female
-                </div>
-
-                <button class="btn btn-primary" type="submit" id="button" style="margin: 10px">Register</button>
+    <h1 class="text-center pa">Registration Form</h1>
+    <!-- Registration Form -->
+    <form action="#!Login" onsubmit="return checkRegister()">
+        <div class="form-group">
+            <div><input class="log-reg-input" type="text" name="" id="username" placeholder=" Username"></div>
+            <div><input class="log-reg-input" type="text" name="" id="fullname" placeholder=" Fullname" required></div>
+            <div><input class="log-reg-input" type="password" name="" id="password" placeholder=" Password"></div>
+            <div><input class="log-reg-input" type="password" name="" id="password1" placeholder=" Password confirm">
             </div>
-            
-        </form>        
-    </section>
+            <div><input class="log-reg-input" type="email" name="email" id="email" placeholder=" Email"></div>
+
+            <div class="">
+                <input type="radio" name="gender" id="male" checked style="margin: 5px 10px"> Male &ensp;
+                <input type="radio" name="gender" id="male"> Female
+            </div>
+
+            <button class="btn btn-primary" type="submit" id="button" style="margin: 10px 0 10px 10px">Register</button>
+            <button class="btn btn-default" type="reset" id="button">Cancel</button>
+        </div>
+    </form>
 </div><br>
