@@ -6,15 +6,9 @@ Project title: Chic Lighting & Design
 
 ========> Group 4 <=========
 
-4 collaborators:
-
-         Group members	            Name	                    Student ID
-
-	                            Đặng Văn Sang	            Student1429111
-	                            Nguyễn Minh Khang	            Student1429115
-	                            Trần Quốc Khánh	            Student1424189
-				    Trần Anh Tiến		    Student1429120
-
+ Fullname	            Student ID
+ Đặng Văn Sang	            Student1429111
+	                            
 ============================
 
 eProject documentation at: https://github.com/Sangdang2203/eProject_Sem01/tree/master/Documentation
