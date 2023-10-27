@@ -1,71 +1,142 @@
-<div class="container-fluid">
-  <section>
-    <table>
-      <tr>
-        <td>
-          <h1>Home Accents</h1>
-        </td>
-        <td>
-          <div class="box">
-            <form name="search">
-              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-            </form>
-            <i class="fas fa-search"></i>
+<section class="container">
+    <!-- Search input -->
+		<div class="d-flex align-items-center">
+			<h3>Home Accents</h1>
+			<div class="box">
+				<form name="search">
+					<input
+						ng-model="brand"
+						type="text"
+						class="input"
+						name="txt"
+						placeholder=" Search..."
+						onmouseout="this.value = ''; this.blur();" />
+				</form>
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+
+		<!--Download file-->
+		<div class="d-flex align-items-center my-4">
+			<h6>Download Catalogue:</h6>
+			<a
+				class="text-decoration-none ms-1"
+				href="./Docx/HomeAccent_Description.docx"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .DOC
+			</a>
+			<a
+				class="text-decoration-none ms-1"
+				href="./PDF/HomeAccent_Description.pdf"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .PDF
+			</a>
+		</div>
+
+    <div class="row">
+      <!--Filter by brand-->
+      <div class="col-lg-2">
+        <h6>Sort by brand:</h6>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat1"
+              value="1"
+              checked
+              ng-click="choose()" />
+            <label >HOME ACCENT</label>
           </div>
-        </td>
-      </tr>
-    </table>
-    <!--Filter by brand-->
-    <b>Filter by brand:</b> <br>
-    <div class="container">
-      <div class="row">
-        <div class="fillter">
-          <ul>
-            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> HOME ACCENT </li>
-            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> AVATAR CONTROLS </li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> GOVEE </li>
-            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> OURLEEME </li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> ABEJA </li>
-            <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> NOVELTY LIGHTS </li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat7" value="7" checked ng-click="choose()"> MINKA LAVERY</li>
-            <li></li>
-          </ul>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat2"
+              value="2"
+              checked
+              ng-click="choose()" />
+            <label >AVATAR CONTROLS</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat3"
+              value="3"
+              checked
+              ng-click="choose()" />
+            <label >GOVEE</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat4"
+              value="4"
+              checked
+              ng-click="choose()" />
+            <label >OURLEEME</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat5"
+              value="5"
+              checked
+              ng-click="choose()" />
+            <label >ABEJA</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat6"
+              value="6"
+              checked
+              ng-click="choose()" />
+            <label >NOVELTY LIGHTS</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat7"
+              value="7"
+              checked
+              ng-click="choose()" />
+            <label >MINKA LAVERY</label>
+          </div>
+        </div>
+      </div>
+      <!--Home Accents List -->
+      <div class="col-lg-10">
+        <div class="product-list col-12">
+          <div
+            ng-repeat="homeaccent in filteredHomeaccents | filter:{ type: type.type } | filter: brand"
+            class="product-item">
+            <a href="#!/home-accents/{{homeaccent.id}}"><img ng-src="{{homeaccent.image}}" width="100" height="200" /></a>
+            <div class="content">
+              <p class="title-ellipsis">{{homeaccent.name | uppercase}}</p>
+              <p style="font-size: 14px;">
+                <i class="fa-solid fa-tag mx-1"></i>
+                {{homeaccent.brand | uppercase}}</p>
+              <p class="text-danger fw-bolder">{{homeaccent.price | currency}}</p>
+              <a
+                class="btn btn-dark text-uppercase w-75 mb-3"
+                href="#!/home-accents/{{homeaccent.id}}"
+                >Buy Now</a
+              >
+              </div>
+          </div>
         </div>
       </div>
     </div>
-    
-    <!--Download file-->
-    <div>
-      <b>Download Catalogue:</b>
-      <a href="./Docx/HomeAccent_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
-      </a>
-      <a href="./PDF/HomeAccent_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
-      </a>
-    </div>
-    <br>
-
-    <!--Homeaccents List --> <!--Add data from homeaccents.json-->
-    <div class="product-list">
-      <div ng-repeat="homeaccent in filteredHomeaccents | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <a href="#!/homeaccent/{{homeaccent.id}}"><img ng-src="{{homeaccent.image}}"></a>
-        <div class="content">
-          <p><b>{{homeaccent.name | uppercase}}</b></p>
-          <p>Brand: {{homeaccent.brand | uppercase}} </p>
-          <p><span>{{homeaccent.price | currency}}</span></p>
-          <p><a ng-href="#!/homeaccent/{{homeaccent.id}}"><button>Buy Now</button></a></p>
-        </div>
-      </div>
-
-      <div style="clear: both;"></div>
-    </div>
-    <br>
   </section>
-</div>

@@ -1,69 +1,143 @@
-<div class="container-fluid">
-  <section>
-    <table>
-      <tr>
-        <td>
-          <h1>Ceiling Lights</h1>
-        </td>
-        <td>
-          <div class="box">
-            <form name="search">
-              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-            </form>
-            <i class="fas fa-search"></i>
+<section class="container">
+	<!-- Search input -->
+		<div class="d-flex align-items-center">
+			<h3>Ceiling Lights</h1>
+			<div class="box">
+				<form name="search">
+					<input
+						ng-model="brand"
+						type="text"
+						class="input"
+						name="txt"
+						placeholder=" Search..."
+						onmouseout="this.value = ''; this.blur();" />
+				</form>
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+	
+	<!--Download file-->
+	<div class="d-flex my-4">
+			<h6>Download Catalogue:</h6>
+			<a
+				class="text-decoration-none ms-1"
+				href="./Docx/Celling_Lights_Description.docx"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .DOC
+			</a>
+			<a
+				class="text-decoration-none ms-1"
+				href="./PDF/Celling_Lights_Description.pdf"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .PDF
+			</a>
+	</div>
+  <div class="row">
+      <!--Filter by brand-->
+      <div class="col-lg-2">
+        <h6>Sort by brand:</h6>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat1"
+              value="1"
+              checked
+              ng-click="choose()" />
+            <label >NOVELUX</label>
           </div>
-        </td>
-      </tr>
-    </table>
-    <!--Filter by brand-->
-    <b>Filter by brand:</b><br>
-    <div class="container">
-      <div class="row">
-        <div class="fillter">
-          <ul>
-            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> NOVELUX </li>
-            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> PARMIDA LED </li>
-          </ul> 
-          <ul>
-            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> LUXRITE </li>
-            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> FEANRON </li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> DROSBEY </li>
-            <li><input type="checkbox" ng-model="cat7" value="7" checked ng-click="choose()"> MEFFLYPEE</li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> MAXVOLADOR </li>
-          </ul>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat2"
+              value="2"
+              checked
+              ng-click="choose()" />
+            <label >PARMIDA LED</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat3"
+              value="3"
+              checked
+              ng-click="choose()" />
+            <label >LUXRITE</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat4"
+              value="4"
+              checked
+              ng-click="choose()" />
+            <label >FEANRON</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat5"
+              value="5"
+              checked
+              ng-click="choose()" />
+            <label >DROSBEY</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat6"
+              value="6"
+              checked
+              ng-click="choose()" />
+            <label >MAXVOLADOR</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat7"
+              value="7"
+              checked
+              ng-click="choose()" />
+            <label >MEFFLYPEE</label>
+          </div>
+        </div>
+      </div>
+      <!--Wall Lights List -->
+      <div class="col-lg-10">
+        <div class="product-list col-12">
+          <div
+            ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter: brand"
+            class="product-item">
+            <a href="#!/ceiling-lights/{{ceiling.id}}"><img ng-src="{{ceiling.image}}" width="100" height="200" /></a>
+            <div class="content">
+              <p class="title-ellipsis">{{ceiling.name | uppercase}}</p>
+              <p style="font-size: 14px;">
+                <i class="fa-solid fa-tag mx-1"></i>
+                {{ceiling.brand | uppercase}}</p>
+              <p class="text-danger fw-bolder">{{ceiling.price | currency}}</p>
+              <a
+                class="btn btn-dark text-uppercase w-75 mb-3"
+                href="#!/ceiling-lights/{{ceiling.id}}"
+                >Buy Now</a
+              >
+              </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--Download file-->
-    <div>
-      <b>Download Catalogue:</b>
-      <a href="./Docx/Celling_Lights_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
-      </a>
-      <a href="./PDF/Celling_Lights_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
-      </a>
-    </div>
-    <br>
 
-    <!--Ceiling Lights List --> <!--Add data from ceilings.json-->
-    <div class="product-list">
-      <div ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <a href="#!/ceiling/{{ceiling.id}}"><img ng-src="{{ceiling.image}}"></a>
-        <div class="content">
-          <p><b>{{ceiling.name | uppercase}}</b></p>
-          <p> Brand: {{ceiling.brand | uppercase}} </p>
-          <p><span>{{ceiling.price | currency}}</span></p>
-          <p><a ng-href="#!/ceiling/{{ceiling.id}}"><button>Buy Now</button></a></p>
-        </div>
-      </div>
-      
-      <div style="clear: both;"></div>
-    </div>
-    
-  </section>
-</div>
+	
+</section>

@@ -1,65 +1,133 @@
-<div class="container-fluid">
-  <section>
-    <table>
-      <tr>
-        <td>
-          <h1>Fans</h1>
-        
-        <td>
-          <div class="box">
-            <div name="search">
-              <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-            </div>
-            <i class="fas fa-search"></i>
+<section class="container">
+    <!-- Search input -->
+		<div class="d-flex align-items-center">
+			<h3>Fans</h1>
+			<div class="box">
+				<form name="search">
+					<input
+						ng-model="brand"
+						type="text"
+						class="input"
+						name="txt"
+						placeholder=" Search..."
+						onmouseout="this.value = ''; this.blur();" />
+				</form>
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+
+		<!--Download file-->
+		<div class="d-flex align-items-center my-4">
+			<h6>Download Catalogue:</h6>
+			<a
+				class="text-decoration-none ms-1"
+				href="./Docx/Fans_Description.docx"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .DOC
+			</a>
+			<a
+				class="text-decoration-none ms-1"
+				href="./PDF/Fans_Description.pdf"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .PDF
+			</a>
+		</div>
+
+    <div class="row">
+      <!--Filter by brand-->
+      <div class="col-lg-2">
+        <h6>Sort by brand:</h6>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat1"
+              value="1"
+              checked
+              ng-click="choose()" />
+            <label >DREO</label>
           </div>
-      </tr>
-    </table> 
-    
-    <!--Filter by brand-->
-    <b>Filter by brand:</b><br>
-    <div class="container">
-      <div class="row">
-        <div class="fillter">
-          <ul>
-            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> DREO </li>
-            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> BLACK DECKER </li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HONEYWELL </li>
-            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> IRIS USA, INC. </li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> YITAHOME </li>
-            <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> VORNADO </li>
-          </ul>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat2"
+              value="2"
+              checked
+              ng-click="choose()" />
+            <label >BLACK DECKER</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat3"
+              value="3"
+              checked
+              ng-click="choose()" />
+            <label >HONEYWELL</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat4"
+              value="4"
+              checked
+              ng-click="choose()" />
+            <label >IRIS USA, INC.</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat5"
+              value="5"
+              checked
+              ng-click="choose()" />
+            <label >YITAHOME</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat6"
+              value="6"
+              checked
+              ng-click="choose()" />
+            <label >VORNADO</label>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!--Download file-->
-    <div>
-      <b>Download Catalogue:</b>
-      <a href="./Docx/Fans_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
-      </a>
-      <a href="./PDF/Fans_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
-      </a>
-    </div><br>
-
-    <!-- Fans list--> <!--Add data from fans.json-->
-    <div class="product-list">
-      <div ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-        <a href="#!/fan/{{fan.id}}"><img ng-src="{{fan.image}}"></a>
-        <div class="content">
-          <p><b>{{fan.name | uppercase}}</b></p>
-          <p>Brand: {{fan.brand | uppercase}}</p>
-          <p><span>{{fan.price | currency}}</span>
-          </p>
-          <p><a ng-href="#!/fan/{{fan.id}}"><button>Buy Now</button></a></p>
+      <!--Fan Lights List -->
+      <div class="col-lg-10">
+        <div class="product-list col-12">
+          <div
+            ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter: brand"
+            class="product-item">
+            <a href="#!/fans/{{fan.id}}"><img ng-src="{{fan.image}}" width="100" height="200" /></a>
+            <div class="content">
+              <p class="title-ellipsis">{{fan.name | uppercase}}</p>
+              <p style="font-size: 14px;">
+                <i class="fa-solid fa-tag mx-1"></i>
+                {{fan.brand | uppercase}}</p>
+              <p class="text-danger fw-bolder">{{fan.price | currency}}</p>
+              <a
+                class="btn btn-dark text-uppercase w-75 mb-3"
+                href="#!/fans/{{fan.id}}"
+                >Buy Now</a
+              >
+              </div>
+          </div>
         </div>
       </div>
     </div>
     
   </section>
-</div>

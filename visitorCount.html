@@ -1,30 +1,54 @@
-<table width="100%" border="0" ng-controller="footer">
-  <tr>
-    <td class="visitorCount">
-      <div class="date-box">
-        <!--Visitor Count-->
-        <b style="color: goldenrod;">Visitor: {{count}}</b>
-        <!--Current date-->
-        <div id="current-time" class="current-date">
-          <script>
-            var curDate = new Date();
-            var curDay = curDate.getDate();
-            var curMonth = curDate.getMonth() + 1;
-            var curYear = curDate.getFullYear();
-            document.getElementById('current-time').innerHTML = "Today " + curDay + "/" + curMonth + "/" + curYear;
-          </script>
-        </div>
-        <!--Current time-->
-        <div id="digital-clock">
-          <script src="./js/watch.js" defer></script>
-        </div>
-      </div>
-    </td>
+<table
+	width="100%"
+	border="0"
+	ng-controller="footer">
+	<tr>
+		<td class="visitorCount"></td>
 
-    <td>
-      <div align="right">     
-        <a href="index.html"><i class="fa-regular fa-circle-up"></i></a>
-        </div>
-      </td>
-  </tr>
-</table><br>
+		<td></td>
+	</tr>
+</table>
+<section
+	ng-controller="footer"
+	class="d-flex justify-content-between align-items-center mx-4">
+	<div class="date-box">
+		<!--Visitor Count-->
+		<p class="text-success fw-bolder mx-4">Visitor: {{count}}</p>
+		<!--Current date-->
+		<div
+			id="current-time"
+			class="current-date">
+			<script>
+				var curDate = new Date();
+				var curDay = curDate.getDate();
+				var curMonth = curDate.getMonth() + 1;
+				var curYear = curDate.getFullYear();
+				document.getElementById("current-time").innerHTML =
+					"Today " + curDay + "/" + curMonth + "/" + curYear;
+			</script>
+		</div>
+		<!--Current time-->
+		<div id="digital-clock">
+			<script
+				src="./js/watch.js"
+				defer></script>
+		</div>
+	</div>
+
+	<div>
+		<a onclick="scrollToTop()">
+			<i class="fa-regular fa-circle-up"></i>
+		</a>
+	</div>
+</section>
+
+<br />
+
+<script>
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}
+</script>

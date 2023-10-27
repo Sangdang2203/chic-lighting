@@ -1,50 +1,62 @@
 <div class="container-fluid">
 
-  <!-- Begin: Slideshow Images -->
-  <div class="slideshow-container">
-    <div class="mySlides1">
-      <img src="./image/home/picture_01.jpg" class="image-style">
+  <!-- Begin: slideShow  -->
+  <div class="d-none d-md-none d-lg-block">
+    <div id="carouselExampleDark" class="carousel carousel-inner slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
-
-    <div class="mySlides1">
-      <img src="./image/home/picture_02.jpg" class="image-style">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="./image/home/picture_01.jpg" class="d-block w-100 rounded-bottom" alt="picture_01">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="./image/home/picture_02.jpg" class="d-block w-100 rounded-bottom" alt="picture_02">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/home/picture_03.jpg" class="d-block w-100 rounded-bottom" alt="picture_03">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/home/picture_04.jpg" class="d-block w-100 rounded-bottom" alt="picture_04">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/home/picture_05.jpg" class="d-block w-100 rounded-bottom" alt="picture_05">
+      </div>
     </div>
-
-    <div class="mySlides1">
-      <img src="./image/home/picture_03.jpg" class="image-style">
+    <button class="carousel-control-prev" type="button" data-bs-target="carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
     </div>
-
-    <div class="mySlides1">
-      <img src="./image/home/picture_04.jpg" class="image-style">
-    </div>
-
-    <div class="mySlides1">
-      <img src="./image/home/picture_05.jpg" class="image-style">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1, 0)"><i class="material-icons">keyboard_arrow_left</i></a>
-    <a class="next" onclick="plusSlides(1, 0)"><i class="material-icons">keyboard_arrow_right</i></a>
   </div>
-  <!-- And: Slideshow Images -->
 
-  <div ng-repeat="type in productTypes | myFilter" class="product-list">
-    <div align="center" class="title">
-      <h1>
-        <img ng-src="{{type.image}}" width="5%"> {{type.name}}
-        <img ng-src="{{type.image}}" width="5%">
-      </h1>
+  <div class="container">
+    <div ng-repeat="type in productTypes | myFilter" class="product-list">
+      <div>
+        <div class="d-flex justify-content-center align-items-center">
+          <img ng-src="{{type.image}}" width="40"> 
+          <h3 class="mx-2">{{type.name}}</h3>
+          <img ng-src="{{type.image}}" width="40">
+        </div>
     </div>
 
     <div ng-repeat="product in products | filter:{ type: type.type }" class="product-item">
       <a href="#!/product/{{product.id}}"><img ng-src="{{product.image}}"></a>
-      <div class="content">
-        <p><b>{{product.name | uppercase}}</b></p>
+      <div class="content ">
+        <p class="title-ellipsis">{{product.name | uppercase}}</p>
         <p>Brand: {{product.brand | uppercase}} </p>
-        <p><span>{{product.price | currency}}</span></p>
-        <p><a ng-href="#!/product/{{product.id}}"><button>Buy Now</button></a></p>
+        <p class="text-danger fw-bolder">{{product.price | currency}}</p>
+        <a class="btn btn-dark text-uppercase w-75 mb-3" ng-href="#!/product/{{product.id}}">Buy Now</a>
       </div>
     </div>
-    <div style="clear: both;"></div>
   </div>
 
   <br>

@@ -1,64 +1,112 @@
-<div class="container-fluid">
-  <section>
-    <!--Search tool-->
-    <table>
-      <tr>
-        <td>
-          <h1>Lamps</h1>
-        </td>
-        <td>
-          <div class="box">
-            <form name="search">
-              <input ng-model="brand" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-            </form>
-            <i class="fas fa-search"></i>
-          </div>
-        </td>
-      </tr>
-    </table>
-    
-    <!--Filter by brand-->
-    <b>Filter by brand:</b><br>
-    <div class="container">
-      <div class="row">
-        <div class="fillter">
-          <ul>
-            <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> HUTA</li>
-            <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MY HOME</li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI</li>
-            <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> YEELIGHT</li>
-          </ul>
-        </div><br>
-      </div>
-    </div>
-    
-    <!--Download file-->
-    <div>
-      <b>Download Catalogue:</b>
-      <a href="./Docx/Lamps_Description.docx" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
-      </a>
-      <a href="./PDF/Lamps_Description.pdf" download>
-        <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
-      </a>
-    </div>
-    <br>
+<section class="container">
+    <!-- Search input -->
+		<div class="d-flex align-items-center">
+			<h3>Lamps</h1>
+			<div class="box">
+				<form name="search">
+					<input
+						ng-model="brand"
+						type="text"
+						class="input"
+						name="txt"
+						placeholder=" Search..."
+						onmouseout="this.value = ''; this.blur();" />
+				</form>
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
 
-    <!--Lamps List --> <!--Add data from lamps.json-->
-    <div class="product-list">
-      <div ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter:brand" class="product-item">
-        <a href="#!/lamp/{{lamp.id}}"><img ng-src="{{lamp.image}}"></a>
-        <div class="content">
-          <p><b>{{lamp.name | uppercase}}</b></p>
-          <p>Brand: {{lamp.brand | uppercase}} </p>
-          <p><span>{{lamp.price | currency}}</span></p>
-          <p><a ng-href="#!/lamp/{{lamp.id}}"><button>Buy Now</button></a></p>
+		<!--Download file-->
+		<div class="d-flex align-items-center my-4">
+			<h6>Download Catalogue:</h6>
+			<a
+				class="text-decoration-none ms-1"
+				href="./Docx/Lamps_Description.docx"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .DOC
+			</a>
+			<a
+				class="text-decoration-none ms-1"
+				href="./PDF/Lamps_Description.pdf"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .PDF
+			</a>
+		</div>
+    
+    <div class="row">
+      <!--Filter by brand-->
+      <div class="col-lg-2">
+        <h6>Sort by brand:</h6>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat1"
+              value="1"
+              checked
+              ng-click="choose()" />
+            <label >HUTA</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat2"
+              value="2"
+              checked
+              ng-click="choose()" />
+            <label >MY HOME</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat3"
+              value="3"
+              checked
+              ng-click="choose()" />
+            <label >XIAOMI</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat4"
+              value="4"
+              checked
+              ng-click="choose()" />
+            <label >YEELIGHT</label>
+          </div>
+        </div>
+      </div>
+      <!--Lamps List -->
+      <div class="col-lg-10">
+        <div class="product-list col-12">
+          <div
+            ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter: brand"
+            class="product-item">
+            <a href="#!/lamps/{{lamp.id}}"><img ng-src="{{lamp.image}}" width="100" height="200" /></a>
+            <div class="content">
+              <p class="title-ellipsis">{{lamp.name | uppercase}}</p>
+              <p style="font-size: 14px;">
+                <i class="fa-solid fa-tag mx-1"></i>
+                {{lamp.brand | uppercase}}</p>
+              <p class="text-danger fw-bolder">{{lamp.price | currency}}</p>
+              <a
+                class="btn btn-dark text-uppercase w-75 mb-3"
+                href="#!/lamps/{{lamp.id}}"
+                >Buy Now</a
+              >
+              </div>
+          </div>
         </div>
       </div>
     </div>
-    <div style="clear: both;"></div>
-    <br>
   </section>
-</div>
