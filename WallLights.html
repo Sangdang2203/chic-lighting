@@ -1,6 +1,6 @@
 <section class="container">
 		<!-- Search input -->
-		<div class="d-flex align-items-center">
+		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
 			<h3>Wall Lights</h1>
 			<div class="box">
 				<form name="search">
@@ -41,7 +41,7 @@
 
 		<div class="row">
       <!--Filter by brand-->
-      <div class="col-lg-2">
+      <div class="row col-lg-2 d-lg-block d-md-none d-none">
         <h6>Sort by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
@@ -108,23 +108,25 @@
       </div>
       <!--Wall Lights List -->
       <div class="col-lg-10">
-        <div class="product-list col-12">
+        <div class="row">
           <div
             ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand"
-            class="product-item">
-            <a href="#!/wall-lights/{{wall.id}}"><img ng-src="{{wall.image}}" width="100" height="200" /></a>
-            <div class="content">
-              <p class="title-ellipsis">{{wall.name | uppercase}}</p>
-              <p style="font-size: 14px;">
-                <i class="fa-solid fa-tag mx-1"></i>
-                {{wall.brand | uppercase}}</p>
-              <p class="text-danger fw-bolder">{{wall.price | currency}}</p>
-              <a
-                class="btn btn-dark text-uppercase w-75 mb-3"
-                href="#!/wall-lights/{{wall.id}}"
-                >Buy Now</a
-              >
+            class="col-lg-3 col-md-4 col-6">
+            <div class="product-item">
+              <a href="#!/wall-lights/{{wall.id}}"><img ng-src="{{wall.image}}"/></a>
+              <div class="product-content">
+                <p class="fw-semibold product-content__ellipsis">{{wall.name | uppercase}}</p>
+                <p class="product-content__ellipsis">
+                  <i class="fa-solid fa-tag ms-1"></i>
+                  {{wall.brand | uppercase}}
+                </p>
+                <p class="product-price">{{wall.price | currency}}</p>
+                <a
+                  class="btn btn-dark text-uppercase w-75 mb-3"
+                  href="#!/wall-lights/{{wall.id}}"
+                  >Buy Now</a>
               </div>
+            </div>
           </div>
         </div>
       </div>

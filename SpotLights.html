@@ -1,58 +1,99 @@
-<div class="container-fluid">
-    <section>
-      <table>
-        <tr>
-          <td>
-            <h1>Spot Lights</h1>
-          </td>
-          <td>
-            <div class="box">
-              <form name="search">
-                <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-              </form>
-              <i class="fas fa-search"></i>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <!--Filter by brand-->
-      <b>Filter by brand:</b> <br>
-      <div class="container">
-        <div class="row">
-          <div class="fillter">
-            <ul>
-              <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> TAPO </li>
-              <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> DIEN QUANG </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <!--Download file-->
-      <div>
-        <b>Download Catalogue:</b>
-        <a href="./Docx/Spot_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
-        </a>
-        <a href="./PDF/Spot_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
-        </a>
-      </div>
-      <br>
-      <!--Spot Lights List --> <!--Add data from spots.json-->
-      <div class="product-list">
-        <div ng-repeat="spot in filteredSpots | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <a href="#!/spot/{{spot.id}}"><img ng-src="{{spot.image}}"></a>
-          <div class="content">
-            <p><b>{{spot.name | uppercase}}</b></p>
-            <p>Brand: {{spot.brand | uppercase}} </p>
-            <p><span>{{spot.price | currency}}</span></p>
-            <p><a ng-href="#!/spot/{{spot.id}}"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-        
-        <div style="clear: both;"></div>
-      </div>
-      
-    </section>
-</div>
+<section class="container">
+		<!-- Search input -->
+		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
+			<h3>Spot Lights</h1>
+			<div class="box">
+				<form name="search">
+					<input
+						ng-model="brand"
+						type="text"
+						class="input"
+						name="txt"
+						placeholder=" Search..."
+						onmouseout="this.value = ''; this.blur();" />
+				</form>
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+
+		<!--Download file-->
+		<div class="d-flex align-items-center my-4">
+			<h6>Download Catalogue:</h6>
+			<a
+				class="text-decoration-none ms-1"
+				href="./Docx/Wall_Lights_Description.docx"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .DOC
+			</a>
+			<a
+				class="text-decoration-none ms-1"
+				href="./PDF/Wall_Lights_Description.pdf"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .PDF
+			</a>
+		</div>
+
+		<div class="row">
+			<!--Filter by brand-->
+			<div class="row col-lg-2 d-lg-block d-md-none d-none">
+				<h6>Sort by brand:</h6>
+				<div>
+					<div class="d-flex align-items-center mb-3">
+						<input
+							type="checkbox"
+							class="label-success me-1 form-check-input"
+							ng-model="cat1"
+							value="1"
+							checked
+							ng-click="choose()" />
+						<label>TAPO</label>
+					</div>
+					<div class="d-flex align-items-center mb-3">
+						<input
+							type="checkbox"
+							class="label-success me-1 form-check-input"
+							ng-model="cat2"
+							value="2"
+							checked
+							ng-click="choose()" />
+						<label>DIEN QUANG</label>
+					</div>
+				</div>
+			</div>
+			<!--spot Lights List -->
+			<div class="col-lg-10">
+				<div class="row">
+					<div
+						ng-repeat="spot in filteredSpots | filter:{ type: type.type } | filter: brand"
+						class="col-lg-3 col-md-4 col-6">
+						<div class="product-item">
+							<a href="#!/spot-lights/{{spot.id}}"
+								><img ng-src="{{spot.image}}"
+							/></a>
+							<div class="product-content">
+								<p class="fw-semibold product-content__ellipsis">
+									{{spot.name | uppercase}}
+								</p>
+								<p class="product-content__ellipsis ">
+									<i class="fa-solid fa-tag ms-1"></i>
+									{{spot.brand | uppercase}}
+								</p>
+								<p class="product-price">{{spot.price | currency}}</p>
+								<a
+									class="btn btn-dark text-uppercase w-75 mb-3"
+									href="#!/spot-lights/{{spot.id}}"
+									>Buy Now</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

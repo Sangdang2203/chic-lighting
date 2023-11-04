@@ -1,14 +1,35 @@
 <div class="container-fluid">
-    <!-- Login Form -->
-    <h1 class="text-center">Login Form</h1>
-    <form action="#!" onsubmit="return checkLogin()">
-        <div class="form-group">
-            <div><input class="log-reg-input" type="text" id="username" placeholder="Enter username..."></div>
-            <div><input class="log-reg-input" type="password" id="password" placeholder="Enter password... "></div>
-            <div style="margin-left: 10px;">
-                <input type="checkbox" id="" class="form-input-check"> Remember me
-            </div>
-            <button class="btn btn-primary" type="submit" id="button">Login</button>
-        </div>
-    </form>
+	<!-- Login Form -->
+	<h1 class="text-center">Login Form</h1>
+	<div
+		class="w-75"
+		style="margin: 0 12.5%">
+		<form
+			action="#!"
+			onsubmit="return checkLogin()">
+			<input
+				class="form-control my-2"
+				type="text"
+				id="username"
+				placeholder="Enter username" />
+			<input
+				class="form-control my-2"
+				type="password"
+				id="password"
+				placeholder="Enter password " />
+
+			<div>
+				<input
+					class="form-check-input mb-2"
+					type="checkbox"
+					class="form-input-check"> Remember me
+			</div>
+
+			<button
+				class="btn btn-primary"
+				type="submit">
+				Login
+			</button>
+		</form>
+	</div>
 </div><br>

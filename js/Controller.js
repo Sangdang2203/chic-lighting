@@ -1,10 +1,10 @@
 var myApp = angular.module("myApp", ["ngRoute"]);
-//begin: router 
+//begin: router
 myApp.config(function ($routeProvider) {
 	var routes = [
 		{ path: "/home", templateUrl: "Home.html", controller: "myCtrl" },
 		{
-			path: "/product/:id",
+			path: "/products/:id",
 			templateUrl: "Product.html",
 			controller: "productController",
 		},
@@ -144,15 +144,20 @@ myApp.controller("myCtrl", [
 ]);
 
 function createController(controllerName, fileName, scopeVariableName) {
-	myApp.controller(controllerName, ["$scope", "$http", "$routeParams", function ($scope, $http, $routeParams) {
-		$http.get(`json/${fileName}.json`).then(function (response) {
-			const data = response.data;
-			const item = data.find((item) => item.id === parseInt($routeParams.id));
-			if (item) {
-				$scope[scopeVariableName] = item;
-			}
-		});
-	}]);
+	myApp.controller(controllerName, [
+		"$scope",
+		"$http",
+		"$routeParams",
+		function ($scope, $http, $routeParams) {
+			$http.get(`json/${fileName}.json`).then(function (response) {
+				const data = response.data;
+				const item = data.find((item) => item.id === parseInt($routeParams.id));
+				if (item) {
+					$scope[scopeVariableName] = item;
+				}
+			});
+		},
+	]);
 }
 
 createController("productController", "products", "product");
@@ -180,6 +185,52 @@ myApp.controller("ceilingListsController", [
 		$http.get("json/ceilings.json").then(function (response) {
 			$scope.ceilings = response.data;
 			$scope.filteredCeilings = $scope.ceilings;
+			let currentPage = 1;
+			const rowPerPage = 2;
+			const data = $scope.ceilings;
+
+			function displayData() {
+				const startIndex = (currentPage - 1) * rowPerPage;
+				const endIndex = startIndex + rowPerPage;
+				const currentData = data.slice(startIndex, endIndex);
+				const dataContainer = document.getElementById("dataContainer");
+				// dataContainer.innerHTML = '';
+
+				currentData.forEach((row) => {
+					// const rowElement = document.createElement("div");
+					// rowElement.textContent = row;
+					// dataContainer.appendChild(rowElement);
+				});
+			}
+
+			function createPagination() {
+				const pagination = document.getElementById("pagination");
+				pagination.innerHTML = "";
+
+				const pageCount = Math.ceil(data.length / rowPerPage);
+
+				for (let i = 1; i <= pageCount; i++) {
+					const pageItem = document.createElement("li");
+					const pageLink = document.createElement("a");
+					pageLink.textContent = i;
+					pageLink.href = "#!ceiling-lights";
+
+					if (i === currentPage) {
+						pageLink.classList.add("active");
+					}
+
+					pageLink.addEventListener("click", () => {
+						currentPage = i;
+						displayData();
+						createPagination();
+					});
+
+					pageItem.appendChild(pageLink);
+					pagination.appendChild(pageItem);
+				}
+			}
+			displayData();
+			createPagination();
 		});
 		$scope.choose = function () {
 			let markedCheckbox = document.querySelectorAll(
@@ -426,7 +477,6 @@ myApp.controller("footer", [
 					$scope.count++;
 				}
 			}
-			console.log($scope.count);
 			localStorage.setItem("visiter", $scope.count.toString());
 		}
 	},

@@ -28,27 +28,16 @@
 			</script>
 		</div>
 		<!--Current time-->
-		<div id="digital-clock">
-			<script
-				src="./js/watch.js"
-				defer></script>
-		</div>
+		<p id="digital-clock"></p>
+		<script
+			src="./js/time.js"
+			defer></script>
 	</div>
 
 	<div>
 		<a onclick="scrollToTop()">
-			<i class="fa-regular fa-circle-up"></i>
+			<i class="fa-regular fa-circle-up fs-2"></i>
 		</a>
 	</div>
 </section>
-
 <br />
-
-<script>
-	function scrollToTop() {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	}
-</script>

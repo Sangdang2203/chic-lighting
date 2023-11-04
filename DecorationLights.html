@@ -1,61 +1,112 @@
-<div class="container-fluid">
-    <section>
-      <table>
-        <tr>
-          <td>
-            <h1>Decoration Lights</h1>
-          </td>
-          <td>
-            <div class="box">
-              <form name="search">
-                <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-              </form>
-              <i class="fas fa-search"></i>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <!--Filter by brand-->
-      <b>Filter by brand:</b> <br>
-      <div class="container">
-        <div class="row">
-          <div class="fillter">
-            <ul>
-              <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> OSIDEN </li>
-              <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> MASHANG </li>
-            </ul>
-            <ul>
-              <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> HUTA </li>
-              <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> MONSKY</li>
-            </ul> 
-          </div>
+<section class="container">
+      <!-- Search input -->
+      <div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
+        <h3>Decoration Lights</h1>
+        <div class="box">
+          <form name="search">
+            <input
+              ng-model="brand"
+              type="text"
+              class="input"
+              name="txt"
+              placeholder=" Search..."
+              onmouseout="this.value = ''; this.blur();" />
+          </form>
+          <i class="fas fa-search"></i>
         </div>
       </div>
-      
       <!--Download file-->
-      <div>
-        <bserch-box>Download Catalogue:</bserch-box>
-        <a href="./Docx/Decoration_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
+      <div class="d-flex align-items-center my-4">
+        <h6>Download Catalogue:</h6>
+        <a
+          class="text-decoration-none ms-1"
+          href="./Docx/Decoration_Lights_Description.docx"
+          download>
+          <img
+            src="./image/home/Download.png"
+            alt=""
+            class="file-icon" />File .DOC
         </a>
-        <a href="./PDF/Decoration_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
+        <a
+          class="text-decoration-none ms-1"
+          href="./PDF/Decoration_Lights_Description.pdf"
+          download>
+          <img
+            src="./image/home/Download.png"
+            alt=""
+            class="file-icon" />File .PDF
         </a>
-      </div>
-      <br>
-      <!--Decoration Lights List --> <!--Add data from decorations.json-->
-      <div class="product-list">
-        <div ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <a href="#!/decoration/{{decoration.id}}"><img ng-src="{{decoration.image1}}"></a>
-          <div class="content">
-            <p><b>{{decoration.name | uppercase}}</b></p>
-            <p> Brand:{{decoration.brand | uppercase}} </p>
-            <p><span>{{decoration.price | currency}}</span></p>
-            <p><a ng-href="#!/decoration/{{decoration.id}}"><button>Buy Now</button></a></p>
+		  </div>
+
+      <div class="row">
+      <!--Filter by brand-->
+      <div class="row col-lg-2 d-lg-block d-md-none d-none">
+        <h6>Sort by brand:</h6>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat1"
+              value="1"
+              checked
+              ng-click="choose()" />
+            <label >DIHUIKEJI</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat2"
+              value="2"
+              checked
+              ng-click="choose()" />
+            <label >GLOBE ELECTRIC</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat3"
+              value="3"
+              checked
+              ng-click="choose()" />
+            <label >HWH FARMHOUSE</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat4"
+              value="4"
+              checked
+              ng-click="choose()" />
+            <label >LOG BARN</label>
           </div>
         </div>
-        
-        <div style="clear: both;"></div>
       </div>
-    </section>
-</div>
+      <!--decoration Lights List -->
+      <div class="col-lg-10">
+        <div class="row">
+          <div
+            ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter: brand"
+            class="col-lg-3 col-md-4 col-6">
+            <div class="product-item">
+              <a href="#!/decoration-lights/{{decoration.id}}"><img ng-src="{{decoration.image}}"/></a>
+              <div class="product-content">
+                <p class="fw-semibold product-content__ellipsis">{{decoration.name | uppercase}}</p>
+                <p class="product-content__ellipsis ">
+                  <i class="fa-solid fa-tag ms-1"></i>
+                  {{decoration.brand | uppercase}}</p>
+                <p class="product-price">{{decoration.price | currency}}</p>
+                <a
+                  class="btn btn-dark text-uppercase w-75 mb-3"
+                  href="#!/decoration-lights/{{decoration.id}}"
+                  >Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

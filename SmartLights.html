@@ -1,66 +1,133 @@
-<div class="container-fluid">
-    <section>
-      <table>
-        <tr>
-          <td>
-            <h1>Smart Lights</h1>
-          </td>
-          <td>
-            <div class="box">
-              <form name="search">
-                <input ng-model="txtSearch" type="text" class="input" name="txt" placeholder=" Search..." onmouseout="this.value = ''; this.blur();">
-              </form>
-              <i class="fas fa-search"></i>
-            </div>
-          </td>
-        </tr>
-      </table>
+<section class="container">
+    <!-- Search input -->
+		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
+			<h3>Smart Lights</h1>
+			<div class="box">
+				<form name="search">
+					<input
+						ng-model="brand"
+						type="text"
+						class="input"
+						name="txt"
+						placeholder=" Search..."
+						onmouseout="this.value = ''; this.blur();" />
+				</form>
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+      
+    <!--Download file-->
+		<div class="d-flex align-items-center my-4">
+			<h6>Download Catalogue:</h6>
+			<a
+				class="text-decoration-none ms-1"
+				href="./Docx/Smart_Lights_Description.docx"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .DOC
+			</a>
+			<a
+				class="text-decoration-none ms-1"
+				href="./PDF/Smart_Lights_Description.pdf"
+				download>
+				<img
+					src="./image/home/Download.png"
+					alt=""
+					class="file-icon" />File .PDF
+			</a>
+		</div>
+
+    <div class="row">
       <!--Filter by brand-->
-      <b>Filter by brand:</b> <br>
-      <div class="container">
+      <div class="row col-lg-2 d-lg-block d-md-none d-none">
+        <h6>Sort by brand:</h6>
+        <div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat1"
+              value="1"
+              checked
+              ng-click="choose()" />
+            <label >DIHUIKEJI</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat2"
+              value="2"
+              checked
+              ng-click="choose()" />
+            <label >GLOBE ELECTRIC</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat3"
+              value="3"
+              checked
+              ng-click="choose()" />
+            <label >HWH FARMHOUSE</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat4"
+              value="4"
+              checked
+              ng-click="choose()" />
+            <label >LOG BARN</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat5"
+              value="5"
+              checked
+              ng-click="choose()" />
+            <label >WESTINGHOUSE</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat6"
+              value="6"
+              checked
+              ng-click="choose()" />
+            <label >GANEEP</label>
+          </div>
+        </div>
+      </div>
+      <!--smart Lights List -->
+      <div class="col-lg-10">
         <div class="row">
-          <div class="fillter">
-            <ul>
-              <li><input type="checkbox" ng-model="cat1" value="1" checked ng-click="choose()"> TAPO </li>
-              <li><input type="checkbox" ng-model="cat2" value="2" checked ng-click="choose()"> BASEUS </li>
-            </ul>
-            <ul>
-              <li><input type="checkbox" ng-model="cat3" value="3" checked ng-click="choose()"> XIAOMI </li>
-              <li><input type="checkbox" ng-model="cat4" value="4" checked ng-click="choose()"> PHILIPS </li>
-            </ul>
-            <ul>
-              <li><input type="checkbox" ng-model="cat5" value="5" checked ng-click="choose()"> OEM </li>
-              <li><input type="checkbox" ng-model="cat6" value="6" checked ng-click="choose()"> RANG DONG </li>
-            </ul>
+          <div
+            ng-repeat="smart in filteredSmarts | filter:{ type: type.type } | filter: brand"
+            class="col-lg-3 col-md-4 col-6">
+            <div class="product-item">
+              <a href="#!/smart-lights/{{smart.id}}"><img ng-src="{{smart.image}}"/></a>
+              <div class="product-content">
+                <p class="fw-semibold product-content__ellipsis">{{smart.name | uppercase}}</p>
+                <p class="product-content__ellipsis ">
+                  <i class="fa-solid fa-tag ms-1"></i>
+                  {{smart.brand | uppercase}}</p>
+                <p class="product-price">{{smart.price | currency}}</p>
+                <a
+                  class="btn btn-dark text-uppercase w-75 mb-3"
+                  href="#!/smart-lights/{{smart.id}}"
+                  >Buy Now</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!--Download file-->
-      <div>
-        <b>Download Catalogue:</b>
-        <a href="./Docx/Smart_Lights_Description.docx" download>
-          <img src="./image/home/Download.png" alt="" class="file-icon">File .DOC
-        </a>
-        <a href="./PDF/Smart_Lights_Description.pdf" download>
-          <img src="./image/home/Download.png" alt="" class="file-icon">File .PDF
-        </a>
-      </div>
-      <br>
-      <!--Smart Lights List --> <!--Add data from smarts.json-->
-      <div class="product-list">
-        <div ng-repeat="smart in filteredSmarts | filter:{ type: type.type } | filter:txtSearch" class="product-item">
-          <a href="#!/smart/{{smart.id}}"><img ng-src="{{smart.image}}"></a>
-          <div class="content">
-            <p><b>{{smart.name | uppercase}}</b></p>
-            <p>Brand: {{smart.brand | uppercase}} </p>
-            <p><span>{{smart.price | currency}}</span></p>
-            <p><a ng-href="#!/smart/{{smart.id}}"><button>Buy Now</button></a></p>
-          </div>
-        </div>
-        
-        <div style="clear: both;"></div>
-      </div>
-      
-    </section>
-</div>
+    </div>
+</section>

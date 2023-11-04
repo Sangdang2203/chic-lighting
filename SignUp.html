@@ -1,22 +1,22 @@
-<div class="container-fluid">
-    <h1 class="text-center pa">Registration Form</h1>
-    <!-- Registration Form -->
-    <form action="#!Login" onsubmit="return checkRegister()">
-        <div class="form-group">
-            <div><input class="log-reg-input" type="text" name="" id="username" placeholder=" Username"></div>
-            <div><input class="log-reg-input" type="text" name="" id="fullname" placeholder=" Fullname" required></div>
-            <div><input class="log-reg-input" type="password" name="" id="password" placeholder=" Password"></div>
-            <div><input class="log-reg-input" type="password" name="" id="password1" placeholder=" Password confirm">
-            </div>
-            <div><input class="log-reg-input" type="email" name="email" id="email" placeholder=" Email"></div>
+<section class="container-fluid">
+	<h1 class="text-center">Registration Form</h1>
+	<!-- Registration Form -->
+	<div class="w-75 mt-4" style="margin: 0 12.5%;">
+		<form action="#!Login" onsubmit="return checkRegister()">
+			<input class="form-control my-2" type="text" name="username" id="username" placeholder="Username" />
+			<input class="form-control my-2" type="text" name="" id="fullname" placeholder="Fullname" required />
+			<input class="form-control my-2" type="password" name="" id="password" placeholder="Password" />
+			<input class="form-control my-2" type="password" name="" id="password1" placeholder="Confirm password" />
 
-            <div class="">
-                <input type="radio" name="gender" id="male" checked style="margin: 5px 10px"> Male &ensp;
-                <input type="radio" name="gender" id="male"> Female
-            </div>
+			<input class="form-control my-2" type="email" name="email" id="email" placeholder="Email" />
 
-            <button class="btn btn-primary" type="submit" id="button" style="margin: 10px 0 10px 10px">Register</button>
-            <button class="btn btn-default" type="reset" id="button">Cancel</button>
-        </div>
-    </form>
-</div><br>
+			<div class="my-2">
+				<input class="form-check-input" type="radio" name="gender" value="male" checked /> Male &ensp;
+				<input class="form-check-input" type="radio" name="gender" value="female" /> Female
+			</div>
+
+			<button class="btn btn-primary" type="submit">Register</button>
+			<button class="btn btn-light" type="reset">Cancel</button>
+		</form>
+	</div>
+</section><br>

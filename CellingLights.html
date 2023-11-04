@@ -1,6 +1,6 @@
 <section class="container">
 	<!-- Search input -->
-		<div class="d-flex align-items-center">
+		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
 			<h3>Ceiling Lights</h1>
 			<div class="box">
 				<form name="search">
@@ -40,7 +40,7 @@
 	</div>
   <div class="row">
       <!--Filter by brand-->
-      <div class="col-lg-2">
+      <div class="col-lg-2 d-lg-block d-md-none d-none">
         <h6>Sort by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
@@ -115,29 +115,31 @@
           </div>
         </div>
       </div>
-      <!--Wall Lights List -->
+      <!--ceiling Lights List -->
       <div class="col-lg-10">
-        <div class="product-list col-12">
-          <div
-            ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter: brand"
-            class="product-item">
-            <a href="#!/ceiling-lights/{{ceiling.id}}"><img ng-src="{{ceiling.image}}" width="100" height="200" /></a>
-            <div class="content">
-              <p class="title-ellipsis">{{ceiling.name | uppercase}}</p>
-              <p style="font-size: 14px;">
-                <i class="fa-solid fa-tag mx-1"></i>
-                {{ceiling.brand | uppercase}}</p>
-              <p class="text-danger fw-bolder">{{ceiling.price | currency}}</p>
-              <a
-                class="btn btn-dark text-uppercase w-75 mb-3"
-                href="#!/ceiling-lights/{{ceiling.id}}"
-                >Buy Now</a
-              >
+        <div id="dataContainer">
+          <div class="row">
+          <div ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter: brand"
+            class="col-lg-3 col-md-4 col-6">
+            <div class="product-item">
+              <a href="#!/ceiling-lights/{{ceiling.id}}"><img ng-src="{{ceiling.image}}"/></a>
+              <div class="product-content">
+                <p class="fw-semibold product-content__ellipsis">{{ceiling.name | uppercase}}</p>
+                <p class="product-content__ellipsis ">
+                  <i class="fa-solid fa-tag ms-1"></i>
+                  {{ceiling.brand | uppercase}}
+                </p>
+                <p class="product-price">{{ceiling.price | currency}}</p>
+                <a
+                  class="btn btn-dark text-uppercase w-75 mb-3"
+                  href="#!/ceiling-lights/{{ceiling.id}}">Buy Now
+                </a>
               </div>
+            </div>
+          </div>
           </div>
         </div>
+        <ul class="pagination" id="pagination"></ul>
       </div>
     </div>
-
-	
 </section>

@@ -1,57 +1,131 @@
-<main class="container-fluid">
-  <div class="row">
-    <div class="product-detail">
-      <ul>
-        <!-- slide product photos -->
-        <div class="slideshow-container">
-          <div class="mySlides1">
-            <img ng-src="{{homeaccent.image}}" class="rounded-2" width="560px" height="560px">
-          </div>
+<section class="container">
+	<div class="my-5">
+		<div class="row">
+			<!-- product photos -->
+			<div class="col-lg-5">
+				<div class="holder">
+					<div class="slides">
+						<img
+							src="{{homeaccent.image}}"
+							alt="Caption 1" />
+					</div>
+					<div class="slides">
+						<img
+							src="{{homeaccent.image1}}"
+							alt="Caption 2" />
+					</div>
+					<div class="slides">
+						<img
+							src="{{homeaccent.image2}}"
+							alt="Caption 3" />
+					</div>
+					<div class="slides">
+						<img
+							src="{{homeaccent.image3}}"
+							alt="Caption 4" />
+					</div>
+				</div>
+				<div class="">
+					<p
+						class="prev"
+						onclick="plusSlides(-1)">
+						<i class="fa-solid fa-circle-arrow-left"></i>
+					</p>
+				</div>
+				<div class="">
+					<p
+						class="next"
+						onclick="plusSlides(1)">
+						<i class="fa-solid fa-circle-arrow-right"></i>
+					</p>
+				</div>
+				<!-- thumbnail images -->
+				<div class="row align-center">
+					<div class="column">
+						<img
+							class="slide-thumbnail"
+							width="500"
+							src="{{homeaccent.image}}"
+							alt="Photo 01"
+							onclick="currentSlide(1)" />
+					</div>
+					<div class="column">
+						<img
+							class="slide-thumbnail"
+							width="500"
+							src="{{homeaccent.image1}}"
+							alt="Photo 02"
+							onclick="currentSlide(2)" />
+					</div>
+					<div class="column">
+						<img
+							class="slide-thumbnail"
+							width="500"
+							src="{{homeaccent.image2}}"
+							alt="Photo 03"
+							onclick="currentSlide(3)" />
+					</div>
+					<div class="column">
+						<img
+							class="slide-thumbnail"
+							width="500"
+							src="{{homeaccent.image3}}"
+							alt="Photo 04"
+							onclick="currentSlide(4)" />
+					</div>
+				</div>
+			</div>
 
-          <div class="mySlides1">
-            <img ng-src="{{homeaccent.image1}}" class="rounded-2" width="560px" height="560px">
-          </div>
-
-          <div class="mySlides1">
-            <img ng-src="{{homeaccent.image2}}" class="rounded-2" width="560px" height="560px">
-          </div>
-
-          <div class="mySlides1">
-            <img ng-src="{{homeaccent.image3}}" class="rounded-2" width="560px" height="560px">
-          </div>
-
-          <a class="prevBtn" onclick="plusSlides(-1, 0)"><i class="fa-solid fa-chevron-left"></i></a>
-          <a class="nextBtn" onclick="plusSlides(1, 0)"><i class="fa-solid fa-chevron-right"></i></a>
-        </div><br>
-      </ul>
-
-      <ul>
+			<!-- Information of product -->
+			<div class="col-lg-7">
         <div>
-          <!-- Information of product -->
-          <b>{{homeaccent.name | uppercase }}</b>
-          <p>Price: <span>{{homeaccent.price | currency}}</span></p>
-
-          <b>Product Specifications:</b>
-          <li>Brand: {{ homeaccent.brand | uppercase }}</li>
-          <li>{{homeaccent.specification}}</li>
-
-          <b>Product Description:</b>
-          <li>{{homeaccent.description}}</li>
+          <p class="fw-semibold">{{homeaccent.name | uppercase }}</p>
+					<p class="text-danger fw-bolder fs-4">{{homeaccent.price | currency}}</p>
         </div>
+				<div>
+					<h6>Product Specifications:</h6>
+					<ul
+						class="ms-3"
+						type="square">
+						<li>Brand: {{ homeaccent.brand | uppercase }}</li>
+						<li>{{homeaccent.specification}}</li>
+					</ul>
 
-        <div style="margin-top: 20px; display: flex;">
-          <b>Quantity:</b> <input class="input-style" type="number" min="0"
-            placeholder=" {{ homeaccent.quantity }} available">
-          <div class="product-detail-btn">
-            <a href="#!cart">
-              <button class="btn btn-info" type="button" value="">Add to Cart</button>
-            </a>
-            <a href="#!cart">
-              <button class="btn btn-success" type="button" value="">Buy Now</button>
-            </a>
-          </div>
-        </div>
-      </ul>
-    </div>
-  </div>
-</main>
+					<h6>Product Description:</h6>
+					<ul
+						class="ms-3"
+						type="square">
+						<li>{{homeaccent.description}}</li>
+						<li>{{homeaccent.description1}}</li>
+						<li>{{homeaccent.description2}}</li>
+					</ul>
+				</div>
+
+				<div class="align-center">
+					<input
+						class="form-control"
+						style="width: 40%"
+						type="number"
+						min="0"
+						placeholder="{{homeaccent.quantity}} available" />
+					<div class="d-flex">
+						<a href="#!cart">
+							<button
+								class="btn btn-dark mx-1"
+								type="submit">
+								<i class="fa-solid fa-cart-plus"></i>
+							</button>
+						</a>
+						<a href="#!cart">
+							<button
+								class="btn btn-success"
+								type="submit">
+								Buy Now
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

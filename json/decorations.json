@@ -1,22 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "LED neon wall mounted decoration.",
-        "brand": "OSIDEN.",
-        "price": 10.15,
-        "image": "./image/DecorationLight/product_01.jpg",
-        "image1": "./image/DecorationLight/product_01a.jpg",
-        "image2": "./image/DecorationLight/product_01b.jpg",
-        "image3": "./image/DecorationLight/Product_01c.jpg",
-        "type": "decorationLight",
-        "type1": 1,
-        "quantity": 2000,
-        "specification": "Lighting Type: LED strip lights.\r\nLight Color: Warm White (3000K).\r\nSmart Equipment: No.\r\nWarranty Duration: No",
-        "description": "Product type: soft LED neon lights.\r\nOperating temperature: 20℃～60℃. Input voltage: 12V.\r\nWaterproof grade: IP65 waterproof grade.\r\nColor: red / green / blue / warm white / white / pink.",
-        "description1": "\r\nSuitable for indoor and outdoor use.\r\nSuper flexible, suitable for families, shops, bars, KTV, clubs, featured restaurants and supermarket signage lights.",
-        "description2": "\r\nWidely used in classroom KTV Christmas party multifunctional lighting multifunctional decoration."
-    },
-    {
         "id": 2,
         "name": "LED string lights ball shaped cotton.",
         "brand": "OSIDEN",
