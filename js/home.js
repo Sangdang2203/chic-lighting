@@ -1,4 +1,4 @@
-// check form and show notification at SignIn.html
+// check login form and show notification
 function checkLogin() {
 	var sUsername = document.getElementById("username").value;
 	var reUsername = /^\w{5,12}$/;
@@ -22,7 +22,7 @@ function checkLogin() {
 
 	alert(message.join("\n"));
 }
-// check form and show notification at SignUp.html
+// check register form and show notification
 function checkRegister() {
 	var sUsername = document.getElementById("username").value;
 	var reUsername = /^\w{5,12}$/;
@@ -62,6 +62,7 @@ function checkRegister() {
 	message.push("Password: " + sPassword);
 	alert(message.join("\n"));
 }
+
 // check form and show notification at cart.html
 function checkOut() {
 	var sName = document.getElementById("name").value;
@@ -84,9 +85,30 @@ function checkOut() {
 	alert(message.join("\n"));
 }
 
+// check contact form
+function check() {
+	var sMail = document.getElementById("mail").value;
+	var reMail = /^\w+[@]\w+[.]\w+$/;
+	if (!reMail.test(sMail)) {
+		alert("Email is invalid. Email format is xxxx@xxx.xxx!");
+		document.getElementById("mail").focus();
+		return false;
+	}
+	var sPhone = document.getElementById("phone").value;
+	var rePhone = /^\d{8,12}$/;
+	if (!rePhone.test(sPhone)) {
+		alert("Phone cannot left blank! Phone must be between 8-12 numbers.");
+		document.getElementById("phone").focus();
+		return false;
+	}
+	var message = new Array();
+	message.push("Information has been sent successfully.");
+	alert(message.join("\n"));
+}
+// Scroll to top
 function scrollToTop() {
 	window.scrollTo({
 		top: 0,
 		behavior: "smooth",
 	});
-};
+}

@@ -12,30 +12,32 @@
 				>
 			</div>
 
-			<a href="#"><img
+			<a href="#"
+				><img
 					src="./image/home/logo.png"
 					width="120"
-					height="70"/></a>
+					height="70"
+			/></a>
 
 			<div class="fw-bolder">
 				<a href="#!cart"
 					><i class="fa-solid fa-cart-shopping text-dark mx-1"></i
 				></a>
 				<a
-					href="#!register"
-					class="text-dark mx-1 text-decoration-none"
+					href=""
+					class="register text-dark mx-1 text-decoration-none"
 					>Register</a
 				>
 				<a
-					href="#!login"
-					class="text-dark mx-1 text-decoration-none"
+					href=""
+					class="text-dark mx-1 text-decoration-none login"
 					>Login</a
 				>
 			</div>
 		</div>
 	</div>
 
-	<!-- Bengin: Navrbar for PC -->
+	<!-- Navbar for PC -->
 	<nav class="nav-pc d-none d-md-none d-lg-block">
 		<ul>
 			<li><a href="#">Home</a></li>
@@ -67,7 +69,6 @@
 			<li><a href="#!faqs">FAQ</a></li>
 		</ul>
 	</nav>
-	<!-- End: Navrbar for PC -->
 
 	<label
 		for="nav-mobile-input"
@@ -86,7 +87,7 @@
 		for="nav-mobile-input"
 		class="nav-overlay"></label>
 
-	<!--Begin: Navrbar for Mobile -->
+	<!-- Navbar for Mobile -->
 	<nav class="nav-mobile">
 		<ul>
 			<li>
@@ -147,14 +148,14 @@
 			</li>
 
 			<li>
-				<a href="#!register">
-					<i class="fa-solid fa-registered px-2"></i> Register
+				<a href="">
+					<i class="register fa-solid fa-registered px-2"></i> Register
 				</a>
 			</li>
 
 			<li>
-				<a href="#!login">
-					<i class="fa-solid fa-right-to-bracket px-2"></i> Login
+				<a href="">
+					<i class="fa-solid fa-right-to-bracket px-2 login"></i> Login
 				</a>
 			</li>
 		</ul>
@@ -162,8 +163,216 @@
 		<label
 			for="nav-mobile-input"
 			class="nav-mobile-close">
-			<i class="fa-solid fa-xmark"></i>
+			<i class="fa-solid fa-circle-xmark"></i>
 		</label>
 	</nav>
-	<!--End: Navrbar for Mobile -->
 </header>
+
+<!-- Registration Form -->
+<div class="registerModal">
+	<div class="modal-container">
+		<div class="modal-close-btn">
+			<i class="fa-regular fa-circle-xmark"></i>
+		</div>
+
+		<div class="modal-header rounded-top-3 text-dark text-uppercase">
+			<img
+				src="./image/home/logo.png"
+				alt="Chic & Lighting logo"
+				width="30%"
+				class="mt-1" />
+			<p>Register new account</p>
+		</div>
+
+		<form
+			action="#"
+			class="modal-body"
+			onsubmit="return checkRegister()">
+			<input
+				class="form-control my-2"
+				type="text"
+				name="username"
+				id="username"
+				placeholder="Username" />
+			<input
+				class="form-control my-2"
+				type="text"
+				name=""
+				id="fullname"
+				placeholder="Fullname"
+				required />
+			<input
+				class="form-control my-2"
+				type="password"
+				name="password"
+				id="password"
+				placeholder="Password" />
+			<input
+				class="form-control my-2"
+				type="password"
+				name="confirmPassword"
+				id="confirmPassword"
+				placeholder="Confirm password" />
+
+			<input
+				class="form-control my-2"
+				type="email"
+				name="email"
+				id="email"
+				placeholder="Email" />
+
+			<div class="my-2">
+				<input
+					class="form-check-input"
+					type="radio"
+					name="gender"
+					value="male"
+					checked />
+				Male &ensp;
+				<input
+					class="form-check-input"
+					type="radio"
+					name="gender"
+					value="female" />
+				Female
+			</div>
+
+			<div class="align-center mt-3">
+				<button
+					class="btn btn-primary mx-1"
+					type="submit">
+					<i class="fa-solid fa-check"></i>
+					Register
+				</button>
+				<button
+					class="btn btn-dark mx-1"
+					type="reset">
+					<i class="fa-solid fa-xmark"></i>
+					Cancel
+				</button>
+			</div>
+		</form>
+
+		<div class="modal-footer rounded-bottom-3">
+			<a
+				href="#!/contact"
+				class="test fs-6"
+				>Need help?</a
+			>
+		</div>
+	</div>
+</div>
+
+<!-- Login Modal -->
+<div class="loginModal">
+	<div class="modal-container">
+		<div class="modal-close-btn">
+			<i class="fa-regular fa-circle-xmark"></i>
+		</div>
+
+		<div class="modal-header rounded-top-3 text-dark text-uppercase">
+			<img
+				src="./image/home/logo.png"
+				alt="Chic & Lighting logo"
+				class="mt-1"
+				width="30%" />
+			<p>Login your account</p>
+		</div>
+
+		<form
+			action="#"
+			class="modal-body"
+			onsubmit="return checkLogin()">
+			<input
+				class="form-control my-2"
+				type="text"
+				id="loginUsername"
+				placeholder="Enter username" />
+			<input
+				class="form-control my-2"
+				type="password"
+				id="loginPassword"
+				name="loginPassword"
+				placeholder="Enter password " />
+
+			<div>
+				<input
+					class="form-check-input mb-2"
+					type="checkbox"
+					class="form-input-check" />
+				Remember me
+			</div>
+
+			<div class="align-center mt-3">
+				<button
+					class="btn btn-primary mx-1"
+					type="submit">
+					<i class="fa-solid fa-check"></i>
+					Login
+				</button>
+				<button
+					class="btn btn-dark mx-1"
+					type="reset">
+					<i class="fa-solid fa-xmark"></i>
+					Cancel
+				</button>
+			</div>
+		</form>
+
+		<div class="modal-footer rounded-bottom-3">
+			<a
+				href="#!/contact"
+				class="test fs-6"
+				>Need help?</a
+			>
+		</div>
+	</div>
+</div>
+
+<script>
+	// show & hide loginModal
+	let loginModal = document.querySelector(".loginModal");
+	let showLogins = document.querySelectorAll(".login");
+	let modalClose = document.querySelector(".modal-close-btn");
+	let modalContainer = document.querySelector(".modal-container");
+
+	function showLoginModal() {
+		loginModal.classList.add("open");
+	}
+	for (var showLogin of showLogins) {
+		showLogin.addEventListener("click", showLoginModal);
+	}
+
+	function hideLoginModal() {
+		loginModal.classList.remove("open");
+	}
+	loginModal.addEventListener("click", hideLoginModal);
+	modalClose.addEventListener("click", hideLoginModal);
+	modalContainer.addEventListener("click", function (event) {
+		event.stopPropagation();
+	});
+
+	// show & hide registerModal
+	let registerModal = document.querySelector(".registerModal");
+	let showRegisters = document.querySelectorAll(".register");
+	let registerModalClose = document.querySelector(".modal-close-btn");
+	let regiterModalContainer = document.querySelector(".modal-container");
+
+	function showRegisterModal() {
+		registerModal.classList.add("open");
+	}
+	for (var showRegister of showRegisters) {
+		showRegister.addEventListener("click", showRegisterModal);
+	}
+
+	function hideRegisterModal() {
+		registerModal.classList.remove("open");
+	}
+	registerModal.addEventListener("click", hideRegisterModal);
+	registerModalClose.addEventListener("click", hideRegisterModal);
+	regiterModalContainer.addEventListener("click", function (event) {
+		event.stopPropagation();
+	});
+</script>
+
+<style></style>

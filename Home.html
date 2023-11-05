@@ -112,7 +112,7 @@
 			<!-- product card -->
 			<div
 				ng-repeat="product in products | filter:{ type: type.type }"
-				class="col-lg-3 col-md-4 col-6">
+				class="col-lg-3 col-md-3 col-6">
 				<div class="product-item">
 					<a href="#!/products/{{product.id}}"
 						><img ng-src="{{product.image}}"
@@ -121,7 +121,7 @@
 						<p class="fw-semibold product-content__ellipsis">
 							{{product.name | uppercase}}
 						</p>
-						<p class="product-content__ellipsis ">
+						<p class="product-content__ellipsis">
 							<i class="fa-solid fa-tag ms-1"></i>
 							{{product.brand | uppercase}}
 						</p>
@@ -136,20 +136,24 @@
 			</div>
 			<!-- next & previous btn -->
 			<div class="d-flex justify-content-end">
-				<a
+				<button
+					ng-disabled="currentPage === 1"
+					ng-click="currentPage = currentPage - 1"
 					class="btn btn-outline-dark mx-1"
 					href="#carouselExampleIndicators2"
 					role="button"
 					data-slide="prev">
 					<i class="fa fa-arrow-left"></i>
-				</a>
-				<a
+				</button>
+				<button
+					ng-disabled="(currentPage * 4) >= (products | filter:{ type: type.type }).length"
+					ng-click="currentPage = currentPage + 1"
 					class="btn btn-outline-dark"
 					href="#carouselExampleIndicators2"
 					role="button"
 					data-slide="next">
 					<i class="fa fa-arrow-right"></i>
-				</a>
+				</button>
 			</div>
 		</div>
 	</div>

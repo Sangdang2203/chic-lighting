@@ -19,21 +19,24 @@
 		<form
 			action="#!"
 			onsubmit="return check()">
-			<div class="d-flex justify-content-between">
+			<div class="d-lg-flex justify-content-between flex-grow-0">
 				<input
-					class="form-control me-1"
+					class="form-control my-1"
 					type="text"
-					id="fullname"
+					id="name"
+					name="name"
 					placeholder=" Jonathan Dang" />
 				<input
-					class="form-control mx-1"
+					class="form-control my-1"
 					type="email"
-					id="email"
+					id="mail"
+					name="mail"
 					placeholder=" sangdang2201@gmail.com" />
 				<input
-					class="form-control ms-1"
+					class="form-control my-1"
 					type="tel"
 					id="phone"
+					name="phone"
 					placeholder=" (+84) 909 751 772" />
 			</div>
 			<div class="mt-2">
@@ -41,6 +44,8 @@
 					class="form-control"
 					style="height: 100px"
 					type="text"
+					id="comment"
+					name="comment"
 					placeholder=" Tell me about your concern."></textarea>
 			</div>
 
@@ -60,55 +65,46 @@
 	</div>
 
 	<div class="row d-flex justify-content-between my-5">
-		<div class="col-12">
+		<div class="col-lg-6 col-md-6 col-12">
 			<b>Head Office</b>
 			<ul type="none">
 				<li>
 					<i class="fa-solid fa-map-location-dot"></i> No. 444 CMT8 street, Ward
 					11, District 3, Ho Chi Minh City.
 				</li>
-				<li><i class="fa-solid fa-envelope"></i> info@chiclighting-design.com</li>
-				<li><i class="fa-solid fa-square-phone"></i> (+84)28 3863 3594 - (+84)28 3863 4270</li>
-				<li><i class="fa-solid fa-print"></i> (+84)28 1254 3594 - (+84)28 5986 4270</li>
+				<li>
+					<i class="fa-solid fa-envelope"></i> info@chiclighting-design.com
+				</li>
+				<li>
+					<i class="fa-solid fa-square-phone"></i> (+84)28 3863 3594 - (+84)28
+					3863 4270
+				</li>
+				<li>
+					<i class="fa-solid fa-print"></i> (+84)28 1254 3594 - (+84)28 5986
+					4270
+				</li>
 			</ul>
 		</div>
 
-		<div class="col-12">
+		<div class="col-lg-6 col-md-6 col-12">
 			<b>Da Nang Brand</b>
 			<ul type="none">
 				<li>
 					<i class="fa-solid fa-map-location-dot"></i> No. 242 - 244 Da Nang
 					street, Ngo Quyen District, Hai Phong City.
 				</li>
-				<li><i class="fa-solid fa-envelope"></i> info@chiclighting-design.com</li>
-				<li><i class="fa-solid fa-square-phone"></i> (+84)28 1254 3594 - (+84)28 5986 4270</li>
-				<li><i class="fa-solid fa-print"></i> (+84)28 1254 3594 - (+84)28 5986 4270</li>
+				<li>
+					<i class="fa-solid fa-envelope"></i> info@chiclighting-design.com
+				</li>
+				<li>
+					<i class="fa-solid fa-square-phone"></i> (+84)28 1254 3594 - (+84)28
+					5986 4270
+				</li>
+				<li>
+					<i class="fa-solid fa-print"></i> (+84)28 1254 3594 - (+84)28 5986
+					4270
+				</li>
 			</ul>
 		</div>
 	</div>
 </section>
-<!-- Validate contact form -->
-<script>
-	function check() {
-		var sMail = document.getElementById("email").value;
-		var reMail = /^\w+[@]\w+[.]\w+$/;
-		if (!reMail.test(sMail)) {
-			alert("Email is invalid. Email format is xxxx@xxx.xxx!");
-			document.getElementById("email").focus();
-			return false;
-		}
-		var sPhone = document.getElementById("phone").value;
-		var rePhone = /^\d{8,12}$/;
-		if (!rePhone.test(sPhone)) {
-			alert("Phone cannot left blank! Phone must be between 8-12 numbers.");
-			document.getElementById("phone").focus();
-			return false;
-		}
-		var message = new Array();
-		message.push("Information has been sent successfully.");
-		alert(message.join("\n"));
-	}
-</script>
-<link
-	rel="stylesheet"
-	href="./css/index.css" />
