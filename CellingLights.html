@@ -1,7 +1,7 @@
 <section class="container">
-    <!-- Search input -->
+	<!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Outdoor Lights</h1>
+			<h3>Ceiling Lights</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -15,13 +15,13 @@
 				<i class="fas fa-search"></i>
 			</div>
 		</div>
-
-		<!--Download file-->
-		<div class="d-flex align-items-center my-4">
+	
+	<!--Download file-->
+	<div class="d-flex my-4">
 			<h6>Download Catalogue:</h6>
 			<a
 				class="text-decoration-none ms-1"
-				href="./Docx/Outdoor_Lights_Description.docx"
+				href="./assets/files/docs/Celling_Lights_Description.docx"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -30,18 +30,17 @@
 			</a>
 			<a
 				class="text-decoration-none ms-1"
-				href="./PDF/Outdoor_Lights_Description.pdf"
+				href="./assets/files/pdf/Celling_Lights_Description.pdf"
 				download>
 				<img
 					src="./image/home/Download.png"
 					alt=""
 					class="file-icon" />File .PDF
 			</a>
-		</div>
-
-    <div class="row">
+	</div>
+  <div class="row">
       <!--Filter by brand-->
-      <div class="row col-lg-2 d-lg-block d-md-none d-none">
+      <div class="col-lg-2 d-lg-block d-md-none d-none">
         <h6>Sort by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
@@ -52,7 +51,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >FOUNTAIN</label>
+            <label >NOVELUX</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -62,7 +61,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >EGLO</label>
+            <label >PARMIDA LED</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -72,7 +71,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >GLOBE ELECTRIC</label>
+            <label >LUXRITE</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -82,7 +81,7 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >AOOTEK</label>
+            <label >FEANRON</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -92,7 +91,7 @@
               value="5"
               checked
               ng-click="choose()" />
-            <label >UCGG</label>
+            <label >DROSBEY</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -102,32 +101,46 @@
               value="6"
               checked
               ng-click="choose()" />
-            <label >LITHONIA</label>
+            <label >MAXVOLADOR</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat7"
+              value="7"
+              checked
+              ng-click="choose()" />
+            <label >MEFFLYPEE</label>
           </div>
         </div>
       </div>
-      <!--outdoor Lights List -->
+
+      <!--Ceiling Lights List -->
       <div class="col-lg-10">
-        <div class="row">
-          <div
-            ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter: brand"
+        <div id="dataContainer">
+          <div class="row">
+          <div ng-repeat="ceiling in filteredCeilings | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/outdoor-lights/{{outdoor.id}}"><img ng-src="{{outdoor.image}}"/></a>
+              <a href="#!/ceiling-lights/{{ceiling.id}}"><img ng-src="{{ceiling.images.split(', ')[0]}}"/></a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{outdoor.name | uppercase}}</p>
+                <p class="fw-semibold product-content__ellipsis">{{ceiling.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{outdoor.brand | uppercase}}</p>
-                <p class="product-price">{{outdoor.price | currency}}</p>
+                  {{ceiling.brand | uppercase}}
+                </p>
+                <p class="product-price">{{ceiling.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/outdoor-lights/{{outdoor.id}}"
-                  >Buy Now</a>
+                  href="#!/ceiling-lights/{{ceiling.id}}">Buy Now
+                </a>
               </div>
             </div>
           </div>
+          </div>
         </div>
+        <ul class="pagination" id="pagination"></ul>
       </div>
     </div>
-  </section>
+</section>

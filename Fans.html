@@ -1,7 +1,7 @@
 <section class="container">
-		<!-- Search input -->
+    <!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Wall Lights</h1>
+			<h3>Fans</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -21,7 +21,7 @@
 			<h6>Download Catalogue:</h6>
 			<a
 				class="text-decoration-none ms-1"
-				href="./Docx/Wall_Lights_Description.docx"
+				href="./assets/files/docs/Fans_Description.docx"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -30,7 +30,7 @@
 			</a>
 			<a
 				class="text-decoration-none ms-1"
-				href="./PDF/Wall_Lights_Description.pdf"
+				href="./assets/files/pdf/Fans_Description.pdf"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -39,7 +39,7 @@
 			</a>
 		</div>
 
-		<div class="row">
+    <div class="row">
       <!--Filter by brand-->
       <div class="row col-lg-2 d-lg-block d-md-none d-none">
         <h6>Sort by brand:</h6>
@@ -52,7 +52,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >DIHUIKEJI</label>
+            <label >DREO</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -62,7 +62,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >GLOBE ELECTRIC</label>
+            <label >BLACK DECKER</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -72,7 +72,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >HWH FARMHOUSE</label>
+            <label >HONEYWELL</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -82,7 +82,7 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >LOG BARN</label>
+            <label >IRIS USA, INC.</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -92,7 +92,7 @@
               value="5"
               checked
               ng-click="choose()" />
-            <label >WESTINGHOUSE</label>
+            <label >YITAHOME</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -102,28 +102,27 @@
               value="6"
               checked
               ng-click="choose()" />
-            <label >GANEEP</label>
+            <label >VORNADO</label>
           </div>
         </div>
       </div>
-      <!--Wall Lights List -->
+      <!--Fan Lights List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand"
+            ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/wall-lights/{{wall.id}}"><img ng-src="{{wall.image}}"/></a>
+              <a href="#!/fans/{{fan.id}}"><img ng-src="{{fan.images.split(',')[0]}}"/></a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{wall.name | uppercase}}</p>
-                <p class="product-content__ellipsis">
+                <p class="fw-semibold product-content__ellipsis">{{fan.name | uppercase}}</p>
+                <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{wall.brand | uppercase}}
-                </p>
-                <p class="product-price">{{wall.price | currency}}</p>
+                  {{fan.brand | uppercase}}</p>
+                <p class="product-price">{{fan.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/wall-lights/{{wall.id}}"
+                  href="#!/fans/{{fan.id}}"
                   >Buy Now</a>
               </div>
             </div>
@@ -131,4 +130,5 @@
         </div>
       </div>
     </div>
-	</section>
+    
+  </section>

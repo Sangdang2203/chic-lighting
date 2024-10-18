@@ -1,7 +1,7 @@
 <section class="container">
     <!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Fans</h1>
+			<h3>Lamps</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -21,7 +21,7 @@
 			<h6>Download Catalogue:</h6>
 			<a
 				class="text-decoration-none ms-1"
-				href="./Docx/Fans_Description.docx"
+				href="./assets/files/docs/Lamps_Description.docx"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -30,7 +30,7 @@
 			</a>
 			<a
 				class="text-decoration-none ms-1"
-				href="./PDF/Fans_Description.pdf"
+				href="./assets/files/pdf/Lamps_Description.pdf"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -38,10 +38,10 @@
 					class="file-icon" />File .PDF
 			</a>
 		</div>
-
+    
     <div class="row">
       <!--Filter by brand-->
-      <div class="row col-lg-2 d-lg-block d-md-none d-none">
+      <div class="row col-lg-2 d-lg-block d-md-none d-none"">
         <h6>Sort by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
@@ -52,7 +52,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >DREO</label>
+            <label >HUTA</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -62,7 +62,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >BLACK DECKER</label>
+            <label >MY HOME</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -72,7 +72,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >HONEYWELL</label>
+            <label >XIAOMI</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -82,47 +82,27 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >IRIS USA, INC.</label>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <input
-              type="checkbox"
-              class="label-success me-1 form-check-input"
-              ng-model="cat5"
-              value="5"
-              checked
-              ng-click="choose()" />
-            <label >YITAHOME</label>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <input
-              type="checkbox"
-              class="label-success me-1 form-check-input"
-              ng-model="cat6"
-              value="6"
-              checked
-              ng-click="choose()" />
-            <label >VORNADO</label>
+            <label >YEELIGHT</label>
           </div>
         </div>
       </div>
-      <!--Fan Lights List -->
+      <!--Lamps List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter: brand"
+            ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/fans/{{fan.id}}"><img ng-src="{{fan.image}}"/></a>
+              <a href="#!/lamps/{{lamp.id}}"><img ng-src="{{lamp.images.split(',')[0]}}"/></a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{fan.name | uppercase}}</p>
+                <p class="fw-semibold product-content__ellipsis">{{lamp.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{fan.brand | uppercase}}</p>
-                <p class="product-price">{{fan.price | currency}}</p>
+                  {{lamp.brand | uppercase}}</p>
+                <p class="product-price">{{lamp.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/fans/{{fan.id}}"
+                  href="#!/lamps/{{lamp.id}}"
                   >Buy Now</a>
               </div>
             </div>
@@ -130,5 +110,4 @@
         </div>
       </div>
     </div>
-    
   </section>

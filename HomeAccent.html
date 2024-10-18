@@ -1,7 +1,7 @@
 <section class="container">
     <!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Lamps</h1>
+			<h3>Home Accents</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -21,7 +21,7 @@
 			<h6>Download Catalogue:</h6>
 			<a
 				class="text-decoration-none ms-1"
-				href="./Docx/Lamps_Description.docx"
+				href="./assets/files/docs/HomeAccent_Description.docx"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -30,7 +30,7 @@
 			</a>
 			<a
 				class="text-decoration-none ms-1"
-				href="./PDF/Lamps_Description.pdf"
+				href="./assets/files/pdf/HomeAccent_Description.pdf"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -38,10 +38,10 @@
 					class="file-icon" />File .PDF
 			</a>
 		</div>
-    
+
     <div class="row">
       <!--Filter by brand-->
-      <div class="row col-lg-2 d-lg-block d-md-none d-none"">
+      <div class="col-lg-2">
         <h6>Sort by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
@@ -52,7 +52,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >HUTA</label>
+            <label >HOME ACCENT</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -62,7 +62,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >MY HOME</label>
+            <label >AVATAR CONTROLS</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -72,7 +72,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >XIAOMI</label>
+            <label >GOVEE</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -82,27 +82,58 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >YEELIGHT</label>
+            <label >OURLEEME</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat5"
+              value="5"
+              checked
+              ng-click="choose()" />
+            <label >ABEJA</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat6"
+              value="6"
+              checked
+              ng-click="choose()" />
+            <label >NOVELTY LIGHTS</label>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <input
+              type="checkbox"
+              class="label-success me-1 form-check-input"
+              ng-model="cat7"
+              value="7"
+              checked
+              ng-click="choose()" />
+            <label >MINKA LAVERY</label>
           </div>
         </div>
       </div>
-      <!--Lamps List -->
+      
+      <!--Home Accents List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter: brand"
+            ng-repeat="homeaccent in filteredHomeaccents | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/lamps/{{lamp.id}}"><img ng-src="{{lamp.image}}"/></a>
+              <a href="#!/home-accents/{{homeaccent.id}}"><img ng-src="{{homeaccent.images.split(',')[0]}}"/></a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{lamp.name | uppercase}}</p>
+                <p class="fw-semibold product-content__ellipsis">{{homeaccent.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{lamp.brand | uppercase}}</p>
-                <p class="product-price">{{lamp.price | currency}}</p>
+                  {{homeaccent.brand | uppercase}}</p>
+                <p class="product-price">{{homeaccent.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/lamps/{{lamp.id}}"
+                  href="#!/home-accents/{{homeaccent.id}}"
                   >Buy Now</a>
               </div>
             </div>

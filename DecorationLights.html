@@ -20,7 +20,7 @@
         <h6>Download Catalogue:</h6>
         <a
           class="text-decoration-none ms-1"
-          href="./Docx/Decoration_Lights_Description.docx"
+          href="./assets//files/docs/Decoration_Lights_Description.docx"
           download>
           <img
             src="./image/home/Download.png"
@@ -29,7 +29,7 @@
         </a>
         <a
           class="text-decoration-none ms-1"
-          href="./PDF/Decoration_Lights_Description.pdf"
+          href="./assets/files/pdf/Decoration_Lights_Description.pdf"
           download>
           <img
             src="./image/home/Download.png"
@@ -92,7 +92,7 @@
             ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/decoration-lights/{{decoration.id}}"><img ng-src="{{decoration.image}}"/></a>
+              <a href="#!/decoration-lights/{{decoration.id}}"><img ng-src="{{decoration.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{decoration.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">

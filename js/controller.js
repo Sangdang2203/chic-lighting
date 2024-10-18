@@ -3,6 +3,13 @@ var myApp = angular.module("myApp", ["ngRoute"]);
 myApp.config(function ($routeProvider) {
 	var routes = [
 		{ path: "/home", templateUrl: "Home.html", controller: "myCtrl" },
+		{ path: "/about", templateUrl: "AboutUs.html", controller: "myCtrl" },
+		{ path: "/gallery", templateUrl: "Gallery.html", controller: "myCtrl" },
+		{ path: "/contact", templateUrl: "ContactUs.html", controller: "myCtrl" },
+		{ path: "/faqs", templateUrl: "FAQ.html", controller: "myCtrl" },
+		{ path: "/cart", templateUrl: "cart.html", controller: "myCtrl" },
+		{ path: "/register", templateUrl: "SignUp.html", controller: "myCtrl" },
+		{ path: "/login", templateUrl: "SignIn.html", controller: "myCtrl" },
 		{
 			path: "/products/:id",
 			templateUrl: "Product.html",
@@ -10,52 +17,49 @@ myApp.config(function ($routeProvider) {
 		},
 		{
 			path: "/decoration-lights/:id",
-			templateUrl: "decorationProduct.html",
+			templateUrl: "DecorationLightDetails.html",
 			controller: "decorationController",
 		},
 		{
 			path: "/smart-lights/:id",
-			templateUrl: "smartProduct.html",
+			templateUrl: "SmartLightDetails.html",
 			controller: "smartController",
 		},
 		{
 			path: "/spot-lights/:id",
-			templateUrl: "spotProduct.html",
+			templateUrl: "SportLightDetails.html",
 			controller: "spotController",
 		},
 		{
 			path: "/ceiling-lights/:id",
-			templateUrl: "ceilingProduct.html",
+			templateUrl: "CeilingDetails.html",
 			controller: "ceilingController",
 		},
 		{
 			path: "/wall-lights/:id",
-			templateUrl: "wallProduct.html",
+			templateUrl: "WallDetails.html",
 			controller: "wallController",
 		},
 		{
 			path: "/fans/:id",
-			templateUrl: "fanProduct.html",
+			templateUrl: "FansDetails.html",
 			controller: "fanController",
 		},
 		{
 			path: "/lamps/:id",
-			templateUrl: "lampProduct.html",
+			templateUrl: "LampDetails.html",
 			controller: "lampController",
 		},
 		{
 			path: "/outdoor-lights/:id",
-			templateUrl: "outdoorProduct.html",
+			templateUrl: "OutdoorLightDetails.html",
 			controller: "outdoorController",
 		},
 		{
 			path: "/home-accents/:id",
-			templateUrl: "homeaccentProduct.html",
+			templateUrl: "HomeAccentDetails.html",
 			controller: "homeaccentController",
 		},
-		{ path: "/about", templateUrl: "AboutUs.html", controller: "myCtrl" },
-		{ path: "/gallery", templateUrl: "Gallery.html", controller: "myCtrl" },
-		{ path: "/contact", templateUrl: "ContactUs.html", controller: "myCtrl" },
 		{
 			path: "/ceiling-lights",
 			templateUrl: "CellingLights.html",
@@ -101,10 +105,6 @@ myApp.config(function ($routeProvider) {
 			templateUrl: "SmartLights.html",
 			controller: "smartListsController",
 		},
-		{ path: "/faqs", templateUrl: "FAQ.html", controller: "myCtrl" },
-		{ path: "/cart", templateUrl: "cart.html", controller: "myCtrl" },
-		{ path: "/register", templateUrl: "SignUp.html", controller: "myCtrl" },
-		{ path: "/login", templateUrl: "SignIn.html", controller: "myCtrl" },
 	];
 
 	routes.forEach(function (route) {
@@ -182,9 +182,10 @@ myApp.controller("ceilingListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/ceilings.json").then(function (response) {
-			$scope.ceilings = response.data;
-			$scope.filteredCeilings = $scope.ceilings;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.ceilings = $scope.products.filter(product => product.type === "ceiling");
+      $scope.filteredCeilings = $scope.ceilings;
 			let currentPage = 1;
 			const rowPerPage = 2;
 			const data = $scope.ceilings;
@@ -245,18 +246,20 @@ myApp.controller("ceilingListsController", [
 				cats.length == 0
 					? data
 					: data.filter(
-							(ceiling) => cats.indexOf(ceiling.type1.toString()) >= 0
+							(ceiling) => cats.indexOf(ceiling.filtered.toString()) >= 0
 					  );
 		};
 	},
 ]);
+
 // Add data from walls.json & Filter by brand at WallLights.html
 myApp.controller("wallListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/walls.json").then(function (response) {
-			$scope.walls = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data
+			$scope.walls = $scope.products.filter(product => product.type === "wallLight");
 			$scope.filteredWalls = $scope.walls;
 		});
 		$scope.choose = function () {
@@ -271,7 +274,7 @@ myApp.controller("wallListsController", [
 			$scope.filteredWalls =
 				cats.length == 0
 					? data
-					: data.filter((wall) => cats.indexOf(wall.type1.toString()) >= 0);
+					: data.filter((wall) => cats.indexOf(wall.filtered.toString()) >= 0);
 		};
 	},
 ]);
@@ -281,8 +284,9 @@ myApp.controller("lampListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/lamps.json").then(function (response) {
-			$scope.lamps = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.lamps = $scope.products.filter(product => product.type === "lamp");
 			$scope.filteredLamps = $scope.lamps;
 		});
 		$scope.choose = function () {
@@ -297,7 +301,7 @@ myApp.controller("lampListsController", [
 			$scope.filteredLamps =
 				cats.length == 0
 					? data
-					: data.filter((lamp) => cats.indexOf(lamp.type1.toString()) >= 0);
+					: data.filter((lamp) => cats.indexOf(lamp.filtered.toString()) >= 0);
 		};
 	},
 ]);
@@ -307,8 +311,9 @@ myApp.controller("fanListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/fans.json").then(function (response) {
-			$scope.fans = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.fans = $scope.products.filter(product => product.type === "fan");
 			$scope.filteredFans = $scope.fans;
 		});
 		$scope.choose = function () {
@@ -323,7 +328,7 @@ myApp.controller("fanListsController", [
 			$scope.filteredFans =
 				cats.length == 0
 					? data
-					: data.filter((fan) => cats.indexOf(fan.type1.toString()) >= 0);
+					: data.filter((fan) => cats.indexOf(fan.filtered.toString()) >= 0);
 		};
 	},
 ]);
@@ -333,8 +338,9 @@ myApp.controller("homeaccentListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/homeaccents.json").then(function (response) {
-			$scope.homeaccents = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.homeaccents = $scope.products.filter(product => product.type === "homeAccent");
 			$scope.filteredHomeaccents = $scope.homeaccents;
 		});
 		$scope.choose = function () {
@@ -350,7 +356,7 @@ myApp.controller("homeaccentListsController", [
 				cats.length == 0
 					? data
 					: data.filter(
-							(homeaccent) => cats.indexOf(homeaccent.type1.toString()) >= 0
+							(homeaccent) => cats.indexOf(homeaccent.filtered.toString()) >= 0
 					  );
 		};
 	},
@@ -442,7 +448,8 @@ myApp.controller("decorationListsController", [
 	"$http",
 	function ($scope, $http) {
 		$http.get("json/decorations.json").then(function (response) {
-			$scope.decorations = response.data;
+			$scope.products = response.data;
+			$scope.decorations = $scope.products.filter(product => product.type === "decorationLight");
 			$scope.filteredDecorations = $scope.decorations;
 		});
 		$scope.choose = function () {
@@ -458,7 +465,7 @@ myApp.controller("decorationListsController", [
 				cats.length == 0
 					? data
 					: data.filter(
-							(decoration) => cats.indexOf(decoration.type1.toString()) >= 0
+							(decoration) => cats.indexOf(decoration.filtered.toString()) >= 0
 					  );
 		};
 	},

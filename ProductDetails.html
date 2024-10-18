@@ -6,23 +6,23 @@
 				<div class="holder">
 					<div class="slides">
 						<img
-							src="{{wall.image}}"
-							alt="Caption 1" />
+						src="{{product.images.split(', ')[0]}}"
+							alt="{{product.name}}" />
 					</div>
 					<div class="slides">
 						<img
-							src="{{wall.image1}}"
-							alt="Caption 2" />
+						src="{{product.images.split(', ')[1]}}"
+							alt="{{product.name}}" />
 					</div>
 					<div class="slides">
 						<img
-							src="{{wall.image2}}"
-							alt="Caption 3" />
+						src="{{product.images.split(', ')[2]}}"
+							alt="{{product.name}}" />
 					</div>
 					<div class="slides">
 						<img
-							src="{{wall.image3}}"
-							alt="Caption 4" />
+						src="{{product.images.split(', ')[3]}}"
+							alt="{{product.name}}" />
 					</div>
 				</div>
 				<div class="">
@@ -45,32 +45,32 @@
 						<img
 							class="slide-thumbnail"
 							width="500"
-							src="{{wall.image}}"
-							alt="Photo 01"
+							src="{{product.images.split(', ')[0]}}"
+							alt="{{product.name}}"
 							onclick="currentSlide(1)" />
 					</div>
 					<div class="column">
 						<img
 							class="slide-thumbnail"
 							width="500"
-							src="{{wall.image1}}"
-							alt="Photo 02"
+							src="{{product.images.split(', ')[1]}}"
+							alt="{{product.name}}"
 							onclick="currentSlide(2)" />
 					</div>
 					<div class="column">
 						<img
 							class="slide-thumbnail"
 							width="500"
-							src="{{wall.image2}}"
-							alt="Photo 03"
+							src="{{product.images.split(', ')[2]}}"
+							alt="{{product.name}}"
 							onclick="currentSlide(3)" />
 					</div>
 					<div class="column">
 						<img
 							class="slide-thumbnail"
 							width="500"
-							src="{{wall.image3}}"
-							alt="Photo 04"
+							src="{{product.images.split(', ')[3]}}"
+							alt="{{product.name}}"
 							onclick="currentSlide(4)" />
 					</div>
 				</div>
@@ -79,25 +79,23 @@
 			<!-- Information of product -->
 			<div class="col-lg-7">
         <div>
-          <p class="fw-semibold">{{wall.name | uppercase }}</p>
-					<p class="text-danger fw-bolder fs-4">{{wall.price | currency}}</p>
+          <p class="fw-semibold">{{product.name | uppercase }}</p>
+					<p class="text-danger fw-bolder fs-4">{{product.price | currency}}</p>
         </div>
 				<div>
 					<h6>Product Specifications:</h6>
 					<ul
 						class="ms-3"
 						type="square">
-						<li>Brand: {{ wall.brand | uppercase }}</li>
-						<li>{{wall.specification}}</li>
+						<li>Brand: {{ product.brand | uppercase }}</li>
+						<li>{{product.specification}}</li>
 					</ul>
 
 					<h6>Product Description:</h6>
 					<ul
 						class="ms-3"
 						type="square">
-						<li>{{wall.description}}</li>
-						<li>{{wall.description1}}</li>
-						<li>{{wall.description2}}</li>
+						<li ng-repeat="desc in product.description.split(',')">{{desc.trim()}}</li>
 					</ul>
 				</div>
 
@@ -107,7 +105,7 @@
 						style="width: 40%"
 						type="number"
 						min="0"
-						placeholder="{{wall.quantity}} available" />
+						placeholder="{{product.quantity}} available" />
 					<div class="d-flex">
 						<a href="#!cart">
 							<button

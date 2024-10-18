@@ -1,7 +1,7 @@
 <section class="container">
     <!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Home Accents</h1>
+			<h3>Outdoor Lights</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -21,7 +21,7 @@
 			<h6>Download Catalogue:</h6>
 			<a
 				class="text-decoration-none ms-1"
-				href="./Docx/HomeAccent_Description.docx"
+				href="./assets/files/docs/Outdoor_Lights_Description.docx"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -30,7 +30,7 @@
 			</a>
 			<a
 				class="text-decoration-none ms-1"
-				href="./PDF/HomeAccent_Description.pdf"
+				href="./assets/files/pdf/Outdoor_Lights_Description.pdf"
 				download>
 				<img
 					src="./image/home/Download.png"
@@ -41,7 +41,7 @@
 
     <div class="row">
       <!--Filter by brand-->
-      <div class="col-lg-2">
+      <div class="row col-lg-2 d-lg-block d-md-none d-none">
         <h6>Sort by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
@@ -52,7 +52,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >HOME ACCENT</label>
+            <label >FOUNTAIN</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -62,7 +62,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >AVATAR CONTROLS</label>
+            <label >EGLO</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -72,7 +72,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >GOVEE</label>
+            <label >GLOBE ELECTRIC</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -82,7 +82,7 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >OURLEEME</label>
+            <label >AOOTEK</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -92,7 +92,7 @@
               value="5"
               checked
               ng-click="choose()" />
-            <label >ABEJA</label>
+            <label >UCGG</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -102,37 +102,27 @@
               value="6"
               checked
               ng-click="choose()" />
-            <label >NOVELTY LIGHTS</label>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <input
-              type="checkbox"
-              class="label-success me-1 form-check-input"
-              ng-model="cat7"
-              value="7"
-              checked
-              ng-click="choose()" />
-            <label >MINKA LAVERY</label>
+            <label >LITHONIA</label>
           </div>
         </div>
       </div>
-      <!--Home Accents List -->
+      <!--outdoor Lights List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="homeaccent in filteredHomeaccents | filter:{ type: type.type } | filter: brand"
+            ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/home-accents/{{homeaccent.id}}"><img ng-src="{{homeaccent.image}}"/></a>
+              <a href="#!/outdoor-lights/{{outdoor.id}}"><img ng-src="{{outdoor.image}}"/></a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{homeaccent.name | uppercase}}</p>
+                <p class="fw-semibold product-content__ellipsis">{{outdoor.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{homeaccent.brand | uppercase}}</p>
-                <p class="product-price">{{homeaccent.price | currency}}</p>
+                  {{outdoor.brand | uppercase}}</p>
+                <p class="product-price">{{outdoor.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/home-accents/{{homeaccent.id}}"
+                  href="#!/outdoor-lights/{{outdoor.id}}"
                   >Buy Now</a>
               </div>
             </div>

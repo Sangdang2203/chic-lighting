@@ -46,7 +46,7 @@
 						<img
 							class="slide-thumbnail"
 							width="500"
-							src="{{fan.image}}"
+							src="{{fan.images}}"
 							alt="Photo 01"
 							onclick="currentSlide(1)" />
 					</div>
@@ -94,6 +94,7 @@
 
 					<h6>Product Description:</h6>
 					<ul
+					ng-repeat="desc in fan.product.description"
 						class="ms-3"
 						type="square">
 						<li>{{fan.description}}</li>
