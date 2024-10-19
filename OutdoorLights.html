@@ -14,35 +14,14 @@
 				</form>
 				<i class="fas fa-search"></i>
 			</div>
+      
 		</div>
 
-		<!--Download file-->
-		<div class="d-flex align-items-center my-4">
-			<h6>Download Catalogue:</h6>
-			<a
-				class="text-decoration-none ms-1"
-				href="./assets/files/docs/Outdoor_Lights_Description.docx"
-				download>
-				<img
-					src="./image/home/Download.png"
-					alt=""
-					class="file-icon" />File .DOC
-			</a>
-			<a
-				class="text-decoration-none ms-1"
-				href="./assets/files/pdf/Outdoor_Lights_Description.pdf"
-				download>
-				<img
-					src="./image/home/Download.png"
-					alt=""
-					class="file-icon" />File .PDF
-			</a>
-		</div>
 
-    <div class="row">
+    <div class="row mt-4">
       <!--Filter by brand-->
       <div class="row col-lg-2 d-lg-block d-md-none d-none">
-        <h6>Sort by brand:</h6>
+        <h6>Filter by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -104,6 +83,11 @@
               ng-click="choose()" />
             <label >LITHONIA</label>
           </div>
+          <a ng-include="'components/DownloadButton.html'"
+            class="text-decoration-none ms-1 "
+            href="./assets/files/pdf/Outdoor_Lights_Description.pdf"
+            download
+          ></a>
         </div>
       </div>
       <!--outdoor Lights List -->
@@ -113,7 +97,7 @@
             ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/outdoor-lights/{{outdoor.id}}"><img ng-src="{{outdoor.image}}"/></a>
+              <a href="#!/outdoor-lights/{{outdoor.id}}"><img ng-src="{{outdoor.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{outdoor.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">

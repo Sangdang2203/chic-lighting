@@ -125,15 +125,15 @@ myApp.controller("myCtrl", [
 	"$http",
 	function ($scope, $http) {
 		$scope.productTypes = [
-			{ type: "best", image: "./image/home/hot.gif", name: "Best Seller" },
+			{ type: "best", image: "./assets/images/home/hot.gif", name: "Best Seller" },
 			{
 				type: "promote",
-				image: "./image/home/hot.gif",
+				image: "./assets/images/home/hot.gif",
 				name: "Promotional Products",
 			},
 			{
 				type: "new",
-				image: "./image/NewProduct/NewIcon.gif",
+				image: "./assets/images/NewProduct/NewIcon.gif",
 				name: "New Products",
 			},
 		];
@@ -170,6 +170,7 @@ createController("wallController", "walls", "wall");
 createController("ceilingController", "ceilings", "ceiling");
 createController("outdoorController", "outdoors", "outdoor");
 createController("homeaccentController", "homeaccents", "homeaccent");
+createController("galleryController", "images", "image");
 
 myApp.filter("myFilter", function () {
 	return function (item) {
@@ -186,52 +187,6 @@ myApp.controller("ceilingListsController", [
 			$scope.products = response.data;
 			$scope.ceilings = $scope.products.filter(product => product.type === "ceiling");
       $scope.filteredCeilings = $scope.ceilings;
-			let currentPage = 1;
-			const rowPerPage = 2;
-			const data = $scope.ceilings;
-
-			function displayData() {
-				const startIndex = (currentPage - 1) * rowPerPage;
-				const endIndex = startIndex + rowPerPage;
-				const currentData = data.slice(startIndex, endIndex);
-				const dataContainer = document.getElementById("dataContainer");
-				// dataContainer.innerHTML = '';
-
-				currentData.forEach((row) => {
-					// const rowElement = document.createElement("div");
-					// rowElement.textContent = row;
-					// dataContainer.appendChild(rowElement);
-				});
-			}
-
-			function createPagination() {
-				const pagination = document.getElementById("pagination");
-				pagination.innerHTML = "";
-
-				const pageCount = Math.ceil(data.length / rowPerPage);
-
-				for (let i = 1; i <= pageCount; i++) {
-					const pageItem = document.createElement("li");
-					const pageLink = document.createElement("a");
-					pageLink.textContent = i;
-					pageLink.href = "#!ceiling-lights";
-
-					if (i === currentPage) {
-						pageLink.classList.add("active");
-					}
-
-					pageLink.addEventListener("click", () => {
-						currentPage = i;
-						displayData();
-						createPagination();
-					});
-
-					pageItem.appendChild(pageLink);
-					pagination.appendChild(pageItem);
-				}
-			}
-			displayData();
-			createPagination();
 		});
 		$scope.choose = function () {
 			let markedCheckbox = document.querySelectorAll(
@@ -367,8 +322,9 @@ myApp.controller("outdoorListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/outdoors.json").then(function (response) {
-			$scope.outdoors = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.outdoors = $scope.products.filter(product => product.type === "outdoorLight");
 			$scope.filteredOutdoors = $scope.outdoors;
 		});
 		$scope.choose = function () {
@@ -384,7 +340,7 @@ myApp.controller("outdoorListsController", [
 				cats.length == 0
 					? data
 					: data.filter(
-							(outdoor) => cats.indexOf(outdoor.type1.toString()) >= 0
+							(outdoor) => cats.indexOf(outdoor.filtered.toString()) >= 0
 					  );
 		};
 	},
@@ -395,8 +351,9 @@ myApp.controller("spotListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/spots.json").then(function (response) {
-			$scope.spots = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.spots = $scope.products.filter(product => product.type === "spotLight");
 			$scope.filteredSpots = $scope.spots;
 		});
 		$scope.choose = function () {
@@ -411,7 +368,7 @@ myApp.controller("spotListsController", [
 			$scope.filteredSpots =
 				cats.length == 0
 					? data
-					: data.filter((spot) => cats.indexOf(spot.type1.toString()) >= 0);
+					: data.filter((spot) => cats.indexOf(spot.filtered.toString()) >= 0);
 		};
 	},
 ]);
@@ -421,8 +378,9 @@ myApp.controller("smartListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/smarts.json").then(function (response) {
-			$scope.smarts = response.data;
+		$http.get("json/products.json").then(function (response) {
+			$scope.products = response.data;
+			$scope.smarts = $scope.products.filter(product => product.type === "smartLight");
 			$scope.filteredSmarts = $scope.smarts;
 		});
 		$scope.choose = function () {
@@ -437,7 +395,7 @@ myApp.controller("smartListsController", [
 			$scope.filteredSmarts =
 				cats.length == 0
 					? data
-					: data.filter((smart) => cats.indexOf(smart.type1.toString()) >= 0);
+					: data.filter((smart) => cats.indexOf(smart.filtered.toString()) >= 0);
 		};
 	},
 ]);
@@ -447,7 +405,7 @@ myApp.controller("decorationListsController", [
 	"$scope",
 	"$http",
 	function ($scope, $http) {
-		$http.get("json/decorations.json").then(function (response) {
+		$http.get("json/products.json").then(function (response) {
 			$scope.products = response.data;
 			$scope.decorations = $scope.products.filter(product => product.type === "decorationLight");
 			$scope.filteredDecorations = $scope.decorations;
@@ -471,7 +429,7 @@ myApp.controller("decorationListsController", [
 	},
 ]);
 
-myApp.controller("footer", [
+myApp.controller("visitorCount", [
 	"$scope",
 	"$location",
 	function ($scope, $location) {
@@ -480,7 +438,7 @@ myApp.controller("footer", [
 		function countVisiter() {
 			if (localStorage.getItem("visiter")) {
 				$scope.count = parseInt(localStorage.getItem("visiter"));
-				if ($location.path() === "/home") {
+				if ($location.path() === "#!/home") {
 					$scope.count++;
 				}
 			}
@@ -488,3 +446,4 @@ myApp.controller("footer", [
 		}
 	},
 ]);
+

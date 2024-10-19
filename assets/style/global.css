@@ -25,6 +25,16 @@ a:hover {
 	align-items: center;
 }
 
+.justify-content-start {
+	display: flex;
+	justify-content: start;
+}
+
+#productBtn:hover {
+	opacity: 0.8;
+	color: goldenrod;
+}
+
 /* BEGIN: navbar for mobile | tablet*/
 .nav-mobile {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -152,6 +162,9 @@ a:hover {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .nav-pc ul li {
@@ -167,11 +180,15 @@ a:hover {
 .nav-pc ul li a {
 	color: white;
 	text-decoration: none;
+	transition: color 0.5s ease, font-size 0.5s ease; 
 }
 
 .nav-pc ul li a:hover {
 	color: goldenrod;
-	font-weight: 600;
+    font-weight: 600;
+    font-size: 1.5rem; 
+    animation-duration: 500ms; 
+    /* text-decoration: underline; */
 }
 
 .dropdown {
@@ -382,31 +399,7 @@ a:hover {
 .product-item img:hover {
 	transform: scale(1.05);
 }
-
-.pagination {
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
-}
-.pagination li {
-	list-style-type: none;
-	margin: 0 5px;
-}
-.pagination li a {
-	text-decoration: none;
-	padding: 5px 10px;
-	border-radius: 6px;
-}
-.pagination li a.active {
-	background-color: #3b3640;
-	color: #fff;
-}
-
 /* END : Product card */
-.file-icon {
-	max-width: 25px;
-	max-width: 25px;
-}
 
 /* Product Detail */
 h1,
@@ -416,7 +409,7 @@ h3 {
 	padding: 20px 0 0 0;
 }
 
-/*Search button*/
+/* Input Search */
 .box {
 	position: relative;
 	margin-left: 20px;
@@ -425,7 +418,7 @@ h3 {
 .box .input {
 	margin-top: 15px;
 	padding: 10px;
-	width: 130px;
+	width: 200px;
 	height: 36px;
 	background: none;
 	border: 2px solid goldenrod;
@@ -783,23 +776,12 @@ h3 {
 		display: none;
 	}
 
-	.footer-google-map {
-		/* display: none; */
-		max-width: 90%;
-		height: 90%;
-	}
-
 	.product-detail ul {
 		width: 100%;
 	}
 
 	.product-detail-btn {
 		margin: 0 0 0 5px;
-	}
-
-	.file-icon {
-		width: 25px;
-		height: 25px;
 	}
 
 	span {

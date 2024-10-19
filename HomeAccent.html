@@ -16,33 +16,10 @@
 			</div>
 		</div>
 
-		<!--Download file-->
-		<div class="d-flex align-items-center my-4">
-			<h6>Download Catalogue:</h6>
-			<a
-				class="text-decoration-none ms-1"
-				href="./assets/files/docs/HomeAccent_Description.docx"
-				download>
-				<img
-					src="./image/home/Download.png"
-					alt=""
-					class="file-icon" />File .DOC
-			</a>
-			<a
-				class="text-decoration-none ms-1"
-				href="./assets/files/pdf/HomeAccent_Description.pdf"
-				download>
-				<img
-					src="./image/home/Download.png"
-					alt=""
-					class="file-icon" />File .PDF
-			</a>
-		</div>
-
-    <div class="row">
+    <div class="row mt-4">
       <!--Filter by brand-->
       <div class="col-lg-2">
-        <h6>Sort by brand:</h6>
+        <h6>Filter by brand:</h6>
         <div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -114,6 +91,10 @@
               ng-click="choose()" />
             <label >MINKA LAVERY</label>
           </div>
+          <a ng-include="'components/DownloadButton.html'"
+          class="text-decoration-none ms-1 "
+          href="./assets/files/pdf/HomeAccent_Description.pdf"
+          download></a>
         </div>
       </div>
       

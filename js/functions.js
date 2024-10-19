@@ -105,10 +105,85 @@ function check() {
 	message.push("Information has been sent successfully.");
 	alert(message.join("\n"));
 }
+
 // Scroll to top
-function scrollToTop() {
-	window.scrollTo({
-		top: 0,
-		behavior: "smooth",
-	});
+function scrollToTop(duration) {
+	const start = document.documentElement.scrollTop || document.body.scrollTop;
+	const startTime = performance.now();
+
+	function scrollStep(currentTime) {
+			const timeElapsed = currentTime - startTime;
+			const progress = Math.min(timeElapsed / duration, 1); 
+
+			// Tính toán vị trí cuộn mới
+			const newScrollTop = start * (1 - progress);
+			window.scrollTo(0, newScrollTop);
+
+			if (progress < 1) {
+					requestAnimationFrame(scrollStep); 
+			}
+	}
+
+	requestAnimationFrame(scrollStep); 
 }
+
+// get product name slug
+function getSlug(productName) {
+  return productName
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9 -]/g, '') 
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+}
+
+// get current time
+function Time() {
+	let date = new Date();
+	let hour = date.getHours();
+	let minute = date.getMinutes();
+	let second = date.getSeconds();
+	let period = "";
+	if (hour >= 12) {
+		period = "PM";
+	} else {
+		period = "AM";
+	}
+	if (hour == 0) {
+		hour = 12;
+	} else {
+		if (hour > 12) {
+			hour = hour - 12;
+		}
+	}
+	hour = update(hour);
+	minute = update(minute);
+	second = update(second);
+	const clockElement = document.getElementById("digital-clock");
+	if (clockElement) {
+		clockElement.innerText = "" + hour + ":" + minute + ":" + second + " " + period;
+	}
+	setTimeout(Time, 1000);
+}
+
+function update(t) {
+	if (t < 10) {
+		return "0" + t;
+	} else {
+		return t;
+	}
+}
+
+// Ensure Time function runs after DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    Time();
+});
+function update(t) {
+	if (t < 10) {
+		return "0" + t;
+	} else {
+		return t;
+	}
+}
+Time();
+

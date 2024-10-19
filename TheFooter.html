@@ -1,72 +1,67 @@
+<div class="my-5 d-flex justify-content-end">
+  <a ng-include="'components/BackButton.html'" onclick="scrollToTop(200)"></a>
+</div>
 <footer class="footer d-block d-md-block d-lg-block">
-	<div class="d-flex justify-content-between">
-		<div class="footer-col d-none d-md-block d-lg-block">
-			<h4 href="#">Homepage</h4>
-			<hr />
-			<div class="footer-col__link">
-				<a href="#!about">About Us</a>
-				<a href="#!gallery">Gallery</a>
-				<a href="#!contact">Contact Us</a>
-			</div>
-		</div>
-		<div class="footer-col d-none d-md-block d-lg-block">
-			<h4>Chic Lights</h4>
-			<hr />
-			<div class="footer-col__link">
-				<a href="#!wall-lights">Wall Lights</a>
-				<a href="#!ceiling-lights">Ceiling Lights</a>
-				<a href="#!outdoor-lights">Outdoor Lights</a>
-			</div>
-		</div>
-		<div class="footer-col d-none d-md-block d-lg-block">
-			<h4>Led Lights</h4>
-			<hr />
-			<div class="footer-col__link">
-				<a href="#!spot-lights">Spot Lights</a>
-				<a href="#!smart-lights">Smart Lights</a>
-				<a href="#!decoration-lights">Decoration</a>
-			</div>
-		</div>
-		<div class="footer-col d-none d-md-block d-lg-block">
-			<h4>Others</h4>
-			<hr />
-			<div class="footer-col__link">
-				<a href="#!fans">Fans</a>
-				<a href="#!lamps">Lamps</a>
-				<a href="#!home-accent">Home Accents</a>
-			</div>
-		</div>
-		<div class="footer-col d-none d-md-block d-lg-block">
-			<h4>Follow Us</h4>
-			<hr />
-			<div class="social-links">
-				<a><i class="fa-brands fa-facebook"></i></a>
-				<a><i class="fa-brands fa-instagram"></i></a>
-				<a><i class="fa-brands fa-linkedin"></i></a>
-			</div>
-		</div>
-		<div class="footer-col d-lg-block d-md-none d-none">
-			<iframe
-				class="footer-google-map"
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.404401950413!2d106.65233383955079!3d10.784398300000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed14610eb1f%3A0x8ea7310c2e6c83e4!2sACB%20Building!5e0!3m2!1sen!2s!4v1675353044750!5m2!1sen!2s"
-				width="180"
-				height="120"
-				allowfullscreen=""
-				loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade">
-			</iframe>
-		</div>
-	</div>
+  <div class="d-flex justify-content-between">
+    <div class="footer-col d-none d-md-block d-lg-block">
+      <h4 href="#">Homepage</h4>
+      <hr />
+      <div class="footer-col__link">
+        <a href="#!about">About Us</a>
+        <a href="#!gallery">Gallery</a>
+        <a href="#!contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-col d-none d-md-block d-lg-block">
+      <h4>Chic Lights</h4>
+      <hr />
+      <div class="footer-col__link">
+        <a href="#!wall-lights">Wall Lights</a>
+        <a href="#!ceiling-lights">Ceiling Lights</a>
+        <a href="#!outdoor-lights">Outdoor Lights</a>
+      </div>
+    </div>
+    <div class="footer-col d-none d-md-block d-lg-block">
+      <h4>Led Lights</h4>
+      <hr />
+      <div class="footer-col__link">
+        <a href="#!spot-lights">Spot Lights</a>
+        <a href="#!smart-lights">Smart Lights</a>
+        <a href="#!decoration-lights">Decoration</a>
+      </div>
+    </div>
+    <div class="footer-col d-none d-md-block d-lg-block">
+      <h4>Others</h4>
+      <hr />
+      <div class="footer-col__link">
+        <a href="#!fans">Fans</a>
+        <a href="#!lamps">Lamps</a>
+        <a href="#!home-accent">Home Accents</a>
+      </div>
+    </div>
+    <div class="footer-col d-none d-md-block d-lg-block">
+      <h4>Follow Us</h4>
+      <hr />
+      <div class="social-links">
+        <a><i class="fa-brands fa-facebook"></i></a>
+        <a><i class="fa-brands fa-instagram"></i></a>
+        <a><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div
+      ng-controller="visitorCount"
+      ng-include="'components/TimeCard.html'"
+      class="footer-col d-lg-block d-md-none d-none"
+    ></div>
+  </div>
 
-	<div class="align-center flex-column mt-3">
-		<p>Designed by Jonathan Dang.</p>
-		<p>
-			Copyright &copy; 2023
-			<a
-				href="#!"
-				class="text-decoration-none text-warning">
-				chiclighting-design.com</a
-			>
-		</p>
-	</div>
+  <div class="align-center flex-column mt-3">
+    <p>Designed by Jonathan Dang.</p>
+    <p>
+      Copyright &copy; 2023
+      <a href="#!" class="text-decoration-none text-warning">
+        chiclighting-design.com</a
+      >
+    </p>
+  </div>
 </footer>
