@@ -1,129 +1,91 @@
 <section class="container">
-	<div class="my-5">
-		<div class="row">
-			<!-- product photos -->
-			<div class="col-lg-5">
-				<div class="holder">
-					<div class="slides">
-						<img
-						src="{{product.images.split(', ')[0]}}"
-							alt="{{product.name}}" />
-					</div>
-					<div class="slides">
-						<img
-						src="{{product.images.split(', ')[1]}}"
-							alt="{{product.name}}" />
-					</div>
-					<div class="slides">
-						<img
-						src="{{product.images.split(', ')[2]}}"
-							alt="{{product.name}}" />
-					</div>
-					<div class="slides">
-						<img
-						src="{{product.images.split(', ')[3]}}"
-							alt="{{product.name}}" />
-					</div>
-				</div>
-				<div class="">
-					<p
-						class="prev"
-						onclick="plusSlides(-1)">
-						<i class="fa-solid fa-circle-arrow-left"></i>
-					</p>
-				</div>
-				<div class="">
-					<p
-						class="next"
-						onclick="plusSlides(1)">
-						<i class="fa-solid fa-circle-arrow-right"></i>
-					</p>
-				</div>
-				<!-- thumbnail images -->
-				<div class="row align-center">
-					<div class="column">
-						<img
-							class="slide-thumbnail"
-							width="500"
-							src="{{product.images.split(', ')[0]}}"
-							alt="{{product.name}}"
-							onclick="currentSlide(1)" />
-					</div>
-					<div class="column">
-						<img
-							class="slide-thumbnail"
-							width="500"
-							src="{{product.images.split(', ')[1]}}"
-							alt="{{product.name}}"
-							onclick="currentSlide(2)" />
-					</div>
-					<div class="column">
-						<img
-							class="slide-thumbnail"
-							width="500"
-							src="{{product.images.split(', ')[2]}}"
-							alt="{{product.name}}"
-							onclick="currentSlide(3)" />
-					</div>
-					<div class="column">
-						<img
-							class="slide-thumbnail"
-							width="500"
-							src="{{product.images.split(', ')[3]}}"
-							alt="{{product.name}}"
-							onclick="currentSlide(4)" />
-					</div>
-				</div>
-			</div>
-
-			<!-- Information of product -->
-			<div class="col-lg-7">
-        <div>
-          <p class="fw-semibold">{{product.name | uppercase }}</p>
-					<p class="text-danger fw-bolder fs-4">{{product.price | currency}}</p>
+  <div class="my-5">
+    <div class="row">
+      <!-- product photos -->
+      <div class="col-lg-5">
+        <div class="holder">
+          <div class="slides" ng-repeat="image in productImages">
+            <img ng-src="{{image}}" alt="{{product.name}}" />
+          </div>
         </div>
-				<div>
-					<h6>Product Specifications:</h6>
-					<ul
-						class="ms-3"
-						type="square">
-						<li>Brand: {{ product.brand | uppercase }}</li>
-						<li>{{product.specification}}</li>
-					</ul>
 
-					<h6>Product Description:</h6>
-					<ul
-						class="ms-3"
-						type="square">
-						<li ng-repeat="desc in product.description.split(',')">{{desc.trim()}}</li>
-					</ul>
-				</div>
+        <!-- thumbnail images -->
+        <div class="align-center py-3">
+          <div class="">
+            <p class="prev" onclick="plusSlides(-1)">
+              <i
+                class="fa-solid fa-circle-arrow-left"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Previous"
+              ></i>
+            </p>
+          </div>
+          <div class="row align-center">
+            <div class="column" ng-repeat="image in productImages">
+              <img
+                class="slide-thumbnail"
+                width="500"
+                ng-src="{{image}}"
+                alt="{{product.name}}"
+                ng-click="changedImage(image)"
+              />
+            </div>
+          </div>
+          <div class="">
+            <p class="next" onclick="plusSlides(1)">
+              <i
+                class="fa-solid fa-circle-arrow-right"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Next"
+              ></i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+      <!-- Information of product -->
+      <div class="col-lg-6">
+        <div>
+          <h3 class="pb-4">{{product.name | uppercase }}</h3>
+          <p class="text-danger fw-bolder fs-4">{{product.price | currency}}</p>
+        </div>
+        <div>
+          <h6>Product Specifications:</h6>
+          <ul class="ms-3" type="square">
+            <li>Brand: {{ product.brand.trim() | uppercase }}</li>
+            <li>{{product.specification.trim()}}</li>
+          </ul>
 
-				<div class="align-center">
-					<input
-						class="form-control"
-						style="width: 40%"
-						type="number"
-						min="0"
-						placeholder="{{product.quantity}} available" />
-					<div class="d-flex">
-						<a href="#!cart">
-							<button
-								class="btn btn-dark mx-1"
-								type="submit">
-								<i class="fa-solid fa-cart-plus"></i>
-							</button>
-						</a>
-						<a href="#!cart">
-							<button
-								class="btn btn-success"
-								type="submit">
-								Buy Now
-							</button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <h6>Product Description:</h6>
+          <ul class="ms-3" type="square">
+            <li ng-repeat="desc in product.description.split(',')">
+              {{desc.trim()}}
+            </li>
+          </ul>
+        </div>
+
+        <div class="align-center">
+          <input
+            class="form-control"
+            style="width: 40%"
+            type="number"
+            min="0"
+            placeholder="{{product.quantity}} available"
+          />
+          <div class="d-flex">
+            <a href="#!cart">
+              <button class="btn btn-dark mx-1" type="submit">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </a>
+            <a href="#!cart">
+              <button class="btn btn-success" type="submit">Buy Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
