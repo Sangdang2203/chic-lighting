@@ -97,26 +97,17 @@
       </div>
     </div>
   </div>
-
+  <div class="my-5"></div>
   <div class="container">
     <div
       class="row"
       ng-repeat="model in productModel | filter:{ model: model.model }"
     >
-      <div class="align-center">
-        <img ng-src="{{model.image}}" width="40" />
-        <h3 class="mx-2">{{model.name}}</h3>
-        <img ng-src="{{model.image}}" width="40" />
-      </div>
-      <!-- product card -->
       <div
         ng-repeat="product in products | filter:{ model: model.model }"
-        class="col-lg-3 col-md-3 col-6"
+        class="col-lg-2 col-md-4 col-6"
       >
-        <div class="product-item">
-          <!-- <div ng-if="product in products.promotion === true'">
-            <p class="tag">-50%</p>
-          </div> -->
+        <div class="product-item my-3">
           <a href="#!/products/{{product.id}}"
             ><img class="" ng-src="{{product.images.split(',')[0]}}"
           /></a>

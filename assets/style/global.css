@@ -30,7 +30,7 @@ a:hover {
 	justify-content: start;
 }
 
-#productBtn:hover {
+.btn-dark:hover {
 	opacity: 0.8;
 	color: goldenrod;
 }
@@ -371,6 +371,7 @@ a:hover {
 	border: 1px solid gainsboro;
 	border-radius: 10px;
 	box-shadow: 1px 1px rgba(0, 0.1, 0, 0.1);
+	max-width: 260px;
 }
 
 .product-item img {
@@ -407,6 +408,7 @@ a:hover {
 
 .product-item:hover {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.28);
+	cursor: pointer;
 }
 
 .product-item img:hover {
@@ -484,10 +486,10 @@ h3 {
 
 /* BEGIN : FAQ Design */
 .faq-header {
-	font-size: 15pt;
+	font-size: 1.5rem;
 	font-weight: 500;
 	border-bottom: 1px dotted #ccc;
-	padding: 24px;
+	padding: 2rem;
 }
 
 .faq-content {
@@ -536,7 +538,7 @@ h3 {
 	margin-left: 20px;
 	margin-top: 4px;
 	z-index: 5;
-	font-size: 25pt;
+	font-size: 2rem;
 	line-height: 100%;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -636,9 +638,6 @@ h3 {
 }
 
 @media screen and (max-width: 740px) {
-	/* .box {
-		display: none;
-	} */
 
 	.address {
 		width: 100%;
