@@ -185,8 +185,10 @@ function createController(controllerName, fileName, scopeVariableName) {
           $scope.changedImage = function (index) {
             $scope.selectedImage = index;
           };
+
           $scope.addToCart = function (product) {
-            CartService.addToCart(product);
+            const productToAdd = { ...product, quantity: 1 };
+            CartService.addToCart(productToAdd);
             $location.path("/cart");
           };
         }
@@ -596,9 +598,9 @@ myApp.service("CartService", function () {
   this.addToCart = function (product) {
     const existingProduct = cartItems.find((item) => item.id === product.id);
     if (existingProduct) {
-      existingProduct.quantity += 1; // Tăng số lượng nếu sản phẩm đã tồn tại
+      existingProduct.quantity += product.quantity; // Tăng số lượng nếu sản phẩm đã tồn tại
     } else {
-      cartItems.push({ ...product, quantity: 1 }); // Thêm sản phẩm mới
+      cartItems.push({ ...product }); // Thêm sản phẩm mới
     }
   };
 
