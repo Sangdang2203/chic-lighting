@@ -97,7 +97,7 @@
             ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/outdoor-lights/{{outdoor.id}}"><img ng-src="{{outdoor.images.split(',')[0]}}"/></a>
+              <a href="#!/outdoor-lights/{{outdoor.name}}"><img ng-src="{{outdoor.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{outdoor.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
@@ -106,7 +106,7 @@
                 <p class="product-price">{{outdoor.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/outdoor-lights/{{outdoor.id}}"
+                  href="#!/outdoor-lights/{{outdoor.name}}"
                   >Buy Now</a>
               </div>
             </div>

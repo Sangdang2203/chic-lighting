@@ -8,7 +8,7 @@
     "promotion": false,
     "discount": "",
     "images": "./assets/images/home/product_01.jpg,./assets/images/home/product_01a.jpg,./assets/images/home/product_01b.jpg,./assets/images/home/product_01c.jpg",
-    "type": "best",
+    "type": "lamp",
     "quantity": 98,
     "specification": "Lighting Type: Ceiling Lights, Recessed Lights, & Panel Lights.\r\n.Smart Equipment: Yes.\r\nWarranty Duration: 12 months",
     "description": "Compatible Apple Homekit, Google Home, Alexa, Samsung SmartThings.\r\nPower 6W 220-240V, color temperature 2000-6500K.",

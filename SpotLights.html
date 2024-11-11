@@ -56,7 +56,7 @@
 						ng-repeat="spot in filteredSpots | filter:{ type: type.type } | filter: brand"
 						class="col-lg-3 col-md-4 col-6">
 						<div class="product-item">
-							<a href="#!/spot-lights/{{spot.id}}"><img ng-src="{{spot.images.split(',')[0]}}"/></a>
+							<a href="#!/spot-lights/{{spot.name}}"><img ng-src="{{spot.images.split(',')[0]}}"/></a>
 							<div class="product-content">
 								<p class="fw-semibold product-content__ellipsis">
 									{{spot.name | uppercase}}
@@ -68,7 +68,7 @@
 								<p class="product-price">{{spot.price | currency}}</p>
 								<a
 									class="btn btn-dark text-uppercase w-75 mb-3"
-									href="#!/spot-lights/{{spot.id}}"
+									href="#!/spot-lights/{{spot.name}}"
 									>Buy Now</a
 								>
 							</div>

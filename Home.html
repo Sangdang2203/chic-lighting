@@ -112,7 +112,7 @@
         class="col-lg-2 col-md-4 col-6"
       >
         <div class="product-item my-3">
-          <a href="#!/products/{{product.id}}"
+          <a href="#!/products/{{product.name}}"
             ><img class="" ng-src="{{product.images.split(',')[0]}}"
           /></a>
           <div class="product-content">
@@ -126,8 +126,8 @@
             <p class="product-price">{{product.price | currency}}</p>
             <a
               id="productBtn"
-              class="btn btn-dark text-uppercase w-75 mb-3"
-              href="#!/products/{{product.id}}"
+              class="btn btn-dark text-uppercase w-75 mb-3 product-slug"
+              href="#!/products/{{product.name}}"
               >Buy Now</a
             >
           </div>

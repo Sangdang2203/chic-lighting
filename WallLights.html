@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" ng-controller="wallListsController">
 		<!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
 			<h3>Wall Lights</h1>
@@ -95,7 +95,7 @@
             ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/wall-lights/{{wall.id}}"><img ng-src="{{wall.images.split(',')[0]}}"/></a>
+              <a href="#!/wall-lights/{{wall.name}}"><img ng-src="{{wall.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{wall.name | uppercase}}</p>
                 <p class="product-content__ellipsis">
@@ -105,12 +105,14 @@
                 <p class="product-price">{{wall.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/wall-lights/{{wall.id}}"
+                  href="#!/wall-lights/{{wall.name}}"
                   >Buy Now</a>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
+      
     </div>
 	</section>

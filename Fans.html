@@ -95,7 +95,7 @@
             ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/fans/{{fan.id}}"><img ng-src="{{fan.images.split(',')[0]}}"/></a>
+              <a href="#!/fans/{{fan.name}}"><img ng-src="{{fan.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{fan.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
@@ -104,7 +104,7 @@
                 <p class="product-price">{{fan.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/fans/{{fan.id}}"
+                  href="#!/fans/{{fan.name}}"
                   >Buy Now</a>
               </div>
             </div>

@@ -11,52 +11,52 @@ myApp.config(function ($routeProvider) {
     { path: "/register", templateUrl: "SignUp.html", controller: "myCtrl" },
     { path: "/login", templateUrl: "SignIn.html", controller: "myCtrl" },
     {
-      path: "/products/:id",
+      path: "/products/:name",
       templateUrl: "ProductDetails.html",
       controller: "productController",
     },
     {
-      path: "/decoration-lights/:id",
+      path: "/decoration-lights/:name",
       templateUrl: "ProductDetails.html",
       controller: "decorationController",
     },
     {
-      path: "/smart-lights/:id",
+      path: "/smart-lights/:name",
       templateUrl: "ProductDetails.html",
       controller: "smartController",
     },
     {
-      path: "/spot-lights/:id",
+      path: "/spot-lights/:name",
       templateUrl: "ProductDetails.html",
       controller: "spotController",
     },
     {
-      path: "/ceiling-lights/:id",
+      path: "/ceiling-lights/:name",
       templateUrl: "ProductDetails.html",
       controller: "ceilingController",
     },
     {
-      path: "/wall-lights/:id",
+      path: "/wall-lights/:name",
       templateUrl: "ProductDetails.html",
       controller: "wallController",
     },
     {
-      path: "/fans/:id",
+      path: "/fans/:name",
       templateUrl: "ProductDetails.html",
       controller: "fanController",
     },
     {
-      path: "/lamps/:id",
+      path: "/lamps/:name",
       templateUrl: "ProductDetails.html",
       controller: "lampController",
     },
     {
-      path: "/outdoor-lights/:id",
+      path: "/outdoor-lights/:name",
       templateUrl: "ProductDetails.html",
       controller: "outdoorController",
     },
     {
-      path: "/home-accents/:id",
+      path: "/home-accents/:name",
       templateUrl: "ProductDetails.html",
       controller: "homeaccentController",
     },
@@ -119,7 +119,6 @@ myApp.config(function ($routeProvider) {
   });
 });
 
-//Add data from json file
 myApp.controller("myCtrl", [
   "$scope",
   "$http",
@@ -127,17 +126,14 @@ myApp.controller("myCtrl", [
     $scope.productModel = [
       {
         model: "best",
-        image: "./assets/images/home/hot.gif",
         name: "Best Seller",
       },
       {
         model: "promotion",
-        image: "./assets/images/home/hot.gif",
         name: "Promotion Products",
       },
       {
         model: "new",
-        image: "./assets/images/NewProduct/NewIcon.gif",
         name: "New Products",
       },
     ];
@@ -148,25 +144,19 @@ myApp.controller("myCtrl", [
   },
 ]);
 
+const fileName = "products";
+const scopeVariable = "product";
 const controllers = [
-  { name: "productController", fileName: "products", scopeVariable: "product" },
-  {
-    name: "decorationController",
-    fileName: "products",
-    scopeVariable: "product",
-  },
-  { name: "smartController", fileName: "products", scopeVariable: "product" },
-  { name: "spotController", fileName: "products", scopeVariable: "product" },
-  { name: "fanController", fileName: "products", scopeVariable: "product" },
-  { name: "lampController", fileName: "products", scopeVariable: "product" },
-  { name: "wallController", fileName: "products", scopeVariable: "product" },
-  { name: "ceilingController", fileName: "products", scopeVariable: "product" },
-  { name: "outdoorController", fileName: "products", scopeVariable: "product" },
-  {
-    name: "homeaccentController",
-    fileName: "products",
-    scopeVariable: "product",
-  },
+  { name: "productController", fileName, scopeVariable },
+  { name: "decorationController", fileName, scopeVariable },
+  { name: "smartController", fileName, scopeVariable },
+  { name: "spotController", fileName, scopeVariable },
+  { name: "fanController", fileName, scopeVariable },
+  { name: "lampController", fileName, scopeVariable },
+  { name: "wallController", fileName, scopeVariable },
+  { name: "ceilingController", fileName, scopeVariable },
+  { name: "outdoorController", fileName, scopeVariable },
+  { name: "homeaccentController", fileName, scopeVariable },
 ];
 
 function createController(controllerName, fileName, scopeVariableName) {
@@ -178,7 +168,7 @@ function createController(controllerName, fileName, scopeVariableName) {
       $http.get(`json/${fileName}.json`).then(function (response) {
         const data = response.data;
         const product = data.find(
-          (product) => product.id === parseInt($routeParams.id)
+          (product) => product.name === $routeParams.name
         );
         if (product) {
           $scope[scopeVariableName] = product;
@@ -251,6 +241,7 @@ myApp.controller("wallListsController", [
       );
       $scope.filteredWalls = $scope.walls;
     });
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'

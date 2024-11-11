@@ -94,8 +94,9 @@
           <div
             ng-repeat="smart in filteredSmarts | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
+          </script>
             <div class="product-item">
-              <a href="#!/smart-lights/{{smart.id}}"><img ng-src="{{smart.images.split(',')[0]}}"/></a>
+              <a href="#!/smart-lights/{{smart.name}}"><img ng-src="{{smart.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{smart.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
@@ -104,7 +105,7 @@
                 <p class="product-price">{{smart.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/smart-lights/{{smart.id}}"
+                  href="#!/smart-lights/{{smart.name}}"
                   >Buy Now</a>
               </div>
             </div>

@@ -76,7 +76,7 @@
             ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/lamps/{{lamp.id}}"><img ng-src="{{lamp.images.split(',')[0]}}"/></a>
+              <a href="#!/lamps/{{lamp.name}}"><img ng-src="{{lamp.images.split(',')[0]}}"/></a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{lamp.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
@@ -85,7 +85,7 @@
                 <p class="product-price">{{lamp.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/lamps/{{lamp.id}}"
+                  href="#!/lamps/{{lamp.name}}"
                   >Buy Now</a>
               </div>
             </div>
