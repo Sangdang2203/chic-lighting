@@ -105,6 +105,11 @@ myApp.config(function ($routeProvider) {
       templateUrl: "SmartLights.html",
       controller: "smartListsController",
     },
+    {
+      path: "/cart",
+      templateUrl: "cart.html",
+      controller: "cartController",
+    },
   ];
 
   routes.forEach(function (route) {
@@ -164,7 +169,9 @@ function createController(controllerName, fileName, scopeVariableName) {
     "$scope",
     "$http",
     "$routeParams",
-    function ($scope, $http, $routeParams) {
+    "$location",
+    "CartService",
+    function ($scope, $http, $routeParams, $location, CartService) {
       $http.get(`json/${fileName}.json`).then(function (response) {
         const data = response.data;
         const product = data.find(
@@ -177,6 +184,10 @@ function createController(controllerName, fileName, scopeVariableName) {
           $scope.selectedImage = $scope.productImages[0];
           $scope.changedImage = function (index) {
             $scope.selectedImage = index;
+          };
+          $scope.addToCart = function (product) {
+            CartService.addToCart(product);
+            $location.path("/cart");
           };
         }
       });
@@ -202,7 +213,9 @@ myApp.filter("myFilter", function () {
 myApp.controller("ceilingListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.ceilings = $scope.products.filter(
@@ -210,6 +223,12 @@ myApp.controller("ceilingListsController", [
       );
       $scope.filteredCeilings = $scope.ceilings;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product.quantity);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -235,7 +254,9 @@ myApp.controller("ceilingListsController", [
 myApp.controller("wallListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.walls = $scope.products.filter(
@@ -243,6 +264,11 @@ myApp.controller("wallListsController", [
       );
       $scope.filteredWalls = $scope.walls;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
 
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
@@ -268,7 +294,9 @@ myApp.controller("wallListsController", [
 myApp.controller("lampListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.lamps = $scope.products.filter(
@@ -276,6 +304,12 @@ myApp.controller("lampListsController", [
       );
       $scope.filteredLamps = $scope.lamps;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -300,12 +334,20 @@ myApp.controller("lampListsController", [
 myApp.controller("fanListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.fans = $scope.products.filter((product) => product.type === "fan");
       $scope.filteredFans = $scope.fans;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -330,7 +372,9 @@ myApp.controller("fanListsController", [
 myApp.controller("homeaccentListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.homeaccents = $scope.products.filter(
@@ -338,6 +382,12 @@ myApp.controller("homeaccentListsController", [
       );
       $scope.filteredHomeaccents = $scope.homeaccents;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -363,7 +413,9 @@ myApp.controller("homeaccentListsController", [
 myApp.controller("outdoorListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.outdoors = $scope.products.filter(
@@ -371,6 +423,12 @@ myApp.controller("outdoorListsController", [
       );
       $scope.filteredOutdoors = $scope.outdoors;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -396,7 +454,9 @@ myApp.controller("outdoorListsController", [
 myApp.controller("spotListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.spots = $scope.products.filter(
@@ -404,6 +464,12 @@ myApp.controller("spotListsController", [
       );
       $scope.filteredSpots = $scope.spots;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -428,7 +494,9 @@ myApp.controller("spotListsController", [
 myApp.controller("smartListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.smarts = $scope.products.filter(
@@ -436,6 +504,12 @@ myApp.controller("smartListsController", [
       );
       $scope.filteredSmarts = $scope.smarts;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -460,7 +534,9 @@ myApp.controller("smartListsController", [
 myApp.controller("decorationListsController", [
   "$scope",
   "$http",
-  function ($scope, $http) {
+  "$location",
+  "CartService",
+  function ($scope, $http, $location, CartService) {
     $http.get("json/products.json").then(function (response) {
       $scope.products = response.data;
       $scope.decorations = $scope.products.filter(
@@ -468,6 +544,12 @@ myApp.controller("decorationListsController", [
       );
       $scope.filteredDecorations = $scope.decorations;
     });
+
+    $scope.addToCart = function (product) {
+      CartService.addToCart(product);
+      $location.path("/cart");
+    };
+
     $scope.choose = function () {
       let markedCheckbox = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -505,5 +587,62 @@ myApp.controller("visitorCount", [
       }
       localStorage.setItem("visiter", $scope.count.toString());
     }
+  },
+]);
+
+myApp.service("CartService", function () {
+  let cartItems = [];
+
+  this.addToCart = function (product) {
+    const existingProduct = cartItems.find((item) => item.id === product.id);
+    if (existingProduct) {
+      existingProduct.quantity += 1; // Tăng số lượng nếu sản phẩm đã tồn tại
+    } else {
+      cartItems.push({ ...product, quantity: 1 }); // Thêm sản phẩm mới
+    }
+  };
+
+  this.getCartItems = function () {
+    return cartItems;
+  };
+
+  this.getTotal = function () {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
+
+  this.cleaCart = function () {
+    cartItems = [];
+  };
+});
+
+myApp.controller("cartController", [
+  "$scope",
+  "$location",
+  "CartService",
+  function ($scope, $location, CartService) {
+    $scope.products = CartService.getCartItems();
+    $scope.total = CartService.getTotal();
+
+    $scope.removeAll = function () {
+      CartService.cleaCart();
+      $scope.products = [];
+      $scope.total = 0;
+    };
+
+    $scope.checkout = function () {
+      if ($scope.products.length == 0) {
+        alert("Cart is empty. Please add some products to checkout.");
+        return;
+      }
+      // Implement checkout logic here
+      alert("Thank you for your purchase. Your order will be delivered soon.");
+      CartService.cleaCart();
+      $scope.products = [];
+      $scope.total = 0;
+      $location.path("/home");
+    };
   },
 ]);

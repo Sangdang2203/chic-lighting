@@ -84,7 +84,7 @@
                 <p class="product-price">{{decoration.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/decoration-lights/{{decoration.name}}"
+                  ng-click="addToCart(decoration)"
                   >Buy Now</a>
               </div>
             </div>

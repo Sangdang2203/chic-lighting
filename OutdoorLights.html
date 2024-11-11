@@ -105,8 +105,8 @@
                   {{outdoor.brand | uppercase}}</p>
                 <p class="product-price">{{outdoor.price | currency}}</p>
                 <a
-                  class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/outdoor-lights/{{outdoor.name}}"
+                  class="btn btn-dark text-uppercase w-75 mb-3"                  
+                  ng-click="addToCart(outdoor)"
                   >Buy Now</a>
               </div>
             </div>

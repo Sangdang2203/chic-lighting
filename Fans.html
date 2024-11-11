@@ -104,7 +104,7 @@
                 <p class="product-price">{{fan.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/fans/{{fan.name}}"
+                  ng-click="addToCart(fan)"
                   >Buy Now</a>
               </div>
             </div>
