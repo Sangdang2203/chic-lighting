@@ -223,7 +223,9 @@ myApp.controller("ceilingListsController", [
         cats.length == 0
           ? data
           : data.filter(
-              (ceiling) => cats.indexOf(ceiling.filtered.toString()) >= 0
+              (ceiling) =>
+                ceiling.filtered &&
+                cats.indexOf(ceiling.filtered.toString()) >= 0
             );
     };
   },
@@ -254,7 +256,10 @@ myApp.controller("wallListsController", [
       $scope.filteredWalls =
         cats.length == 0
           ? data
-          : data.filter((wall) => cats.indexOf(wall.filtered.toString()) >= 0);
+          : data.filter(
+              (wall) =>
+                wall.filtered && cats.indexOf(wall.filtered.toString()) >= 0
+            );
     };
   },
 ]);
@@ -283,7 +288,10 @@ myApp.controller("lampListsController", [
       $scope.filteredLamps =
         cats.length == 0
           ? data
-          : data.filter((lamp) => cats.indexOf(lamp.filtered.toString()) >= 0);
+          : data.filter(
+              (lamp) =>
+                lamp.filtered && cats.indexOf(lamp.filtered.toString()) >= 0
+            );
     };
   },
 ]);
@@ -310,7 +318,10 @@ myApp.controller("fanListsController", [
       $scope.filteredFans =
         cats.length == 0
           ? data
-          : data.filter((fan) => cats.indexOf(fan.filtered.toString()) >= 0);
+          : data.filter(
+              (fan) =>
+                fan.filtered && cats.indexOf(fan.filtered.toString()) >= 0
+            );
     };
   },
 ]);
@@ -340,7 +351,9 @@ myApp.controller("homeaccentListsController", [
         cats.length == 0
           ? data
           : data.filter(
-              (homeaccent) => cats.indexOf(homeaccent.filtered.toString()) >= 0
+              (homeaccent) =>
+                homeaccent.filtered &&
+                cats.indexOf(homeaccent.filtered.toString()) >= 0
             );
     };
   },
@@ -371,7 +384,9 @@ myApp.controller("outdoorListsController", [
         cats.length == 0
           ? data
           : data.filter(
-              (outdoor) => cats.indexOf(outdoor.filtered.toString()) >= 0
+              (outdoor) =>
+                outdoor.filtered &&
+                cats.indexOf(outdoor.filtered.toString()) >= 0
             );
     };
   },
@@ -401,7 +416,10 @@ myApp.controller("spotListsController", [
       $scope.filteredSpots =
         cats.length == 0
           ? data
-          : data.filter((spot) => cats.indexOf(spot.filtered.toString()) >= 0);
+          : data.filter(
+              (spot) =>
+                spot.filtered && cats.indexOf(spot.filtered.toString()) >= 0
+            );
     };
   },
 ]);
@@ -431,7 +449,8 @@ myApp.controller("smartListsController", [
         cats.length == 0
           ? data
           : data.filter(
-              (smart) => cats.indexOf(smart.filtered.toString()) >= 0
+              (smart) =>
+                smart.filtered && cats.indexOf(smart.filtered.toString()) >= 0
             );
     };
   },
@@ -462,7 +481,9 @@ myApp.controller("decorationListsController", [
         cats.length == 0
           ? data
           : data.filter(
-              (decoration) => cats.indexOf(decoration.filtered.toString()) >= 0
+              (decoration) =>
+                decoration.filtered &&
+                cats.indexOf(decoration.filtered.toString()) >= 0
             );
     };
   },
