@@ -96,7 +96,9 @@
             class="col-lg-3 col-md-4 col-6">
           </script>
             <div class="product-item">
-              <a href="#!/smart-lights/{{smart.name}}"><img ng-src="{{smart.images.split(',')[0]}}"/></a>
+              <a href="#!/smart-lights/{{smart.name}}">
+                <img ng-src="{{smart.images.split(',')[0]}}" title="More details" />
+              </a>
               <div class="product-content">
                 <p class="fw-semibold product-content__ellipsis">{{smart.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">

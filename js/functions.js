@@ -130,8 +130,8 @@ function scrollToTop(duration) {
 }
 
 // get product name slug
-function getSlug(productName) {
-  return productName
+function getSlug(value) {
+  return value
     .toLowerCase()
     .trim()
     .replace(/[^a-z0-9 -]/g, "")

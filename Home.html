@@ -112,9 +112,13 @@
         class="col-lg-2 col-md-4 col-6"
       >
         <div class="product-item my-3">
-          <a href="#!/products/{{product.name}}"
-            ><img class="" ng-src="{{product.images.split(',')[0]}}"
-          /></a>
+          <a href="#!/products/{{product.name}}">
+            <img
+              class=""
+              ng-src="{{product.images.split(',')[0]}}"
+              title="More details"
+            />
+          </a>
           <div class="product-content">
             <p class="fw-semibold product-content__ellipsis">
               {{product.name | uppercase}}
