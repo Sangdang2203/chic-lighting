@@ -105,10 +105,11 @@
                   <i class="fa-solid fa-tag ms-1"></i>
                   {{smart.brand | uppercase}}</p>
                 <p class="product-price">{{smart.price | currency}}</p>
-                <button
+                <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
+                  href="#!/smart-lights/{{smart.name}}"
                   ng-click="addToCart(smart)"
-                  >Buy Now</button>
+                  >Buy Now</a>
               </div>
             </div>
           </div>

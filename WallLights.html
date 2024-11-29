@@ -105,10 +105,10 @@
                   {{wall.brand | uppercase}}
                 </p>
                 <p class="product-price">{{wall.price | currency}}</p>
-                <button
+                <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  ng-click="addToCart(wall)"
-                  >Buy Now</button>
+                  href="#!/wall-lights/{{wall.name}}"
+                  >Buy Now</a>
               </div>
             </div>
           </div>
