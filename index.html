@@ -52,6 +52,12 @@
 
     <section>
       <div ng-view></div>
+      <div class="my-5 d-flex justify-content-end">
+        <a
+          ng-include="'components/BackButton.html'"
+          onclick="scrollToTop(200)"
+        ></a>
+      </div>
     </section>
 
     <footer ng-include="'TheFooter.html'"></footer>

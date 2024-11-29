@@ -110,15 +110,16 @@ function check() {
 
 // Scroll to top
 function scrollToTop(duration) {
-  const start = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollPosition =
+    document.documentElement.scrollTop || document.body.scrollTop;
   const startTime = performance.now();
 
   function scrollStep(currentTime) {
     const timeElapsed = currentTime - startTime;
     const progress = Math.min(timeElapsed / duration, 1);
 
-    // Tính toán vị trí cuộn mới
-    const newScrollTop = start * (1 - progress);
+    // calculate new scroll position
+    const newScrollTop = scrollPosition * (1 - progress);
     window.scrollTo(0, newScrollTop);
 
     if (progress < 1) {
