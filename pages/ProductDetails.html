@@ -25,7 +25,8 @@
             <div class="column" ng-repeat="image in productImages">
               <img
                 class="slide-thumbnail"
-                width="500"
+                width="100%"
+                height="100%"
                 ng-src="{{image}}"
                 alt="{{product.name}}"
                 ng-click="changedImage(image)"

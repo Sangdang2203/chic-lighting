@@ -1,7 +1,7 @@
-<section class="container">
-    <!-- Search input -->
+<section class="container" ng-controller="wallListsController">
+		<!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Fans</h1>
+			<h3>Wall Lights</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -16,7 +16,7 @@
 			</div>
 		</div>
 
-    <div class="row mt-4">
+		<div class="row mt-4">
       <!--Filter by brand-->
       <div class="row col-lg-2 d-lg-block d-md-none d-none">
         <h6>Filter by brand:</h6>
@@ -29,7 +29,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >DREO</label>
+            <label >DIHUIKEJI</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -39,7 +39,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >BLACK DECKER</label>
+            <label >GLOBE ELECTRIC</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -49,7 +49,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >HONEYWELL</label>
+            <label >HWH FARMHOUSE</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -59,7 +59,7 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >IRIS USA, INC.</label>
+            <label >LOG BARN</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -69,7 +69,7 @@
               value="5"
               checked
               ng-click="choose()" />
-            <label >YITAHOME</label>
+            <label >WESTINGHOUSE</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -79,40 +79,42 @@
               value="6"
               checked
               ng-click="choose()" />
-            <label >VORNADO</label>
+            <label >GANEEP</label>
           </div>
           <a ng-include="'components/DownloadButton.html'"
-            class="text-decoration-none ms-1 "
-            href="./assets/files/pdf/Fans_Description.pdf"
-            download
-          ></a>
+          class="text-decoration-none ms-1 "
+          href="./assets/files/pdf/Wall_Lights_Description.pdf"
+          download>
+        </a>
         </div>
       </div>
-      <!--Fan Lights List -->
+      <!--Wall Lights List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="fan in filteredFans | filter:{ type: type.type } | filter: brand"
+            ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/fans/{{fan.name}}">
-                <img ng-src="{{fan.images.split(',')[0]}}" alt={{fan.name}} width="" height="" title="More details"/>
+              <a href="#!/wall-lights/{{wall.name}}">
+                <img ng-src="{{wall.images.split(',')[0]}}" alt={{wall.name}} width="100%" height="100%" title="More details"/>
               </a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{fan.name | uppercase}}</p>
-                <p class="product-content__ellipsis ">
+                <p class="fw-semibold product-content__ellipsis">{{wall.name | uppercase}}</p>
+                <p class="product-content__ellipsis">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{fan.brand | uppercase}}</p>
-                <p class="product-price">{{fan.price | currency}}</p>
+                  {{wall.brand | uppercase}}
+                </p>
+                <p class="product-price">{{wall.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/fans/{{fan.name}}"
+                  href="#!/wall-lights/{{wall.name}}"
                   >Buy Now</a>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
+      
     </div>
-    
-  </section>
+	</section>

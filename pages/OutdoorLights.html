@@ -1,7 +1,7 @@
-<section class="container" ng-controller="wallListsController">
-		<!-- Search input -->
+<section class="container">
+    <!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Wall Lights</h1>
+			<h3>Outdoor Lights</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -14,9 +14,11 @@
 				</form>
 				<i class="fas fa-search"></i>
 			</div>
+      
 		</div>
 
-		<div class="row mt-4">
+
+    <div class="row mt-4">
       <!--Filter by brand-->
       <div class="row col-lg-2 d-lg-block d-md-none d-none">
         <h6>Filter by brand:</h6>
@@ -29,7 +31,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >DIHUIKEJI</label>
+            <label >FOUNTAIN</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -39,7 +41,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >GLOBE ELECTRIC</label>
+            <label >EGLO</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -49,7 +51,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >HWH FARMHOUSE</label>
+            <label >GLOBE ELECTRIC</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -59,7 +61,7 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >LOG BARN</label>
+            <label >AOOTEK</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -69,7 +71,7 @@
               value="5"
               checked
               ng-click="choose()" />
-            <label >WESTINGHOUSE</label>
+            <label >UCGG</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -79,42 +81,39 @@
               value="6"
               checked
               ng-click="choose()" />
-            <label >GANEEP</label>
+            <label >LITHONIA</label>
           </div>
           <a ng-include="'components/DownloadButton.html'"
-          class="text-decoration-none ms-1 "
-          href="./assets/files/pdf/Wall_Lights_Description.pdf"
-          download>
-        </a>
+            class="text-decoration-none ms-1 "
+            href="./assets/files/pdf/Outdoor_Lights_Description.pdf"
+            download
+          ></a>
         </div>
       </div>
-      <!--Wall Lights List -->
+      <!--outdoor Lights List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="wall in filteredWalls | filter:{ type: type.type } | filter: brand"
+            ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/wall-lights/{{wall.name}}">
-                <img ng-src="{{wall.images.split(',')[0]}}" alt={{wall.name}} width="" height="" title="More details"/>
+              <a href="#!/outdoor-lights/{{outdoor.name}}">
+                <img ng-src="{{outdoor.images.split(',')[0]}}" alt={{outdoor.name}} width="100%" height="100%" title="More details"/>
               </a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{wall.name | uppercase}}</p>
-                <p class="product-content__ellipsis">
+                <p class="fw-semibold product-content__ellipsis">{{outdoor.name | uppercase}}</p>
+                <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{wall.brand | uppercase}}
-                </p>
-                <p class="product-price">{{wall.price | currency}}</p>
+                  {{outdoor.brand | uppercase}}</p>
+                <p class="product-price">{{outdoor.price | currency}}</p>
                 <a
-                  class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/wall-lights/{{wall.name}}"
+                  class="btn btn-dark text-uppercase w-75 mb-3"                  
+                  href="#!/outdoor-lights/{{outdoor.name}}"
                   >Buy Now</a>
               </div>
             </div>
           </div>
-          
         </div>
       </div>
-      
     </div>
-	</section>
+  </section>

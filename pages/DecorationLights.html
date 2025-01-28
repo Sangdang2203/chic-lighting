@@ -1,24 +1,22 @@
 <section class="container">
-    <!-- Search input -->
-		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Lamps</h1>
-			<div class="box">
-				<form name="search">
-					<input
-						ng-model="brand"
-						type="text"
-						class="input"
-						name="txt"
-						placeholder=" Search..."
-						onmouseout="this.value = ''; this.blur();" />
-				</form>
-				<i class="fas fa-search"></i>
-			</div>
-		</div>
+      <!-- Search input -->
+      <div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
+        <h3>Decoration Lights</h1>
+        <div class="box">
+          <form name="search">
+            <input
+              ng-model="brand"
+              type="text"
+              class="input"
+              name="txt"
+              placeholder=" Search..."
+              onmouseout="this.value = ''; this.blur();" />
+          </form>
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
 
-		
-    
-    <div class="row mt-4">
+      <div class="row mt-4">
       <!--Filter by brand-->
       <div class="row col-lg-2 d-lg-block d-md-none d-none">
         <h6>Filter by brand:</h6>
@@ -31,7 +29,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >HUTA</label>
+            <label >DIHUIKEJI</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -41,7 +39,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >MY HOME</label>
+            <label >GLOBE ELECTRIC</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -51,7 +49,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >XIAOMI</label>
+            <label >HWH FARMHOUSE</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -61,33 +59,34 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >YEELIGHT</label>
+            <label >LOG BARN</label>
           </div>
-          <a ng-include="'components/DownloadButton.html'"
-          class="text-decoration-none ms-1 "
-          href="./assets/files/pdf/Lamps_Description.pdf"
-          download></a>
         </div>
+        <a ng-include="'components/DownloadButton.html'"
+          class="text-decoration-none ms-1 "
+          href="./assets/files/pdf/Decoration_Lights_Description.pdf"
+          download>
+        </a>
       </div>
-      <!--Lamps List -->
+      <!--decoration Lights List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter: brand"
+            ng-repeat="decoration in filteredDecorations | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/lamps/{{lamp.name}}">
-                <img ng-src="{{lamp.images.split(',')[0]}}" alt={{lamp.name}} width="" height="" title="More details"/>
+              <a href="#!/decoration-lights/{{decoration.name}}">
+                <img ng-src="{{decoration.images.split(',')[0]}}" alt={{decoration.name}} width="100%" height="100%" title="More details"/>
               </a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{lamp.name | uppercase}}</p>
+                <p class="fw-semibold product-content__ellipsis">{{decoration.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{lamp.brand | uppercase}}</p>
-                <p class="product-price">{{lamp.price | currency}}</p>
+                  {{decoration.brand | uppercase}}</p>
+                <p class="product-price">{{decoration.price | currency}}</p>
                 <a
                   class="btn btn-dark text-uppercase w-75 mb-3"
-                  href="#!/lamps/{{lamp.name}}"
+                  href="#!/decoration-lights/{{decoration.name}}"
                   >Buy Now</a>
               </div>
             </div>
@@ -95,4 +94,4 @@
         </div>
       </div>
     </div>
-  </section>
+</section>

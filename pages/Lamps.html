@@ -1,7 +1,7 @@
 <section class="container">
     <!-- Search input -->
 		<div class="align-center justify-content-lg-start justify-content-between mt-lg-0 mt-5">
-			<h3>Outdoor Lights</h1>
+			<h3>Lamps</h1>
 			<div class="box">
 				<form name="search">
 					<input
@@ -14,10 +14,10 @@
 				</form>
 				<i class="fas fa-search"></i>
 			</div>
-      
 		</div>
 
-
+		
+    
     <div class="row mt-4">
       <!--Filter by brand-->
       <div class="row col-lg-2 d-lg-block d-md-none d-none">
@@ -31,7 +31,7 @@
               value="1"
               checked
               ng-click="choose()" />
-            <label >FOUNTAIN</label>
+            <label >HUTA</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -41,7 +41,7 @@
               value="2"
               checked
               ng-click="choose()" />
-            <label >EGLO</label>
+            <label >MY HOME</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -51,7 +51,7 @@
               value="3"
               checked
               ng-click="choose()" />
-            <label >GLOBE ELECTRIC</label>
+            <label >XIAOMI</label>
           </div>
           <div class="d-flex align-items-center mb-3">
             <input
@@ -61,54 +61,33 @@
               value="4"
               checked
               ng-click="choose()" />
-            <label >AOOTEK</label>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <input
-              type="checkbox"
-              class="label-success me-1 form-check-input"
-              ng-model="cat5"
-              value="5"
-              checked
-              ng-click="choose()" />
-            <label >UCGG</label>
-          </div>
-          <div class="d-flex align-items-center mb-3">
-            <input
-              type="checkbox"
-              class="label-success me-1 form-check-input"
-              ng-model="cat6"
-              value="6"
-              checked
-              ng-click="choose()" />
-            <label >LITHONIA</label>
+            <label >YEELIGHT</label>
           </div>
           <a ng-include="'components/DownloadButton.html'"
-            class="text-decoration-none ms-1 "
-            href="./assets/files/pdf/Outdoor_Lights_Description.pdf"
-            download
-          ></a>
+          class="text-decoration-none ms-1 "
+          href="./assets/files/pdf/Lamps_Description.pdf"
+          download></a>
         </div>
       </div>
-      <!--outdoor Lights List -->
+      <!--Lamps List -->
       <div class="col-lg-10">
         <div class="row">
           <div
-            ng-repeat="outdoor in filteredOutdoors | filter:{ type: type.type } | filter: brand"
+            ng-repeat="lamp in filteredLamps | filter:{ type: type.type } | filter: brand"
             class="col-lg-3 col-md-4 col-6">
             <div class="product-item">
-              <a href="#!/outdoor-lights/{{outdoor.name}}">
-                <img ng-src="{{outdoor.images.split(',')[0]}}" alt={{outdoor.name}} width="" height="" title="More details"/>
+              <a href="#!/lamps/{{lamp.name}}">
+                <img ng-src="{{lamp.images.split(',')[0]}}" alt={{lamp.name}} width="100%" height="100%" title="More details"/>
               </a>
               <div class="product-content">
-                <p class="fw-semibold product-content__ellipsis">{{outdoor.name | uppercase}}</p>
+                <p class="fw-semibold product-content__ellipsis">{{lamp.name | uppercase}}</p>
                 <p class="product-content__ellipsis ">
                   <i class="fa-solid fa-tag ms-1"></i>
-                  {{outdoor.brand | uppercase}}</p>
-                <p class="product-price">{{outdoor.price | currency}}</p>
+                  {{lamp.brand | uppercase}}</p>
+                <p class="product-price">{{lamp.price | currency}}</p>
                 <a
-                  class="btn btn-dark text-uppercase w-75 mb-3"                  
-                  href="#!/outdoor-lights/{{outdoor.name}}"
+                  class="btn btn-dark text-uppercase w-75 mb-3"
+                  href="#!/lamps/{{lamp.name}}"
                   >Buy Now</a>
               </div>
             </div>
