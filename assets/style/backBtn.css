@@ -1,8 +1,8 @@
 
 .Btn {
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(#c9b312, #e8e276);
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
