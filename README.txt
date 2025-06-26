@@ -15,7 +15,7 @@ eProject documentation at: https://github.com/Sangdang2203/eProject_Sem01/tree/m
 
 ============================
 
-eProject published at: https://sangdang2203.github.io/Chic-Lighting/
+eProject published at: https://lighting-vn.vercel.app/#!/home
 
 ============================
 
