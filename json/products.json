@@ -558,7 +558,7 @@
     "price": 55.05,
     "promotion": false,
     "discount": "",
-    "images": "./assets/images/lamps/Product_07.jpg,./assets/images/lamps/Product_07a.jpg,./assets/images/lamps/Product_07b.jpg,./assets/images/lamps/Product_07c.jpg",
+    "images": "./assets/images/lamps/Product_07a.jpg,./assets/images/lamps/Product_07b.jpg,./assets/images/lamps/Product_07c.jpg",
     "type": "lamp",
     "filtered": 4,
     "quantity": 212,
